@@ -4,16 +4,24 @@ require.config({
     backbone : 'backbone',
     underscore : 'underscore',
     jquery : 'jquery',
+    'jquery-ui' : 'jquery-ui',
     text: 'text',
     marionette : 'backbone.marionette',
     wreqr : 'backbone.wreqr',
     eventbinder : 'backbone.eventbinder',
-    babysitter : 'backbone.babysitter'
+    babysitter : 'backbone.babysitter',
+    datepicker: 'jquery.ui.datepicker.min'
   },
   shim : {
     jquery : {
       exports : 'jQuery'
     },
+    'jquery-ui' : {
+      deps : ['jquery'],
+    },
+/*    datepicker: {
+      deps : ['jquery','jquery-ui'],
+    },*/
     underscore : {
       exports : '_'
     },
@@ -39,14 +47,13 @@ require.config({
 });
 
 // Loading dependences and module to execute Marionette App
-require( ["marionette",
+require( ["jquery-ui",
+          "marionette",
           "../modules/RouterModule",
           "../modules/ControllerModule",
           "../modules/EventAggregatorModule",
-          "../views/HeaderView",
-          "../views/FooterView",
-          "../views/FormView",],
-          function (Marionette, RouterModule, ControllerModule, EventAggregatorModule, HeaderView, FooterView, FormView) {
+          "../views/HeaderView"],
+          function (jQueryUI, Marionette, RouterModule, ControllerModule, EventAggregatorModule, HeaderView) {
     // set up the app instance
     var MyApp = new Marionette.Application();
 
@@ -62,44 +69,31 @@ require( ["marionette",
     // Pass reference to Main Region to Controller
     var controller = new ControllerModule({
       mainRegion: MyApp.mainRegion,
+      vent: MyApp.vent
     });
+
+/*    // Initialiaze EventAggregator a Messaging System
+    MyApp.vent = new EventAggregatorModule();*/
 
     // initialize the router
     MyApp.router = new RouterModule({
-      controller : controller
+      controller : controller,
     });
 
     // Initialize the app router if neccessary
     MyApp.addInitializer(function(options) {});
 
-    MyApp.on("initialize:after", function(){
+    MyApp.on("initialize:after", function() {
 
-      // Creating a generic ItemView for Header
-      headerView = new HeaderView();
+      // Createing a generic ItemView for Header
+      headerView = new HeaderView({router: MyApp.router});
 
       // Add Header View to region to be render
       MyApp.headerRegion.show(headerView);
 
-      // Creating a generic ItemView for Footer
-      footerView = new FooterView();
-
-      // Add Header View to region to be render
-      MyApp.footerRegion.show(footerView);
-
-      // Create  Form view
-      formView = new FormView({
-        vent: MyApp.vent,
-      });
-
-      // Add Form to render to main region and avoid be replaced
-      MyApp.toolbarRegion.show(formView);
-
-      MyApp.vent.on("myapp:buddy", function(buddy){
-        MyApp.router.navigate('#hello/' + buddy, {trigger: true});
-      });
-
       // Start Backbone history a necessary step for bookmarkable URL's
       Backbone.history.start();
+
     });
 
     MyApp.start({});

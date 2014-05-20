@@ -11,6 +11,8 @@ To help you to defeat that syndrome, here is my proposal for a <a target="_blank
 
 This Skeleton is a starting point with structure and sample about how to create modules, views, routing and controller for a Marionette JS application.
 
+**DEMO** : <a target="_blank" href="http://enzolutions.github.io/marionette-skeleton-app/">http://enzolutions.github.io/marionette-skeleton-app/</a>
+
 ![Marionnete Skeleton View](https://raw.githubusercontent.com/enzolutions/marionette-skeleton-app/master/images/marionette_skeleton_app.png "Marionnete Skeleton View")
 
 ### Structure and Files
@@ -22,6 +24,7 @@ This Skeleton is a starting point with structure and sample about how to create 
 │   ├── main.js
 ├── index-module.html
 ├── index.html
+├── layouts
 ├── models
 ├── modules
 ├── templates
@@ -42,7 +45,7 @@ This Skeleton is a starting point with structure and sample about how to create 
 
 The skeleton implement <a target="_blank" href-"http://requirejs.org/">RequireJS</a> to load libraries and modules to start a MarionetteJS App.
 
-Collections and models and their integration with Views in outside the scope this Skeleton, becuase is different in each implemetantion.
+Collections and models and their integration with Views in outside the scope this Skeleton, becuase is different in each implemetantion. I recommend to use Drupal as Backend and you can use the Model plugin <a href="https://github.com/enzolutions/backbone.drupal" target="_blank">Backbone.Drupal</a>.
 
 ### Errors
 
