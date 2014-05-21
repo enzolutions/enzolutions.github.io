@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Blog</title>
+<title>MarionetteJS Cascading Select</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home of crazy things I did just for fun">
+<meta name="description" content="Example about how to implement a Cascade Select with MarionetteJs, Backbone and Silex">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Blog">
-    <meta name="twitter:description" content="Home of crazy things I did just for fun">
+    <meta name="twitter:title" content="MarionetteJS Cascading Select">
+    <meta name="twitter:description" content="Example about how to implement a Cascade Select with MarionetteJs, Backbone and Silex">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Home of crazy things I did just for fun">
-<meta property="og:url" content="http://enzolutions.com/">
+<meta property="og:title" content="MarionetteJS Cascading Select">
+<meta property="og:description" content="Example about how to implement a Cascade Select with MarionetteJs, Backbone and Silex">
+<meta property="og:url" content="http://enzolutions.com/projects/marionettejs_cascading_select/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -99,27 +99,80 @@
     </div>
 </div>
             <div class="container">
-                                <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">My blog is alive again!</a>
-        </h1>
-    </header>
+                    <header>
+    <h1>
+        MarionetteJS Cascading Select</a>
+    </h1>
+</header>
 
+<p>Implementation of the typical Ajax example of three level of select elements with dependency, results in selects change based in his parent selection.</p>
 
+<p>This example use the project <a target="_blank" href="https://github.com/enzolutions/marionette-skeleton-app" taget="_blank" >https://github.com/enzolutions/marionette-skeleton-app</a> as start point.</p>
 
-            Hello folks.
+<p>Inside you can find how use Nested Views or Marionette Layout, also the Event Manager is used to trigger the proper event based in used selection.</p>
 
-After many years without touch my personal website, I took the decision to put it back online.
+<p><strong>DEMO</strong> : <a target="_blank" href="http://enzolutions.com/marionette-cascading-select/">http://enzolutions.com/marionette-cascading-select/</a></p>
 
-Recently I have been writing technical documentation in Spanish in the website 7Sabores.co...
-        <p class='alignright'>
-            <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">Read More</a>
-        </p>
-    
-    </article>
-    
-    
+<h3>Usage</h3>
+
+<p>This example use a REST API server to get the information related with Clients, Projects of Clients and Tasks of Projects. The Rest server was implemente using <a href="http://silex.sensiolabs.org/" target="_blank">Silex</a> Micro Framework</p>
+
+<h4>Installing Rest Server</h4>
+
+<p><a href="https://getcomposer.org" target="_blank">Composer</a> is required.</p>
+
+<p>Inside rest-server execute <strong>composer.phar install</strong> to install Silex Micro Framewok.</p>
+
+<h4>Running Rest Server</h4>
+
+<p>After install Silex, you must run inside folder <strong>rest-server/web</strong> you must run the following command.</p>
+
+<pre><code>$ php -S localhost:8081
+</code></pre>
+
+<p>You can choose any port available in your system. The URL and port will be using in Collections to get the Model</p>
+
+<h4>Configuring Collections</h4>
+
+<p>Is required edit all Collections to set the proper URL for Rest Server as you can see in the following example.</p>
+
+<pre><code>define(["marionette",
+        "../models/ClientModel"], function(Marionette, Client ) {
+
+    var Clients = Backbone.Collection.extend({
+                url: 'http://localhost:8081/rest/clients',
+                model: Client
+    });
+
+    return Clients;
+
+});
+</code></pre>
+
+<p>You can use the sample REST server http://silex.7sabores.com/</p>
+
+<p>If you are planning to use your own server to test, remenber modiy the Silex Middleware after to enable CORS request and avoid error related the server and client aren't located under same domain, check the current implementation</p>
+
+<pre><code>$app-&gt;after(function (Request $request, Response $response) {
+    //$response-&gt;headers-&gt;set('Access-Control-Allow-Origin', '*');
+    $response-&gt;headers-&gt;set('Access-Control-Allow-Origin', 'http://YOURSERVER:YOURPORT');
+});
+</code></pre>
+
+<p>Your port is neccessary only if you use other port than 80</p>
+
+<div class="col-md-12">
+    <ul class="list-unstyled">
+                <li>
+              <i class="fa fa-tags"></i>
+              Drupal, MarionetteJS, BackboneJS, Javascript, Silex
+          </li>
+                      <li>
+              <i class="fa fa-folder"></i>
+              projects
+          </li>
+        </ul>
+</div>
 
             </div>
         </div>

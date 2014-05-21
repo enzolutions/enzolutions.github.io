@@ -10,3 +10,19 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 .alignright {float:right; }
 .alignleft {float:left; }
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+li {
+  margin-bottom: 5px;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.list-unstyled {
+  margin-top: 20px;
+}
