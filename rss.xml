@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>[enzo]lutions</title>
+        <link>http://localhost:8080</link>
+        <description>RSS feed for [enzo]lutions</description>
+        <atom:link href="http://localhost:8080/rss.xml" rel="self" type="application/rss+xml" />
+                    <item>
+                <title>My blog is alive again!</title>
+                <description><![CDATA[<p>Hello folks.</p>
+
+<p>After many years without touch my personal website, I took the decision to put it back online.</p>
+
+<p>Recently I have been writing technical documentation in Spanish in the website <a href="http://7sabores.com" target="_blank">7Sabores.com</a>. If you are wondering Why in Spanish? and if you read Spanish you can find my justification in the blog entry <a href='http://7sabores.com/blog/se-busca-en-espanol'>¿Se busca en Español?</a>.</p>
+
+<p>I will not translate all my Spanish entries to English or viceversa, all depends my mood :P.</p>
+
+<p>Also I have to say THANKS YOU to two great products <a targe="_blank" href="https://pages.github.com/">GitHub Pages</a> and <a href="http://spress.yosymfony.com/">[S]press</a>. Without them this blog couldn't be possible.</p>
+
+<p>See you around.</p>
+]]></description>
+                <link>http://localhost:8080/articles/2014/05/21/my-blog-is-alive-again/</link>
+                <pubDate>Wed, 21 May 2014 13:07:18 -0600</pubDate>
+                <guid>http://localhost:8080/articles/2014/05/21/my-blog-is-alive-again/</guid>
+            </item>
+            </channel>
+</rss>
