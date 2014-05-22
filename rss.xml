@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>[enzo]lutions</title>
-        <link>http://enzolutions.com</link>
+        <link>http://localhost:8080</link>
         <description>RSS feed for [enzo]lutions</description>
-        <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:8080/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
                 <title>My blog is alive again!</title>
                 <description><![CDATA[<p>Hello folks.</p>
@@ -19,9 +19,9 @@
 
 <p>See you around.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 17:24:28 -0600</pubDate>
-                <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
+                <link>http://localhost:8080/articles/2014/05/21/my-blog-is-alive-again/</link>
+                <pubDate>Wed, 21 May 2014 19:32:01 -0600</pubDate>
+                <guid>http://localhost:8080/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
 </rss>
