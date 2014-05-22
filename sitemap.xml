@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://enzolutions.com</loc>
+        <loc>http://localhost:8080</loc>
     </url>
             <url>
-            <loc>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</loc>
-            <lastmod>2014-05-21T21:50:37-0600</lastmod>
+            <loc>http://localhost:8080/articles/2014/05/21/my-blog-is-alive-again/</loc>
+            <lastmod>2014-05-21T14:59:16-0600</lastmod>
             <changefreq>monthly</changefreq>
             <priority>0.5</priority>
         </url>
