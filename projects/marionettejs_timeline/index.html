@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Projects</title>
+<title>MarionetteJS Timelime</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Projects I am involved">
+<meta name="description" content="Example about how to implement a Timelime with MarionetteJS">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Projects">
-    <meta name="twitter:description" content="Projects I am involved">
+    <meta name="twitter:title" content="MarionetteJS Timelime">
+    <meta name="twitter:description" content="Example about how to implement a Timelime with MarionetteJS">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Projects">
-<meta property="og:description" content="Projects I am involved">
-<meta property="og:url" content="http://enzolutions.com/projects/">
+<meta property="og:title" content="MarionetteJS Timelime">
+<meta property="og:description" content="Example about how to implement a Timelime with MarionetteJS">
+<meta property="og:url" content="http://enzolutions.com/projects/marionettejs_timeline/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -105,55 +105,94 @@
     </div>
 </div>
             <div class="container">
-                    <header>
-    <h1>
-        Projects</a>
-    </h1>
-</header>
+                    <article class="project">
+    <header>
+        <h1>
+            MarionetteJS Timelime
+        </h1>
+    </header>
 
-<p>These are some projects I created to solve my needs and maybe could help you to cover yours..</p>
 
-<h3>Javascript</h3>
+    <p>Implementation of a Timeline enabled to end user change the Date Range of Timeline to get differnt results via Ajax.</p>
 
-<ul>
-<li><a target="_blank" href="https://github.com/enzolutions/backbone.drupal" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/backbone_drupal">Backbone.Drupal</a></li>
-<li><a target="_blank" href="https://github.com/enzolutions/marionette-skeleton-app" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/marionettejs_skeleton_app">MarionetteJS Skeleton App</a></li>
-<li><a target="_blank" href="https://github.com/enzolutions/marionette-cascading-select" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/marionettejs_cascading_select">MarionetteJS Cascading Select</a></li>
-<li><a target="_blank" href="https://github.com/enzolutions/marionette-timeline" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/marionettejs_timeline">MarionetteJS Timeline Select</a></li>
-</ul>
+<p>This example use the project <a target="_blank" href="http://enzolutions.com/projects/silex_rss_importer_image" _target="_blank" >http://enzolutions.com/projects/silex_rss_importer_image</a> as Rest Server.</p>
 
-<h3>Drupal</h3>
+<p>The data develired by Rest Server is list of Time Magazine Close Up images imported from <a target="_blank" href="http://lightbox.time.com/category/closeup/feed/">http://lightbox.time.com/category/closeup/feed/</a> you can check the data at <a target="_blank" href="http://silex.7sabores.com/timeline/index.php/rest/covers">http://silex.7sabores.com/timeline/index.php/rest/covers</a>.</p>
 
-<ul>
-<li><a target="_blank" href="https://drupal.org/project/plato_tipico" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/plato_tipico">Plato Típico</a></li>
-<li><a target="_blank" href="https://drupal.org/project/openpolitic" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/openpolitic">Open Politic</a></li>
-</ul>
+<p>Inside you can find how bind jQuery events with BackboneJS Routes.</p>
 
-<h2>Silex</h2>
+<p>Libraries used.</p>
 
 <ul>
-<li><a target="_blank" href="https://github.com/enzolutions/silex-rss-importer-image-field" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/silex_rss_importer_image">Silex RSS Importer Imagen</a></li>
+<li><a target="_blank" href="http://marionettejs.com">MarionetteJS</a></li>
+<li><a target="_blank" href="http://backbonejs.org">BackboneJS</a></li>
+<li><a target="_blank" href="">jQRangeSlider</a></li>
+<li><a target="_blank" href="http://adomas.org/javascript-mouse-wheel/">javascript-mouse-wheel</a></li>
 </ul>
 
-<h2>Shell</h2>
+<p><strong>DEMO</strong> : <a target="_blank" href="http://enzolutions.com/marionette-timeline/">http://enzolutions.com/marionette-timeline/</a></p>
 
-<ul>
-<li><a target="_blank" href="https://github.com/enzolutions/sublime-drupal" class="btn btn-primary btn-sm btn-danger" role="button"><i class="fa fa-code-fork"></i></a><a href="http://enzolutions.com/projects/sublime_drupal">Sublime Drupal</a></li>
-</ul>
+<p><img src="https://raw.githubusercontent.com/enzolutions/marionette-timeline/master/images/marionettejs_date_range_filter.png" alt="Marionnete Timeline" title="Marionnete Timeline" /></p>
 
-<div class="col-md-12">
-    <ul class="list-unstyled">
+<h3>Usage</h3>
+
+<p>You just need to play with Date Range select to get less or more results as you can see in the picture above.</p>
+
+<h4>Installing Rest Server</h4>
+
+<p>You must follow the instructions to install Rest Server <a target="_blank" href="http://enzolutions.com/projects/silex_rss_importer_image">http://enzolutions.com/projects/silex_rss_importer_image</a> or you can implement your own Server to delivery diferent data.</p>
+
+<h4>Configuring Collections</h4>
+
+<p>Is required edit ResultCollection to set the proper URL for Rest Server as you can see in the following example.</p>
+
+<pre><code>define(["marionette",
+        "../models/ResultModel"], function(Marionette, Result ) {
+
+    var Results = Backbone.Collection.extend({
+       model: Result,
+       initialize : function(options) {
+          this.min = options.min;
+          this.max = options.max;
+       },
+       url: function() {
+         return 'http://silex.7sabores.com/timeline/rest/covers/' + this.min + '/' + this.max;
+       },
+    });
+
+    return Results;
+
+});
+
+</code></pre>
+
+
+    <footer>
+      <div class="col-md-12">
+         <ul class="list-unstyled">
                 <li>
               <i class="fa fa-tags"></i>
-              Drupal, Javascript, PHP, Symfony, Silex, MarionetteJS, BackboneJS
+              MarionetteJS, BackboneJS, Javascript
           </li>
                       <li>
               <i class="fa fa-folder"></i>
               projects
           </li>
         </ul>
-</div>
+      </div>
+    </footer>
 
+
+          <section>
+  <h3>Comments</h3>
+  <div id="disqus_thread"></div>
+  <noscript>
+      Please enable JavaScript to view the
+      <a target="_blank" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  <a target="_blank" href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </article>
             </div>
         </div>
 
@@ -227,6 +266,15 @@
                         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             
-                    </footer>
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
     </body>
 </html>
