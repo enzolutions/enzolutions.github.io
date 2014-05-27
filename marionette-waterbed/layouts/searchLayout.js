@@ -16,6 +16,7 @@ define(["marionette",
       dateSelected : function (e) {
         e.preventDefault();
         var client = this.$el.find('select').val();
+
         // Trigger event to update project
         this.vent.trigger("myapp:projects", client);
         this.vent.trigger("myapp:tasks", 0);
