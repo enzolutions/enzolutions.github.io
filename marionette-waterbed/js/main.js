@@ -114,7 +114,7 @@ require( ["marionette",
 
     // Setup Drupal API Information
     Backbone.Drupal.restEndpoint = {
-      root: 'http://waterbed-backend.com/api',
+      root: 'http://waterbed-backend.7sabores.com//api',
       dataType: '.json'
     };
 
@@ -124,7 +124,7 @@ require( ["marionette",
 
     // Star authentication process, if credentials are valida the token will be
     // use in further connection
-    var auth_status = Auth.login('admin', 'admin');
+    var auth_status = Auth.login('regular_user', 'J6>40xjQ6M2^X6y');
 
 
     if(auth_status) {
