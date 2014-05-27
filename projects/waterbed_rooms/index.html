@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>MarionetteJS Cascading Select</title>
+<title>Waterbed Rooms</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Example about how to implement a Cascade Select with MarionetteJs, Backbone and Silex">
+<meta name="description" content="Drupal 7 Feature to create a backend for a site like http://airbnb.com with minimal features.">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="MarionetteJS Cascading Select">
-    <meta name="twitter:description" content="Example about how to implement a Cascade Select with MarionetteJs, Backbone and Silex">
+    <meta name="twitter:title" content="Waterbed Rooms">
+    <meta name="twitter:description" content="Drupal 7 Feature to create a backend for a site like http://airbnb.com with minimal features.">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MarionetteJS Cascading Select">
-<meta property="og:description" content="Example about how to implement a Cascade Select with MarionetteJs, Backbone and Silex">
-<meta property="og:url" content="http://enzolutions.com/projects/marionettejs_cascading_select/">
+<meta property="og:title" content="Waterbed Rooms">
+<meta property="og:description" content="Drupal 7 Feature to create a backend for a site like http://airbnb.com with minimal features.">
+<meta property="og:url" content="http://enzolutions.com/projects/waterbed_rooms/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -108,73 +108,116 @@
                     <article class="project">
     <header>
         <h1>
-            MarionetteJS Cascading Select
+            Waterbed Rooms
         </h1>
     </header>
 
 
-    <p>Implementation of the typical Ajax example of three level of select elements with dependency, results in selects change based in his parent selection.</p>
-
-<p>This example use the project <a target="_blank" href="https://github.com/enzolutions/marionette-skeleton-app" taget="_blank" >https://github.com/enzolutions/marionette-skeleton-app</a> as start point.</p>
-
-<p>Inside you can find how use Nested Views or Marionette Layout, also the Event Manager is used to trigger the proper event based in used selection.</p>
-
-<p><img src="https://raw.githubusercontent.com/enzolutions/marionette-cascading-select/master/images/marionettejs_cascading_select.png" alt="Marionnete Cascading Select" title="Marionnete Cascading Select" /></p>
-
-<p><strong>DEMO</strong> : <a target="_blank" href="http://enzolutions.com/marionette-cascading-select/">http://enzolutions.com/marionette-cascading-select/</a></p>
+    <p>Waterbed Rooms is a Drupal 7 Feature to create a backend for a site like http://airbnb.com with minimal features.</p>
 
 <h2>Download</h2>
 
-<pre><code>$ git clone git@github.com:enzolutions/marionette-cascading-select.git
+<pre><code>$ git clone git@github.com:enzolutions/drupal_waterbed_rooms.git
 </code></pre>
+
+<h2>Tweaks and Tricks included</h2>
+
+<p>This Feature include some tweaks and tricks you can read inside the file waterbed_rooms.module</p>
+
+<ul>
+<li>Custom Image Formatter for Services ( Absolute path with option to select an image style)</li>
+<li>View query alter to add extra group by</li>
+<li>Created custom Service Resource <em>node_waterbed</em> to return some extra information about owner and enable field_pictures to return absolute paths.</li>
+</ul>
+
+<h2>Drupal Dependencies</h2>
+
+<ul>
+<li><a target="_blank" href="drupal.org/project/features">Features</a>.</li>
+<li><a target="_blank" href="drupal.org/project/date">Date</a>.</li>
+<li><a target="_blank" href="drupal.org/project/commerce">Commerce</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/entityreference">Entityreference</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/rules">Rules</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/geocoder">Geocoder</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/geocoder_autocomplete">Geocoder_autocomplete</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/geofield">Geofield</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/services">Services</a>.</li>
+<li><a target="_blank" href="https://drupal.org/project/services_views">Services_views</a></li>
+<li><a target="_blank" href="https://drupal.org/project/views">Views</a></li>
+<li><a target="_blank" href="drupal.org/project/rooms">Rooms</a></li>
+<li><a target="_blank" href="https://drupal.org/sandbox/ziomizar/2086255">Rooms_node</a>. (Sandbox)</li>
+<li><a target="_blank" href="https://drupal.org/project/cors">Cors</a></li>
+</ul>
+
+<h2>Installation.</h2>
+
+<p>Before to enable the Feature Waterbed Rooms, I recommend install the Rooms module, because could be little tricky, you can find the instructions at <a target="_blank" href="http://www.drupalrooms.com/docs"></a>http://www.drupalrooms.com/docs</a> (don't forget the libraries section).</p>
+
+<p>Is required apply the patch <a target="_blank"href="https://drupal.org/node/2274681#comment-8816065"></a>https://drupal.org/node/2274681#comment-8816065</a> to Sandbox module Rooms Node.</p>
+
+<p>After enable Feature Module Waterbed Rooms, is required edit the Content Type "Standard Doubles" (http://YOURDOMAIN/admin/structure/types/manage/room-standard-doubles) to enable the contact type as a Room Node. (see image)</p>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/drupal_waterbed_rooms/master/images/edit_room_availability.png" alt="Edit Content Type Standard Doubles" title="Edit Content Type Standard Doubles" /></p>
+
+<p>After create "Standard Doubles" nodes,  is required update the room availability (http://YOURDOMAIN/node/1/availability) (see image)</p>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/drupal_waterbed_rooms/master/images/edit_room_node_content_type.png" alt="Editing Room Node Availablity" title="Editing Room Node Availablity" /></p>
 
 <h3>Usage</h3>
 
-<p>This example use a REST API server to get the information related with Clients, Projects of Clients and Tasks of Projects. The Rest server was implemente using <a href="http://silex.sensiolabs.org/" target="_blank">Silex</a> Micro Framework</p>
+<p>The goal of this project is to create a backend for a service similar to Airbnb, after complete the installation steps and create some Room Nodes with availability you will be ready to consume the API to fetch rooms information.</p>
 
-<h4>Installing Rest Server</h4>
+<h4>Getting all rooms available</h4>
 
-<p><a href="https://getcomposer.org" target="_blank">Composer</a> is required.</p>
-
-<p>Inside rest-server execute <strong>composer.phar install</strong> to install Silex Micro Framewok.</p>
-
-<h4>Running Rest Server</h4>
-
-<p>After install Silex, you must run inside folder <strong>rest-server/web</strong> you must run the following command.</p>
-
-<pre><code>$ php -S localhost:8081
+<pre><code>http://YOURDOMAIN/api/views/waterbed.json
 </code></pre>
 
-<p>You can choose any port available in your system. The URL and port will be using in Collections to get the Model</p>
+<h4>Getting all rooms available in a range of dates.</h4>
 
-<h4>Configuring Collections</h4>
-
-<p>Is required edit all Collections to set the proper URL for Rest Server as you can see in the following example.</p>
-
-<pre><code>define(["marionette",
-        "../models/ClientModel"], function(Marionette, Client ) {
-
-    var Clients = Backbone.Collection.extend({
-                url: 'http://localhost:8081/rest/clients',
-                model: Client
-    });
-
-    return Clients;
-
-});
+<pre><code>http://YOURDOMAIN/api/views/waterbed.json?availabilty[min]=2014-5-20&amp;availabilty[max]=2014-5-28
 </code></pre>
 
-<p>You can use the sample REST server http://silex.7sabores.com/</p>
+<h4>Getting all rooms available in a range of price</h4>
 
-<p>f you are planning to use your own server to test, remember modify the Silex Middleware after to enable CORS request and avoid errors related invalid client request because the client isn't located under same domain, check the current implementation.</p>
-
-<pre><code>$app-&gt;after(function (Request $request, Response $response) {
-    //$response-&gt;headers-&gt;set('Access-Control-Allow-Origin', '*');
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Origin', 'http://YOURSERVER:YOURPORT');
-});
+<pre><code>http://YOURDOMAIN/api/views/waterbed?price[min]=30&amp;price[max]=45
 </code></pre>
 
-<p>Your port is neccessary only if you use other port than 80</p>
+<p>You can combine price and date filtering. In any case we will a JSON response similar to next example.</p>
+
+<pre><code>[
+  {
+    nid: "1",
+    legend: "Walk to downtown san jose from here. ",
+    images: "http://waterbed-backend.7sabores.com/sites/default/files/styles/waterbed__260x195_/public/Atardecer-San-Jose.jpg?itok=R0sIs042, http://waterbed-backend.7sabores.com/sites/default/files/styles/waterbed__260x195_/public/62349C455.jpg?itok=Y_uonL9Y",
+    rooms_availability_index_price: "45",
+    latitude: "9.896970600000",
+    longitude: "-84.061670900000",
+    type: "Standard Doubles",
+    date: "2014-05-27"
+  },
+  {
+    nid: "2",
+    legend: "Apartment in San José North Sabana",
+    images: "http://waterbed-backend.7sabores.com/sites/default/files/styles/waterbed__260x195_/public/SAb-nor.-Condo-Bruno-24.jpg?itok=GuIkH3-v, http://waterbed-backend.7sabores.com/sites/default/files/styles/waterbed__260x195_/public/San-Jose-Real-Estate-Prices-Around-Parque-La-%20Sabana-Expected-To-Rise-Dramatically.jpg?itok=RD7Ip73F",
+    rooms_availability_index_price: "60",
+    latitude: "9.935231600000",
+    longitude: "-84.102606200000",
+    type: "Standard Doubles",
+    date: "2014-05-27"
+  }
+]
+</code></pre>
+
+<p>You can check a live example at <a target="_blank"href="http://waterbed-backend.7sabores.com/api/views/waterbed.json">http://waterbed-backend.7sabores.com/api/views/waterbed.json</a>.</p>
+
+<h4>CORS</h4>
+
+<p>If you are planning to use your own server to test, remember use the module CORS to enable CORS request and avoid errors related invalid client request because the client isn't located under same domain. Just go to http://YOURDOMAIN/admin/config/services/cors and do a similar setting as suggested below.</p>
+
+<pre><code>api/*|http://localhost:8080|POST,ADD,GET,PUT,DELETE,OPTIONS|X-CSRF-Token|true
+</code></pre>
+
+<p>Your port is necessary only if you use other port than 80</p>
 
 
     <footer>
@@ -182,7 +225,7 @@
          <ul class="list-unstyled">
                 <li>
               <i class="fa fa-tags"></i>
-              Drupal, MarionetteJS, BackboneJS, Javascript, Silex
+              Drupal, JSON, REST, PHP, CORS
           </li>
                       <li>
               <i class="fa fa-folder"></i>
