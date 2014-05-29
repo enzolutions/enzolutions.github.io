@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Open Politic</title>
+<title>How to configure MySQL to import large database</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Drupal Distribution oriented to strengthening democracy">
+<meta name="description" content="Instructions to enable import huge database in your MySQL server.">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Open Politic">
-    <meta name="twitter:description" content="Drupal Distribution oriented to strengthening democracy">
+    <meta name="twitter:title" content="How to configure MySQL to import large database">
+    <meta name="twitter:description" content="Instructions to enable import huge database in your MySQL server.">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Open Politic">
-<meta property="og:description" content="Drupal Distribution oriented to strengthening democracy">
-<meta property="og:url" content="http://enzolutions.com/projects/openpolitic/">
+<meta property="og:title" content="How to configure MySQL to import large database">
+<meta property="og:description" content="Instructions to enable import huge database in your MySQL server.">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -111,82 +111,75 @@
     </div>
 </div>
             <div class="container">
-                    <article class="project">
+                    <article class="post">
     <header>
         <h1>
-            Open Politic
+            <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">How to configure MySQL to import large database</a>
         </h1>
     </header>
 
+    
+    <p>On many occasions we need to install in our local enviroment a copy of production sites for development or debugging process, this entails that need to import large databases.</p>
 
-    <img class="alignleft" src="https://drupal.org/files/styles/grid-3/public/project-images/openpolitic.png?itok=uUaCy8C6"/>
+<p>The most common error is that you cannot import the database because for some reason you loose the communication with the <a target="_blank" href="http://www.mysql.com/">MySQL</a> server, as shown below.</p>
 
-Audience: Citizens, Communities  & NGOs focused on strengthening democracy.
-<br/><br/>
-Community Tool for generating a digital profile of the candidates where citizens can report actions taken by the candidate successes and failures.
-<br/>
-<h2>Features</h2>
+<pre><code>$ /mysql -f -uroot -proot mydb -h 127.0.0.1 &lt; ~/Downloads/prod-mysql-2013-01-29.sql
+ERROR 2006 (HY000) at line 6565: MySQL server has gone away
+</code></pre>
+
+<p>To fix this error you must to change the default configuration of MySQL.</p>
+
+<p>MySQL store his configuration in a file commonly named my.cnf and could be located in different locations depending the OS version you have installed.</p>
+
+<p>If you do not know the location of this file, you can use the following command shown below to determine where you expect to find locations MySQL settings.</p>
+
+<pre><code>$ ./mysql --help | grep my.cnf
+/etc/my.cnf /etc/mysql/my.cnf /Applications/MAMP/conf/my.cnf ~/.my.cnf
+</code></pre>
+
+<p>In my case I had MySQL as part of <a target="_blank" href="http://www.mamp.info/">MAMP</a> and this file is not created by default. For this reason I will create a new file located at <em>/Applications/MAMP/conf/my.cnf</em> becuase is one of the location where MySQL will look his configuration file.</p>
+
+<p>I recommend to use the sample provided by MySQL documentation for large databases localed at <em>/usr/share/doc/mysql-server-5.0/examples/my-large.cnf.gz.</em></p>
+
+<p>After copy the suggested configuration from documantion, I have to apply two changes to warranty the import process don't fail.</p>
 
 <ul>
-  <li>Ability to create political parties</li>
-  <li>Ability to create public job candidates belonging to a political party.</li>
-  <li>Ability to store the candidates proposed</li>
-  <li>Possibility to compare candidates proposals on specific topics.</li>
-  <li>Users can report achievements, failures, legal proceedings or sentencing processes of candidates or political parties, this reports are called references</li>
-  <li>Each citizens can vote like or dislike for one candidate or party</li>
-  <li>Ability to share the profile of a candidate, party or reference.</li>
-  <li>Ability to make comments about a party, candidate or reference</li>
+<li><p>Remove Directive # <em>skip-locking</em></p></li>
+<li><p>Increase setting <em>max_allowed_packet = 100M</em></p></li>
 </ul>
 
-<strong>Replicating the experience:</strong>
+<p>Then just be enough restart the MySQL server and try to import the database again.</p>
 
-Open Politic is a Drupal distribution that allows any person anywhere in the world, implementing a site for your local or national elections.
-
-Open Politic use Drupal theme <a target = "_blank" href="https://drupal.org/project/transparency">Transparency</a>.
-
-<h2>Download</h2>
-
-You can find the Drupal Releases at <a target="_blank" href="https://drupal.org/node/2039355/release">https://drupal.org/node/2039355/release</a>
-
-<h2>Drush Install</h2>
-
-<a href="https://drupal.org/node/2230351">https://drupal.org/node/2230351</a>
-
-If you are comfortable with drush make the make file build-openpublic.make can be used to build openpolitic with the command
-
-<code>drush make --prepare-install build-openpolitic .make openpolitic</code>
-
-<h2>Contributions</h2>
-Please feel encouraged to contribute code, tutorials, screencasts, and other documentation for OpenPublic. Please email us at enzo@anexusit.com for more information.
-
+<p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 
 
     <footer>
-      <div class="col-md-12">
-         <ul class="list-unstyled">
-                <li>
-              <i class="fa fa-tags"></i>
-              Drupal, Distribution, PHP
-          </li>
-                      <li>
-              <i class="fa fa-folder"></i>
-              projects
-          </li>
-        </ul>
-      </div>
-    </footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-05-28</time>
+        </p>
 
-
-          <section>
-  <h3>Comments</h3>
-  <div id="disqus_thread"></div>
-  <noscript>
-      Please enable JavaScript to view the
-      <a target="_blank" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  <a target="_blank" href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-    </article>
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    MySQL
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
 

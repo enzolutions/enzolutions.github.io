@@ -6,6 +6,45 @@
         <description>RSS feed for [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to configure MySQL to import large database</title>
+                <description><![CDATA[<p>On many occasions we need to install in our local enviroment a copy of production sites for development or debugging process, this entails that need to import large databases.</p>
+
+<p>The most common error is that you cannot import the database because for some reason you loose the communication with the <a target="_blank" href="http://www.mysql.com/">MySQL</a> server, as shown below.</p>
+
+<pre><code>$ /mysql -f -uroot -proot mydb -h 127.0.0.1 &lt; ~/Downloads/prod-mysql-2013-01-29.sql
+ERROR 2006 (HY000) at line 6565: MySQL server has gone away
+</code></pre>
+
+<p>To fix this error you must to change the default configuration of MySQL.</p>
+
+<p>MySQL store his configuration in a file commonly named my.cnf and could be located in different locations depending the OS version you have installed.</p>
+
+<p>If you do not know the location of this file, you can use the following command shown below to determine where you expect to find locations MySQL settings.</p>
+
+<pre><code>$ ./mysql --help | grep my.cnf
+/etc/my.cnf /etc/mysql/my.cnf /Applications/MAMP/conf/my.cnf ~/.my.cnf
+</code></pre>
+
+<p>In my case I had MySQL as part of <a target="_blank" href="http://www.mamp.info/">MAMP</a> and this file is not created by default. For this reason I will create a new file located at <em>/Applications/MAMP/conf/my.cnf</em> becuase is one of the location where MySQL will look his configuration file.</p>
+
+<p>I recommend to use the sample provided by MySQL documentation for large databases localed at <em>/usr/share/doc/mysql-server-5.0/examples/my-large.cnf.gz.</em></p>
+
+<p>After copy the suggested configuration from documantion, I have to apply two changes to warranty the import process don't fail.</p>
+
+<ul>
+<li><p>Remove Directive # <em>skip-locking</em></p></li>
+<li><p>Increase setting <em>max_allowed_packet = 100M</em></p></li>
+</ul>
+
+<p>Then just be enough restart the MySQL server and try to import the database again.</p>
+
+<p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
+                <pubDate>Wed, 28 May 2014 21:29:23 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
+            </item>
+                    <item>
                 <title>My blog is alive again!</title>
                 <description><![CDATA[<p>Hello folks.</p>
 
@@ -20,7 +59,7 @@
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 15:41:53 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 21:29:23 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
