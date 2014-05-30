@@ -25,9 +25,9 @@ Access-Control-Allow-Origin:http://localhost:8080
 
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sun, 31 May 2015 09:44:07 -0600</pubDate>
-                <guid>http://enzolutions.com/articles/2015/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
+                <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
+                <pubDate>Sat, 31 May 2014 09:45:57 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
                 <title>How to configure MySQL to import large database</title>
@@ -65,7 +65,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 09:44:07 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 09:45:57 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -83,7 +83,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 09:44:07 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 09:45:57 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>

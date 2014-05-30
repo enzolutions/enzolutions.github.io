@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Blog</title>
+<title>What is Cross-Origin Resource Sharing (CORS)</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home of crazy things I do just for fun">
+<meta name="description" content="Explanation aboout Cross-Origin Resource Sharing (CORS).">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Blog">
-    <meta name="twitter:description" content="Home of crazy things I do just for fun">
+    <meta name="twitter:title" content="What is Cross-Origin Resource Sharing (CORS)">
+    <meta name="twitter:description" content="Explanation aboout Cross-Origin Resource Sharing (CORS).">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Home of crazy things I do just for fun">
-<meta property="og:url" content="http://enzolutions.com/">
+<meta property="og:title" content="What is Cross-Origin Resource Sharing (CORS)">
+<meta property="og:description" content="Explanation aboout Cross-Origin Resource Sharing (CORS).">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -111,56 +111,60 @@
     </div>
 </div>
             <div class="container">
-                                <article class="post">
+                    <article class="post">
     <header>
         <h1>
             <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">What is Cross-Origin Resource Sharing (CORS)</a>
         </h1>
     </header>
 
-         Nowdays is pretty common to transfer data between web applications via Web Services to  clients that require information on different interfaces such as REST, XMLRPC, JSON, JSON-RPC, SOAP and others.
-
-Almost all sites to...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">Read More</a>
-      </p>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">How to configure MySQL to import large database</a>
-        </h1>
-    </header>
+    <p>Nowdays is pretty common to transfer data between web applications via Web Services to  clients that require information on different interfaces such as REST, XMLRPC, JSON, JSON-RPC, SOAP and others.</p>
 
-         On many occasions we need to install in our local enviroment a copy of production sites for development or debugging process, this entails that need to import large databases.
+<p>Almost all sites today are built using JavaScript, generating AJAX calls with XMLHttpRequest mechanism to get information  from external sites. To enable this kind of comunication is necessary implement "cross-domain" requests would otherwise be forbidden by web browsers, per the <a target="_blank" href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin security policy</a>.</p>
 
-The most common error is that you cannot im...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">Read More</a>
-      </p>
+<p>Lets imagine the following scenery: we have a frontend application using the domain http://a.com and this application wants to use data provided by a  backend site located in domain http://b.com. For security this type of communication is blocked and the end user will be only able to get the information from http://a.com, this scenario is exemplified in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/crossdomain.png"/></p>
+
+<p>To enable this kind of communication is requiered that your backed server (http//b.com) returns the specific HTTP Headers to enable CORS comunication. Below you can see an example of HTTP Header required.</p>
+
+<pre><code>Access-Control-Allow-Credentials:true
+Access-Control-Allow-Headers:X-CSRF-Token
+Access-Control-Allow-Methods:POST,ADD,GET,PUT,DELETE,OPTIONS
+Access-Control-Allow-Origin:http://localhost:8080
+</code></pre>
+
+<p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-05-31</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Ajax, CORS, WWW
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">My blog is alive again!</a>
-        </h1>
-    </header>
-
-         Hello folks.
-
-After many years without touch my personal website, I took the decision to put it back online.
-
-Recently I have been writing technical documentation in Spanish in the website 7Sabores.com. If you are wonder...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">Read More</a>
-      </p>
-    
-    </article>
-    
-    
-
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
 
@@ -240,6 +244,15 @@ Recently I have been writing technical documentation in Spanish in the website 7
                         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             
-                    </footer>
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
     </body>
 </html>
