@@ -4,7 +4,31 @@
         <title>[enzo]lutions</title>
         <link>http://enzolutions.com</link>
         <description>RSS feed for [enzo]lutions</description>
-        <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
+                <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
+                    <item>
+                <title>What is Cross-Origin Resource Sharing (CORS)</title>
+                <description><![CDATA[<p>Nowdays is pretty common to transfer data between web applications via Web Services to  clients that require information on different interfaces such as REST, XMLRPC, JSON, JSON-RPC, SOAP and others.</p>
+
+<p>Almost all sites today are built using JavaScript, generating AJAX calls with XMLHttpRequest mechanism to get information  from external sites. To enable this kind of comunication is necessary implement "cross-domain" requests would otherwise be forbidden by web browsers, per the <a target="_blank" href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin security policy</a>.</p>
+
+<p>Lets imagine the following scenery: we have a frontend application using the domain http://a.com and this application wants to use data provided by a  backend site located in domain http://b.com. For security this type of communication is blocked and the end user will be only able to get the information from http://a.com, this scenario is exemplified in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/crossdomain.png"/></p>
+
+<p>To enable this kind of communication is requiered that your backed server (http//b.com) returns the specific HTTP Headers to enable CORS comunication. Below you can see an example of HTTP Header required.</p>
+
+<pre><code>Access-Control-Allow-Credentials:true
+Access-Control-Allow-Headers:X-CSRF-Token
+Access-Control-Allow-Methods:POST,ADD,GET,PUT,DELETE,OPTIONS
+Access-Control-Allow-Origin:http://localhost:8080
+</code></pre>
+
+<p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2015/05/31/what-is-cross-origin-resource-sharing-cors/</link>
+                <pubDate>Sun, 31 May 2015 09:44:07 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2015/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
+            </item>
                     <item>
                 <title>How to configure MySQL to import large database</title>
                 <description><![CDATA[<p>On many occasions we need to install in our local enviroment a copy of production sites for development or debugging process, this entails that need to import large databases.</p>
@@ -41,7 +65,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 21:29:23 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 09:44:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -59,7 +83,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 21:29:23 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 09:44:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
