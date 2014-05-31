@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>What is and how it works RequireJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explanation about how to implement RequireJS.">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="What is and how it works RequireJS">
+    <meta name="twitter:description" content="Explanation about how to implement RequireJS.">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What is and how it works RequireJS">
+<meta property="og:description" content="Explanation about how to implement RequireJS.">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>
+        </h1>
+    </header>
+
+    
+    <p><a target="_blank" href="http://requirejs.org/">RequireJS</a> is a JavaScript library that allows us to isolate the components of our JS application as modules and resolve their dependencies.</p>
+
+<p>RequireJS implements the design pattern of software <a target="_blank" href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD</a> (Asynchronous Module Definition) which you could say is very similar to <a target="_blank" href="http://en.wikipedia.org/wiki/Dependency_injection">Dependency injection</a> implemented by frameworks like <a target="_blank" href="http://symfony.com/">Symfony</a>.</p>
+
+<p>Let's check how we can use in our JS application in simple steps.</p>
+
+<h2>1. Define entry point for RequireJS.</h2>
+
+<p>We must download the lastest version of RequireJS library available on the website <a target="_blank" href="http://requirejs.org">http://requirejs.org</a>, after download will put in a directory called libs just for purposes of this example (tested with version 2.1.11).</p>
+
+<p>Now we need to  define a html file and could named index.html where RequireJS is loading as shown below.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;script data-main="libs/main" src="libs/require.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>As you can see the inclusión is done with the script tag at the end of the HTML tag body, but it could also be done within the head tag.</p>
+
+<p>It's also possible to include RequireJS remotely using the URL <a target="_blank" href="http://requirejs.org/docs/release/2.1.11/minified/require.js">http://requirejs.org/docs/release/2.1.11/minified/require.js</a> or similar, but it is a desition of the reader.</p>
+
+<p>As can be seen RequireJS  use the meta-data property <em>data-main</em>(, with this property we can define the entry point for RequireJS configuration, which is a relative path for the file we choose to load teh RequireJS configuraton (is necesarry exlude the js extension).</p>
+
+<h2>2. Configure RequireJS</h2>
+
+<p>In the file libs/main.js we define the RequireJS options. The first thing we should to define is which JS libraries will use in our application as shown below.</p>
+
+<pre><code>require.config({
+    baseUrl: 'libs',
+    paths : {
+      backbone : 'backbone',
+      underscore : 'underscore',
+      jquery : 'jquery',
+      marionette : 'backbone.marionette',
+      wreqr : 'backbone.wreqr',
+      eventbinder : 'backbone.eventbinder',
+      babysitter : 'backbone.babysitter'
+  }
+});
+</code></pre>
+
+<p>All files are seek in the directory defined using the <em>baseUrl</em> property, and the <em>paths</em> property allow define the location of the libraries required with a key to refer to the library later. The js extension is not required and will be added by RequireJS later.</p>
+
+<p>As its name suggests the pattern AMD makes an asynchronous load of packages. But because not all the libraries implement the AMD pattern, is likely to a library A try to use a function defined in library B not yet loaded causing a fatal error.</p>
+
+<p>To resolve this issue we use the property <em>Shim</em> part of  RequireJS configuration, as we see below.</p>
+
+<pre><code>require.config({,
+  shim : {
+    jquery : {
+      exports : 'jQuery'
+    },
+    underscore : {
+      exports : '_'
+    },
+    backbone : {
+      deps : ['jquery', 'underscore'],
+      exports : 'Backbone'
+    },
+    wreqr: {
+      deps : ['backbone']
+    },
+    eventbinder : {
+      deps : ['backbone']
+    },
+    babysitter : {
+      deps: ['backbone']
+    },
+    marionette : {
+      deps: ['wreqr', 'eventbinder', 'babysitter'],
+      exports : 'Marionette'
+    }
+  }
+});
+</code></pre>
+
+<p>Using Shim we can define dependencies between libraries and allow to export global variables that can be used within other libraries such as jQuery library which  export  the variable jQuery.</p>
+
+<p>The configuration with the Shim is a replacement for Order plugin used before version 2.0 of RequireJS.</p>
+
+<p>The exports variable can also be an anonymous function to return the call noConflict function, if the library supports it.</p>
+
+<p>Using the <em>deps</em> property, you can define multiple dependencies of libraries should be loaded before including the library that are defining, such as backbone that depends on jquery and underscore to be used.</p>
+
+<p>Of course if we want to use the library with RequireJS  and supports AMD configuration pattern Shim isn't required.</p>
+
+<h2>3. How to execute code required.</h2>
+
+<p>Once defined libraries and its dependencies if necessary, we can now rewrite the code we need as shown below.</p>
+
+<pre><code>// Loading dependences and execute Marionette App
+require( ["marionette"], function (Marionette) {
+    // set up the app instance
+    var MyApp = new Marionette.Application();
+ 
+    MyApp.on("initialize:after", function(){
+      alert("Application has started!");
+    });
+ 
+    MyApp.start();
+});
+</code></pre>
+
+<p>The above code checks that all the libraries needed to run Marionette are loaded before executing the code and get the exported global variable as a parameter.</p>
+
+<p>In the anonymous function will create a Marionette Application and start it, As result we  will get an alert with the message "Application has started".</p>
+
+<p>The require function has the same effect of an anonymous function, meaning that run without problems but can not be used later.</p>
+
+<h2>4. How to create named modules.</h2>
+
+<p>If we want encapsulate our App we must create named modules using the funcion <em>define</em>; The diference with require function is  an extra parameter that is used to name the module and returns an object or variable that will be used when the module is instantiated.</p>
+
+<p>Then consider the previous example as a named module.</p>
+
+<pre><code>define( 'MyApp', ["marionette"], function (Marionette) {
+ 
+    // set up the app instance
+    var MyApp = new Marionette.Application();
+ 
+    MyApp.on("initialize:after", function(){
+      alert("Application has started!");
+    });
+ 
+    // export the app from this module
+    return MyApp;
+});
+ 
+// Fetch and execute Marionette App
+require( ["MyApp"], function (MyApp) {
+    // Execute App
+    MyApp.start();
+});
+</code></pre>
+
+<p>As you see we register a named module <em>MyApp</em> and  returns an object defined in Marionette.</p>
+
+<p>Then with a <em>require</em> function the module is loaded, it receives as parameters the object returns by the module and can thus start our application.</p>
+
+<p>It might seem a waste of time doing it this way as it is in the same file, but the idea is to create a module for file and using the configuration of RequireJS load all the libraries that define modules and then use these modules in our application.</p>
+
+<p>You can download the <a target="_blank" href="http://enzolutions.com/projects/marionettejs_skeleton_app">Marionette App Skeleton</a> repository which implements the concepts discussed here.</p>
+
+<p>I hope you have been to his liking.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-06-01</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Ajax, Javascript, RequireJS, MarionetteJS
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    </body>
+</html>
