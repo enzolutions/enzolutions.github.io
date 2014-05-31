@@ -120,14 +120,12 @@ require( ["marionette",
 
 
     // Define auth object, set crossDomain if is necessary
-    var Auth = new Backbone.Drupal.Auth({crossDomain: true});
+    //var Auth = new Backbone.Drupal.Auth({crossDomain: true});
 
-    // Star authentication process, if credentials are valida the token will be
+    // Start authentication process, if credentials are valida the token will be
     // use in further connection
-    var auth_status = Auth.login('regular_user', 'J6>40xjQ6M2^X6y');
-
-
-    if(auth_status) {
+    //var auth_status = Auth.login('regular_user', 'J6>40xjQ6M2^X6y');
+    //if(auth_status) {
 
       // Initialize the app controller
       // Pass reference to Main Region to Controller
@@ -219,11 +217,11 @@ require( ["marionette",
     });
 
     MyApp.start({});
-  } else {
+  /*} else {
     // Generating error message
     accessDeniendView = new AccessDeniedView({ message: 'Authentication fail'});
 
     // Add Header View to region to be render
     MyApp.propertyRegion.show(accessDeniendView);
-  }
+  }*/
 });
