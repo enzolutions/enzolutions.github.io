@@ -26,3 +26,7 @@ img {
 .list-unstyled {
   margin-top: 20px;
 }
+
+.talks .fa-file-pdf-o, .talks .fa-file-powerpoint-o {
+  margin-left: 10px;
+}
