@@ -1,0 +1,398 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Routing & Controlling with MarionetteJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Implementing Routing & Contrilling with MarionetteJS.">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="Routing & Controlling with MarionetteJS">
+    <meta name="twitter:description" content="Implementing Routing & Contrilling with MarionetteJS.">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Routing & Controlling with MarionetteJS">
+<meta property="og:description" content="Implementing Routing & Contrilling with MarionetteJS.">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/">Routing & Controlling with MarionetteJS</a>
+        </h1>
+    </header>
+
+    
+    <p><a target="_blank" href="http://marionettejs.com/">MarionetteJS</a>  is a layer that sits on <a target="_blank" href="http://backbonejs.org">BackboneJS</a> to create scalable and professional applications.</p>
+
+<p>Some features of MarionetteJS are :</p>
+
+<ul>
+<li>Scalable: applications are built in modules, and with event-driven architecture</li>
+<li>Sensible defaults: Underscore templates are used for view rendering</li>
+<li>Easily modifiable: make it work with your application's specific needs</li>
+<li>Reduce boilerplate for views, with specialized view types</li>
+<li>Build on a modular architecture with an Application and modules that attach to it</li>
+<li>Compose your application's visuals at runtime, with the Region and Layout objects</li>
+<li>Nested views and layouts within visual regions</li>
+<li>Built-in memory management and zombie-killing in views, regions and layouts</li>
+<li>Event-driven architecture with Backbone.Wreqr.EventAggregator</li>
+<li>Flexible, "as-needed" architecture allowing you to pick and choose what you need</li>
+<li>And much, much more</li>
+</ul>
+
+<p>In this example I will take the structure of libraries and dependencies explained in the blog entry <a target="_blank" href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a> to create a MarionetteJS application.</p>
+
+<h1>1. Router Module.</h1>
+
+<p>MarionetteJS  implements the object <a target="_blank" href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.approuter.md">Marionette.AppRouter</a> that allows you to define the paths that respond to your application. Using <a target="_blank" href="http://requirejs.org/">RequireJS</a> we can create a module that defines an object for our routes, also allows us to create multiple  Route objects that can be instantiated for other applications by convenience.</p>
+
+<p>In our application we create a folder where modules live, named modules. See an example definition of a Route.</p>
+
+<pre><code>define(["marionette"], function (Marionette) {
+  var Router = Marionette.AppRouter.extend({
+    appRoutes: {
+      "": "home",
+    },
+    /* standard routes can be mixed with appRoutes/Controllers above */
+    routes : {
+      "hello/:username": "helloBuddy"
+    },
+    helloBuddy : function (buddy) {
+      // Without controller the routing functions live in Router object
+      alert("Hello " + buddy);
+    }
+  });
+ 
+  return Router;
+});
+</code></pre>
+
+<p>As you can see the code has an anonymus definition that returns a Router object, which then will be required for our application.</p>
+
+<p>Then we must define the properties that are response functions of our application routes.</p>
+
+<p><em>AppRoutes</em>: Property that allows the definition of routes with convention: URL : Method Name, the method must be defined in the Controller module that is associated with the Route within the application. This option allows the response functions change dramatically, depending on the controller being involved in Route.</p>
+
+<p><em>routes</em>: Property that defines routes, but unlike the previous methods will be defined within the Router object. This option ensures that certain (s) routes have a specific desired behavior.</p>
+
+<p>Both properties can be used in the same definition without problem, but the routes should not be repeated.</p>
+
+<p>When the application starts the Router indicate which methods are executed in response to a route visited by a user.</p>
+
+<p>In the definition of Route we use the property routes with dynamic parameters. in the  route hello:username, username is a dynamic value passed as a parameter to the method of response to the route.</p>
+
+<h2>2. Controller Module.</h2>
+
+<p>In the same way we did  for Routing will create a module for the controller, as shown below</p>
+
+<pre><code>define(["marionette"], function (Marionette) {
+ 
+    var Controller = Marionette.Controller.extend({
+        initialize : function(options) {
+             //TODO: code to initialize
+         },
+        start: function() {
+            //TODO: code to start
+        },
+ 
+        /**
+         * Initialized on start, without hash
+         * @method
+         */
+         home :  function () {
+            alert('Hello Marionette');
+        },
+    });
+ 
+    return Controller;
+});
+</code></pre>
+
+<p>This module is anonymous and extend the <a target="_blank" href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.controller.md">Marionette.Controller</a> object as seen have initialize and start methods to perform tasks that are required at the time of the creation of the controller.</p>
+
+<p>Then you must define the properties that are response functions of our application routes. In our case we define the hello method.</p>
+
+<h2>3. Invoking Controller  and Router</h2>
+
+<p>When we declare our application we load the objects that define the Router and Controller, as shown below.</p>
+
+<pre><code>// Loading dependences and module to execute Marionette App
+require( ["marionette","../modules/AppRouter", "../modules/AppController"], function (Marionette, AppRouter, AppController) {
+    // set up the app instance
+    var MyApp = new Marionette.Application();
+ 
+    // initialize the app controller
+    var controller = new AppController({});
+ 
+    // initialize the app router
+    MyApp.addInitializer(function(options) {
+        // initialize the router
+        var router = new AppRouter({
+          controller : controller
+        });
+    });
+ 
+    MyApp.on("initialize:after", function(){
+      // Start Backbone history a necessary step for bookmarkable URL's
+      Backbone.history.start();
+    });
+ 
+    MyApp.start({});
+});
+</code></pre>
+
+<p>Although Route and Controller modules were anonymous, using RequireJS we can do load modules using the relative path of the modules as shown in detail in the next line.</p>
+
+<pre><code>require( ["marionette","../modules/AppRouter", "../modules/AppController"], function (Marionette, AppRouter, AppController) {
+</code></pre>
+
+<p>The returned objects are passed as a parameter to the anonymous function that defines the application.</p>
+
+<p>As seen proceeds to create an instance of the Controller object, which will be later used in the definition of the Router.</p>
+
+<pre><code>// initialize the app controller
+var controller = new AppController({});
+</code></pre>
+
+<p>In the initialization of our MarionetteJS application, we create the Router using the Controller.</p>
+
+<pre><code>// initialize the app router
+MyApp.addInitializer(function(options) {
+  // initialize the router
+  var router = new AppRouter({
+    controller : controller
+  });
+});
+</code></pre>
+
+<p>Finally after finishing the initialization of our application should be activated BackboneJS history of what that will activate the process of routing.</p>
+
+<pre><code>MyApp.on("initialize:after", function(){
+  // Start Backbone history a necessary step for bookmarkable URL's
+  Backbone.history.start();
+});
+</code></pre>
+
+<p>When it loads the application we will getan alert with the message "Hello Marionette" and if you change the URL to index.html#hello/ enzo you will get a resul similar to the following output.</p>
+
+<p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-06-02</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Ajax, Javascript, RequireJS, MarionetteJS, BackboneJS
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    </body>
+</html>

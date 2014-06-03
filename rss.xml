@@ -6,6 +6,167 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Routing & Controlling with MarionetteJS</title>
+                <description><![CDATA[<p><a target="_blank" href="http://marionettejs.com/">MarionetteJS</a>  is a layer that sits on <a target="_blank" href="http://backbonejs.org">BackboneJS</a> to create scalable and professional applications.</p>
+
+<p>Some features of MarionetteJS are :</p>
+
+<ul>
+<li>Scalable: applications are built in modules, and with event-driven architecture</li>
+<li>Sensible defaults: Underscore templates are used for view rendering</li>
+<li>Easily modifiable: make it work with your application's specific needs</li>
+<li>Reduce boilerplate for views, with specialized view types</li>
+<li>Build on a modular architecture with an Application and modules that attach to it</li>
+<li>Compose your application's visuals at runtime, with the Region and Layout objects</li>
+<li>Nested views and layouts within visual regions</li>
+<li>Built-in memory management and zombie-killing in views, regions and layouts</li>
+<li>Event-driven architecture with Backbone.Wreqr.EventAggregator</li>
+<li>Flexible, "as-needed" architecture allowing you to pick and choose what you need</li>
+<li>And much, much more</li>
+</ul>
+
+<p>In this example I will take the structure of libraries and dependencies explained in the blog entry <a target="_blank" href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a> to create a MarionetteJS application.</p>
+
+<h1>1. Router Module.</h1>
+
+<p>MarionetteJS  implements the object <a target="_blank" href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.approuter.md">Marionette.AppRouter</a> that allows you to define the paths that respond to your application. Using <a target="_blank" href="http://requirejs.org/">RequireJS</a> we can create a module that defines an object for our routes, also allows us to create multiple  Route objects that can be instantiated for other applications by convenience.</p>
+
+<p>In our application we create a folder where modules live, named modules. See an example definition of a Route.</p>
+
+<pre><code>define(["marionette"], function (Marionette) {
+  var Router = Marionette.AppRouter.extend({
+    appRoutes: {
+      "": "home",
+    },
+    /* standard routes can be mixed with appRoutes/Controllers above */
+    routes : {
+      "hello/:username": "helloBuddy"
+    },
+    helloBuddy : function (buddy) {
+      // Without controller the routing functions live in Router object
+      alert("Hello " + buddy);
+    }
+  });
+ 
+  return Router;
+});
+</code></pre>
+
+<p>As you can see the code has an anonymus definition that returns a Router object, which then will be required for our application.</p>
+
+<p>Then we must define the properties that are response functions of our application routes.</p>
+
+<p><em>AppRoutes</em>: Property that allows the definition of routes with convention: URL : Method Name, the method must be defined in the Controller module that is associated with the Route within the application. This option allows the response functions change dramatically, depending on the controller being involved in Route.</p>
+
+<p><em>routes</em>: Property that defines routes, but unlike the previous methods will be defined within the Router object. This option ensures that certain (s) routes have a specific desired behavior.</p>
+
+<p>Both properties can be used in the same definition without problem, but the routes should not be repeated.</p>
+
+<p>When the application starts the Router indicate which methods are executed in response to a route visited by a user.</p>
+
+<p>In the definition of Route we use the property routes with dynamic parameters. in the  route hello:username, username is a dynamic value passed as a parameter to the method of response to the route.</p>
+
+<h2>2. Controller Module.</h2>
+
+<p>In the same way we did  for Routing will create a module for the controller, as shown below</p>
+
+<pre><code>define(["marionette"], function (Marionette) {
+ 
+    var Controller = Marionette.Controller.extend({
+        initialize : function(options) {
+             //TODO: code to initialize
+         },
+        start: function() {
+            //TODO: code to start
+        },
+ 
+        /**
+         * Initialized on start, without hash
+         * @method
+         */
+         home :  function () {
+            alert('Hello Marionette');
+        },
+    });
+ 
+    return Controller;
+});
+</code></pre>
+
+<p>This module is anonymous and extend the <a target="_blank" href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.controller.md">Marionette.Controller</a> object as seen have initialize and start methods to perform tasks that are required at the time of the creation of the controller.</p>
+
+<p>Then you must define the properties that are response functions of our application routes. In our case we define the hello method.</p>
+
+<h2>3. Invoking Controller  and Router</h2>
+
+<p>When we declare our application we load the objects that define the Router and Controller, as shown below.</p>
+
+<pre><code>// Loading dependences and module to execute Marionette App
+require( ["marionette","../modules/AppRouter", "../modules/AppController"], function (Marionette, AppRouter, AppController) {
+    // set up the app instance
+    var MyApp = new Marionette.Application();
+ 
+    // initialize the app controller
+    var controller = new AppController({});
+ 
+    // initialize the app router
+    MyApp.addInitializer(function(options) {
+        // initialize the router
+        var router = new AppRouter({
+          controller : controller
+        });
+    });
+ 
+    MyApp.on("initialize:after", function(){
+      // Start Backbone history a necessary step for bookmarkable URL's
+      Backbone.history.start();
+    });
+ 
+    MyApp.start({});
+});
+</code></pre>
+
+<p>Although Route and Controller modules were anonymous, using RequireJS we can do load modules using the relative path of the modules as shown in detail in the next line.</p>
+
+<pre><code>require( ["marionette","../modules/AppRouter", "../modules/AppController"], function (Marionette, AppRouter, AppController) {
+</code></pre>
+
+<p>The returned objects are passed as a parameter to the anonymous function that defines the application.</p>
+
+<p>As seen proceeds to create an instance of the Controller object, which will be later used in the definition of the Router.</p>
+
+<pre><code>// initialize the app controller
+var controller = new AppController({});
+</code></pre>
+
+<p>In the initialization of our MarionetteJS application, we create the Router using the Controller.</p>
+
+<pre><code>// initialize the app router
+MyApp.addInitializer(function(options) {
+  // initialize the router
+  var router = new AppRouter({
+    controller : controller
+  });
+});
+</code></pre>
+
+<p>Finally after finishing the initialization of our application should be activated BackboneJS history of what that will activate the process of routing.</p>
+
+<pre><code>MyApp.on("initialize:after", function(){
+  // Start Backbone history a necessary step for bookmarkable URL's
+  Backbone.history.start();
+});
+</code></pre>
+
+<p>When it loads the application we will getan alert with the message "Hello Marionette" and if you change the URL to index.html#hello/ enzo you will get a resul similar to the following output.</p>
+
+<p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
+                <pubDate>Mon, 02 Jun 2014 19:28:40 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
+            </item>
+                    <item>
                 <title>What is and how it works RequireJS</title>
                 <description><![CDATA[<p><a target="_blank" href="http://requirejs.org/">RequireJS</a> is a JavaScript library that allows us to isolate the components of our JS application as modules and resolve their dependencies.</p>
 
@@ -158,7 +319,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 09:42:12 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 19:28:40 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -182,7 +343,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 09:42:12 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 19:28:40 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -221,7 +382,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 09:42:12 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 19:28:40 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -239,7 +400,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 09:42:12 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 19:28:40 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
