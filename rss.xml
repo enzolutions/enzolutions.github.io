@@ -9,6 +9,14 @@
                 <title>Yeoman Generator: Marionette JS + Drupal</title>
                 <description><![CDATA[<p><a href="http://yeoman.io">Yeoman</a> <a href="http://marionettejs.com">MarionetteJS</a> + <a href="drupical.org">Drupal</a> generator</p>
 
+<p>This generator create a structured HTML 5 application generating modules using RequireJS, includes Grunt support to automate tasks.</p>
+
+<p>Compass is used to generate CSS using bootstrap-sass.</p>
+
+<p>The HTML 5 application is defined using a MVC pattern implemented with MarionetteJS and Backbone.Drupal for data model.</p>
+
+<p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
+
 <ul>
 <li><a href="#application-structure">Application Structure</a></li>
 <li><a href="#getting-started">Getting Started</a>
@@ -220,7 +228,7 @@
 </code></pre>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 22:27:22 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 22:48:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -381,7 +389,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 22:27:22 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 22:48:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -537,7 +545,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 22:27:22 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 22:48:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -561,7 +569,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 22:27:22 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 22:48:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -600,7 +608,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 22:27:22 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 22:48:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -618,7 +626,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 22:27:22 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 22:48:07 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
