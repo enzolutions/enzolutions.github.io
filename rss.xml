@@ -6,6 +6,224 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Yeoman Generator: Marionette JS + Drupal</title>
+                <description><![CDATA[<p><a href="http://yeoman.io">Yeoman</a> <a href="http://marionettejs.com">MarionetteJS</a> + <a href="drupical.org">Drupal</a> generator</p>
+
+<ul>
+<li><a href="#application-structure">Application Structure</a></li>
+<li><a href="#getting-started">Getting Started</a>
+
+<ul>
+<li><a href="#install-generator">Install Generator</a></li>
+<li><a href="#create-a-marionette-drupal-project">Create a Marionett + Drupal Project</a></li>
+<li><a href="#execute-sample-application">Execute Sample Application</a></li>
+<li><a href="#integration-with-grunt">Integration with Grunt</a></li>
+</ul></li>
+<li><a href="#scaffolding">Scaffolding</a></li>
+<li><a href="#todo">ToDo</a></li>
+<li><a href="#known-issues">Known Issues</a></li>
+</ul>
+
+<p><a class="anchor" name="application-structure"></a></p>
+
+<h2>Application Structure</h2>
+
+<pre><code>├── Gruntfile.js
+├── bower.json
+├── node_modules
+├── package.json
+└── web ( Configurable: web is recommended)
+    ├── 404.html
+    ├── favicon.ico
+    ├── images
+    ├── index.html
+    ├── js
+        ├── scripts (application scripts)
+    ├── models
+    ├── robots.txt
+    ├── scripts
+    ├── styles
+    ├── templates
+    ├── vendor ( Configurable: vendor is recommended)
+    └── views
+</code></pre>
+
+<p><a class="anchor" name="getting-started"></a></p>
+
+<h2>Getting Started</h2>
+
+<p><a class="anchor" name="install-generator"></a></p>
+
+<h3>Install Generator</h3>
+
+<p>First make sure you have Node, Npm, Yeoman, Bower, Mocha, phantomJS and Grunt installed.</p>
+
+<p>Visit nodejs.org to install node and NPM</p>
+
+<p>Install phantomJS with:</p>
+
+<pre><code class="bash">$ brew install phantomjs
+</code></pre>
+
+<p>Or visit http://phantomjs.org/</p>
+
+<p>To install Yeoman, Bower and Grunt run:</p>
+
+<pre><code class="bash">$ npm install -g yo grunt-cli bower
+</code></pre>
+
+<p>Install mocha-phantomjs:</p>
+
+<pre><code class="bash">$ npm install -g mocha-phantomjs
+</code></pre>
+
+<p>Install mocha generator:</p>
+
+<pre><code class="bash">$ npm install -g generator-mocha-amd
+</code></pre>
+
+<p>Install Marionette Drupal generator</p>
+
+<pre><code class="bash">$ npm install -g generator-marionette-drupal
+</code></pre>
+
+<p><a class="anchor" name="create-a-marionette-drupal-project"></a></p>
+
+<h3>Create a Marionette Drupal project</h3>
+
+<p>Finally, initiate the generator in a empty folder</p>
+
+<pre><code class="bash">$ yo marionette-drupal
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/generator-marionette-drupal/master/images/yo_marionette_drupal_generator.png" alt="yeoman generator" title="yeoman generator" /></p>
+
+<p>You have to define where do you want the app installed <em>web</em> is recommended, also you have to define where do you want the Bower components installed <em>vendor</em> is recommended.</p>
+
+<p><a class="anchor" name="execute-sample-application"></a></p>
+
+<h3>Execute sample application</h3>
+
+<p>The generator create a simple sample application using an empty model, simple view and render without region.</p>
+
+<p>To execute the sample application you can use the <a href="http://php.net/manual/en/features.commandline.webserver.php">PHP Built-in web server</a> executing the following command.</p>
+
+<pre><code class="bash">$ php -S localhost:8080
+</code></pre>
+
+<p>After execute that command, you just need open the URL http://localhost:8080 and you will see a similar result as shown in following image.</p>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/generator-marionette-drupal/master/images/you_marionette_drupal_sample_app.png" alt="yeoman sample application" title="yeoman sample application" /></p>
+
+<p>The objetive of this sample application is just demostrate the environment is ready to work and you can use the <a href="#scaffolding">Scaffolding</a> commands to build your application.</p>
+
+<p><a class="anchor" name="integration-with-grunt"></a></p>
+
+<h3>Integration with Grunt</h3>
+
+<p>This generator provide a initial Grunt file to execute minimal tasks, you can run all tasks available with following command.</p>
+
+<pre><code class="bash">$ grunt
+</code></pre>
+
+<p>If you prefer you can execute any specific command among listed below.</p>
+
+<h4>Concat</h4>
+
+<pre><code class="bash">$ grunt contact
+</code></pre>
+
+<p>Enable concat all JS files.</p>
+
+<p>Todo: Configure the proper JS files and enable CSS files</p>
+
+<h4>Uglify</h4>
+
+<pre><code class="bash">$ grunt uglify
+</code></pre>
+
+<p>Minify JS file combined in Contact tasks.</p>
+
+<p>Todo: Configure minify for CSS files.</p>
+
+<h4>Imagemin</h4>
+
+<pre><code class="bash">$ grunt imagemin
+</code></pre>
+
+<p>Optimize images in your project.</p>
+
+<h4>Compass</h4>
+
+<pre><code class="bash">$ grunt compass
+</code></pre>
+
+<p>Enable process SASS files to generate CSS files in your project. This project include <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a></p>
+
+<h4>Watch</h4>
+
+<pre><code class="bash">$ grunt watch
+</code></pre>
+
+<p>Monitor when SASS files are modified to generate new CSS files.</p>
+
+<p><a class="anchor" name="scaffolding"></a></p>
+
+<h2>Scaffolding</h2>
+
+<h3>Generate a template</h3>
+
+<pre><code class="bash">$ yo marionette-drupal:tmpl name
+</code></pre>
+
+<p>This command will create an empty template inside application folder [app_folder]/<em>templates</em></p>
+
+<h3>Generate a Model</h3>
+
+<pre><code class="bash">$ yo marionette-drupal:model name
+</code></pre>
+
+<p>This command will create a simple Backbone module to be used in combination with a View</p>
+
+<h3>Generate a View</h3>
+
+<pre><code class="bash">$ yo marionette-drupal:view name [--with-template]
+</code></pre>
+
+<p>This command will create a Marionette ItemView, optionally is possible create a template with the same name of view auto related with this template.</p>
+
+<p>When a template is related with a view, Twig.js is used to render the template.</p>
+
+<p><a class="anchor" name="todo"></a></p>
+
+<h2>ToDO</h2>
+
+<ul>
+<li>Improve Drupal Model Scaffolding command</li>
+<li>Improve View Scaffolding command</li>
+<li>Create Drupal Collection Scaffolding command</li>
+<li>Create Region Scaffolding command</li>
+<li>Create Layout Scaffolding command</li>
+</ul>
+
+<p><a class="anchor" name="known-issues"></a></p>
+
+<h2>Known Issues</h2>
+
+<p>When  you are trying to create you application, the combination of dependencies between packages require you define what version os underscore you want to install and you will get a message similar to following image.</p>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/generator-marionette-drupal/master/images/yo_marionette_drupal_resolving_conflict.png" alt="yeoman generator conflicts" title="yeoman generator conflicts" /></p>
+
+<p>If you only see the question mark symbol, without any indication, you need to change the log level of npm using the folowing command.</p>
+
+<pre><code>$ npm config set loglevel error
+</code></pre>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
+                <pubDate>Mon, 16 Jun 2014 22:27:22 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
+            </item>
+                    <item>
                 <title>Routing & Controlling with MarionetteJS</title>
                 <description><![CDATA[<p><a target="_blank" href="http://marionettejs.com/">MarionetteJS</a>  is a layer that sits on <a target="_blank" href="http://backbonejs.org">BackboneJS</a> to create scalable and professional applications.</p>
 
@@ -163,7 +381,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 14:43:53 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 22:27:22 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -319,7 +537,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 14:43:53 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 22:27:22 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -343,7 +561,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 14:43:53 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 22:27:22 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -382,7 +600,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 14:43:53 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 22:27:22 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -400,7 +618,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 14:43:53 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 22:27:22 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
