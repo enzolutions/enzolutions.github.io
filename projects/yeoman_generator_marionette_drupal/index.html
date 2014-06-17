@@ -17,7 +17,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Yeoman Generator: Marionette JS + Drupal">
 <meta property="og:description" content="Yeoman generator to create app with Marionette JS & Drupal.">
-<meta property="og:url" content="http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/">
+<meta property="og:url" content="http://enzolutions.com/projects/yeoman_generator_marionette_drupal/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -114,22 +114,15 @@
     </div>
 </div>
             <div class="container">
-                    <article class="post">
+                    <article class="project">
     <header>
         <h1>
-            <a href="http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/">Yeoman Generator: Marionette JS + Drupal</a>
+            Yeoman Generator: Marionette JS + Drupal
         </h1>
     </header>
 
-    
+
     <p><a href="http://yeoman.io">Yeoman</a> <a href="http://marionettejs.com">MarionetteJS</a> + <a href="drupical.org">Drupal</a> generator</p>
-
-<p>Today I release the version 0.1.0-beta of <a href="http://enzolutions.com/projects/yeoman_generator_marionette_drupal">Yeoman Generator: Marionette + Drupal</a>.</p>
-
-<p>If you want to create your own version of this generator, you can fork or download my version at</p>
-
-<pre><code>$ git clone git@github.com:enzolutions/generator-marionette-drupal.git
-</code></pre>
 
 <p>This generator create a structured HTML 5 application generating modules using RequireJS, includes Grunt support to automate tasks.</p>
 
@@ -139,34 +132,243 @@
 
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 
+<ul>
+<li><a href="#application-structure">Application Structure</a></li>
+<li><a href="#getting-started">Getting Started</a>
+
+<ul>
+<li><a href="#install-generator">Install Generator</a></li>
+<li><a href="#create-a-marionette-drupal-project">Create a Marionett + Drupal Project</a></li>
+<li><a href="#execute-sample-application">Execute Sample Application</a></li>
+<li><a href="#integration-with-grunt">Integration with Grunt</a></li>
+</ul></li>
+<li><a href="#scaffolding">Scaffolding</a></li>
+<li><a href="#todo">ToDo</a></li>
+<li><a href="#known-issues">Known Issues</a></li>
+</ul>
+
+<p><a class="anchor" name="application-structure"></a></p>
+
+<h2>Application Structure</h2>
+
+<pre><code>├── Gruntfile.js
+├── bower.json
+├── node_modules
+├── package.json
+└── web ( Configurable: web is recommended)
+    ├── 404.html
+    ├── favicon.ico
+    ├── images
+    ├── index.html
+    ├── js
+        ├── scripts (application scripts)
+    ├── models
+    ├── robots.txt
+    ├── scripts
+    ├── styles
+    ├── templates
+    ├── vendor ( Configurable: vendor is recommended)
+    └── views
+</code></pre>
+
+<p><a class="anchor" name="getting-started"></a></p>
+
+<h2>Getting Started</h2>
+
+<p><a class="anchor" name="install-generator"></a></p>
+
+<h3>Install Generator</h3>
+
+<p>First make sure you have Node, Npm, Yeoman, Bower, Mocha, phantomJS and Grunt installed.</p>
+
+<p>Visit nodejs.org to install node and NPM</p>
+
+<p>Install phantomJS with:</p>
+
+<pre><code class="bash">$ brew install phantomjs
+</code></pre>
+
+<p>Or visit http://phantomjs.org/</p>
+
+<p>To install Yeoman, Bower and Grunt run:</p>
+
+<pre><code class="bash">$ npm install -g yo grunt-cli bower
+</code></pre>
+
+<p>Install mocha-phantomjs:</p>
+
+<pre><code class="bash">$ npm install -g mocha-phantomjs
+</code></pre>
+
+<p>Install mocha generator:</p>
+
+<pre><code class="bash">$ npm install -g generator-mocha-amd
+</code></pre>
+
+<p>Install Marionette Drupal generator</p>
+
+<pre><code class="bash">$ npm install -g generator-marionette-drupal
+</code></pre>
+
+<p><a class="anchor" name="create-a-marionette-drupal-project"></a></p>
+
+<h3>Create a Marionette Drupal project</h3>
+
+<p>Finally, initiate the generator in a empty folder</p>
+
+<pre><code class="bash">$ yo marionette-drupal
+</code></pre>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/generator-marionette-drupal/master/images/yo_marionette_drupal_generator.png" alt="yeoman generator" title="yeoman generator" /></p>
+
+<p>You have to define where do you want the app installed <em>web</em> is recommended, also you have to define where do you want the Bower components installed <em>vendor</em> is recommended.</p>
+
+<p><a class="anchor" name="execute-sample-application"></a></p>
+
+<h3>Execute sample application</h3>
+
+<p>The generator create a simple sample application using an empty model, simple view and render without region.</p>
+
+<p>To execute the sample application you can use the <a href="http://php.net/manual/en/features.commandline.webserver.php">PHP Built-in web server</a> executing the following command.</p>
+
+<pre><code class="bash">$ php -S localhost:8080
+</code></pre>
+
+<p>After execute that command, you just need open the URL http://localhost:8080 and you will see a similar result as shown in following image.</p>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/generator-marionette-drupal/master/images/you_marionette_drupal_sample_app.png" alt="yeoman sample application" title="yeoman sample application" /></p>
+
+<p>The objetive of this sample application is just demostrate the environment is ready to work and you can use the <a href="#scaffolding">Scaffolding</a> commands to build your application.</p>
+
+<p><a class="anchor" name="integration-with-grunt"></a></p>
+
+<h3>Integration with Grunt</h3>
+
+<p>This generator provide a initial Grunt file to execute minimal tasks, you can run all tasks available with following command.</p>
+
+<pre><code class="bash">$ grunt
+</code></pre>
+
+<p>If you prefer you can execute any specific command among listed below.</p>
+
+<h4>Concat</h4>
+
+<pre><code class="bash">$ grunt contact
+</code></pre>
+
+<p>Enable concat all JS files.</p>
+
+<p>Todo: Configure the proper JS files and enable CSS files</p>
+
+<h4>Uglify</h4>
+
+<pre><code class="bash">$ grunt uglify
+</code></pre>
+
+<p>Minify JS file combined in Contact tasks.</p>
+
+<p>Todo: Configure minify for CSS files.</p>
+
+<h4>Imagemin</h4>
+
+<pre><code class="bash">$ grunt imagemin
+</code></pre>
+
+<p>Optimize images in your project.</p>
+
+<h4>Compass</h4>
+
+<pre><code class="bash">$ grunt compass
+</code></pre>
+
+<p>Enable process SASS files to generate CSS files in your project. This project include <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a></p>
+
+<h4>Watch</h4>
+
+<pre><code class="bash">$ grunt watch
+</code></pre>
+
+<p>Monitor when SASS files are modified to generate new CSS files.</p>
+
+<p><a class="anchor" name="scaffolding"></a></p>
+
+<h2>Scaffolding</h2>
+
+<h3>Generate a template</h3>
+
+<pre><code class="bash">$ yo marionette-drupal:tmpl name
+</code></pre>
+
+<p>This command will create an empty template inside application folder [app_folder]/<em>templates</em></p>
+
+<h3>Generate a Model</h3>
+
+<pre><code class="bash">$ yo marionette-drupal:model name
+</code></pre>
+
+<p>This command will create a simple Backbone module to be used in combination with a View</p>
+
+<h3>Generate a View</h3>
+
+<pre><code class="bash">$ yo marionette-drupal:view name [--with-template]
+</code></pre>
+
+<p>This command will create a Marionette ItemView, optionally is possible create a template with the same name of view auto related with this template.</p>
+
+<p>When a template is related with a view, Twig.js is used to render the template.</p>
+
+<p><a class="anchor" name="todo"></a></p>
+
+<h2>ToDO</h2>
+
+<ul>
+<li>Improve Drupal Model Scaffolding command</li>
+<li>Improve View Scaffolding command</li>
+<li>Create Drupal Collection Scaffolding command</li>
+<li>Create Region Scaffolding command</li>
+<li>Create Layout Scaffolding command</li>
+</ul>
+
+<p><a class="anchor" name="known-issues"></a></p>
+
+<h2>Known Issues</h2>
+
+<p>When  you are trying to create you application, the combination of dependencies between packages require you define what version os underscore you want to install and you will get a message similar to following image.</p>
+
+<p><img src="https://raw.githubusercontent.com/enzolutions/generator-marionette-drupal/master/images/yo_marionette_drupal_resolving_conflict.png" alt="yeoman generator conflicts" title="yeoman generator conflicts" /></p>
+
+<p>If you only see the question mark symbol, without any indication, you need to change the log level of npm using the folowing command.</p>
+
+<pre><code>$ npm config set loglevel error
+</code></pre>
+
 
     <footer>
-        <p>
-            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-06-16</time>
-        </p>
+      <div class="col-md-12">
+         <ul class="list-unstyled">
+                <li>
+              <i class="fa fa-tags"></i>
+              Ajax, Javascript, RequireJS, MarionetteJS, BackboneJS, MarionetteJS, Drupal
+          </li>
+                      <li>
+              <i class="fa fa-folder"></i>
+              projects
+          </li>
+        </ul>
+      </div>
+    </footer>
 
-                <ul class="list-unstyled">
-                            <li>
-                    <i class="fa fa-tags"></i>
-                    Ajax, Javascript, RequireJS, MarionetteJS, BackboneJS, Drupal
-                </li>
-                                        <li>
-                    <i class="fa fa-folder"></i>
-                    articles
-                </li>
-                    </ul>
-            </footer>
-    
-                        <section>
-                <h3>Comments</h3>
-                <div id="disqus_thread"></div>
-                <noscript>
-                    Please enable JavaScript to view the
-                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-                </noscript>
-                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            </section>
-            </article>
+
+          <section>
+  <h3>Comments</h3>
+  <div id="disqus_thread"></div>
+  <noscript>
+      Please enable JavaScript to view the
+      <a target="_blank" href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  <a target="_blank" href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </article>
             </div>
         </div>
 
