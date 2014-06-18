@@ -6,6 +6,233 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Introduction to Grunt</title>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/grunt-logo.png"/> Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.</p>
+
+<p>From my own experience I know how difficult it is to have enough time to learn all these Sexy tools, I'll try to explain it in the most practical and easiest way possible.</p>
+
+<h2>What's Grunt.?</h2>
+
+<p>Grunt is a tool to automate tasks is our web projects. The idea is that all of those routine tasks that we do in our projects Grunt make them for us. Among the most common tasks are:</p>
+
+<ul>
+<li>Concat files (CSS, JS, etc)</li>
+<li>Minify files (CSS, JS, etc)</li>
+<li>Optimize images.</li>
+<li>Compilation (SASS -> CSS and others)</li>
+<li>Unit Test</li>
+</ul>
+
+<p>Each of these tasks is implemented by a Grunt plugin, which today has nearly three thousand plugins, you can see the full list of plugins in <a targe="_blank" href="http://gruntjs.com/plugins">http://gruntjs.com/plugins</a>.</p>
+
+<p>Grunt is built with is Javascript  and require <a target="_blank" href="http://nodejs.org/">NodeJS</a> to be executed which makes Grunt multi platform.</p>
+
+<h2>How install Grunt.</h2>
+
+<p>As I said earlier Grunt uses NodeJS to run, but you don't need to know anything about NodeJS to use Grunt, is only required to install and execute, it in the same way we you don't need to know Java to run programs that use the Java JRE.</p>
+
+<p>The first is to install NodeJS, you can find an installer for your platform at <a target="_blank" href="http://nodejs.org/download/">http://nodejs.org/download/</a>.</p>
+
+<p>After install NodeJS we will have NPM (Node Packaged Modules) available, NPM allows us to install packages, all packages available are listed in <a target="_blank" href="https://www.npmjs.org">https://www.npmjs.org</a>. Right now there are almost 80,000 packages and one of them is Grunt.</p>
+
+<p>Now we have to install the package <a target="_blank" href="https://www.npmjs.org/package/grunt-cli">grunt-cli</a>, grunt-cli is a command line interface to interact with grunt. Use the following command to install it.</p>
+
+<pre><code>npm install grunt-cli -g
+</code></pre>
+
+<p>The -g option indicates that the package will be install in overall system instead of local.</p>
+
+<p>Now to install the <a target="_blank" href="https://www.npmjs.org/package/grunt">grunt</a> package to execute tasks we have two options.</p>
+
+<h3>Defining package.json</h3>
+
+<p>In our application we need to create a file named <em>package.json</em> that will read by the npm command:</p>
+
+<pre><code>{
+  "name": "example-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
+</code></pre>
+
+<p>Then run the command:</p>
+
+<pre><code>$ npm install
+</code></pre>
+
+<p>The previous command will read and process the package.json file; installing grunt and his dependencies. Generating an output similar to the following list:</p>
+
+<pre><code>grunt@0.4.5 node_modules/grunt
+├── which@1.0.5
+├── dateformat@1.0.2-1.2.3
+├── eventemitter2@0.4.13
+├── getobject@0.1.0
+├── rimraf@2.2.8
+├── colors@0.6.2
+├── hooker@0.2.3
+├── async@0.1.22
+├── grunt-legacy-util@0.2.0
+├── exit@0.1.2
+├── lodash@0.9.2
+├── coffee-script@1.3.3
+├── underscore.string@2.2.1
+├── iconv-lite@0.2.11
+├── nopt@1.0.10 (abbrev@1.0.5)
+├── minimatch@0.2.14 (sigmund@1.0.0, lru-cache@2.5.0)
+├── grunt-legacy-log@0.1.1 (underscore.string@2.3.3, lodash@2.4.1)
+├── findup-sync@0.1.3 (lodash@2.4.1, glob@3.2.11)
+├── glob@3.1.21 (inherits@1.0.0, graceful-fs@1.2.3)
+└── js-yaml@2.0.5 (esprima@1.0.4, argparse@0.1.15)
+</code></pre>
+
+<p>Grunt and his dependencies remain within the node_modules folder and our directory tree will be similar to the following list:</p>
+
+<pre><code>$ tree -L 3
+.
+├── node_modules
+│   └── grunt
+│       ├── CONTRIBUTING.md
+│       ├── LICENSE-MIT
+│       ├── README.md
+│       ├── appveyor.yml
+│       ├── internal-tasks
+│       ├── lib
+│       ├── node_modules
+│       └── package.json
+└── package.json
+</code></pre>
+
+<h3>Generate dependencies in package.json</h3>
+
+<p>If you do not know which version of Grunt we need, we can request to NPM to auto generated grunt dependencies and store in package.json file. We have to create a create a generic package.json file as shown below:</p>
+
+<pre><code>{
+  "name": "example-project",
+  "version": "0.1.0",
+  "devDependencies": {
+  }
+}
+</code></pre>
+
+<p>Now run the installation of grunt informing we want auto generate dependencies as shown in the following command:</p>
+
+<pre><code>$ npm install grunt --save-dev
+</code></pre>
+
+<p>After installing grunt and his dependencies our archive package.json will look similar to below:</p>
+
+<pre><code>{
+  "name": "example-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}
+</code></pre>
+
+<h2>How to create Grunt Tasks.</h2>
+
+<p>At this point we have everything you need to start building tasks you want to use, the first thing to do is create a Gruntfile.js file to define the tasks to automate.</p>
+
+<p>Let's check a minimum file Grunt.</p>
+
+<pre><code>'use strict';
+ 
+module.exports = function (grunt) {
+ 
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+    });
+ 
+    // Where we tell Grunt we plan to use some plug-ins.
+    //grunt.loadNpmTasks('grunt-contrib-xxxx');
+ 
+ 
+    // Where we tell Grunt what to do when we type "grunt" into the terminal.
+    //grunt.registerTask('default', ['xxxx']);
+};
+</code></pre>
+
+<p>As seen the file has 3 sections.</p>
+
+<ul>
+<li>Initconfig: In this area we define tasks to be execute by Grunt</li>
+<li>LoadNpmTask: You should make a proper load plugin for the tasks we wish to define.</li>
+<li>RegisterTask: We must register the tasks to be run, they can be less than defined tasks.</li>
+</ul>
+
+<h3>Install Grunt plugin.</h3>
+
+<p>As an example we will install the plugin <a target="_blank" href="https://github.com/gruntjs/grunt-contrib-concat">concat</a> to merge files, run the following command inside the folder of your project.</p>
+
+<pre><code>$ npm install grunt-contrib-concat --save-dev
+</code></pre>
+
+<p>The option - save-dev  amending package.json to add the dependency in file.</p>
+
+<h3>Plugin usage.</h3>
+
+<p>With the plugin concat installed, now we just have to configure in Gruntfile.js file as shown below.</p>
+
+<pre><code>'use strict';
+ 
+module.exports = function (grunt) {
+ 
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        concat: {
+            dist: {
+                src: [
+                    'js/libs/*.js', // All JS in the libs folder
+                    '/js/global.js'  // This specific file
+                ],
+                dest: '/js/build/production.js',
+            }
+        }
+    });
+ 
+    // Where we tell Grunt we plan to use some plug-ins.
+    grunt.loadNpmTasks('grunt-contrib-concat');
+ 
+    // Where we tell Grunt what to do when we type "grunt" into the terminal.
+    grunt.registerTask('default', ['concat']);
+};
+</code></pre>
+
+<p>With this definition we indicate where the files are and where we want the concatenate file be stored, then we load the NPM package and finally register the task.</p>
+
+<p>As you can see on the origin of the files to be concatenated we can use the special character * to define a large group of files.</p>
+
+<h3>Execute task.</h3>
+
+<p>To run the task we just use one of the following commands:</p>
+
+<pre><code>$ grunt
+ 
+$ grunt concat
+</code></pre>
+
+<p>The first command runs all available tasks and the second specifies the concat task, as we only have one tasks the result will be the same and we will get an output similar to the following.</p>
+
+<pre><code>Running "concat:dist" (concat) task
+File "web/js/build/production.js" created.
+ 
+Done, without errors.
+</code></pre>
+
+<p>We can continue increasing our tasks, for instance use output of concat to add a task to minify the file.</p>
+
+<p>All depends on what you need, the limit are  plugins available in grunt (nearly 3,000) and the needs of your project.</p>
+
+<p>I hope you have been to his liking.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
+                <pubDate>Wed, 18 Jun 2014 10:25:59 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
+            </item>
+                    <item>
                 <title>Yeoman Generator: Marionette JS + Drupal</title>
                 <description><![CDATA[<p><a href="http://yeoman.io">Yeoman</a> <a href="http://marionettejs.com">MarionetteJS</a> + <a href="drupical.org">Drupal</a> generator</p>
 
@@ -25,7 +252,7 @@
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 23:10:50 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 10:25:59 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -186,7 +413,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 23:10:50 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 10:25:59 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -342,7 +569,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 23:10:50 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 10:25:58 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -366,7 +593,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 23:10:50 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 10:25:58 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -405,7 +632,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 23:10:50 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 10:25:58 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -423,7 +650,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 23:10:50 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 10:25:58 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
