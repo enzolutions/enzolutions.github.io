@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Blog</title>
+<title>How to configure MySQL to import large database</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home of crazy things I do just for fun">
+<meta name="description" content="Intructions to prepare MySQL to import large databases">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Blog">
-    <meta name="twitter:description" content="Home of crazy things I do just for fun">
+    <meta name="twitter:title" content="How to configure MySQL to import large database">
+    <meta name="twitter:description" content="Intructions to prepare MySQL to import large databases">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Home of crazy things I do just for fun">
-<meta property="og:url" content="http://enzolutions.com/">
+<meta property="og:title" content="How to configure MySQL to import large database">
+<meta property="og:description" content="Intructions to prepare MySQL to import large databases">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -114,67 +114,71 @@
     </div>
 </div>
             <div class="container">
-                                <article class="post">
+                    <article class="post">
     <header>
         <h1>
-            <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">What is Cross-Origin Resource Sharing (CORS)</a>
+            <a href="http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/">How to configure MySQL to import large database</a>
         </h1>
     </header>
 
-         Nowdays is pretty common to transfer data between web applications via Web Services to  clients that require information on different interfaces such as REST, XMLRPC, JSON, JSON-RPC, SOAP and others.
-
-Almost all sites to...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">Read More</a>
-      </p>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">How to configure MySQL to import large database</a>
-        </h1>
-    </header>
+    <p>On many occasions we need to install in our local machine production sites for development or just for faster debugging, this entails that we need to import very large databases.</p>
 
-         On many occasions we need to install in our local enviroment a copy of production sites for development or debugging process, this entails that need to import large databases.
+<p>The most common mistake is that you can not import the database, returning an error that communication with the <a target="_blank" href="http://www.mysql.com/">MySQL</a> server has been lost, as shown below.</p>
 
-The most common error is that you cannot im...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">Read More</a>
-      </p>
+<pre><code>$ /mysql -f -uroot -proot mydb -h 127.0.0.1 &lt; ~/Downloads/prod-mysql-2013-01-29.sql
+ERROR 2006 (HY000) at line 6565: MySQL server has gone away
+$
+</code></pre>
+
+<p>To fix this error you must change the default configuration of MySQL, if you do not know the location of this file can use the command shown below to determine at which locations MySQL expects to find the configuration.</p>
+
+<pre><code>$ ./mysql --help | grep my.cnf
+/etc/my.cnf /etc/mysql/my.cnf /Applications/MAMP/conf/my.cnf ~/.my.cnf
+$
+</code></pre>
+
+<p>In my case I have MySQL provided by <a target="_blank" href="http://www.mamp.info">MAMP</a>, so I need create a file in the location /Applications/MAMP/conf/my.cnf, based on a configuration for large databases which is available in the documentation MySQL and should be available in the path <em>/usr/share/doc/mysql-server-5.0/examples/my-large.cnf.gz</em>.</p>
+
+<p>I will apply two changes to enable big importations.</p>
+
+<ul>
+<li>Remover Directive # skip-locking</li>
+<li>Increase max_allowed_packet = 100M</li>
+</ul>
+
+<p>Then you just need restart the MySQL server and try to import the database again.</p>
+
+<p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-07-03</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    MySQL, Import
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">My blog is alive again!</a>
-        </h1>
-    </header>
-
-         Hello folks.
-
-After many years without touch my personal website, I took the decision to put it back online.
-
-Recently I have been writing technical documentation in Spanish in the website 7Sabores.com. If you are wonder...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">Read More</a>
-      </p>
-    
-    </article>
-    
-    
-    <ul class="pagination">
-          <li>
-                <a class="prev" href="http://enzolutions.com/">
-                    &laquo; Newer
-                </a>
-            </li>
-    
-                  <li><a href="http://enzolutions.com/blog/">1</a></li>
-                        <li><span class="active">2</span></li>
-          
-      </ul>
-
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
 
@@ -254,6 +258,27 @@ Recently I have been writing technical documentation in Spanish in the website 7
                         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             
-                    </footer>
-    </body>
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
 </html>

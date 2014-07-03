@@ -6,6 +6,41 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to configure MySQL to import large database</title>
+                <description><![CDATA[<p>On many occasions we need to install in our local machine production sites for development or just for faster debugging, this entails that we need to import very large databases.</p>
+
+<p>The most common mistake is that you can not import the database, returning an error that communication with the <a target="_blank" href="http://www.mysql.com/">MySQL</a> server has been lost, as shown below.</p>
+
+<pre><code>$ /mysql -f -uroot -proot mydb -h 127.0.0.1 &lt; ~/Downloads/prod-mysql-2013-01-29.sql
+ERROR 2006 (HY000) at line 6565: MySQL server has gone away
+$
+</code></pre>
+
+<p>To fix this error you must change the default configuration of MySQL, if you do not know the location of this file can use the command shown below to determine at which locations MySQL expects to find the configuration.</p>
+
+<pre><code>$ ./mysql --help | grep my.cnf
+/etc/my.cnf /etc/mysql/my.cnf /Applications/MAMP/conf/my.cnf ~/.my.cnf
+$
+</code></pre>
+
+<p>In my case I have MySQL provided by <a target="_blank" href="http://www.mamp.info">MAMP</a>, so I need create a file in the location /Applications/MAMP/conf/my.cnf, based on a configuration for large databases which is available in the documentation MySQL and should be available in the path <em>/usr/share/doc/mysql-server-5.0/examples/my-large.cnf.gz</em>.</p>
+
+<p>I will apply two changes to enable big importations.</p>
+
+<ul>
+<li>Remover Directive # skip-locking</li>
+<li>Increase max_allowed_packet = 100M</li>
+</ul>
+
+<p>Then you just need restart the MySQL server and try to import the database again.</p>
+
+<p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
+                <pubDate>Thu, 03 Jul 2014 07:48:05 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
+            </item>
+                    <item>
                 <title>Introduction to Grunt</title>
                 <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/grunt-logo.png"/> Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.</p>
 
@@ -229,7 +264,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 10:25:59 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -252,7 +287,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 10:25:59 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -413,7 +448,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 10:25:59 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -569,7 +604,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 10:25:58 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -593,7 +628,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 10:25:58 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -632,7 +667,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 10:25:58 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -650,7 +685,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 10:25:58 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 07:48:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
