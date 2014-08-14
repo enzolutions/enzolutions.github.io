@@ -6,6 +6,34 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Mi Tribu</title>
+                <description><![CDATA[<p>This is an oratory I did in Spanish for my son Axel to present to his classroom, he is coursing right now 3rd grade.</p>
+
+<p>¿Qué es ser Tico?</p>
+
+<p>Esta es una pregunta que puede ser fácil de responder para muchos, pero si lo piensan un poco mejor puede que no seamos 100% ticos en los que se entiende generalmente.</p>
+
+<p>¿Quien es más tico? un indio Cabécar de la zona de Talamanca o un niño recién nacido en San Carlos?, bueno todo depende de los ojos y la tolerancia con que se mire.</p>
+
+<p>Más del 95% de la población en Costa Rica puede rastrear sus ancestros no más allá de 500 años que fue la época de llegada de los españoles, bajo esta definición sólo los indígenas sin mezcla podrías ser denominados ticos.</p>
+
+<p>Lo curioso es que ellos mismos no se definen como ticos sino como miembros de su tribu, lo que me hace pensar que quizás es suficiente que nosotros sepamos a qué tribu pertenecemos.</p>
+
+<p>Yo, por ejemplo, soy un Tico algo particular, nací en Chepe para decirlo en tico, pero mis padres son colombianos, por lo que se podría decir que soy Colombiano, lo cual me conviene en términos de Fútbol pensando en James Rodríguez y demás jugadores de la Selección de Colombia que hicieron un buen papel en el mundial de Brasil.</p>
+
+<p>Los que negativamente dicen que no soy tico, les puedo decir que en toda mi vida solo he estado 2 semanas fuera de Costa Rica y siento este país mío, como el más tico de todos.</p>
+
+<p>Para mí el ser tico significa que lo acepte yo, y que así lo acepten los demás miembros de mi tribu que son mi familia, vecinos, compañeros de escuela y nuevas personas que se van integrando a mi vida.</p>
+
+<p>Por eso los invito a preocuparnos más en qué podemos hacer, para que nuestro país cada día sea mejor sin importar a qué tribu pertenecemos, porque a final de cuentas todos venimos siendo turistas en este lindo país</p>
+
+<p>Pura Vida.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
+                <pubDate>Thu, 14 Aug 2014 08:42:15 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
+            </item>
+                    <item>
                 <title>Introduction to Bower</title>
                 <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> Continuing with the serie "Hot &amp; Sexy tools" available these days for web developers started with the entry of Blog <a target="_blank" href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
 
@@ -126,7 +154,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 10:47:35 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -161,7 +189,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 10:47:35 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -388,7 +416,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 10:47:35 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -411,7 +439,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 10:47:35 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -572,7 +600,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 10:47:35 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -728,7 +756,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 10:47:35 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -752,7 +780,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 10:47:35 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -791,7 +819,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 10:47:35 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -809,7 +837,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 10:47:35 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 08:42:15 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
