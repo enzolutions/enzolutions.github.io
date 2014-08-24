@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Blog</title>
+<title>How to Generate TOC in Github/BitBucket projects</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home of crazy things I do just for fun">
+<meta name="description" content="Command to geerate TOC in Github/BitBucket projects.">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Blog">
-    <meta name="twitter:description" content="Home of crazy things I do just for fun">
+    <meta name="twitter:title" content="How to Generate TOC in Github/BitBucket projects">
+    <meta name="twitter:description" content="Command to geerate TOC in Github/BitBucket projects.">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Home of crazy things I do just for fun">
-<meta property="og:url" content="http://enzolutions.com/">
+<meta property="og:title" content="How to Generate TOC in Github/BitBucket projects">
+<meta property="og:description" content="Command to geerate TOC in Github/BitBucket projects.">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -114,94 +114,75 @@
     </div>
 </div>
             <div class="container">
-                                <article class="post">
+                    <article class="post">
     <header>
         <h1>
             <a href="http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/">How to Generate TOC in Github/BitBucket projects</a>
         </h1>
     </header>
 
-         Nowadays using version control systems like Github or Bitbucket for our projects is pretty popular because of their flexibility.
-
-When we are starting our projects both systems recommends the creation of a README.md file...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/">Read More</a>
-      </p>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/08/14/mi-tribu/">Mi Tribu</a>
-        </h1>
-    </header>
+    <p>Nowadays using version control systems like <a href="http://github.com/">Github</a> or <a href="https://bitbucket.org/">Bitbucket</a> for our projects is pretty popular because of their flexibility.</p>
 
-         This is an oratory I did in Spanish for my son Axel to present to his classroom, he is coursing right now 3rd grade.
+<p>When we are starting our projects both systems recommends the creation of a README.md file to provide an introduction to our projects, but it could turn into documentation.</p>
 
-¿Qué es ser Tico?
+<p>At first moment the MD extension were not familiar for us and it's normal. The MD extension stands for MarkDown which is a series of dialing rules that will generate a HTML without knowing HTML for tags like bold, subtitle and other special labels in a similar way to that done by <a href="http://wikipedia.org">http://wikipedia.org</a>.</p>
 
-Esta es una pregunta que puede ser fácil de responder para muchos, pero si lo piens...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/08/14/mi-tribu/">Read More</a>
-      </p>
+<p>If you want to know a little more about MarkDown you can check the version of Github at <a href="https://help.github.com/articles/github-flavored-markdown">https://help.github.com/articles/github-flavored-markdown</a> and BitBucket version at  <a href="https://bitbucket.org/tutorials/markdowndemo">https://bitbucket.org/tutorials/markdowndemo</a>.</p>
+
+<p>When we have mastered the MarkDown creating sections within our document, the natural evolution is to make a table of contents to make it easier to navigate through Readme file doing our project more professional, but this task can be cumbersome luckily we will see below a tool that does this job for us.</p>
+
+<h1>Install DocToc</h1>
+
+<p>Assuming you have NodeJS installed in your system and therefore the npm command is available run the following command to install the DocToc project.</p>
+
+<pre><code>$ npm install -g doctoc
+</code></pre>
+
+<h1>Generating TOC</h1>
+
+<p>Once installed we just need to indicate on which files we are going to generate the TOC. If our project is in github only must execute the following command</p>
+
+<pre><code>$ doctoc README.md
+</code></pre>
+
+<p>If our project is hosted in Bitbucket we just need execute the command with a slight variation as shown below.</p>
+
+<pre><code>$ doctoc README.md --bitbucket
+</code></pre>
+
+<p>You can see a TOC generated by this command in the project <a href="https://github.com/enzolutions/community-bookstore/">https://github.com/enzolutions/community-bookstore/</a></p>
+
+<p>I hope you have been to his liking.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-08-24</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Github, BitBucket, TOC, NodeJs
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/07/08/introduction-to-bower/">Introduction to Bower</a>
-        </h1>
-    </header>
-
-          Continuing with the serie "Hot &amp; Sexy tools" available these days for web developers started with the entry of Blog Introduction to Grunt, now I come to speak of Bower.
-
-Bower by definition is a package manager for ...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/07/08/introduction-to-bower/">Read More</a>
-      </p>
-    
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/">How to configure MySQL to import large database</a>
-        </h1>
-    </header>
-
-         On many occasions we need to install in our local machine production sites for development or just for faster debugging, this entails that we need to import very large databases.
-
-The most common mistake is that you can ...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/">Read More</a>
-      </p>
-    
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>
-        </h1>
-    </header>
-
-          Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.
-
-From my own experie...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Read More</a>
-      </p>
-    
-    </article>
-    
-    
-    <ul class="pagination">
-    
-                  <li><span class="active">1</span></li>
-                        <li><a href="http://enzolutions.com/blog/page2/">2</a></li>
-                        <li><a href="http://enzolutions.com/blog/page3/">3</a></li>
-          
-          <li><a href="http://enzolutions.com/blog/page2/">Older &raquo;</a></li>
-      </ul>
-
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
 
@@ -281,6 +262,27 @@ From my own experie...
                         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             
-                    </footer>
-    </body>
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
 </html>
