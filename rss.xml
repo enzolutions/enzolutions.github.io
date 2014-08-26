@@ -6,6 +6,73 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Grunt: How to list available tasks</title>
+                <description><![CDATA[<p>In the blog entry <a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a> I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good idea execute tasks that do not know what they do .</p>
+
+<p>Fortunately there is a plugin that allows  Grunt toe review tasks available, this plugin is <a href="https://github.com/ben-eb/grunt-available-tasks">grunt-available-tasks</a>. Lets see how we can implement it in our  project.</p>
+
+<h1>Install plugin.</h1>
+
+<p>The first thing to do is install the plugin available-tasks running assuming you have npm installed just execute the following command.</p>
+
+<pre><code>$ npm install grunt-available-tasks --save-dev
+</code></pre>
+
+<p>The above command will add the respective dependency in your package.json file and you will get a similar entry to the following file.</p>
+
+<pre><code>"grunt-available-tasks":"0.5.0"
+</code></pre>
+
+<h1>Add task to Grunt.</h1>
+
+<p>Having as base the file <strong>Gruntfile.js</strong> created in previous entry "Introduction to Grunt" we will include the necessary configuration to add the task to list the available tasks as shown below.</p>
+
+<pre><code>availabletasks: {
+  tasks: {
+    options: {
+      filter: 'exclude',
+      tasks: ['availabletasks', 'tasks']
+    }
+  }              
+},
+</code></pre>
+
+<p>The above action registers the configuration for the plugin <strong>available-tasks</strong> indicating that we want to exclude from the list of tasks "availabletasks" and "tasks " the last one  is an alias to configure later.</p>
+
+<h1>Load the plugin.</h1>
+
+<p>In order to execute the comand availabletasks/tasks we have load the plugin with the following settings Gruntfile.js close the end of file as shown in the following listing</p>
+
+<pre><code>grunt.loadNpmTasks('grunt-available-tasks');
+</code></pre>
+
+<h1>Register the task.</h1>
+
+<p>Finally lets register the task using an alias to facilitate their implementation, for which we just add the following code at the end of the configuration file.</p>
+
+<pre><code>grunt.registerTask('tasks', ['availabletasks']);
+</code></pre>
+
+<h1>Run the command</h1>
+
+<p>At this point we could get the tasks available and should just run the following command.</p>
+
+<pre><code>$ grunt tasks
+</code></pre>
+
+<p>The above command would get an output  similar to the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/grunt-tasks.png"/></p>
+
+<p>The image above was executed within the project <a href="https://github.com/enzolutions/community-bookstore">Community Bookstore</a>. See the full configuration file at <a href="https://github.com/enzolutions/community-bookstore/blob/master/frontend/Gruntfile.js">https://github.com/enzolutions/community-bookstore/blob/master/frontend/Gruntfile.js</a>.</p>
+
+<p>I hope you have been to his liking.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
+                <pubDate>Tue, 26 Aug 2014 15:06:14 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
+            </item>
+                    <item>
                 <title>How to Generate TOC in Github/BitBucket projects</title>
                 <description><![CDATA[<p>Nowadays using version control systems like <a href="http://github.com/">Github</a> or <a href="https://bitbucket.org/">Bitbucket</a> for our projects is pretty popular because of their flexibility.</p>
 
@@ -41,7 +108,7 @@
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 12:42:37 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -69,7 +136,7 @@
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 12:42:37 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -193,7 +260,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 12:42:37 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -228,7 +295,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 12:42:37 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -455,7 +522,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 12:42:37 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -478,7 +545,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 12:42:37 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -639,7 +706,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 12:42:37 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -795,7 +862,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 12:42:37 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -819,7 +886,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 12:42:37 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -858,7 +925,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 12:42:37 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -876,7 +943,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 12:42:37 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 15:06:14 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
