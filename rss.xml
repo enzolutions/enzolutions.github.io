@@ -6,6 +6,153 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Understanding Configuration Management in Drupal 8</title>
+                <description><![CDATA[<p>In few months we will get the new release of Drupal the #8 (I hope) and I think it's time to start to test, learn and write about the new ways we have in Drupal 8 to do our old tricks.</p>
+
+<p>Today I want to talk about the Drupal 8 <a target="_blank" href="http://drupal8cmi.org/">Initiative Configuration Management</a>, this initiative pretend to facilitate the process of pass Site Building stuffs from Dev environments to Production.</p>
+
+<p>As you can imagine this feature will be a replacement of Drupal <a target="_blank" href="https://www.drupal.org/project/features">Features</a> and if you don't use or don't like Features also will be a replacement for Drupal <a target="_blank" href="https://www.drupal.org/project/bundle_copy">Bundle Copy</a></p>
+
+<h1>Installing Drupal 8</h1>
+
+<p>Right now there isn't an official Drupal release for Drupal 8, but if you can start to test you can get directly from git repository.</p>
+
+<p>If you don't have plans to contribute with code to Drupal 8 you can use the following command to get just the latest version of Drupal 8 but without the whole git history reducing dramatically the download process.</p>
+
+<pre><code>git clone -depth 1 --branch 8.0.x http://git.drupal.org/project/drupal.git [FOLDER_NAME]
+</code></pre>
+
+<p>After that you just need create a Database and point your webserver to this folder and start the installation in the same way you usually do for Drupal 7.</p>
+
+<h1>Configuration Management Install</h1>
+
+<p>You don't need install Configuration Management module, because is part of Drupal 8 Core and is already installed when you complete a standard Drupal 8 installation, as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_module_enable.png"/></p>
+
+<p>As you can imagine, you can't disable the Configuration Management module.</p>
+
+<h1>Export Configuration</h1>
+
+<p>As I said at the beginning Configuration Management is a replacement for Features, so you need to work in your website doing Site Building tasks like creating or modifying content types and other tasks like creating Views(part of Drupal 8 Core).</p>
+
+<p>Now we will call the first Drupal 8 Installation <strong>Devel#1</strong> of a new Drupal 8 project and as you can imagine we need to share our progress with the rest of team and to avoid to create a DB Dump and force the rest of the team import we will use the Configuration Management.</p>
+
+<p>The administrator of <strong>Devel#1</strong> has to go page: example.com/admin/config/development/configuration/full/export the UI will looks similar to image below.</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_full_export.png"></p>
+
+<p>After press the button Export you will get a zip file named <strong>config.tar.gz</strong>, after you uncompress the zip file you will get a config folder with severals files in <a target="_blank" href="http://symfony.com/doc/current/components/yaml/yaml_format.html">YAML</a> format and each one represent a isolate piece of configuration of our site. Below you can a partial list of files created by export.</p>
+
+<pre><code>block.block.bartik_footer.yml       menu.entity.node.page.yml
+block.block.bartik_help.yml       menu_link.static.overrides.yml
+block.block.bartik_login.yml        menu_ui.settings.yml
+block.block.bartik_powered.yml        node.settings.yml
+block.block.bartik_search.yml       node.type.article.yml
+block.block.bartik_tools.yml        node.type.book.yml
+block.block.seven_breadcrumbs.yml     node.type.page.yml
+block.block.seven_content.yml       rdf.mapping.comment.comment.yml
+block.block.seven_help.yml        rdf.mapping.node.article.yml
+</code></pre>
+
+<p>Now we have the options to share all files or just one of them with the rest of the team.</p>
+
+<h1>Importing Configuration</h1>
+
+<p>Now we have the files required to import the configuration in other Drupal installation <strong>Devel#2</strong> but we need to prepare the destination.</p>
+
+<p>The Drupal 8 installation process create two folders to handle the import and export process, the installer create two folders inside <DOCROOT>/sites/default/files using random names, but we can check the proper names checking our configuration at <DOCROOT>/sites/default/setting.php.</p>
+
+<p>Let me show you an example of that configuration file:</p>
+
+<pre><code>$settings['install_profile'] = 'standard';
+$config_directories['active'] = 'sites/default/files/config_0HU-CmGmyKok3uG6Ao8Lv4WCsVZDwqitSKnQcUNPJmtrKWdgQuM4nhQNZO_T5Mcsmaz-bFcOyA/active';
+$config_directories['staging'] = 'sites/default/files/config_0HU-CmGmyKok3uG6Ao8Lv4WCsVZDwqitSKnQcUNPJmtrKWdgQuM4nhQNZO_T5Mcsmaz-bFcOyA/staging';
+</code></pre>
+
+<p>As you can see now we have two concepts <strong>active</strong> and <strong>staging</strong>.</p>
+
+<p>The <strong>active</strong> folder must contain the current site configuration, but by default is empty because the default storage for current site is Database but is possible change I will write about that in other blog entry.</p>
+
+<p>The <strong>staging</strong> folder contain any configuration we want to import in our site, here we must copy the files we get from export process.</p>
+
+<p>I recommend use a version system like GIT to control the staging files and change configuration to use a non hash folder name, check my recommendation below:</p>
+
+<pre><code>$settings['install_profile'] = 'standard';
+$config_directories['active'] = 'sites/default/files/config_rK_6KVDPn-s9l-ea_L0XBN1GzJlcnrZ3CssUXn1eQ7G98viRJXesYsSdsf_KjxkCRgelximKzg/active';
+$config_directories['staging'] = 'sites/default/config/staging';
+</code></pre>
+
+<p>Is required your web server have permissions to read the configuration files, for instance if _www is the user running your web server you must run the following commands:</p>
+
+<pre><code>$ sudo chown -R _www sites/default/config/staging/
+$ sudo chmod -R 755 sites/default/config/staging/
+</code></pre>
+
+<p>Until here all looks OK, but If you go to the page example.com/admin/config/development/configuration you will get the following error</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
+
+<p>We will solve this issue in next section.</p>
+
+<h2>Force Site UUID match</h2>
+
+<p>The Configuration Management only allow sync configuration between same site or project to avoid issues importing configuration from site a.com to b.com, to accomplish this validation Drupal 8 generate a <a target="_blank" href="https://www.drupal.org/project/uuid">UUID</a> for each site.</p>
+
+<p>You cat get your current site UUDI executing the following command</p>
+
+<pre><code>$ drush cget system.site
+</code></pre>
+
+<p>The command above we will have a similar output to next listing</p>
+
+<pre><code>uuid: 236fa77c-d83e-42de-8a03-03c574c00160
+name: backend.com
+mail: enzo@enzolutions.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+</code></pre>
+
+<p>The config import has a different UUID, you can confirm the UID with the following command</p>
+
+<pre><code>$ cat sites/default/config/staging/system.site.yml
+</code></pre>
+
+<p>For that reason uou need to change the value of Site UUID using the following Drush command:</p>
+
+<pre><code>$ drush cedit system.site
+</code></pre>
+
+<p>The command above enable you to use your favorite text editor to set the same UUID present in staging config files.</p>
+
+<h2>Run Sync</h2>
+
+<p>After change the UUID and change the permissions, if you visit again the page example.com/admin/config/development/configuration you will see all changes, deletions, renames, and additions as you can see in the following image:</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
+
+<p>You can review the differences and remove some files from staging folder if you are not happy with the result and finally execute the Import All process.</p>
+
+<p>If you are a Drush lover you still can run this process with Drush with the following command:</p>
+
+<pre><code>$ drush config-import staging
+</code></pre>
+
+<p>After complete the import you have now site sync.</p>
+
+<p>I hope you have found this article useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
+                <pubDate>Wed, 27 Aug 2014 09:11:39 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
+            </item>
+                    <item>
                 <title>Grunt: How to list available tasks</title>
                 <description><![CDATA[<p>In the blog entry <a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a> I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good idea execute tasks that do not know what they do .</p>
 
@@ -69,7 +216,7 @@
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 16:56:37 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -108,7 +255,7 @@
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 16:56:37 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -136,7 +283,7 @@
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 16:56:37 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -260,7 +407,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 16:56:37 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -295,7 +442,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 16:56:37 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -522,7 +669,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 16:56:37 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -545,7 +692,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 16:56:37 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -706,7 +853,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 16:56:37 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -862,7 +1009,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 16:56:37 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -886,7 +1033,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 16:56:37 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -925,7 +1072,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 16:56:37 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -943,7 +1090,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 16:56:37 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 09:11:39 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>

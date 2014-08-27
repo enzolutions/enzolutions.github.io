@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>Understanding Configuration Management in Drupal 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Practical guide about how to migrate configuration between two sites in Drupal 8">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="Understanding Configuration Management in Drupal 8">
+    <meta name="twitter:description" content="Practical guide about how to migrate configuration between two sites in Drupal 8">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding Configuration Management in Drupal 8">
+<meta property="og:description" content="Practical guide about how to migrate configuration between two sites in Drupal 8">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a>
+        </h1>
+    </header>
+
+    
+    <p>In few months we will get the new release of Drupal the #8 (I hope) and I think it's time to start to test, learn and write about the new ways we have in Drupal 8 to do our old tricks.</p>
+
+<p>Today I want to talk about the Drupal 8 <a target="_blank" href="http://drupal8cmi.org/">Initiative Configuration Management</a>, this initiative pretend to facilitate the process of pass Site Building stuffs from Dev environments to Production.</p>
+
+<p>As you can imagine this feature will be a replacement of Drupal <a target="_blank" href="https://www.drupal.org/project/features">Features</a> and if you don't use or don't like Features also will be a replacement for Drupal <a target="_blank" href="https://www.drupal.org/project/bundle_copy">Bundle Copy</a></p>
+
+<h1>Installing Drupal 8</h1>
+
+<p>Right now there isn't an official Drupal release for Drupal 8, but if you can start to test you can get directly from git repository.</p>
+
+<p>If you don't have plans to contribute with code to Drupal 8 you can use the following command to get just the latest version of Drupal 8 but without the whole git history reducing dramatically the download process.</p>
+
+<pre><code>git clone -depth 1 --branch 8.0.x http://git.drupal.org/project/drupal.git [FOLDER_NAME]
+</code></pre>
+
+<p>After that you just need create a Database and point your webserver to this folder and start the installation in the same way you usually do for Drupal 7.</p>
+
+<h1>Configuration Management Install</h1>
+
+<p>You don't need install Configuration Management module, because is part of Drupal 8 Core and is already installed when you complete a standard Drupal 8 installation, as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_module_enable.png"/></p>
+
+<p>As you can imagine, you can't disable the Configuration Management module.</p>
+
+<h1>Export Configuration</h1>
+
+<p>As I said at the beginning Configuration Management is a replacement for Features, so you need to work in your website doing Site Building tasks like creating or modifying content types and other tasks like creating Views(part of Drupal 8 Core).</p>
+
+<p>Now we will call the first Drupal 8 Installation <strong>Devel#1</strong> of a new Drupal 8 project and as you can imagine we need to share our progress with the rest of team and to avoid to create a DB Dump and force the rest of the team import we will use the Configuration Management.</p>
+
+<p>The administrator of <strong>Devel#1</strong> has to go page: example.com/admin/config/development/configuration/full/export the UI will looks similar to image below.</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_full_export.png"></p>
+
+<p>After press the button Export you will get a zip file named <strong>config.tar.gz</strong>, after you uncompress the zip file you will get a config folder with severals files in <a target="_blank" href="http://symfony.com/doc/current/components/yaml/yaml_format.html">YAML</a> format and each one represent a isolate piece of configuration of our site. Below you can a partial list of files created by export.</p>
+
+<pre><code>block.block.bartik_footer.yml       menu.entity.node.page.yml
+block.block.bartik_help.yml       menu_link.static.overrides.yml
+block.block.bartik_login.yml        menu_ui.settings.yml
+block.block.bartik_powered.yml        node.settings.yml
+block.block.bartik_search.yml       node.type.article.yml
+block.block.bartik_tools.yml        node.type.book.yml
+block.block.seven_breadcrumbs.yml     node.type.page.yml
+block.block.seven_content.yml       rdf.mapping.comment.comment.yml
+block.block.seven_help.yml        rdf.mapping.node.article.yml
+</code></pre>
+
+<p>Now we have the options to share all files or just one of them with the rest of the team.</p>
+
+<h1>Importing Configuration</h1>
+
+<p>Now we have the files required to import the configuration in other Drupal installation <strong>Devel#2</strong> but we need to prepare the destination.</p>
+
+<p>The Drupal 8 installation process create two folders to handle the import and export process, the installer create two folders inside <DOCROOT>/sites/default/files using random names, but we can check the proper names checking our configuration at <DOCROOT>/sites/default/setting.php.</p>
+
+<p>Let me show you an example of that configuration file:</p>
+
+<pre><code>$settings['install_profile'] = 'standard';
+$config_directories['active'] = 'sites/default/files/config_0HU-CmGmyKok3uG6Ao8Lv4WCsVZDwqitSKnQcUNPJmtrKWdgQuM4nhQNZO_T5Mcsmaz-bFcOyA/active';
+$config_directories['staging'] = 'sites/default/files/config_0HU-CmGmyKok3uG6Ao8Lv4WCsVZDwqitSKnQcUNPJmtrKWdgQuM4nhQNZO_T5Mcsmaz-bFcOyA/staging';
+</code></pre>
+
+<p>As you can see now we have two concepts <strong>active</strong> and <strong>staging</strong>.</p>
+
+<p>The <strong>active</strong> folder must contain the current site configuration, but by default is empty because the default storage for current site is Database but is possible change I will write about that in other blog entry.</p>
+
+<p>The <strong>staging</strong> folder contain any configuration we want to import in our site, here we must copy the files we get from export process.</p>
+
+<p>I recommend use a version system like GIT to control the staging files and change configuration to use a non hash folder name, check my recommendation below:</p>
+
+<pre><code>$settings['install_profile'] = 'standard';
+$config_directories['active'] = 'sites/default/files/config_rK_6KVDPn-s9l-ea_L0XBN1GzJlcnrZ3CssUXn1eQ7G98viRJXesYsSdsf_KjxkCRgelximKzg/active';
+$config_directories['staging'] = 'sites/default/config/staging';
+</code></pre>
+
+<p>Is required your web server have permissions to read the configuration files, for instance if _www is the user running your web server you must run the following commands:</p>
+
+<pre><code>$ sudo chown -R _www sites/default/config/staging/
+$ sudo chmod -R 755 sites/default/config/staging/
+</code></pre>
+
+<p>Until here all looks OK, but If you go to the page example.com/admin/config/development/configuration you will get the following error</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
+
+<p>We will solve this issue in next section.</p>
+
+<h2>Force Site UUID match</h2>
+
+<p>The Configuration Management only allow sync configuration between same site or project to avoid issues importing configuration from site a.com to b.com, to accomplish this validation Drupal 8 generate a <a target="_blank" href="https://www.drupal.org/project/uuid">UUID</a> for each site.</p>
+
+<p>You cat get your current site UUDI executing the following command</p>
+
+<pre><code>$ drush cget system.site
+</code></pre>
+
+<p>The command above we will have a similar output to next listing</p>
+
+<pre><code>uuid: 236fa77c-d83e-42de-8a03-03c574c00160
+name: backend.com
+mail: enzo@enzolutions.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+</code></pre>
+
+<p>The config import has a different UUID, you can confirm the UID with the following command</p>
+
+<pre><code>$ cat sites/default/config/staging/system.site.yml
+</code></pre>
+
+<p>For that reason uou need to change the value of Site UUID using the following Drush command:</p>
+
+<pre><code>$ drush cedit system.site
+</code></pre>
+
+<p>The command above enable you to use your favorite text editor to set the same UUID present in staging config files.</p>
+
+<h2>Run Sync</h2>
+
+<p>After change the UUID and change the permissions, if you visit again the page example.com/admin/config/development/configuration you will see all changes, deletions, renames, and additions as you can see in the following image:</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
+
+<p>You can review the differences and remove some files from staging folder if you are not happy with the result and finally execute the Import All process.</p>
+
+<p>If you are a Drush lover you still can run this process with Drush with the following command:</p>
+
+<pre><code>$ drush config-import staging
+</code></pre>
+
+<p>After complete the import you have now site sync.</p>
+
+<p>I hope you have found this article useful.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-08-27</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Drupal, Migrate
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>
