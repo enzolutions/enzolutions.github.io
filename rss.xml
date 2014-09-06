@@ -6,6 +6,63 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to enable CORS requests against Drupal 8</title>
+                <description><![CDATA[<h1>The Problem</h1>
+
+<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
+
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+
+<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
+
+<pre><code>public function options(EntityInterface $entity) {
+   $response = new ResourceResponse();
+   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
+   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
+   return $response-&gt;send();
+  }
+</code></pre>
+
+<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
+
+<h1>The Solution</h1>
+
+<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
+
+<p>But let me explain the changes introduced in my patch.</p>
+
+<h2>Intercept OPTIONS Request</h2>
+
+<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
+
+<p>Check the code below.</p>
+
+<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* / [R=200,L]
+</code></pre>
+
+<h2>Enable CORS</h2>
+
+<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
+
+<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
+
+<p>Check the implementation below.</p>
+
+<pre><code>Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+</code></pre>
+
+<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
+
+<p>I expect you have found this entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
+                <pubDate>Mon, 08 Sep 2014 09:31:12 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
+            </item>
+                    <item>
                 <title>How to create an interactive command in Node.js</title>
                 <description><![CDATA[<p>One of the first things we learn in a new programming language is how to  implement a command line is to read the parameters provided by user in execution, today I want to make my first blog related to <a target="_blank" href="http://nodejs.org/">Node.js</a> and I will show you how to make an interactive interface with Node.js.</p>
 
@@ -194,7 +251,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 07:58:38 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -341,7 +398,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 07:58:38 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -408,7 +465,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 07:58:38 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -447,7 +504,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 07:58:38 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -475,7 +532,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 07:58:38 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -599,7 +656,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 07:58:38 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -634,7 +691,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 07:58:38 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -861,7 +918,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 07:58:38 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -884,7 +941,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 07:58:38 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -1045,7 +1102,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 07:58:38 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -1201,7 +1258,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 07:58:38 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -1225,7 +1282,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 07:58:38 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -1264,7 +1321,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 07:58:38 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1282,7 +1339,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 07:58:38 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 09:31:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>

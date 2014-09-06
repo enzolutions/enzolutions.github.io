@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Blog</title>
+<title>How to enable CORS requests against Drupal 8</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home of crazy things I do just for fun">
+<meta name="description" content="Explanaition to enable CORS request against Drupal 8 using .htacess">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Blog">
-    <meta name="twitter:description" content="Home of crazy things I do just for fun">
+    <meta name="twitter:title" content="How to enable CORS requests against Drupal 8">
+    <meta name="twitter:description" content="Explanaition to enable CORS request against Drupal 8 using .htacess">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Home of crazy things I do just for fun">
-<meta property="og:url" content="http://enzolutions.com/">
+<meta property="og:title" content="How to enable CORS requests against Drupal 8">
+<meta property="og:description" content="Explanaition to enable CORS request against Drupal 8 using .htacess">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -114,90 +114,93 @@
     </div>
 </div>
             <div class="container">
-                                <article class="post">
+                    <article class="post">
     <header>
         <h1>
             <a href="http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">How to enable CORS requests against Drupal 8</a>
         </h1>
     </header>
 
-         The Problem
-
-Nowadays I was creating a new version of my library https://github.com/enzolutions/backbone.drupal to enable to use Drupal 8 in mode Headless Drupal using front end in a different domain or subdomain.
-
-The p...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">Read More</a>
-      </p>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/">How to create an interactive command in Node.js</a>
-        </h1>
-    </header>
+    <h1>The Problem</h1>
 
-         One of the first things we learn in a new programming language is how to  implement a command line is to read the parameters provided by user in execution, today I want to make my first blog related to Node.js and I will...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/">Read More</a>
-      </p>
-    
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a>
-        </h1>
-    </header>
+<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
 
-         In few months we will get the new release of Drupal the #8 (I hope) and I think it's time to start to test, learn and write about the new ways we have in Drupal 8 to do our old tricks.
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
 
-Today I want to talk about the Dru...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Read More</a>
-      </p>
-    
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/">Grunt: How to list available tasks</a>
-        </h1>
-    </header>
+<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
 
-         In the blog entry Introduction to Grunt I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good i...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/">Read More</a>
-      </p>
-    
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/">How to Generate TOC in Github/BitBucket projects</a>
-        </h1>
-    </header>
+<pre><code>public function options(EntityInterface $entity) {
+   $response = new ResourceResponse();
+   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
+   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
+   return $response-&gt;send();
+  }
+</code></pre>
 
-         Nowadays using version control systems like Github or Bitbucket for our projects is pretty popular because of their flexibility.
+<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
 
-When we are starting our projects both systems recommends the creation of a README.md file...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/">Read More</a>
-      </p>
-    
-    </article>
-    
-    
-    <ul class="pagination">
-    
-                  <li><span class="active">1</span></li>
-                        <li><a href="http://enzolutions.com/blog/page2/">2</a></li>
-                        <li><a href="http://enzolutions.com/blog/page3/">3</a></li>
-          
-          <li><a href="http://enzolutions.com/blog/page2/">Older &raquo;</a></li>
-      </ul>
+<h1>The Solution</h1>
 
+<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
+
+<p>But let me explain the changes introduced in my patch.</p>
+
+<h2>Intercept OPTIONS Request</h2>
+
+<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
+
+<p>Check the code below.</p>
+
+<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* / [R=200,L]
+</code></pre>
+
+<h2>Enable CORS</h2>
+
+<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
+
+<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
+
+<p>Check the implementation below.</p>
+
+<pre><code>Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+</code></pre>
+
+<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
+
+<p>I expect you have found this entry useful.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-09-08</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    CORS, Drupal, .htacess
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
 
@@ -277,6 +280,27 @@ When we are starting our projects both systems recommends the creation of a READ
                         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             
-                    </footer>
-    </body>
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
 </html>
