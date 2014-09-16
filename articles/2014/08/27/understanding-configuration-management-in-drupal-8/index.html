@@ -8,7 +8,7 @@
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:image" content="http://localhost:8081/assets/img/spresso-logo.png">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
     <meta name="twitter:title" content="Understanding Configuration Management in Drupal 8">
     <meta name="twitter:description" content="Practical guide about how to migrate configuration between two sites in Drupal 8">
     <meta name="twitter:creator" content="@enzolutions">
@@ -17,21 +17,21 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Understanding Configuration Management in Drupal 8">
 <meta property="og:description" content="Practical guide about how to migrate configuration between two sites in Drupal 8">
-<meta property="og:url" content="http://localhost:8081/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">
 <meta property="og:site_name" content="[enzo]lutions">
 
-<link href="http://localhost:8081/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
-<link rel="icon" type="image/x-icon" href="http://localhost:8081/favicon.ico">
-<link rel="apple-touch-icon" href="http://localhost:8081/assets/img/touch-icon-iphone.png">
-<link rel="apple-touch-icon" sizes="76x76" href="http://localhost:8081/assets/img/touch-icon-ipad.png">
-<link rel="apple-touch-icon" sizes="120x120" href="http://localhost:8081/assets/img/touch-icon-iphone-retina.png">
-<link rel="apple-touch-icon" sizes="152x152" href="http://localhost:8081/assets/img/touch-icon-ipad-retina.png">
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
 
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="http://localhost:8081/assets/css/bootstrap.css" rel="stylesheet" media="screen">
-<link href="http://localhost:8081/assets/css/style.css" rel="stylesheet" media="screen">
-<link href="http://localhost:8081/assets/css/theme.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
 
 <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
     </head>
@@ -117,7 +117,7 @@
                     <article class="post">
     <header>
         <h1>
-            <a href="http://localhost:8081/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a>
+            <a href="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a>
         </h1>
     </header>
 
@@ -143,7 +143,7 @@
 
 <p>You don't need install Configuration Management module, because is part of Drupal 8 Core and is already installed when you complete a standard Drupal 8 installation, as you can see in the following image.</p>
 
-<p><img src="http://localhost:8081/assets/img/configuration_management_module_enable.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_module_enable.png"/></p>
 
 <p>As you can imagine, you can't disable the Configuration Management module.</p>
 
@@ -155,7 +155,7 @@
 
 <p>The administrator of <strong>Devel#1</strong> has to go page: example.com/admin/config/development/configuration/full/export the UI will looks similar to image below.</p>
 
-<p><img src="http://localhost:8081/assets/img/configuration_management_full_export.png"></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_full_export.png"></p>
 
 <p>After press the button Export you will get a zip file named <strong>config.tar.gz</strong>, after you uncompress the zip file you will get a config folder with severals files in <a target="_blank" href="http://symfony.com/doc/current/components/yaml/yaml_format.html">YAML</a> format and each one represent a isolate piece of configuration of our site. Below you can a partial list of files created by export.</p>
 
@@ -206,7 +206,7 @@ $ sudo chmod -R 755 sites/default/config/staging/
 
 <p>Until here all looks OK, but If you go to the page example.com/admin/config/development/configuration you will get the following error</p>
 
-<p><img src="http://localhost:8081/assets/img/configuration_management_sync_error.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
 
 <p>We will solve this issue in next section.</p>
 
@@ -250,7 +250,7 @@ langcode: en
 
 <p>After change the UUID and change the permissions, if you visit again the page example.com/admin/config/development/configuration you will see all changes, deletions, renames, and additions as you can see in the following image:</p>
 
-<p><img src="http://localhost:8081/assets/img/configuration_management_sync.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync.png"/></p>
 
 <p>You can review the differences and remove some files from staging folder if you are not happy with the result and finally execute the Import All process.</p>
 
@@ -349,7 +349,7 @@ langcode: en
                 </div>
                 <p class="text-center">
                     <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
-                        <img src="http://localhost:8081/assets/img/spresso-logo.png"/>
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
                     </a>
                 </p>
                 <p class="text-center">
@@ -360,7 +360,7 @@ langcode: en
             <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
             <script src="/assets/js/bootstrap.min.js"></script>
 
-            <script src="http://localhost:8081/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
             <script type="text/javascript">
               jQuery( document ).ready(function() {
                   jQuery("#my-github-projects").loadRepositories("enzolutions");
