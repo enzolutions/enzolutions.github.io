@@ -6,6 +6,184 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Manage PHP versions with Phpbrew.</title>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
+
+<p>To resolve this situation described above nowadays the common recommendation is install a virtual machine like <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> or <a href="https://www.docker.com/" target="_blank">Docker</a> and off course works but if you are not a big fan of <em>Virtual Machines</em> like me and specially to only change the PHP version I have good news you can resolve your problems using the project <a href="http://phpbrew.github.io/phpbrew/" target="_blank">Phpbrew</a>.</p>
+
+<p>Let me show you how to install and use.</p>
+
+<h1>Install Phpbrew.</h1>
+
+<h2>Dependencies.</h2>
+
+<p>If you already have an environment to dev in PHP is probable you can skip this section.</p>
+
+<p>The following utils are required.</p>
+
+<p>+automake
++autoconf
++curl
++pcre
++re2c
++mhash
++libtool
++icu4c
++gettext
++jpeg
++libxml2
++mcrypt
++gmp
++libevent</p>
+
+<p>If you are in Mac OS X and you use <a href="http://brew.sh/" target="_blank">brew</a> you run the following command.</p>
+
+<pre><code>$ brew install automake autoconf curl pcre re2c mhash libtool icu4c gettext jpeg libxml2 mcrypt gmp libevent
+$ brew link icu4c
+</code></pre>
+
+<h2>Download, Install and Initialize.</h2>
+
+<p>To install you just need to execute the following commands</p>
+
+<pre><code>curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+chmod +x phpbrew
+sudo mv phpbrew /usr/bin/phpbrew
+</code></pre>
+
+<p>Now you must initialize your system executing the following command.</p>
+
+<pre><code>$ phpbrew init
+</code></pre>
+
+<p>Then add these lines to your <em>.bashrc</em>, <em>.bash_profile</em> or <em>.zshrc</em> file</p>
+
+<pre><code>export PHPBREW_SET_PROMPT=1
+source ~/.phpbrew/bashrc
+</code></pre>
+
+<h1>Phpbrew commands</h1>
+
+<h2>List PHP versions available to be installed</h2>
+
+<pre><code>$ phpbrew known
+5.6:  5.6.1, 5.6.0 ...
+5.5:  5.5.17, 5.5.16, 5.5.15, 5.5.14, 5.5.13, 5.5.12, 5.5.11, 5.5.10 ...
+5.4:  5.4.33, 5.4.32, 5.4.31, 5.4.30, 5.4.29, 5.4.28, 5.4.27, 5.4.26 ...
+5.3:  5.3.29, 5.3.28, 5.3.27, 5.3.26, 5.3.25, 5.3.24, 5.3.23, 5.3.22 ...
+</code></pre>
+
+<h2>Install a PHP specific version of PHP</h2>
+
+<pre><code>phpbrew install 5.5.10
+</code></pre>
+
+<p>You need wait until Phpbrew configure your system.</p>
+
+<h2>Install a PHP with specific libraries or virtual variant.</h2>
+
+<pre><code>$ sudo phpbrew install 5.5.10 +mysql +pdo +ctype +mhash +hash +json +iconv +apxs2=/usr/sbin/apxs
+
+$ sudo phpbrew install 5.5.10 +default +mysql +hash +iconv +apxs2=/usr/sbin/apxs
+</code></pre>
+
+<p>If you don't know where is located the directory for your apache <a href="http://httpd.apache.org/docs/2.2/programs/apxs.html">apxs</a> you can execute the following command.</p>
+
+<p>The previous install works to use with <a href="http://drupal.org" target="_blank">Drupal</a> 8 and <a href="spress.yosymfony.com" target="_blank">Spress</a>.</p>
+
+<pre><code>$ whereis apxs
+/usr/sbin/apxs
+</code></pre>
+
+<h2>Get a list of available libraries or variants</h2>
+
+<pre><code>$ phpbrew variants
+Variants:
+  all, apxs2, bcmath, bz2, calendar, cgi, cli, ctype, curl, dba, debug, dom,
+  embed, exif, fileinfo, filter, fpm, ftp, gcov, gd, gettext, hash, iconv,
+  icu, imap, inifile, inline, intl, ipc, ipv6, json, kerberos, libgcc,
+  maintainer, mbregex, mbstring, mcrypt, mhash, mysql, opcache, openssl,
+  pcntl, pcre, pdo, pgsql, phar, phpdbg, posix, readline, session, soap,
+  sockets, sqlite, static, tidy, tokenizer, wddx, xml, xml_all, xmlrpc,
+  zip, zlib
+
+
+Virtual variants:
+  dbs: sqlite, mysql, pgsql, pdo
+  mb: mbstring, mbregex
+  neutral:
+  default: bcmath, bz2, calendar, cli, ctype, dom, fileinfo, filter, ipc,
+  json, mbregex, mbstring, mhash, mcrypt, pcntl, pcre, pdo, phar, posix,
+  readline, sockets, tokenizer, xml, curl, zip
+
+
+Using variants to build PHP:
+
+  phpbrew install php-5.3.10 +default
+  phpbrew install php-5.3.10 +mysql +pdo
+  phpbrew install php-5.3.10 +mysql +pdo +apxs2
+  phpbrew install php-5.3.10 +mysql +pdo +apxs2=/usr/bin/apxs2
+</code></pre>
+
+<h2>List php version versions available in your system</h2>
+
+<pre><code>$ phpbrew list
+Installed versions:
+* php-5.5.10
+</code></pre>
+
+<h2>Change php Version</h2>
+
+<pre><code>$ phpbrew switch php-5.5.10
+</code></pre>
+
+<h2>Disable Phpbrew</h2>
+
+<pre><code>$ phpbrew off
+phpbrew is turned off.
+</code></pre>
+
+<p>After disable Phpbrew you can execute the following command to check the current status of system</p>
+
+<pre><code>$ phpbrew list
+Installed versions:
+* (system)
+  php-5.5.10
+</code></pre>
+
+<p>As you can see the PHP version available if the normal PHP version your system have, off course you enable again other version using the <em>switch</em> command explained above.</p>
+
+<h1>Enable PHPbrew version in Apache.</h1>
+
+<p>After switch a version you must to inform to apache about the new version of PHP apache editing the apache config file <em>/etc/apache2/httpd.conf</em> or <em>/private/etc/apache2/httpd.conf</em> as you can see in the follow snippet.</p>
+
+<pre><code>#LoadModule php5_module libexec/apache2/libphp5.so #Disabled
+LoadModule hfs_apple_module libexec/apache2/mod_hfs_apple.so
+LoadModule php5_module libexec/apache2/libphp5.5.10.so
+</code></pre>
+
+<p>As you can imagine a restart of Apache Server is required.</p>
+
+<h2>Update Phpbrew</h2>
+
+<pre><code>$ phpbrew self-update
+</code></pre>
+
+<h1>Modify your PHP info.</h1>
+
+<p>Is so probable after enable a new version of PHP you lost your previous setup and you need to apply that tweaks and tricks in your new PHP.ini to determine where are located you just need execute the next command.</p>
+
+<pre><code>$ phpbrew info | grep php.ini
+Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
+</code></pre>
+
+<p>Remove the grep portion to get the whole information.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
+                <pubDate>Fri, 17 Oct 2014 15:03:05 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
+            </item>
+                    <item>
                 <title>How to pass parameters to RequireJS modules</title>
                 <description><![CDATA[<p>RequireJS is a great library for managing JavaScript dependencies and create JavaScript modules to encapsulate concepts in your application. If you are totally new with RequiteJS maybe you want to read the post entry <a target='_blank' href="http://enzolutions.com//articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>.</p>
 
@@ -114,65 +292,8 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 13:24:47 -0600</pubDate>
+                <pubDate>Tue, 16 Sep 2014 15:03:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
-            </item>
-                    <item>
-                <title>How to enable CORS requests against Drupal 8</title>
-                <description><![CDATA[<h1>The Problem</h1>
-
-<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
-
-<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
-
-<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
-
-<pre><code>public function options(EntityInterface $entity) {
-   $response = new ResourceResponse();
-   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
-   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
-   return $response-&gt;send();
-  }
-</code></pre>
-
-<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
-
-<h1>The Solution</h1>
-
-<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
-
-<p>But let me explain the changes introduced in my patch.</p>
-
-<h2>Intercept OPTIONS Request</h2>
-
-<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
-
-<p>Check the code below.</p>
-
-<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule .* / [R=200,L]
-</code></pre>
-
-<h2>Enable CORS</h2>
-
-<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
-
-<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
-
-<p>Check the implementation below.</p>
-
-<pre><code>Header always set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
-Header always set Access-Control-Allow-Headers: Authorization
-</code></pre>
-
-<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
-
-<p>I expect you have found this entry useful.</p>
-]]></description>
-                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 13:24:47 -0600</pubDate>
-                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to create an interactive command in Node.js</title>
@@ -363,8 +484,65 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 13:24:47 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:03:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
+            </item>
+                    <item>
+                <title>How to enable CORS requests against Drupal 8</title>
+                <description><![CDATA[<h1>The Problem</h1>
+
+<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
+
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+
+<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
+
+<pre><code>public function options(EntityInterface $entity) {
+   $response = new ResourceResponse();
+   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
+   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
+   return $response-&gt;send();
+  }
+</code></pre>
+
+<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
+
+<h1>The Solution</h1>
+
+<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
+
+<p>But let me explain the changes introduced in my patch.</p>
+
+<h2>Intercept OPTIONS Request</h2>
+
+<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
+
+<p>Check the code below.</p>
+
+<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* / [R=200,L]
+</code></pre>
+
+<h2>Enable CORS</h2>
+
+<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
+
+<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
+
+<p>Check the implementation below.</p>
+
+<pre><code>Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+</code></pre>
+
+<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
+
+<p>I expect you have found this entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
+                <pubDate>Mon, 08 Sep 2014 15:03:05 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>Understanding Configuration Management in Drupal 8</title>
@@ -510,7 +688,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 13:24:47 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 15:03:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -577,7 +755,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 13:24:47 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 15:03:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -616,7 +794,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 13:24:47 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 15:03:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -644,7 +822,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 13:24:47 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 15:03:05 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -768,7 +946,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 13:24:47 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -803,7 +981,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 13:24:47 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1030,7 +1208,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 13:24:47 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -1053,7 +1231,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 13:24:47 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -1214,7 +1392,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 13:24:47 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -1370,7 +1548,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 13:24:47 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -1394,7 +1572,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 13:24:47 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -1433,7 +1611,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 13:24:47 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1451,7 +1629,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 13:24:47 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 15:03:04 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
