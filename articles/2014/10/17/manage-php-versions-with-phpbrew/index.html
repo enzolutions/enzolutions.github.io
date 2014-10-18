@@ -197,9 +197,9 @@ source ~/.phpbrew/bashrc
 
 <h2>Install a PHP with specific libraries or virtual variant.</h2>
 
-<pre><code>$ sudo phpbrew install 5.5.10 +mysql +pdo +ctype +mhash +hash +json +iconv +apxs2=/usr/sbin/apxs
+<pre><code>$ sudo phpbrew install 5.5.10 +mysql +pdo +ctype +mhash +hash +iconv +json +iconv +gd +apxs2=/usr/sbin/apxs -- --with-gd -- --enable-gd-natf -- --with-jpeg-dir -- --with-png-dir
 
-$ sudo phpbrew install 5.5.10 +default +mysql +hash +iconv +apxs2=/usr/sbin/apxs
+$ sudo phpbrew install 5.5.10 +default +mysql +hash +iconv +gd +apxs2=/usr/sbin/apxs -- --with-gd -- --enable-gd-natf -- --with-jpeg-dir -- --with-png-dir
 </code></pre>
 
 <p>If you don't know where is located the directory for your apache <a href="http://httpd.apache.org/docs/2.2/programs/apxs.html">apxs</a> you can execute the following command.</p>
