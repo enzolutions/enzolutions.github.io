@@ -6,8 +6,81 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Apache issues after upgrade to Mac OS X Yosemite.</title>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/mac_osx_yosemite.png"/> Last night I had the <em>brilliant</em> idea of upgrade to latest version of Mac OS X <a href="http://www.apple.com/osx/" target="_blank">Yosemite</a> and the upgrade process itself was slow as usual but without any apparent error.</p>
+
+<p>The problems popup when I decide continue the development of <a href="https://github.com/enzolutions/generator-marionette-drupal" target="_blank">Yeoman Marionette Drupal generator</a> against Drupal 8.</p>
+
+<p>When I try to use my regular installation of Drupal 8 I got the infamous message <em>"It Works!"</em>, so the upgrade screw my apache configuration.</p>
+
+<p>After executing the following command I detect my system now has <a href="http://httpd.apache.org/docs/2.4/">Apache 2.4</a>.</p>
+
+<pre><code>$ httpd -v
+Server version: Apache/2.4.9 (Unix)
+Server built:   Sep  9 2014 14:48:20
+</code></pre>
+
+<h1>Where is my previous configuration</h1>
+
+<p>You can find your old configuration at <em>/etc/apache2/httpd.conf~previous</em>, but could a bad idea just restore because some directives could be wrong.</p>
+
+<p>Instead of I start to re-enable the things I used to have enabled.</p>
+
+<h2>Mod Rewrite</h2>
+
+<p>Because I'm a Drupal developer this is a mandatory Apache module, to re-enabled you just need edit the file <em>/etc/apache2/httpd.conf</em> and enable the following line</p>
+
+<pre><code>LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+</code></pre>
+
+<h2>Virtual Hosts</h2>
+
+<p>If you used to have virtual host for your different project this feature is gone, again you just need to enable the directive to load where are located your virtual host as you can see in the following snippet.</p>
+
+<pre><code># Virtual hosts
+Include /private/etc/apache2/extra/httpd-vhosts.conf
+</code></pre>
+
+<h3>Client denied by server configuration</h3>
+
+<p>After enable your virtual hosts is probable you can't access your sites and if you check your error log you will get an error similar to following log.</p>
+
+<pre><code>[Sun Oct 19 10:29:31.338082 2014] [authz_core:error] [pid 3008] [client 127.0.0.1:51587] AH01630: client denied by server configuration: /Users/enzo/www/drupal8/
+</code></pre>
+
+<p>After read some document I found I have to add to my <em>Directory</em> section of Virtual Host the directive <em>Require all granted</em>, after apply my Virtual Host looks like next definition.</p>
+
+<pre><code>&lt;VirtualHost *:80&gt;
+    ServerAdmin enzo@enzolutions.com
+    DocumentRoot "/Users/enzo/www/drupal8"
+
+    ServerName drupal8
+
+    #ServerAlias www.dummy-host.example.com
+    &lt;Directory /Users/enzo/www/drupal8&gt;
+        Require all granted
+        Options Includes FollowSymLinks
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+    &lt;/Directory&gt;
+
+    ErrorLog "/private/var/log/apache2/drupal8-error.log"
+    CustomLog "/private/var/log/apache2/drupal8-access.log" common
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>After this changes is probable your PHP version require some tweaks, in this case I recommend read the blog entry "<a href="http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew">Manage PHP versions with Phpbrew</a>".</p>
+
+<p>I hope you find this article useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
+                <pubDate>Sun, 19 Oct 2014 11:13:12 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
+            </item>
+                    <item>
                 <title>Manage PHP versions with Phpbrew.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
 
 <p>To resolve this situation described above nowadays the common recommendation is install a virtual machine like <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> or <a href="https://www.docker.com/" target="_blank">Docker</a> and off course works but if you are not a big fan of <em>Virtual Machines</em> like me and specially to only change the PHP version I have good news you can resolve your problems using the project <a href="http://phpbrew.github.io/phpbrew/" target="_blank">Phpbrew</a>.</p>
 
@@ -180,7 +253,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 09:18:46 -0600</pubDate>
+                <pubDate>Fri, 17 Oct 2014 11:13:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -292,7 +365,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 09:18:46 -0600</pubDate>
+                <pubDate>Tue, 16 Sep 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -484,7 +557,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 09:18:46 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -541,7 +614,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 09:18:46 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -688,7 +761,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 09:18:46 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -755,7 +828,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 09:18:46 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -794,7 +867,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 09:18:46 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -822,7 +895,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 09:18:46 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -946,7 +1019,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 09:18:46 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -981,7 +1054,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 09:18:46 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1208,7 +1281,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 09:18:46 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -1231,7 +1304,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 09:18:46 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -1392,7 +1465,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 09:18:46 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -1548,7 +1621,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 09:18:46 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -1572,7 +1645,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 09:18:46 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -1611,7 +1684,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 09:18:46 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1629,7 +1702,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 09:18:46 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 11:13:11 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
