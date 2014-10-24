@@ -6,6 +6,80 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to validate Bower files.</title>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
+
+<ul>
+<li>Add a bower.json files to out project.</li>
+<li>Create a release matching the info in our bower file.</li>
+<li>Run <em>bower publish</em> command to share our project.</li>
+</ul>
+
+<h1>The Problem</h1>
+
+<p>The problem I found is the publishing process don't validate the bower.json, so is probable after publish when people try to use your library even if the system detect the library is available they get an awful error like this</p>
+
+<pre><code>bower backform#~0.0.1-alpha EMALFORMED Failed to read /var/folders/bh/8fr0bx9113n0plkjjkt2s5d40000gn/T/enzo/bower/backform-20375-ST4wT6/bower.json
+
+Additional error details:
+Unexpected token n
+</code></pre>
+
+<h1>The solution.</h1>
+
+<p>Fortunately there is a NodeJS package to validate the bower.json before to publish.</p>
+
+<p>We need to install the package with the following command.</p>
+
+<pre><code>npm install bower-json
+</code></pre>
+
+<p>Execute this command inside the folder of your library or use the option <em>-g</em> to install globally is up to you.</p>
+
+<p>Now we will use the following NodeJS scrit to validate the bower.json file, let name this script as check_bower.json</p>
+
+<pre><code>var bowerJson = require('bower-json');
+
+// Can also be used by simply calling bowerJson()
+bowerJson.read('./bower.json', function (err, json) {
+    if (err) {
+        console.error('There was an error reading the file');
+        console.error(err.message);
+        return;
+    }
+
+    console.log('JSON: ', json);
+});
+</code></pre>
+
+<p>To use this script execute the following command.</p>
+
+<pre><code>node check_bower.js
+</code></pre>
+
+<p>As you can imagine you will get the same error in the first execution, so you need to work in your file until you get an output similar to this</p>
+
+<pre><code>JSON:  { name: 'backform',
+  main: [ 'src/backform.js' ],
+  version: '0.0.1-alpha',
+  homepage: 'https://github.com/AmiliaApp/backform',
+  author: { name: 'Martin Drapeau', email: 'martindrapeau@gmail.com' },
+  description: 'Backform takes a Backbone model and transforms it into an HTML form',
+  keywords: [ 'backbone', 'form', 'underscore' ],
+  license: 'MIT',
+  ignore: [ '**/.*', 'node_modules', 'bower_components', 'test', 'tests' ],
+  dependencies: { backbone: '1.0.0 - 1.1.2', underscore: '1.4.4 - 1.6.0' } }
+</code></pre>
+
+<p>You can see a bower file sample at <a href="https://github.com/enzolutions/backbone.drupal/blob/master/bower.json" target="_blank">https://github.com/enzolutions/backbone.drupal/blob/master/bower.json</a>.</p>
+
+<p>I hope you found this blog entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
+                <pubDate>Fri, 24 Oct 2014 07:45:13 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
+            </item>
+                    <item>
                 <title>Apache issues after upgrade to Mac OS X Yosemite.</title>
                 <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/mac_osx_yosemite.png"/> Last night I had the <em>brilliant</em> idea of upgrade to latest version of Mac OS X <a href="http://www.apple.com/osx/" target="_blank">Yosemite</a> and the upgrade process itself was slow as usual but without any apparent error.</p>
 
@@ -75,7 +149,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 11:13:12 -0600</pubDate>
+                <pubDate>Sun, 19 Oct 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -253,7 +327,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 11:13:12 -0600</pubDate>
+                <pubDate>Fri, 17 Oct 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -365,8 +439,65 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 11:13:11 -0600</pubDate>
+                <pubDate>Tue, 16 Sep 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
+            </item>
+                    <item>
+                <title>How to enable CORS requests against Drupal 8</title>
+                <description><![CDATA[<h1>The Problem</h1>
+
+<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
+
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+
+<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
+
+<pre><code>public function options(EntityInterface $entity) {
+   $response = new ResourceResponse();
+   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
+   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
+   return $response-&gt;send();
+  }
+</code></pre>
+
+<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
+
+<h1>The Solution</h1>
+
+<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
+
+<p>But let me explain the changes introduced in my patch.</p>
+
+<h2>Intercept OPTIONS Request</h2>
+
+<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
+
+<p>Check the code below.</p>
+
+<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* / [R=200,L]
+</code></pre>
+
+<h2>Enable CORS</h2>
+
+<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
+
+<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
+
+<p>Check the implementation below.</p>
+
+<pre><code>Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+</code></pre>
+
+<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
+
+<p>I expect you have found this entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
+                <pubDate>Mon, 08 Sep 2014 07:45:13 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to create an interactive command in Node.js</title>
@@ -557,65 +688,8 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 11:13:11 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
-            </item>
-                    <item>
-                <title>How to enable CORS requests against Drupal 8</title>
-                <description><![CDATA[<h1>The Problem</h1>
-
-<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
-
-<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
-
-<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
-
-<pre><code>public function options(EntityInterface $entity) {
-   $response = new ResourceResponse();
-   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
-   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
-   return $response-&gt;send();
-  }
-</code></pre>
-
-<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
-
-<h1>The Solution</h1>
-
-<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
-
-<p>But let me explain the changes introduced in my patch.</p>
-
-<h2>Intercept OPTIONS Request</h2>
-
-<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
-
-<p>Check the code below.</p>
-
-<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule .* / [R=200,L]
-</code></pre>
-
-<h2>Enable CORS</h2>
-
-<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
-
-<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
-
-<p>Check the implementation below.</p>
-
-<pre><code>Header always set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
-Header always set Access-Control-Allow-Headers: Authorization
-</code></pre>
-
-<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
-
-<p>I expect you have found this entry useful.</p>
-]]></description>
-                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 11:13:11 -0600</pubDate>
-                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>Understanding Configuration Management in Drupal 8</title>
@@ -761,7 +835,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 11:13:11 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -828,7 +902,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 11:13:11 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -867,7 +941,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 11:13:11 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -895,12 +969,12 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 11:13:11 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
                 <title>Introduction to Bower</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> Continuing with the serie "Hot &amp; Sexy tools" available these days for web developers started with the entry of Blog <a target="_blank" href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> Continuing with the serie <em>Hot &amp; Sexy tools</em> available these days for web developers started with the entry of Blog <a target="_blank" href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
 
 <p>Bower by definition is a package manager for the web, now that simple English means a tool that allows us to define required libraries in our web applications and the bower detect the dependencies of required packages.</p>
 
@@ -1019,7 +1093,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 11:13:11 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -1054,7 +1128,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 11:13:11 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1281,7 +1355,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 11:13:11 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -1304,7 +1378,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 11:13:11 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -1465,7 +1539,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 11:13:11 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -1621,7 +1695,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 11:13:11 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -1645,7 +1719,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 11:13:11 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -1684,7 +1758,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 11:13:11 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1702,7 +1776,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 11:13:11 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 07:45:13 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>

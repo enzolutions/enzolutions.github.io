@@ -2,22 +2,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-<title>Blog</title>
+<title>How to validate Bower files.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Home of crazy things I do just for fun">
+<meta name="description" content="Script to validate Bower files before to publish">
 <meta name="author" content="enzo - Eduardo Garcia">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
-    <meta name="twitter:title" content="Blog">
-    <meta name="twitter:description" content="Home of crazy things I do just for fun">
+    <meta name="twitter:title" content="How to validate Bower files.">
+    <meta name="twitter:description" content="Script to validate Bower files before to publish">
     <meta name="twitter:creator" content="@enzolutions">
 
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="Home of crazy things I do just for fun">
-<meta property="og:url" content="http://enzolutions.com/">
+<meta property="og:title" content="How to validate Bower files.">
+<meta property="og:description" content="Script to validate Bower files before to publish">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/">
 <meta property="og:site_name" content="[enzo]lutions">
 
 <link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
@@ -114,84 +114,110 @@
     </div>
 </div>
             <div class="container">
-                                <article class="post">
+                    <article class="post">
     <header>
         <h1>
-            <a href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>
+            <a href="http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/">How to validate Bower files.</a>
         </h1>
     </header>
 
-         RequireJS is a JavaScript library that allows us to isolate the components of our JS application as modules and resolve their dependencies.
-
-RequireJS implements the design pattern of software AMD (Asynchronous Module De...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">Read More</a>
-      </p>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">What is Cross-Origin Resource Sharing (CORS)</a>
-        </h1>
-    </header>
+    <p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
 
-         Nowdays is pretty common to transfer data between web applications via Web Services to  clients that require information on different interfaces such as REST, XMLRPC, JSON, JSON-RPC, SOAP and others.
+<ul>
+<li>Add a bower.json files to out project.</li>
+<li>Create a release matching the info in our bower file.</li>
+<li>Run <em>bower publish</em> command to share our project.</li>
+</ul>
 
-Almost all sites to...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">Read More</a>
-      </p>
+<h1>The Problem</h1>
+
+<p>The problem I found is the publishing process don't validate the bower.json, so is probable after publish when people try to use your library even if the system detect the library is available they get an awful error like this</p>
+
+<pre><code>bower backform#~0.0.1-alpha EMALFORMED Failed to read /var/folders/bh/8fr0bx9113n0plkjjkt2s5d40000gn/T/enzo/bower/backform-20375-ST4wT6/bower.json
+
+Additional error details:
+Unexpected token n
+</code></pre>
+
+<h1>The solution.</h1>
+
+<p>Fortunately there is a NodeJS package to validate the bower.json before to publish.</p>
+
+<p>We need to install the package with the following command.</p>
+
+<pre><code>npm install bower-json
+</code></pre>
+
+<p>Execute this command inside the folder of your library or use the option <em>-g</em> to install globally is up to you.</p>
+
+<p>Now we will use the following NodeJS scrit to validate the bower.json file, let name this script as check_bower.json</p>
+
+<pre><code>var bowerJson = require('bower-json');
+
+// Can also be used by simply calling bowerJson()
+bowerJson.read('./bower.json', function (err, json) {
+    if (err) {
+        console.error('There was an error reading the file');
+        console.error(err.message);
+        return;
+    }
+
+    console.log('JSON: ', json);
+});
+</code></pre>
+
+<p>To use this script execute the following command.</p>
+
+<pre><code>node check_bower.js
+</code></pre>
+
+<p>As you can imagine you will get the same error in the first execution, so you need to work in your file until you get an output similar to this</p>
+
+<pre><code>JSON:  { name: 'backform',
+  main: [ 'src/backform.js' ],
+  version: '0.0.1-alpha',
+  homepage: 'https://github.com/AmiliaApp/backform',
+  author: { name: 'Martin Drapeau', email: 'martindrapeau@gmail.com' },
+  description: 'Backform takes a Backbone model and transforms it into an HTML form',
+  keywords: [ 'backbone', 'form', 'underscore' ],
+  license: 'MIT',
+  ignore: [ '**/.*', 'node_modules', 'bower_components', 'test', 'tests' ],
+  dependencies: { backbone: '1.0.0 - 1.1.2', underscore: '1.4.4 - 1.6.0' } }
+</code></pre>
+
+<p>You can see a bower file sample at <a href="https://github.com/enzolutions/backbone.drupal/blob/master/bower.json" target="_blank">https://github.com/enzolutions/backbone.drupal/blob/master/bower.json</a>.</p>
+
+<p>I hope you found this blog entry useful.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-10-24</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    NodeJS, Bower
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
     
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">How to configure MySQL to import large database</a>
-        </h1>
-    </header>
-
-         On many occasions we need to install in our local enviroment a copy of production sites for development or debugging process, this entails that need to import large databases.
-
-The most common error is that you cannot im...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/">Read More</a>
-      </p>
-    
-    </article>
-            <article class="post">
-    <header>
-        <h1>
-            <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">My blog is alive again!</a>
-        </h1>
-    </header>
-
-         Hello folks.
-
-After many years without touch my personal website, I took the decision to put it back online.
-
-Recently I have been writing technical documentation in Spanish in the website 7Sabores.com. If you are wonder...
-        <p class='alignright'>
-              <a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/">Read More</a>
-      </p>
-    
-    </article>
-    
-    
-    <ul class="pagination">
-          <li>
-                <a class="prev" href="http://enzolutions.com/page3/">
-                    &laquo; Newer
-                </a>
-            </li>
-    
-                  <li><a href="http://enzolutions.com/blog/">1</a></li>
-                        <li><a href="http://enzolutions.com/blog/page2/">2</a></li>
-                        <li><a href="http://enzolutions.com/blog/page3/">3</a></li>
-                        <li><span class="active">4</span></li>
-          
-      </ul>
-
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
             </div>
         </div>
 
@@ -271,6 +297,27 @@ Recently I have been writing technical documentation in Spanish in the website 7
                         <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
             <script>hljs.initHighlightingOnLoad();</script>
             
-                    </footer>
-    </body>
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
 </html>
