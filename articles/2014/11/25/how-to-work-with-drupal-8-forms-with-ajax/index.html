@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>How to work with Drupal 8 forms with Ajax.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to add Ajax effect to a Form in Drupal 8">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="How to work with Drupal 8 forms with Ajax.">
+    <meta name="twitter:description" content="How to add Ajax effect to a Form in Drupal 8">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to work with Drupal 8 forms with Ajax.">
+<meta property="og:description" content="How to add Ajax effect to a Form in Drupal 8">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/">How to work with Drupal 8 forms with Ajax.</a>
+        </h1>
+    </header>
+
+    
+    <p>Nowadays Drupal 8 has couple of beta releases so the official release is around the corner. For that reason I start to test the typical features required in a Drupal 7 site.</p>
+
+<p>Today I will share with you my experiences with Form with Ajax effects.</p>
+
+<h1>Create a Form</h1>
+
+<p>I will skip the explanation about how to create a Form in Drupal 8 because could be generated using the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> executing the following command.</p>
+
+<pre><code>$ php console.phar generate:form:config
+</code></pre>
+
+<h1>Drupal 8 FAPI + Ajax</h1>
+
+<p>The current documentation of FAPI for Drupal 8 about <a href="https://api.drupal.org/api/drupal/developer!topics!forms_api_reference.html/8#ajax" target="_blank">ajax</a> is not updated.</p>
+
+<p>But the property is still name <strong>#ajax</strong> check the following implementation.</p>
+
+<pre><code>   $form['source']['version'] = array(
+      '#type' =&gt; 'radios',
+      '#title' =&gt; $this-&gt;t('Drupal Version'),
+      '#default_value'=&gt;"d6",
+      '#options' =&gt; $options,
+      '#description' =&gt; t('Choise what version of Drupal you want migrate'),
+      '#required' =&gt; TRUE,
+      '#ajax' =&gt; array(
+        'callback' =&gt; '::updateDestinationIds',
+        'wrapper' =&gt; 'edit-destinations',
+        'progress' =&gt; array(
+          'type' =&gt; 'throbber',
+          'message' =&gt; "searching",
+        ),
+      ),
+    );
+</code></pre>
+
+<p>If you are a old developer of Drupal you will recognize the properties <strong>wrapper</strong>, <strong>progress</strong>, these properties work equal in Drupal 7.</p>
+
+<p>The main change is in callback property, in my example the value '::updateDestinationIds' means the method <em>updateDestinationIds</em> is part of the Form class. I didn't test but looks like we can assign a static method like 'Drupal::StaticMethod'.</p>
+
+<h1>Response method</h1>
+
+<p>Similar to Drupal 7 the method has to return the portion of the Form must be overwritten via ajax, let me show you an example.</p>
+
+<pre><code>/**
+ * Gets migration configurations.
+ *
+ * @return array
+ *   An array of migration names.
+ */
+function updateDestinationIds($form, FormStateInterface $form_state) {
+    $form ['source']['migration_ids']['#options'] = $this-&gt;getDestinationIds($form_state-&gt;getValue('version'));
+    return $form ['source']['migration_ids'];
+}
+</code></pre>
+
+<h1>Known Issues</h1>
+
+<p>After implement the Ajax function I detect a problem when I try to select values populated via Ajax and submit the form I get this error message "An illegal choice has been detected. Please contact the site administrator."</p>
+
+<p>When I debug I can determine the method <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Installer!Form!SiteSettingsForm.php/function/SiteSettingsForm%3A%3AbuildForm/8" target="_blank">buildForm</a> is executed in different moments listed below</p>
+
+<p>*Form load: To build the form
+*Ajax request: To re-build the form and determine elements to overwrite.
+*Form submit: To process the form</p>
+
+<p>My problem was in the last one <em>Form Submit</em> because the submit run the implementation of class <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormValidator.php/8" target="_blank">FormValidator</a>.</p>
+
+<p>The FormValidator ignore the Ajax process and validate the FormState values against the list of values allowed and because took this values from buildForm they are always the initial values ignoring the user interaction.</p>
+
+<p>To resolve this problem I use the FormState object to determine if buildForm was executed to render the form at first time or if has humman interaction (ajax or submit) to define the allowed list of values based in user interaction, check the following snippet.</p>
+
+<pre><code>$form_state_complete_form=$form_state-&gt;getCompleteForm();
+if(empty($form_state_complete_version)){
+    $form ['source']['migration_ids']['#options'] = $this-&gt;getDestinationIds("d6");
+ }
+  else  {
+   $form ['source']['migration_ids']['#options'] = $this-&gt;getDestinationIds($form_state_complete_version);
+ }
+</code></pre>
+
+<p>Don't be worry about this behavior as you can see is easy to fix and I'm sure won't be necessary when Drupal 8 get the first official release.</p>
+
+<h1>Caveats</h1>
+
+<p>The current status of Drupal 8 only support the ajax update in <em>Select</em> elements, I tried with <strong>tableselect</strong> and <strong>checkboxes</strong> and doesn't work.</p>
+
+<p>There  is a issues for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-11-25</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Drupal, Ajax
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>
