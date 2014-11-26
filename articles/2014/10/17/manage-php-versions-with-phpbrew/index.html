@@ -136,20 +136,22 @@
 
 <p>The following utils are required.</p>
 
-<p>+automake
-+autoconf
-+curl
-+pcre
-+re2c
-+mhash
-+libtool
-+icu4c
-+gettext
-+jpeg
-+libxml2
-+mcrypt
-+gmp
-+libevent</p>
+<ul>
+<li>automake</li>
+<li>autoconf</li>
+<li>curl</li>
+<li>pcre</li>
+<li>re2c</li>
+<li>mhash</li>
+<li>libtool</li>
+<li>icu4c</li>
+<li>gettext</li>
+<li>jpeg</li>
+<li>libxml2</li>
+<li>mcrypt</li>
+<li>gmp</li>
+<li>libevent</li>
+</ul>
 
 <p>If you are in Mac OS X and you use <a href="http://brew.sh/" target="_blank">brew</a> you run the following command.</p>
 
@@ -161,9 +163,9 @@ $ brew link icu4c
 
 <p>To install you just need to execute the following commands</p>
 
-<pre><code>curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
-chmod +x phpbrew
-sudo mv phpbrew /usr/bin/phpbrew
+<pre><code>$ curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+$ chmod +x phpbrew
+$ sudo mv phpbrew /usr/bin/phpbrew
 </code></pre>
 
 <p>Now you must initialize your system executing the following command.</p>
@@ -190,7 +192,7 @@ source ~/.phpbrew/bashrc
 
 <h2>Install a PHP specific version of PHP</h2>
 
-<pre><code>phpbrew install 5.5.10
+<pre><code>$ phpbrew install 5.5.10
 </code></pre>
 
 <p>You need wait until Phpbrew configure your system.</p>
