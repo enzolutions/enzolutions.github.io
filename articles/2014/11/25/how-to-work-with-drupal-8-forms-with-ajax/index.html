@@ -183,9 +183,11 @@ function updateDestinationIds($form, FormStateInterface $form_state) {
 
 <p>When I debug I can determine the method <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Installer!Form!SiteSettingsForm.php/function/SiteSettingsForm%3A%3AbuildForm/8" target="_blank">buildForm</a> is executed in different moments listed below</p>
 
-<p>*Form load: To build the form
-*Ajax request: To re-build the form and determine elements to overwrite.
-*Form submit: To process the form</p>
+<ul>
+<li><strong>Form load</strong>: To build the form</li>
+<li><strong>Ajax request</strong>: To re-build the form and determine elements to overwrite.</li>
+<li><strong>Form submit</strong>: To process the form</li>
+</ul>
 
 <p>My problem was in the last one <em>Form Submit</em> because the submit run the implementation of class <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormValidator.php/8" target="_blank">FormValidator</a>.</p>
 
