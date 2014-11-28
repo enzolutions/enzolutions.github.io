@@ -125,7 +125,7 @@
     <p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
 
 <ul>
-<li>Add a bower.json files to out project.</li>
+<li>Add a bower.json files to our project.</li>
 <li>Create a release matching the info in our bower file.</li>
 <li>Run <em>bower publish</em> command to share our project.</li>
 </ul>
@@ -146,7 +146,7 @@ Unexpected token n
 
 <p>We need to install the package with the following command.</p>
 
-<pre><code>npm install bower-json
+<pre><code>$ npm install bower-json
 </code></pre>
 
 <p>Execute this command inside the folder of your library or use the option <em>-g</em> to install globally is up to you.</p>
@@ -169,7 +169,7 @@ bowerJson.read('./bower.json', function (err, json) {
 
 <p>To use this script execute the following command.</p>
 
-<pre><code>node check_bower.js
+<pre><code>$ node check_bower.js
 </code></pre>
 
 <p>As you can imagine you will get the same error in the first execution, so you need to work in your file until you get an output similar to this</p>
