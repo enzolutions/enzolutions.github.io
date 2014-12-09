@@ -1,0 +1,498 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>How to create a Field Formatter in Drupal 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explanation to create a custom Field Formatter in Drupal 8">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="How to create a Field Formatter in Drupal 8">
+    <meta name="twitter:description" content="Explanation to create a custom Field Formatter in Drupal 8">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to create a Field Formatter in Drupal 8">
+<meta property="og:description" content="Explanation to create a custom Field Formatter in Drupal 8">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/">How to create a Field Formatter in Drupal 8</a>
+        </h1>
+    </header>
+
+    
+    <p>One of the biggest changes in <a href="https://www.drupal.org/drupal-8.0" target="_blank">Drupal 8</a> is his integration with <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful</a>.</p>
+
+<p>Because now Views lives in Core you can create a view with JSON response in few minutes, you just need enable modules <strong>Views</strong>, <strong>Views UI</strong> and <strong>RESTful Web Services</strong></p>
+
+<p>The problem I found with image is the formatter for image is not compatible with RESTful responses due the output of Image formatter is HTML.</p>
+
+<h1>Create a View</h1>
+
+<p>Let me explain the situation if you create a view with a <strong>Rest Export</strong> display you can select what fields of your entity you want to render.</p>
+
+<p>Now if you choose an image field the default format is Image as you can see in the following snapshot.</p>
+
+<p><img src="http://enzolutions.com/assets/img/image_field_formatter.png"/></p>
+
+<p>Even if you don't set the option to link to original image you will get the image in HTML format as you see in the following sample of JSON response.</p>
+
+<pre><code>[
+  {
+    title: "Image sample # 3",
+    field_image: " &lt;img src="http://example.com/sites/default/files/styles/thumbnail/public/field/image/globe.jpg?itok=wmu3VCr6" width="100" height="75" alt="" typeof="foaf:Image" class="image-style-thumbnail" /&gt; "
+  },
+  {
+    title: "Image sample # 2",
+    field_image: " &lt;img src="http://example.com/sites/default/files/styles/thumbnail/public/field/image/sample_08.jpg?itok=X9N005N1" width="100" height="75" alt="" typeof="foaf:Image" class="image-style-thumbnail" /&gt; "
+  },
+  {
+    title: "Image sample # 1",
+    field_image: " &lt;img src="http://d$/sites/default/files/styles/thumbnail/public/field/image/sample_01.jpg?itok=UD1-QXTj" width="100" height="75" alt="" typeof="foaf:Image" class="image-style-thumbnail" /&gt; "
+  }
+]
+</code></pre>
+
+<p>The previous was generated by a view selected articles with images, if you want import this view in system just download the file <a href="http://enzolutions.com/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/configuration_management_view_import.png"/></p>
+
+<p>If you want read more about Configuration Management in Drupal 8 you can read the post entry <a href="{site.url}}/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a></p>
+
+<p>To resolve this problem I will show you how to create your own Field Formatter to meet your needs.</p>
+
+<h1>Create a Module</h1>
+
+<p>I will skip the explanation about how to create a Module in Drupal 8 because could be generated using the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> executing the following command.</p>
+
+<pre><code>$ php console.phar generate:module
+</code></pre>
+
+<h1>Create a new Field Formatter</h1>
+
+<p>If you want to create a new custom Field Formatter is require to add a new class file located inside your module in the following path</p>
+
+<pre><code>YOUR_MODULE/src/Plugin/Field/FieldFormatter/
+</code></pre>
+
+<p>Inside this folder you must create a class file per each Field Formatter do you want to create.</p>
+
+<p>I will create a new file named <strong>ImageRawFormatter.php</strong>, I will explain each part of this file</p>
+
+<h2>Field Formatter Metadata</h2>
+
+<p>Before to start to code we must to define some stuff required for a proper function.</p>
+
+<h3>Namespace</h3>
+
+<p>We have to define what will be Namespace for your Field Formatter</p>
+
+<pre><code>namespace Drupal\image_raw_formatter\Plugin\Field\FieldFormatter;
+</code></pre>
+
+<p>Drupal 8 implement <a href="http://www.php-fig.org/psr/psr-4/" target="_blank">PSR-4</a> from  <a href="http://www.php-fig.org/" target="_blank">PHP Framework Interop Group</a></p>
+
+<p>This specification follow the following pattern</p>
+
+<pre><code>\&lt;NamespaceName&gt;(\&lt;SubNamespaceNames&gt;)*\&lt;ClassName&gt;
+</code></pre>
+
+<p>In our case the division will be</p>
+
+<ul>
+<li><strong>NamespaceName</strong>: Drupal</li>
+<li><strong>SubNamespaceNames</strong>: image_raw_formatter\Plugin\Field\FieldFormatter</li>
+<li><strong>ClassName</strong>: ImageRawFormatter</li>
+</ul>
+
+<h2>Libraries required</h2>
+
+<p>In this specific case we have to define where are classes we require to create our Field Formatter.</p>
+
+<p>Drupal 8 use Autoloader class but we need to inform where they are using the intruction <strong>use</strong>.</p>
+
+<pre><code>use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatterBase;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use \InvalidArgumentException;
+</code></pre>
+
+<h3>Annotations</h3>
+
+<p>Drupal 8 have several discovers to detect specific implementation, for instance we have a Discover to detect all Field Formatter declared in our application and the way to declare a new Field Formatter is using <a href="https://wiki.php.net/rfc/annotations" target="_blank">Annotations</a>.</p>
+
+<p>Below you can find an annotation example for Field Formatter</p>
+
+<pre><code>/**
+ * Plugin implementation of the 'image_raw_formatter' formatter.
+ *
+ * @FieldFormatter(
+ *   id = "image_raw_formatter",
+ *   label = @Translation("Image Raw"),
+ *   field_types = {
+ *     "image"
+ *   }
+ * )
+ */
+</code></pre>
+
+<p>As you can see we must define an unique <strong>id</strong> with a <strong>label</strong> with translation and we must define for which field types this Field Formatter will be available.</p>
+
+<h2>Implement Class</h2>
+
+<p>Now we have to create a class extending from <a href="https://api.drupal.org/api/drupal/core%21modules%21image%21src%21Plugin%21Field%21FieldFormatter%21ImageFormatterBase.php/class/ImageFormatterBase/8">ImageFormatterBase</a> as you can see in the following snippet</p>
+
+<pre><code>class ImageRawFormatter extends ImageFormatterBase
+{
+}
+</code></pre>
+
+<h3>Settings Form</h3>
+
+<p>Now we have to add a method <strong>settingsForm</strong> to define the Setting options for our Formatter. check the following implementation.</p>
+
+<pre><code>/**
+   * {@inheritdoc}
+   */
+  public function settingsForm(array $form, FormStateInterface $form_state) {
+    $image_styles = image_style_options(FALSE);
+    $element['image_style'] = array(
+      '#title' =&gt; t('Image style'),
+      '#type' =&gt; 'select',
+      '#default_value' =&gt; $this-&gt;getSetting('image_style'),
+      '#empty_option' =&gt; t('None (original image)'),
+      '#options' =&gt; $image_styles,
+    );
+    return $element;
+  }
+</code></pre>
+
+<p>The implementation above allow user select a specific image style to be returned or just return the original image.</p>
+
+<h3>Summary Report</h3>
+
+<p>Is important to inform to end users current setting of formatter, to enable that we have to implement the method <strong>settingsSummary</strong></p>
+
+<pre><code>/**
+   * {@inheritdoc}
+   */
+  public function settingsSummary() {
+    $summary = array();
+    $image_styles = image_style_options(FALSE);
+    // Unset possible 'No defined styles' option.
+    unset($image_styles['']);
+    // Styles could be lost because of enabled/disabled modules that defines
+    // their styles in code.
+    $image_style_setting = $this-&gt;getSetting('image_style');
+    if (isset($image_styles[$image_style_setting])) {
+      $summary[] = t('Image style: @style', array('@style' =&gt; $image_styles[$image_style_setting]));
+    }
+    else {
+      $summary[] = t('Original image');
+    }
+    return $summary;
+  }
+</code></pre>
+
+<p>As you can see the method above just read the current settings and render an output.</p>
+
+<h3>Render Field Formatter</h3>
+
+<p>At the end we need to define the how we want to render the field based in current Field Formatter settings, we have to implement the method <strong>viewElements</strong> as you can see in the following snippet.</p>
+
+<pre><code>/**
+   * {@inheritdoc}
+   */
+  public function viewElements(FieldItemListInterface $items) {
+    $elements = array();
+    $image_style_setting = $this-&gt;getSetting('image_style');
+
+    // Determine if Image style is required.
+    $image_style = NULL;
+    if (!empty($image_style_setting)) {
+      $image_style = entity_load('image_style', $image_style_setting);
+    }
+    foreach ($items as $delta =&gt; $item) {
+      if ($item-&gt;entity) {
+        $image_uri = $item-&gt;entity-&gt;getFileUri();
+        // Get image style URL
+        if ($image_style) {
+          $image_uri = ImageStyle::load($image_style-&gt;getName())-&gt;buildUrl($image_uri);
+        } else {
+          // Get absolute path for original image
+          $image_uri = $item-&gt;entity-&gt;url();
+        }
+        $elements[$delta] = array(
+          '#markup' =&gt; $image_uri,
+        );
+      }
+    }
+    return $elements;
+  }
+</code></pre>
+
+<p>If you read the logic only determine if the configuration require use any image style or if is only required the original image, in both sceneries the proper path url is return.</p>
+
+<p>We don't need any transformation to JSON because that is handled by view Display selected.</p>
+
+<h1>Module usage</h1>
+
+<p>After enable our custom module we just need edit our view and edit the field to use new Raw Formatter as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/image_field_raw_formatter.png"/></p>
+
+<p>After save the view and run again the output will be totally different and perfect to use in RESTful services to avoid HTML parsing to extract the image path. check the output example below.</p>
+
+<pre><code>[
+  {
+    title: "Image sample # 3",
+    field_image: "http://drupal8b3.dev/sites/default/files/styles/thumbnail/public/field/image/globe.jpg?itok=wmu3VCr6"
+  },
+  {
+    title: "Image sample # 2",
+    field_image: "http://drupal8b3.dev/sites/default/files/styles/thumbnail/public/field/image/sample_08.jpg?itok=X9N005N1"
+  },
+  {
+    title: "Image sample # 1",
+    field_image: "http://drupal8b3.dev/sites/default/files/styles/thumbnail/public/field/image/sample_01.jpg?itok=UD1-QXTj"
+  }
+]
+</code></pre>
+
+<p>You can download a full implementation of this custom Image Raw Field Formatter at <a href="https://github.com/enzolutions/image_raw_formatter" target="_blank">https://github.com/enzolutions/image_raw_formatter</a>.</p>
+
+<p>I expect you found this blog entry useful.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-12-09</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Drupal, Drupal Modules
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>
