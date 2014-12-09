@@ -124,7 +124,7 @@
     
     <h1>The Problem</h1>
 
-<p>When, in Drupal 8, the password for user 1 (the administrator) is lost and the email notification don't work, it is possible to set the password via a database query.</p>
+<p>When in Drupal 8, the password for user #1 (the administrator) is lost and the email notification don't work, it is possible to set the password via a database query.</p>
 
 <p>Right now we are in the middle of the development of Drupal 8 and the usual command <a href="http://www.drushcommands.com/drush-6x/user/user-login" target="_blank"><strong>drush uli</strong></a> provided by <a href="http://www.drush.org/" target="_blank"></a>Drush doesn't work.</p>
 
@@ -142,9 +142,7 @@ Drush command terminated abnormally due to an unrecoverable error.
 
 <p>Execute the following commands from the command line, in the Drupal 8 root directory:</p>
 
-<pre><code>update users_field_data set pass='$S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KIGiAVXvREBy.9E' where uid = 1;
-
-$ php core/scripts/password-hash.sh 'your-new-pass-here'
+<pre><code>$ php core/scripts/password-hash.sh 'your-new-pass-here'
 
 password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KIGiAVXvREBy.9E
 </code></pre>
@@ -162,7 +160,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <pre><code>UPDATE users_field_data SET pass='$S$E5j59pCS9kjQ8P/M1aUCKuF4UUIp.dXjrHyvnE4PerAVJ93bIu4U' WHERE uid = 1;
 </code></pre>
 
-<h2>Dealign with Cache</h2>
+<h2>Dealing with Cache</h2>
 
 <p>At this point if you try to login in the Drupal 8 website you will rejected, it's because the login system don't read directly the table <strong>users_field_data</strong> instead of a cache for entities is used.</p>
 
