@@ -205,7 +205,10 @@ use Psr\Log\LoggerInterface;
 
 <h1>Class Setup</h1>
 
-<p>As you can imagine each class require a constructor and Drupal 8 is not the exception, but Drupal also implement a custom <a href="http://php.net/manual/en/language.oop5.magic.php" target="_blank">Magic</a> Method <strong>create</strong> to prepare the values to send to constructor. But is better explain to you with the following example where we need to send the <a href="https://www.drupal.org/node/2133171" target="_blank">services</a>: <strong>Resource Format</strong>, <strong>Logger</strong>, <strong>Entity manager</strong> and <strong>Current User</strong> to the <strong>constructor</strong></p>
+<p>As you can imagine each class require a constructor and Drupal 8 is not the exception, but Drupal also implement
+<a href="http://www.phptherightway.com/pages/Design-Patterns.html" target="_blank">The Factory Pattern</a> to prepare the values to send to constructor.</p>
+
+<p>But is better to explain to you with the following example where we need to send the <a href="https://www.drupal.org/node/2133171" target="_blank">services</a>: <strong>Resource Format</strong>, <strong>Logger</strong>, <strong>Entity manager</strong> and <strong>Current User</strong> to the <strong>constructor</strong></p>
 
 <pre><code>/**
    * {@inheritdoc}
