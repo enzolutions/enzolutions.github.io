@@ -6,6 +6,217 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to create a Rest Resource in Drupal 8</title>
+                <description><![CDATA[<p>One of the biggest changes in <a href="https://www.drupal.org/drupal-8.0" target="_blank">Drupal 8</a> is his integration with <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful</a>.</p>
+
+<p>Today I want to share with you how to create your own Rest Resources in a custom module to publish your website information using a RESTful API.</p>
+
+<p>I will create a new REST Resource with the objective to get the list of bundle types available for a specific entity.</p>
+
+<h1>Create a Module</h1>
+
+<p>I will skip the explanation about how to create a Module in Drupal 8 because could be generated using the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> executing the following command.</p>
+
+<pre><code>$ php console.phar generate:module
+</code></pre>
+
+<h1>Create a new REST Resource</h1>
+
+<p>Assuming we create a new module named <strong>entity_rest_extra</strong> is required to create a class file <strong>EntityBundlesResource.php</strong> inside the module in a folder path <strong>src/Plugin/rest/resource</strong>.</p>
+
+<h2>Namespace</h2>
+
+<p>The namespace for this new Rest Resource will be</p>
+
+<pre><code>namespace Drupal\entity_rest_extra\Plugin\rest\resource;
+</code></pre>
+
+<h2>Libraries</h2>
+
+<p>We must to use some dependencies to create the REST Resource, below the full list.</p>
+
+<pre><code>use Drupal\Core\Entity\EntityManagerInterface;
+use Drupal\rest\Plugin\ResourceBase;
+use Drupal\rest\ResourceResponse;
+use Drupal\Core\Session\AccountProxyInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Psr\Log\LoggerInterface;
+</code></pre>
+
+<h2>Annotations</h2>
+
+<p>To enable the Discover for REST Resources found our new Rest Resource we must to implement the proper information in Annotation. check the following example.</p>
+
+<pre><code>/**
+ * Provides a resource for database watchdog log entries.
+ *
+ * @RestResource(
+ *   id = "entity_bundles",
+ *   label = @Translation("Bundles by entities"),
+ *   uri_paths = {
+ *     "canonical" = "/bundles/{entity}"
+ *   }
+ * )
+ */
+</code></pre>
+
+<p>As you can see we provide a Resource <strong>id</strong> with a <strong>label</strong>, also we define the <strong>canonical</strong> URL for our REST Resource with a parameter named <strong>entity</strong></p>
+
+<p>Using the annotation the Discover for Rest Resources will declare the routing dynamically so we don't need include a <strong>routing.yml</strong> file in our module.</p>
+
+<h2>Implement Class</h2>
+
+<p>Now we have to create a class extending from <a href="https://api.drupal.org/api/drupal/core%21modules%21rest%21src%21Plugin%21ResourceBase.php/class/ResourceBase/8" target="_blank">ResourceBase</a> as you can see in the following snippet</p>
+
+<pre><code>class EntityBundlesResource extends ResourceBase {
+  /**
+   *  A curent user instance.
+   *
+   * @var \Drupal\Core\Session\AccountProxyInterface
+   */
+  protected $currentUser;
+  /**
+   *  A instance of entity manager.
+   *
+   * @var \Drupal\Core\Entity\EntityManagerInterface
+   */
+  protected $entityManager;
+}
+</code></pre>
+
+<p>Our implementation require two properties for <strong>Current User</strong> and <strong>EntityManager</strong>.</p>
+
+<h1>Class Setup</h1>
+
+<p>As you can imagine each class require a constructor and Drupal 8 is not the exception, but Drupal also implement a custom <a href="http://php.net/manual/en/language.oop5.magic.php" target="_blank">Magic</a> Method <strong>create</strong> to prepare the values to send to constructor. But is better explain to you with the following example where we need to send the <a href="https://www.drupal.org/node/2133171" target="_blank">services</a>: <strong>Resource Format</strong>, <strong>Logger</strong>, <strong>Entity manager</strong> and <strong>Current User</strong> to the <strong>constructor</strong></p>
+
+<pre><code>/**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container-&gt;getParameter('serializer.formats'),
+      $container-&gt;get('logger.factory')-&gt;get('rest'),
+      $container-&gt;get('entity.manager'),
+      $container-&gt;get('current_user')
+    );
+  }
+</code></pre>
+
+<p>Now we need to define the constructor as you can see below</p>
+
+<pre><code>/**
+  * Constructs a Drupal\rest\Plugin\ResourceBase object.
+  *
+  * @param array $configuration
+  *   A configuration array containing information about the plugin instance.
+  * @param string $plugin_id
+  *   The plugin_id for the plugin instance.
+  * @param mixed $plugin_definition
+  *   The plugin implementation definition.
+  * @param array $serializer_formats
+  *   The available serialization formats.
+  * @param \Psr\Log\LoggerInterface $logger
+  *   A logger instance.
+  */
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    array $serializer_formats,
+    LoggerInterface $logger,
+    EntityManagerInterface $entity_manager,
+    AccountProxyInterface $current_user) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition, $serializer_formats, $logger);
+
+    $this-&gt;entityManager = $entity_manager;
+    $this-&gt;currentUser = $current_user;
+  }
+</code></pre>
+
+<h1>Implement REST method</h1>
+
+<p>Last but not least we have to define the RESTful state we want to implement, in my example I want to implement a GET method to response according the parameters.</p>
+
+<p>Inside the class with have to create a method matching the RESTful state name, so for GET we have to implement a method named <strong>get</strong> as you can see in the following snippet.</p>
+
+<pre><code>  /*
+   * Responds to GET requests.
+   *
+   * Returns a list of bundles for specified entity.
+   *
+   * @return \Drupal\rest\ResourceResponse
+   *   The response containing a list of bundle names.
+   *
+   * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+   */
+  public function get($entity = NULL) {
+    if ($entity) {
+      $permission = 'Administer content types';
+      if(!$this-&gt;currentUser-&gt;hasPermission($permission)) {
+        throw new AccessDeniedHttpException();
+      }
+      $bundles_entities = \Drupal::entityManager()-&gt;getStorage($entity .'_type')-&gt;loadMultiple();
+      $bundles = array();
+      foreach ($bundles_entities as $entity) {
+        $bundles[$entity-&gt;id()] = $entity-&gt;label();
+      }
+      if (!empty($bundles)) {
+        return new ResourceResponse($bundles);
+      }
+      throw new NotFoundHttpException(t('Bundles for entity @entity were not found', array('@entity' =&gt; $entity)));
+    }
+
+    throw new HttpException(t('Entity wasn\'t provided'));
+  }
+</code></pre>
+
+<p>As you can see the method receive as parameter the last value pass to URL.</p>
+
+<p>Also using the <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Session%21AccountProxyInterface.php/interface/AccountProxyInterface/8" target="_blank">Account Proxy Interface</a> we can determine if Current User has enough rights to get the bundle list.</p>
+
+<p>The <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Entity%21EntityManagerInterface.php/interface/EntityManagerInterface/8" target="_blank">Entity Manager Interface</a> allow us to we get the list of bundles for Entity requested.</p>
+
+<p>After that we prepare an array with the results, these results will be transformed to the proper format requested by the user using the class <a href="https://api.drupal.org/api/drupal/core%21modules%21rest%21src%21ResourceResponse.php/class/ResourceResponse/8" target="_blank">ResourceResponse</a>, in our case we will request a json response.</p>
+
+<p>If you want to implement RESTful state POST just add a method <strong>post</strong></p>
+
+<p>You can see a full and functional custom REST Resources at <a href="https://github.com/enzolutions/entity_rest_extra" target="_blank">https://github.com/enzolutions/entity_rest_extra</a></p>
+
+<h1>Using our new Resource</h1>
+
+<p>Using the contrib module <a href="https://www.drupal.org/project/restui/git-instructions" target="_blank">Rest UI</a> (I recommend to use the git version until Drupal 8 get a first release) you can enable your custom Rest Resource.</p>
+
+<p>This module enable a UI to set the Authentication and format for each RESTful method implemented as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/restui_bundle_entities_settings.png"/></p>
+
+<p>Using this setting the access to Resource will be granted or denied.</p>
+
+<p>Using the Chrome Application <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm">Postman - REST Client</a> you can execute an authenticated request to URL <strong>http://example.com/bundles/node</strong> as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/postman_rest_request.png"/></p>
+
+<p>If all is working as expected you will get a similar result to next json output.</p>
+
+<pre><code>{
+  "article": "Article",
+  "page": "Basic page"
+}
+</code></pre>
+
+<p>I hope you find this blog entry usefull.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
+                <pubDate>Tue, 16 Dec 2014 22:40:10 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
+            </item>
+                    <item>
                 <title>How to create a Field Formatter in Drupal 8</title>
                 <description><![CDATA[<p>One of the biggest changes in <a href="https://www.drupal.org/drupal-8.0" target="_blank">Drupal 8</a> is his integration with <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">RESTful</a>.</p>
 
@@ -251,7 +462,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 12:11:07 -0600</pubDate>
+                <pubDate>Tue, 09 Dec 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -308,7 +519,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 12:11:07 -0600</pubDate>
+                <pubDate>Sun, 07 Dec 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -404,7 +615,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 12:11:07 -0600</pubDate>
+                <pubDate>Tue, 25 Nov 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -478,7 +689,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 12:11:07 -0600</pubDate>
+                <pubDate>Fri, 24 Oct 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -551,7 +762,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 12:11:07 -0600</pubDate>
+                <pubDate>Sun, 19 Oct 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -731,7 +942,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 12:11:07 -0600</pubDate>
+                <pubDate>Fri, 17 Oct 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -843,7 +1054,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 12:11:07 -0600</pubDate>
+                <pubDate>Tue, 16 Sep 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -1035,7 +1246,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 12:11:07 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -1092,7 +1303,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 12:11:07 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -1239,7 +1450,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 12:11:07 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1306,7 +1517,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 12:11:07 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -1345,7 +1556,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 12:11:07 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -1373,7 +1584,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 12:11:07 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -1497,7 +1708,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 12:11:07 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -1532,7 +1743,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 12:11:07 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1759,7 +1970,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 12:11:07 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 22:40:09 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -1782,7 +1993,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 12:11:07 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 22:40:09 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -1943,7 +2154,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 12:11:07 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 22:40:10 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -2099,7 +2310,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 12:11:07 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 22:40:09 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -2123,7 +2334,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 12:11:07 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 22:40:09 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -2162,7 +2373,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 12:11:07 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 22:40:09 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -2180,7 +2391,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 12:11:07 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 22:40:09 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
