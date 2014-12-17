@@ -50,7 +50,7 @@ use Psr\Log\LoggerInterface;
 <p>To enable the Discover for REST Resources found our new Rest Resource we must to implement the proper information in Annotation. check the following example.</p>
 
 <pre><code>/**
- * Provides a resource for database watchdog log entries.
+ * Provides a resource to get bundles by entity.
  *
  * @RestResource(
  *   id = "entity_bundles",
@@ -111,7 +111,7 @@ use Psr\Log\LoggerInterface;
   }
 </code></pre>
 
-<p>Now we need to define the constructor as you can see below</p>
+<p>Now we need to define the constructor where we are receiving the values from the create method, as you can see below.</p>
 
 <pre><code>/**
   * Constructs a Drupal\rest\Plugin\ResourceBase object.
@@ -216,7 +216,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 23:33:44 -0600</pubDate>
+                <pubDate>Tue, 16 Dec 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -465,7 +465,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 23:33:44 -0600</pubDate>
+                <pubDate>Tue, 09 Dec 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -522,7 +522,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 23:33:44 -0600</pubDate>
+                <pubDate>Sun, 07 Dec 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -618,7 +618,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 23:33:44 -0600</pubDate>
+                <pubDate>Tue, 25 Nov 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -692,7 +692,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 23:33:44 -0600</pubDate>
+                <pubDate>Fri, 24 Oct 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -765,7 +765,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 23:33:44 -0600</pubDate>
+                <pubDate>Sun, 19 Oct 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -945,7 +945,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 23:33:43 -0600</pubDate>
+                <pubDate>Fri, 17 Oct 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -1057,7 +1057,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 23:33:43 -0600</pubDate>
+                <pubDate>Tue, 16 Sep 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -1249,7 +1249,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 23:33:43 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -1306,7 +1306,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 23:33:43 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -1453,7 +1453,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 23:33:43 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1520,7 +1520,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 23:33:43 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -1559,7 +1559,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 23:33:43 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -1587,7 +1587,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 23:33:43 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -1711,7 +1711,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 23:33:43 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -1746,7 +1746,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 23:33:43 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -1973,7 +1973,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 23:33:43 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -1996,7 +1996,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 23:33:43 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -2157,7 +2157,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 23:33:43 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -2313,7 +2313,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 23:33:43 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -2337,7 +2337,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 23:33:43 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -2376,7 +2376,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 23:33:43 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -2394,7 +2394,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 23:33:43 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 23:44:45 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
