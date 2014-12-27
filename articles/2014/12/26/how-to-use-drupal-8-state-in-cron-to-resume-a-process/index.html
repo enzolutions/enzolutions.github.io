@@ -1,0 +1,339 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>How to use Drupal 8 state in Cron to resume a process.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explanation about Drupal::State to create a Cron implementation with option to resume the execution">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="How to use Drupal 8 state in Cron to resume a process.">
+    <meta name="twitter:description" content="Explanation about Drupal::State to create a Cron implementation with option to resume the execution">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to use Drupal 8 state in Cron to resume a process.">
+<meta property="og:description" content="Explanation about Drupal::State to create a Cron implementation with option to resume the execution">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/">How to use Drupal 8 state in Cron to resume a process.</a>
+        </h1>
+    </header>
+
+    
+    <p>Usually operation in Cron could be used to execute tasks who require a lot of processing, is normal to execute this tasks is a list of items.</p>
+
+<p>The problem with this requirements is maybe is not enough one cron time execution to process the whole elements in our list of items to process. So we have to save the status of out execution to continue the next time the cron is executed.</p>
+
+<p>We can do that with <a href="https://api.drupal.org/api/drupal/core%21modules%21system%21core.api.php/group/queue/8" target="_blank">Queue Operations</a>, but this solution is complex to implement(maybe just for me) so I will propose a simple option to the implement the resume feature.</p>
+
+<h1>Working with our list of items to process.</h1>
+
+<p>Lets imagine we store our list of items in and array, and the normal option to process and array is using a <a href="http://php.net/manual/en/control-structures.foreach.php" target="_blank">foreach</a>.</p>
+
+<p>Well we can't use a foreach in our resume because this function starts his execution with a reset of the internal array pointer to the first element of the array and that is not good for our resume process.</p>
+
+<p>So I have to use a different solution to do that, let me show you my first implementation</p>
+
+<pre><code>foreach ( $array as $array_key =&gt; $array_value ) {
+}
+</code></pre>
+
+<p>Instead of that I decide to use a simple while with some changes to simulate the array key assignation in a variable as you can see in the following snippet.</p>
+
+<pre><code>while (list($array_key, $array_value) = each($array)) {
+}
+</code></pre>
+
+<h1>Store last state</h1>
+
+<p>With the problem about array pointer resolved we need store the last correct pointer processed by cron, to store that I use a new feature of Drupal 8 <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3Astate/8" target="_blank">Drupal::state()</a>.</p>
+
+<p>Drupal:state store temporary and not critical information, this information is not be migrated between environments in a eventual migration to production.</p>
+
+<p>Let me show you how to use in combination with while loops</p>
+
+<pre><code>while (list($array_key, $array_value) = each($array)) {
+
+  // --- INSERT LONG OPERATIONS HERE --
+
+  // Set last bank process to continue after this bank
+  \Drupal::state()-&gt;set('last_key', $array_key);
+}
+
+// Delete last bank if all were processed
+\Drupal::state()-&gt;delete('last_key');
+</code></pre>
+
+<p>If the hook_cron is interrupted at least we will know in the last index executed without problems, because is stored in state variable <strong>last_key</strong></p>
+
+<p>If we don't get any interruption we must delete the state variable.</p>
+
+<h1>Set array pointer</h1>
+
+<p>First I need to create a custom function named <strong>_array_set_pointer_by_key</strong> to set the array pointer to any arbitrary position, let me show the implementation.</p>
+
+<pre><code>function _array_set_pointer_by_key(&amp;$array, $key)
+{
+    reset($array);
+    while($index=key($array))
+    {
+        if($index==$key)
+            break;
+
+        next($array);
+    }
+}
+</code></pre>
+
+<p>The function above works with any kind of array keys.</p>
+
+<p>Now we need to validate if we have to resume the execution of <strong>hook_cron</strong> in some position of our array of list of items, using again the <strong>Drupal::State</strong> to get the information as you can see in the following piece of code.</p>
+
+<pre><code>$last_key = \Drupal::state()-&gt;get($last_bank_variable, null);
+
+if ($last_key) {
+  // Set pointer to last key to process
+  _array_set_pointer_by_key($array, $last_key);
+
+  // Set array to next valid bank to process
+  next($banks);
+}
+</code></pre>
+
+<p>After reset the array we use the <a href="http://php.net/manual/en/function.next.php" target="_blank">next</a> function to move the pointer to next position where we want to resume.</p>
+
+<p>I hope you find this blog entry useful.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-12-26</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    PHP, Drupal
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>

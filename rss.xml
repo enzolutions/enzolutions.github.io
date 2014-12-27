@@ -6,6 +6,96 @@
         <description>RSS feed for [enzo]lutions</description>
                 <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to use Drupal 8 state in Cron to resume a process.</title>
+                <description><![CDATA[<p>Usually operation in Cron could be used to execute tasks who require a lot of processing, is normal to execute this tasks is a list of items.</p>
+
+<p>The problem with this requirements is maybe is not enough one cron time execution to process the whole elements in our list of items to process. So we have to save the status of out execution to continue the next time the cron is executed.</p>
+
+<p>We can do that with <a href="https://api.drupal.org/api/drupal/core%21modules%21system%21core.api.php/group/queue/8" target="_blank">Queue Operations</a>, but this solution is complex to implement(maybe just for me) so I will propose a simple option to the implement the resume feature.</p>
+
+<h1>Working with our list of items to process.</h1>
+
+<p>Lets imagine we store our list of items in and array, and the normal option to process and array is using a <a href="http://php.net/manual/en/control-structures.foreach.php" target="_blank">foreach</a>.</p>
+
+<p>Well we can't use a foreach in our resume because this function starts his execution with a reset of the internal array pointer to the first element of the array and that is not good for our resume process.</p>
+
+<p>So I have to use a different solution to do that, let me show you my first implementation</p>
+
+<pre><code>foreach ( $array as $array_key =&gt; $array_value ) {
+}
+</code></pre>
+
+<p>Instead of that I decide to use a simple while with some changes to simulate the array key assignation in a variable as you can see in the following snippet.</p>
+
+<pre><code>while (list($array_key, $array_value) = each($array)) {
+}
+</code></pre>
+
+<h1>Store last state</h1>
+
+<p>With the problem about array pointer resolved we need store the last correct pointer processed by cron, to store that I use a new feature of Drupal 8 <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3Astate/8" target="_blank">Drupal::state()</a>.</p>
+
+<p>Drupal:state store temporary and not critical information, this information is not be migrated between environments in a eventual migration to production.</p>
+
+<p>Let me show you how to use in combination with while loops</p>
+
+<pre><code>while (list($array_key, $array_value) = each($array)) {
+
+  // --- INSERT LONG OPERATIONS HERE --
+
+  // Set last bank process to continue after this bank
+  \Drupal::state()-&gt;set('last_key', $array_key);
+}
+
+// Delete last bank if all were processed
+\Drupal::state()-&gt;delete('last_key');
+</code></pre>
+
+<p>If the hook_cron is interrupted at least we will know in the last index executed without problems, because is stored in state variable <strong>last_key</strong></p>
+
+<p>If we don't get any interruption we must delete the state variable.</p>
+
+<h1>Set array pointer</h1>
+
+<p>First I need to create a custom function named <strong>_array_set_pointer_by_key</strong> to set the array pointer to any arbitrary position, let me show the implementation.</p>
+
+<pre><code>function _array_set_pointer_by_key(&amp;$array, $key)
+{
+    reset($array);
+    while($index=key($array))
+    {
+        if($index==$key)
+            break;
+
+        next($array);
+    }
+}
+</code></pre>
+
+<p>The function above works with any kind of array keys.</p>
+
+<p>Now we need to validate if we have to resume the execution of <strong>hook_cron</strong> in some position of our array of list of items, using again the <strong>Drupal::State</strong> to get the information as you can see in the following piece of code.</p>
+
+<pre><code>$last_key = \Drupal::state()-&gt;get($last_bank_variable, null);
+
+if ($last_key) {
+  // Set pointer to last key to process
+  _array_set_pointer_by_key($array, $last_key);
+
+  // Set array to next valid bank to process
+  next($banks);
+}
+</code></pre>
+
+<p>After reset the array we use the <a href="http://php.net/manual/en/function.next.php" target="_blank">next</a> function to move the pointer to next position where we want to resume.</p>
+
+<p>I hope you find this blog entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
+                <pubDate>Fri, 26 Dec 2014 22:14:12 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
+            </item>
+                    <item>
                 <title>A Drupal Guy in a Backbone Conference</title>
                 <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs_logo.png"/> Past Dic 15th and 16th I attend the 3rd Backbone Conference in Cambridge, Massachusetts, USA.</p>
 
@@ -41,7 +131,7 @@
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 12:54:58 -0600</pubDate>
+                <pubDate>Wed, 17 Dec 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -255,7 +345,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 12:54:58 -0600</pubDate>
+                <pubDate>Tue, 16 Dec 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -292,7 +382,7 @@ use Psr\Log\LoggerInterface;
 ]
 </code></pre>
 
-<p>The previous was generated by a view selected articles with images, if you want import this view in system just download the file <a href="http://enzolutions.com/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
+<p>The previous output was generated by a view selecting articles with images, if you want import this view in your system just download the file <a href="http://enzolutions.com/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
 
 <p><img src="http://enzolutions.com/assets/img/configuration_management_view_import.png"/></p>
 
@@ -504,7 +594,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 12:54:58 -0600</pubDate>
+                <pubDate>Tue, 09 Dec 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -561,7 +651,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 12:54:58 -0600</pubDate>
+                <pubDate>Sun, 07 Dec 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -657,7 +747,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 12:54:58 -0600</pubDate>
+                <pubDate>Tue, 25 Nov 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -731,7 +821,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 12:54:58 -0600</pubDate>
+                <pubDate>Fri, 24 Oct 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -804,7 +894,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 12:54:58 -0600</pubDate>
+                <pubDate>Sun, 19 Oct 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -984,7 +1074,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 12:54:58 -0600</pubDate>
+                <pubDate>Fri, 17 Oct 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -1096,8 +1186,65 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 12:54:58 -0600</pubDate>
+                <pubDate>Tue, 16 Sep 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
+            </item>
+                    <item>
+                <title>How to enable CORS requests against Drupal 8</title>
+                <description><![CDATA[<h1>The Problem</h1>
+
+<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
+
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+
+<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
+
+<pre><code>public function options(EntityInterface $entity) {
+   $response = new ResourceResponse();
+   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
+   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
+   return $response-&gt;send();
+  }
+</code></pre>
+
+<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
+
+<h1>The Solution</h1>
+
+<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
+
+<p>But let me explain the changes introduced in my patch.</p>
+
+<h2>Intercept OPTIONS Request</h2>
+
+<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
+
+<p>Check the code below.</p>
+
+<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* / [R=200,L]
+</code></pre>
+
+<h2>Enable CORS</h2>
+
+<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
+
+<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
+
+<p>Check the implementation below.</p>
+
+<pre><code>Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+</code></pre>
+
+<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
+
+<p>I expect you have found this entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
+                <pubDate>Mon, 08 Sep 2014 22:14:12 -0600</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to create an interactive command in Node.js</title>
@@ -1288,65 +1435,8 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 12:54:58 -0600</pubDate>
+                <pubDate>Mon, 08 Sep 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
-            </item>
-                    <item>
-                <title>How to enable CORS requests against Drupal 8</title>
-                <description><![CDATA[<h1>The Problem</h1>
-
-<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
-
-<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
-
-<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
-
-<pre><code>public function options(EntityInterface $entity) {
-   $response = new ResourceResponse();
-   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
-   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
-   return $response-&gt;send();
-  }
-</code></pre>
-
-<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
-
-<h1>The Solution</h1>
-
-<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
-
-<p>But let me explain the changes introduced in my patch.</p>
-
-<h2>Intercept OPTIONS Request</h2>
-
-<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
-
-<p>Check the code below.</p>
-
-<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule .* / [R=200,L]
-</code></pre>
-
-<h2>Enable CORS</h2>
-
-<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
-
-<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
-
-<p>Check the implementation below.</p>
-
-<pre><code>Header always set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
-Header always set Access-Control-Allow-Headers: Authorization
-</code></pre>
-
-<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
-
-<p>I expect you have found this entry useful.</p>
-]]></description>
-                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 12:54:58 -0600</pubDate>
-                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>Understanding Configuration Management in Drupal 8</title>
@@ -1492,7 +1582,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 12:54:58 -0600</pubDate>
+                <pubDate>Wed, 27 Aug 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1559,7 +1649,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 12:54:58 -0600</pubDate>
+                <pubDate>Tue, 26 Aug 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -1598,7 +1688,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 12:54:58 -0600</pubDate>
+                <pubDate>Sun, 24 Aug 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -1626,7 +1716,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 12:54:58 -0600</pubDate>
+                <pubDate>Thu, 14 Aug 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -1750,7 +1840,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 12:54:58 -0600</pubDate>
+                <pubDate>Tue, 08 Jul 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -1785,7 +1875,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 12:54:58 -0600</pubDate>
+                <pubDate>Thu, 03 Jul 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -2012,7 +2102,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 12:54:58 -0600</pubDate>
+                <pubDate>Wed, 18 Jun 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -2035,7 +2125,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 12:54:58 -0600</pubDate>
+                <pubDate>Mon, 16 Jun 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -2196,7 +2286,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 12:54:58 -0600</pubDate>
+                <pubDate>Mon, 02 Jun 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -2352,7 +2442,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 12:54:58 -0600</pubDate>
+                <pubDate>Sun, 01 Jun 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -2376,7 +2466,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 12:54:58 -0600</pubDate>
+                <pubDate>Sat, 31 May 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -2415,7 +2505,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 12:54:58 -0600</pubDate>
+                <pubDate>Wed, 28 May 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -2433,7 +2523,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 12:54:58 -0600</pubDate>
+                <pubDate>Wed, 21 May 2014 22:14:12 -0600</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
