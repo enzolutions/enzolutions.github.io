@@ -1,0 +1,495 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<title>How to create an Authentication Provider in Drupal 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explanation to create a custom Autentication Provider in Drupal 8">
+<meta name="author" content="enzo - Eduardo Garcia">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:image" content="http://enzolutions.com/assets/img/spresso-logo.png">
+    <meta name="twitter:title" content="How to create an Authentication Provider in Drupal 8">
+    <meta name="twitter:description" content="Explanation to create a custom Autentication Provider in Drupal 8">
+    <meta name="twitter:creator" content="@enzolutions">
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to create an Authentication Provider in Drupal 8">
+<meta property="og:description" content="Explanation to create a custom Autentication Provider in Drupal 8">
+<meta property="og:url" content="http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/">
+<meta property="og:site_name" content="[enzo]lutions">
+
+<link href="http://enzolutions.com/rss.xml" type="application/rss+xml" rel="alternate" title="[enzo]lutions Feed">
+<link rel="icon" type="image/x-icon" href="http://enzolutions.com/favicon.ico">
+<link rel="apple-touch-icon" href="http://enzolutions.com/assets/img/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://enzolutions.com/assets/img/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://enzolutions.com/assets/img/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://enzolutions.com/assets/img/touch-icon-ipad-retina.png">
+
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://enzolutions.com/assets/css/bootstrap.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/style.css" rel="stylesheet" media="screen">
+<link href="http://enzolutions.com/assets/css/theme.css" rel="stylesheet" media="screen">
+
+<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+            <a class="label label-primary" href="/">[enzo]lutions</a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        <li><a href="/">
+        About</a>
+    </li>
+        <li><a href="/blog">
+        Blog</a>
+    </li>
+        <li><a href="/company">
+        Company</a>
+    </li>
+        <li><a href="/projects">
+        Projects</a>
+    </li>
+        <li><a href="/talks">
+        Talks</a>
+    </li>
+    </ul>
+        <div class="navbar-social text-right">
+          <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+        </div>
+      </div><!--/.nav-collapse -->
+    </div>
+</div>
+            <div class="container">
+                    <article class="post">
+    <header>
+        <h1>
+            <a href="http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/">How to create an Authentication Provider in Drupal 8</a>
+        </h1>
+    </header>
+
+    
+    <p>Some weeks ago I show you <a href="http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8" target="_blank">How to create a Rest Resource in Drupal 8</a> and as I explain in that post we use the Authentication Provider <strong>Basic Auth</strong> as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/restui_bundle_entities_settings.png"/></p>
+
+<p>Right now is the unique Authentication Provider available to use in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> scenery. If you want to read more about CORS you can read the blog entry <a href="http://enzolutions.com2014/05/31/what-is-cross-origin-resource-sharing-cors" target="_blank">What is Cross-Origin Resource Sharing (CORS)</a>.</p>
+
+<p>But what about if <strong>Basic Auth</strong> doesn't fit with you needs, well I will show you how to create a custom Authentication Provider.</p>
+
+<h1>The Requirement</h1>
+
+<p>My imaginary request will be an Authentication Provider without user validation, that means access as <strong>Anonymous</strong> user but we require to validate the source of request to check against an <strong>IP White List</strong> enabled to access our REST resources.</p>
+
+<h1>Create a Module</h1>
+
+<p>I will skip the explanation about how to create the Module <strong>ip_consumer_auth</strong> in Drupal 8 because could be generated using the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> executing the following command.</p>
+
+<pre><code>$ drupal generate:module
+</code></pre>
+
+<p>After create the module with the console, we will use again to create a Form Configuration to create our <strong>IP White List</strong> using the following command.</p>
+
+<pre><code>$ drupal generate:form:config
+</code></pre>
+
+<p>Add a textfield to the form, because right now is not possible add a textarea ( I already report the <a href="https://github.com/hechoendrupal/DrupalAppConsole/issues/264">issue</a>).</p>
+
+<p>But the change to enable a textarea is just replace the type textield to <strong>textarea</strong> and complete some extra information, the implementation of method buildForm will looks similar to following snippet.</p>
+
+<pre><code>/**
+ * {@inheritdoc}
+ */
+public function buildForm(array $form, FormStateInterface $form_state) {
+  $config = $this-&gt;config('ip_consumer_auth.consumers_form_config');
+  $form['allowed_ip_consumers'] = [
+    '#type' =&gt; 'textarea',
+    '#title' =&gt; $this-&gt;t('Allowed IP Consumers'),
+    '#description' =&gt; $this-&gt;t('Place IP addresses on separate lines'),
+    '#default_value' =&gt; $config-&gt;get('allowed_ip_consumers'),
+  ];
+  return parent::buildForm($form, $form_state);
+}
+</code></pre>
+
+<p>The form class will be located at <strong>ip_consumer_auth/src/Form/ConsumersForm.php</strong></p>
+
+<p>The layout to enter allowed IP consumer will looks similar to this image</p>
+
+<p><img src="http://enzolutions.com/assets/img/allowed_ip_resources.png"/></p>
+
+<p>The code to save that values are generated by <strong>Drupal Console</strong>, in the same way the Routing is created, be sure you change the values to your convenience after generate the form.</p>
+
+<h1>Create Authentication Provider</h1>
+
+<p>Before to start with code for our Authetication Provider we need to inform to <strong>Drupal 8</strong> the existence of our custom Authentication Provider, to do that we add a new file in our module named <strong>ip_consumer_auth.service.yml</strong> because my module name is <strong>ip_consumer_auth</strong>.</p>
+
+<p>Let me show you the content of that file</p>
+
+<pre><code>services:
+  authentication.ip_consumer_auth:
+    class: Drupal\ip_consumer_auth\Authentication\Provider\IPConsumerAuth
+    arguments: ['@config.factory', '@entity.manager']
+    tags:
+      - { name: authentication_provider, priority: 100 }
+</code></pre>
+
+<p>The discover for services will find this file and registering our Authentication Provider Class <strong>Drupal\ip_consumer_auth\Authentication\Provider\IPConsumerAuth</strong> and prepare the elements to send to constructor.</p>
+
+<p>With the sentence above we don't have to implement the method <strong>create</strong> in our class.</p>
+
+<p>At the end we define the priority, this value will define the execution order if multiple Authentication Provider were enabled.</p>
+
+<h2>Implement Class Authentication Provider IPConsumerAuth</h2>
+
+<p>Our class <strong>IPConsumerAuth</strong> must implement the interface <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Authentication!AuthenticationProviderInterface.php/interface/AuthenticationProviderInterface/8" target="_blank">AuthenticationProviderInterface</a> as you can see in the following snippet.</p>
+
+<pre><code>/**
+ * HTTP Basic authentication provider.
+ */
+class IPConsumerAuth implements AuthenticationProviderInterface {
+}
+</code></pre>
+
+<h2>Libraries</h2>
+
+<p>The Authentication Provider require some libraries and we must to inform to AutoLoader where are these libraries, let me show the complete list.</p>
+
+<pre><code>namespace Drupal\ip_consumer_auth\Authentication\Provider;
+
+use \Drupal\Component\Utility\String;
+use Drupal\Core\Authentication\AuthenticationProviderInterface;
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Entity\EntityManagerInterface;
+use Drupal\Core\Flood\FloodInterface;
+use Drupal\user\UserAuthInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
+use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+</code></pre>
+
+<h2>Implement method applies</h2>
+
+<p>Even if the Authentication Provider is enabled for some REST resource is required a validation to confirm the Authentication Provider apply for current Request.</p>
+
+<p>In our case if our Authentication Provider was enabled we will add any extra validation as you can see in the following implementation.</p>
+
+<pre><code>/**
+ * {@inheritdoc}
+ */
+public function applies(Request $request) {
+  // If Authentication Provider is enabled always apply
+  return TRUE;
+}
+</code></pre>
+
+<h2>Implement method authenticate</h2>
+
+<p>Now we have to implement the logic to execute to validate the Request, check the following snippet.</p>
+
+<pre><code>/**
+ * {@inheritdoc}
+ */
+public function authenticate(Request $request) {
+  $allowed_ip_consumers = $this-&gt;configFactory-&gt;get('ip_consumer_auth.consumers_form_config')-&gt;get('allowed_ip_consumers');
+  $ips = explode( "\n", $allowed_ip_consumers );
+  $consumer_ip = $request-&gt;getClientIp(TRUE);
+  if (in_array($consumer_ip, $ips)) {
+    // Return Anonymous user
+    return $this-&gt;entityManager-&gt;getStorage('user')-&gt;load(0);
+  }
+  else{
+    throw new AccessDeniedHttpException();
+    return null;
+  }
+}
+</code></pre>
+
+<p>In the implementation above I use the <strong>configFactory</strong> to get the information stored about allowed IP Consumer using the Settings form created before.</p>
+
+<p>The authenticate method receive an <a href="http://api.symfony.com/2.0/Symfony/Component/HttpFoundation/Request.html" target="_blank">Request</a> object defined in <a href="http://symfony.com/doc/current/components/http_foundation/introduction.html"></a>The HttpFoundation Component</a> of <a href="http://symfony.com/" target="_blank">Symfony</a>.</p>
+
+<p>Using the Request method <a href="http://api.symfony.com/2.0/Symfony/Component/HttpFoundation/Request.html#method_getClientIp" target="_blank">getClientIp</a> we get the IP of Consumer.</p>
+
+<p>I used the PHP functions <a href="http://php.net/manual/es/function.explode.php" target="_blank">explode</a> and <a href="http://php.net/manual/en/function.in-array.php" target="_blank">in_array</a> to determine if IP consumer belong to Allowed IP consumer. I know maybe with a regex will be more efficient but I really sucks in Regex.</p>
+
+<p>If validation pass I return an Account object for Anonymous user, if fail an Access Denied Exception is throw.</p>
+
+<h2>Implement method handleException</h2>
+
+<p>Before if the IP wasn't in the allowed list of IP Consumer an exception is throw, using the method <strong>handleException</strong> we have the option to intercept and process to produce any output desired.</p>
+
+<p>Let me share with you my implementation</p>
+
+<pre><code>  /**
+   * {@inheritdoc}
+   */
+  public function cleanup(Request $request) {}
+
+  /**
+   * {@inheritdoc}
+   */
+  public function handleException(GetResponseForExceptionEvent $event) {
+    $exception = $event-&gt;getException();
+    if ($exception instanceof AccessDeniedHttpException) {
+      $event-&gt;setException(new UnauthorizedHttpException('Invalid consumer origin.', $exception));
+      return TRUE;
+    }
+    return FALSE;
+  }
+</code></pre>
+
+<p>As you can see is not to complex, but is just an idea above what you can do with this method.</p>
+
+<h1>Usage</h1>
+
+<p>After create our module with our custom Authentication Provider and enable we are ready to start to use.</p>
+
+<p>Lets imagine you install the module <a href="https://github.com/enzolutions/entity_rest_extra" target="_blank">Entity Rest Extra</a> and we will use our Authentication Provider.</p>
+
+<p>Using the <a href="https://www.drupal.org/project/restui/git-instructions" target="_blank">Rest UI</a>(I recommend to use the git version until Drupal 8 get a first release) module we enable the REST Resource and enable our Custom Authentication Provider, as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/custom_authentication_provider.png"/></p>
+
+<h2>Access Denied</h2>
+
+<p>Now if you try to access via CORS the REST end point <strong>http://example.com/bundles/node</strong> you will get an error <strong>403 Forbidden</strong> because the allowed IP consumers weren't defined yet.</p>
+
+<h2>Unauthorized</h2>
+
+<p>After enable your IP consumer and try again <strong>http://example.com/bundles/node</strong> you will get an error <strong>401 Unauthorized</strong></p>
+
+<p>If that error doesn't have any logic for you let me explain, remember in our Authentication Provider we don't have information about any users, so if the request pass the validation of IP Consumer we return an Anonymous user.</p>
+
+<p>When we enable any REST Resource in Drupal 8 a new set of  permissions is created, in our case we have to assign the permission <strong>Access GET on Bundles by entities resource</strong> to Anonymous user as you can see in the following image.</p>
+
+<p><img src="http://enzolutions.com/assets/img/rest_anonymous_permission.png"/></p>
+
+<h2>Access Denied AGAIN</h2>
+
+<p>Well maybe at this point you get MAD with me, because now you get again an error
+ <strong>403 Forbidden</strong>, but at this time the fault is not caused by Authentication Provider.</p>
+
+<p>The error now is related with REST Resource itself is you check the code of module <strong>Entity Rest Extra</strong> you will found the permission <strong>Administer content types</strong> is required to access this Resource.</p>
+
+<h2>Bonus</h2>
+
+<p>Well you can complain about nobody inform to you that module has own permissions validation or the REST permissions, well that could be true.</p>
+
+<p>If you want to get more information about a specific Drupal router you can use the <strong>Drupal Console</strong>.</p>
+
+<p>First thing you have to do is determine the Router id, we can you the canonical URL as you can see in the following command.</p>
+
+<pre>
+ $ console router:debug | grep bundles/{entity}
+ rest.entity_bundles.GET.json                             /bundles/{entity}
+ </pre>
+
+<p>Now we can get more information about router using the following command.</p>
+
+<pre>
+ $ console router:debug rest.entity_bundles.GET.json
+ Route name                   Options
+ rest.entity_bundles.GET.json
+  + Pattern                   /bundles/{entity}
+  + Defaults
+   - _controller              Drupal\rest\RequestHandler::handle
+   - _plugin                  entity_bundles
+  + Options
+   - compiler_class           \Drupal\Core\Routing\RouteCompiler
+   - _access_mode             ANY
+   - 0                        ip_consumer_auth
+   - 0                        access_check.permission
+  </pre>
+
+<p>As you can see the last think executed is access_check.permission generating the error 401. Maybe in the future the internal permissions in resourced will be included.</p>
+
+<p>If you want see a complete implementation of Authentication provider you clone the project <a href="https://github.com/enzolutions/ip_consumer_auth" target="_blank">IP Consumer Auth</a></p>
+
+<p>I hope you found this blog entry useful.</p>
+
+
+    <footer>
+        <p>
+            Posted by enzo - Eduardo Garcia on <time pubdate="pubdate">2014-12-28</time>
+        </p>
+
+                <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Drupal, Drupal Modules, Rest
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+            </footer>
+    
+                        <section>
+                <h3>Comments</h3>
+                <div id="disqus_thread"></div>
+                <noscript>
+                    Please enable JavaScript to view the
+                    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </section>
+            </article>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="list-inline">
+        <li><a href="https://github.com/yosymfony/Spress-theme-spresso">
+        Go to Spresso theme web</a>
+    </li>
+    </ul>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <ul class="list-inline">
+        <li>
+        <a target="_blank" href="https://twitter.com/enzolutions">
+            <i class="fa fa-twitter fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="https://www.facebook.com/enzolutions">
+            <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="cr.linkedin.com/in/edugarcia/">
+            <i class="fa fa-linkedin-square fa-2x"></i>
+        </a>
+    </li>
+    
+    
+        <li>
+        <a target="_blank" href="https://github.com/enzolutions">
+            <i class="fa fa-github fa-2x"></i>
+        </a>
+    </li>
+    
+    
+    
+        <li>
+        <a target="_blank" href="mailto:enzo@enzolutions.com">
+            <i class="fa fa-paper-plane fa-2x"></i>
+        </a>
+    </li>
+    
+        <li>
+        <a target="_blank" href="http://enzolutions.com/rss.xml">
+            <i class="fa fa-rss fa-2x"></i>
+        </a>
+    </li>
+    </ul>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <a href="https://github.com/yosymfony/Spress-theme-spresso" title="Spresso theme">
+                        <img src="http://enzolutions.com/assets/img/spresso-logo.png"/>
+                    </a>
+                </p>
+                <p class="text-center">
+                    &copy; 2014 enzo - Eduardo Garcia.
+                    Powered by <a href="https://github.com/yosymfony/Spress">Spress</a>.
+                </p>
+            </div>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+            <script src="/assets/js/bootstrap.min.js"></script>
+
+            <script src="http://enzolutions.com/assets/js/github-repositories.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              jQuery( document ).ready(function() {
+                  jQuery("#my-github-projects").loadRepositories("enzolutions");
+              });
+            </script>
+
+                        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+            <script>hljs.initHighlightingOnLoad();</script>
+            
+                        <script type="text/javascript">
+            var disqus_shortname = 'enzolutions';
+
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+            </footer>
+    
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>
