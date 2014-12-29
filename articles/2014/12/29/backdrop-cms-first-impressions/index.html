@@ -194,7 +194,7 @@ backdrop = 1.x
 
 <h3>Replace function system_get_date_types</h3>
 
-<p>The function <a href="https://api.drupal.org/api/drupal/modules!system!system.module/function/system_get_date_types/7" target="_blank">system_get_date_types</a> doesn't exist in Backdrop, but after some review in source code of core I detect this function was replaced by <strong>system_get_date_formats</strong></p>
+<p>The function <a href="https://api.drupal.org/api/drupal/modules!system!system.module/function/system_get_date_types/7" target="_blank">system_get_date_types</a> doesn't exist in Backdrop, but after some review in source code of core I detect this function was replaced by <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_get_date_formats/1" target="_blank">system_get_date_formats</a>.</p>
 
 <p>Also in Drupal 7 this function return a multidimensional array, and each array entry has a title index, in backdrop this index was replaced by <strong>label</strong></p>
 
@@ -202,7 +202,7 @@ backdrop = 1.x
 
 <p>These functions were replaced by function <strong>cache</strong> this function receive a bin name and return a Cache class with methods set and get.</p>
 
-<p>The default cache class in Backdrop is <strong>BackdropDatabaseCache</strong></p>
+<p>The default cache class in Backdrop is <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21cache.inc/class/BackdropDatabaseCache/1" target="_blank">BackdropDatabaseCache</a></p>
 
 <p>Let me show how a get change from Drupal 7</p>
 
