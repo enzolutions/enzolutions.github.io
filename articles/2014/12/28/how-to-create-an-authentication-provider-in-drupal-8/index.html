@@ -146,9 +146,7 @@
 <pre><code>$ drupal generate:form:config
 </code></pre>
 
-<p>Add a textfield to the form, because right now is not possible add a textarea ( I already report the <a href="https://github.com/hechoendrupal/DrupalAppConsole/issues/264">issue</a>).</p>
-
-<p>But the change to enable a textarea is just replace the type textield to <strong>textarea</strong> and complete some extra information, the implementation of method buildForm will looks similar to following snippet.</p>
+<p>Add a textarea field to form to store allowed IP Address. The implementation of method buildForm will looks similar to following snippet.</p>
 
 <pre><code>/**
  * {@inheritdoc}

@@ -122,11 +122,11 @@
     </header>
 
     
-    <p>Usually operation in Cron could be used to execute tasks who require a lot of processing, is normal to execute this tasks is a list of items.</p>
+    <p>Usually Cron could be used to execute tasks who require a lot of processing, is normal to execute this tasks over a list of items.</p>
 
-<p>The problem with this requirements is maybe is not enough one cron time execution to process the whole elements in our list of items to process. So we have to save the status of out execution to continue the next time the cron is executed.</p>
+<p>The problem with this requirements is maybe there is not enough with one cron time execution to process the whole elements in our list of items to process. So we have to save the status of our execution to continue the next time the cron is executed.</p>
 
-<p>We can do that with <a href="https://api.drupal.org/api/drupal/core%21modules%21system%21core.api.php/group/queue/8" target="_blank">Queue Operations</a>, but this solution is complex to implement(maybe just for me) so I will propose a simple option to the implement the resume feature.</p>
+<p>We can do that with <a href="https://api.drupal.org/api/drupal/core%21modules%21system%21core.api.php/group/queue/8" target="_blank">Queue Operations</a>, but this solution is complex to implement(maybe just for me) so I will propose a simple option to implement the resume feature.</p>
 
 <h1>Working with our list of items to process.</h1>
 
@@ -198,7 +198,7 @@ if ($last_key) {
   _array_set_pointer_by_key($array, $last_key);
 
   // Set array to next valid bank to process
-  next($banks);
+  next($array);
 }
 </code></pre>
 
