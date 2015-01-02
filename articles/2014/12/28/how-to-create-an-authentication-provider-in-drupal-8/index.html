@@ -244,7 +244,7 @@ public function applies(Request $request) {
  */
 public function authenticate(Request $request) {
   $allowed_ip_consumers = $this-&gt;configFactory-&gt;get('ip_consumer_auth.consumers_form_config')-&gt;get('allowed_ip_consumers');
-  $ips = explode( "\n", $allowed_ip_consumers );
+  $ips = array_map('trim', explode( "\n", $allowed_ip_consumers));
   $consumer_ip = $request-&gt;getClientIp(TRUE);
   if (in_array($consumer_ip, $ips)) {
     // Return Anonymous user
@@ -263,7 +263,7 @@ public function authenticate(Request $request) {
 
 <p>Using the Request method <a href="http://api.symfony.com/2.0/Symfony/Component/HttpFoundation/Request.html#method_getClientIp" target="_blank">getClientIp</a> we get the IP of Consumer.</p>
 
-<p>I used the PHP functions <a href="http://php.net/manual/es/function.explode.php" target="_blank">explode</a> and <a href="http://php.net/manual/en/function.in-array.php" target="_blank">in_array</a> to determine if IP consumer belong to Allowed IP consumer. I know maybe with a regex will be more efficient but I really sucks in Regex.</p>
+<p>I used the PHP functions <a href="http://php.net/manual/es/function.explode.php" target="_blank">explode</a>, <a href="http://php.net/manual/es/function.array-map.php" target="_blank">array_map</a> and <a href="http://php.net/manual/en/function.in-array.php" target="_blank">in_array</a> to determine if IP consumer belong to Allowed IP consumer. I know maybe with a regex will be more efficient but I really sucks in Regex.</p>
 
 <p>If validation pass I return an Account object for Anonymous user, if fail an Access Denied Exception is throw.</p>
 
