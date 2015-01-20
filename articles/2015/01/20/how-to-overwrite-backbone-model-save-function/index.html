@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>Welcome to [enzo]lutions</title>
+    <title>How to overwrite Backbone Model save function</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -100,11 +100,7 @@
       </div><!-- /.top-navigation -->
 </div><!-- /.navigation-wrapper -->
 
-          <div class="image-wrap">
-  <img src="http://enzolutions.com/assets/images/enzolutions_image_header.png" alt="feature image">
-  <span class="image-credit">Photo Credit: <a target="_blank" href="http://cr.linkedin.com/pub/werner-gomez/31/ba8/9b6">Werner Gomez</a></span>
-</div><!-- /.image-wrap -->
-    
+      
   <div id="main" role="main">
     <div class="article-author-side">
       <img src="http://enzolutions.com/assets/images/enzo.png" class="bio-photo" alt="enzo - Eduardo Garcia bio photo">
@@ -129,43 +125,125 @@
 <a href="http://enzolutions.com/rss.xml" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> Feed</a>
     </div>
 
-        <div id="index">
-    <h3><a href="http://enzolutions.com/posts/">Recent Posts</a></h3>
-                <article>
-        <h2><a href="http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/" title="How to configure MySQL to import large database">How to configure MySQL to import large database</a></h2>
-            </article>
-      <article>
-        <h2><a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/" title="Introduction to Grunt">Introduction to Grunt</a></h2>
-            </article>
-      <article>
-        <h2><a href="http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/" title="Yeoman Generator: Marionette JS + Drupal">Yeoman Generator: Marionette JS + Drupal</a></h2>
-            </article>
-      <article>
-        <h2><a href="http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/" title="Routing & Controlling with MarionetteJS">Routing & Controlling with MarionetteJS</a></h2>
-            </article>
-      <article>
-        <h2><a href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/" title="What is and how it works RequireJS">What is and how it works RequireJS</a></h2>
-            </article>
-      
-    <ul class="pagination inline-list">
-          <li>
-                <a class="prev" href="http://enzolutions.com/page4/">
-                    &laquo; Newer
-                </a>
-            </li>
-    
-                  <li><a href="http://enzolutions.com/">1</a></li>
-                        <li><a href="http://enzolutions.com/page2/">2</a></li>
-                        <li><a href="http://enzolutions.com/page3/">3</a></li>
-                        <li><a href="http://enzolutions.com/page4/">4</a></li>
-                        <li><span class="active">5</span></li>
-                        <li><a href="http://enzolutions.com/page6/">6</a></li>
-          
-          <li><a href="http://enzolutions.com/page6/">Older &raquo;</a></li>
-      </ul>
+  <article class="post">
+  <div class="headline-wrap">
+          <h1><a href="http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" rel="bookmark" title="How to overwrite Backbone Model save function">How to overwrite Backbone Model save function</a></h1>
+      </div><!--/ .headline-wrap -->
+  <div class="article-wrap">
+    <div class="social-share">
+  <ul class="inline-list">
+    <li class="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+    </li>
+    <li class="twitter">
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+    </li>
+    <li class="googleplus">
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+    </li>
+  </ul>
 </div>
 
-  
+    <p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
+
+<p>Backbone define some <a href="http://es.wikipedia.org/wiki/Representational_State_Transfer" target="_blank">REST</a> states to operate over models for instance:</p>
+
+<ul>
+<li>Model Fetch: <strong>GET</strong></li>
+<li>Model New: <strong>POST</strong></li>
+<li>Model Update: <strong>PUT</strong></li>
+</ul>
+
+<p>But is possible our API doesn't implement all REST States, for instance <a href="http://www.drupal.org" target="_blank">Drupal</a> 8 (version in development) don't implement the method PUT to save Drupal Entities yet.</p>
+
+<p>In exchange the REST State PATCH is used by Drupal to save models.</p>
+
+<p>So if I try to create a regular Model as you can see in the following snippet.</p>
+
+<pre><code>Node = Backbone.Model.extend({
+        initialize: function(){
+            alert("Welcome to this world");
+        }
+    });
+
+var node = new Node({ id: 1, title: 'Node Sample in Backbone'});
+
+node.save(userDetails, {
+    success: function (user) {
+        alert(user.toJSON());
+    }
+})
+</code></pre>
+
+<p>The code above will execute an Ajax call using PUT method.</p>
+
+<p>If you are a Drupal Developer you will notice the model doesn't match the Drupal Entity structure with language and deltas, but I just want to show a simply logic about Backbone save.</p>
+
+<p>Now let me show you how we can overwrite the save function to change the REST method.</p>
+
+<pre><code>Node = Backbone.Model.extend({
+        initialize: function(){
+            alert("Welcome to this world");
+        },
+        save: function(attrs, options) {
+          options.patch = true;
+          // Proxy the call to the original save function
+          Backbone.Model.prototype.save.call(this, attrs, options);
+        }
+    });
+
+var node = new Node({ id: 1, title: 'Node Sample in Backbone'});
+
+node.save(userDetails, {
+    success: function (user) {
+        alert(user.toJSON());
+    }
+})
+</code></pre>
+
+<p>Now our model will execute and Ajax request using PATCH method.</p>
+
+<p>I used this technique to enable the library <a href="https://github.com/enzolutions/backbone.drupal" target="_blank">Backbone.Drupal</a> send models to Drupal 8 using REST method PATCH.</p>
+
+<p>I hope you found this blog entry useful.</p>
+
+    <hr />
+    <footer role="contentinfo">
+            <p class="byline">Published on <time datetime="2015-01-20T18:44:26+0000">2015-01-20T18:44:26+0000</time>.</p>
+      
+              <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Backbone, Javascript, Rest, Drupal
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+          </footer>
+  </div><!-- /.article-wrap -->
+    <section>
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+
+      <script type="text/javascript">
+        var disqus_shortname = 'enzolutions';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+  </article>
+
 </div><!-- /#main -->
 
 <div class="footer-wrap">
@@ -184,5 +262,17 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-</body>
+
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
 </html>
