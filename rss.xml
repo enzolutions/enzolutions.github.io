@@ -6,6 +6,153 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to create a Multi Step Form in Drupal 8</title>
+                <description><![CDATA[<p>Last weekend I organize and participate in the initiative of <a href="http://drupal.org" target="_blank">Drupal</a> Community <a href="http://www.anexusit.com/blog/drupal-sprint-weekend-costa-rica" target="_blank">Global Sprint Weekend</a> with a location in Costa Rica.</p>
+
+<p>Among talks and contributions I found a interested request in Drupal 8 and I want to share with my the implementation.</p>
+
+<p>I want to create a Multi Step Form, because Drupal 8 doesn't have an offitial release yet there are many stuff we easyly do in Drupal 7 but now in some way to need to learn again how to solve our problems in a different way or Drupal/Symfony Style.</p>
+
+<p>I will create a Multi Step Form to enable users to find a car providing Year, Body Style and Gas Mileage.</p>
+
+<h1>Create a Module</h1>
+
+<p>I will skip the explanation about how to create the Module <strong>multi_step_form</strong> in Drupal 8 because could be generated using the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> executing the following command.</p>
+
+<pre><code>$ drupal generate:module
+</code></pre>
+
+<p>After generate the module we will use another comand to add a Form with properties required as you can see below</p>
+
+<pre><code>$ drupal generate:form:config
+</code></pre>
+
+<p>As result we will get a form with a method <strong>buildForm</strong> like this</p>
+
+<pre><code>/**
+ * {@inheritdoc}
+ */
+public function buildForm(array $form, FormStateInterface $form_state) {
+
+  $config = $this-&gt;config('multi_step.multi_step_form_config');
+
+  $form['model'] = [
+    '#type' =&gt; 'select',
+    '#title' =&gt; $this-&gt;t('Model'),
+    '#description' =&gt; $this-&gt;t(''),
+          '#options' =&gt; array('1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'),
+          '#default_value' =&gt; $config-&gt;get('model'),
+  ];
+
+  $form['body_style'] = [
+    '#type' =&gt; 'checkboxes',
+    '#title' =&gt; $this-&gt;t('Body Style'),
+    '#description' =&gt; $this-&gt;t(''),
+          '#options' =&gt; array('Coupe', 'Sedan', 'Convertible', 'Hatchbac', 'Station wagon', 'SUV', 'Minivan', 'Full-size van', 'Pick-up'),
+          '#default_value' =&gt; $config-&gt;get('body_style'),
+  ];
+
+  $form['gas_mileage'] = [
+    '#type' =&gt; 'radios',
+    '#title' =&gt; $this-&gt;t('Gas Mileage'),
+    '#description' =&gt; $this-&gt;t(''),
+          '#options' =&gt; array('20 mpg or less', '21 mpg or more', '26 mpg or more', '31 mpg or more', '36 mpg or more', '41 mpg or more'),
+          '#default_value' =&gt; $config-&gt;get('gas_mileage'),
+  ];
+
+  return parent::buildForm($form, $form_state);
+
+}
+</code></pre>
+
+<h2>Define step property</h2>
+
+<p>Inside the Form class we need to a protected property to store the current step of Multi Step,check the following snippet.</p>
+
+<pre><code>class MultiStepForm extends ConfigFormBase
+ {
+
+  protected $step = 1;
+</code></pre>
+
+<h2>Get parent form</h2>
+
+<p>Instead call parent form <strong>buildForm</strong> at the end I will call at the begging to modify the form before the form is render.</p>
+
+<pre><code>/**
+ * {@inheritdoc}
+ */
+public function buildForm(array $form, FormStateInterface $form_state) {
+  $form = parent::buildForm($form, $form_state);
+</code></pre>
+
+<h2>Filter form elements by step</h2>
+
+<p>Now we need filter what elements will be render base in step value, as you can see in following snippet.</p>
+
+<pre><code>if($this-&gt;step == 1) {
+  $form['model'] = [
+    '#type' =&gt; 'select',
+    '#title' =&gt; $this-&gt;t('Model'),
+    '#description' =&gt; $this-&gt;t(''),
+          '#options' =&gt; array('1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'),
+          '#default_value' =&gt; $config-&gt;get('model'),
+  ];
+}
+</code></pre>
+
+<h2>Change submit label</h2>
+
+<p>Now we need alter the label of submit buttom to inform end user there is a next step or if we reach the end of multi step.</p>
+
+<p>In our case we only have 3 steps and the code will be like this</p>
+
+<pre><code>if($this-&gt;step &lt; 3) {
+  $button_label = $this-&gt;t('Next');
+}
+else {
+  $button_label = $this-&gt;t('Find a Car');
+}
+
+$form['actions']['submit']['#value'] = $button_label;
+
+return $form;
+</code></pre>
+
+<h2>Enable Multi Step</h2>
+
+<p>At the end we need enable the Multi Step Form behaviour, to do this is neccessary modify the method <strong>submitForm</strong> forcing Form Rebuild if we don't reach yet the last step of Multi Step using the method <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Form!FormState.php/function/FormState%3A%3AsetRebuild/8" target="_blank">setRebuild()</a> part of <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormState.php/class/FormState/8" target="_blank">Form State</a>.</p>
+
+<p>The submitForm method will be similar to following code</p>
+
+<pre><code>/**
+ * {@inheritdoc}
+ */
+public function submitForm(array &amp;$form, FormStateInterface $form_state) {
+  if($this-&gt;step &lt; 3) {
+    $form_state-&gt;setRebuild();
+    $this-&gt;step++;
+  }
+  else {
+    parent::submitForm($form, $form_state);
+    /*$this-&gt;config('multi_step.multi_step_form_config')
+          -&gt;set('model', $form_state-&gt;getValue('model'))
+          -&gt;set('body_style', $form_state-&gt;getValue('body_style'))
+          -&gt;set('gas_mileage', $form_state-&gt;getValue('gas_mileage'))
+        -&gt;save();*/
+  }
+}
+</code></pre>
+
+<p>If you want test a full implementation of Multi Step you can download the module <a href="https://github.com/enzolutions/drupal8_multi_step_form" target="_blank">drupal8_multi_step_form</a>.</p>
+
+<p>I hope you found this blog entry useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
+                <pubDate>Wed, 21 Jan 2015 22:38:54 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
+            </item>
+                    <item>
                 <title>How to overwrite Backbone Model save function</title>
                 <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
 
@@ -71,7 +218,7 @@ node.save(userDetails, {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 20 Jan 2015 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
@@ -209,7 +356,7 @@ print 'Node ID: ' . $nid . "\n";
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Mon, 29 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
@@ -453,7 +600,7 @@ public function authenticate(Request $request) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Sun, 28 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
@@ -543,7 +690,7 @@ if ($last_key) {
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Fri, 26 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
@@ -582,7 +729,7 @@ if ($last_key) {
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Wed, 17 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -796,7 +943,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 16 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1045,7 +1192,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 09 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1102,7 +1249,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 19:55:42 +0000</pubDate>
+                <pubDate>Sun, 07 Dec 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1198,7 +1345,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 25 Nov 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -1278,7 +1425,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 19:55:42 +0000</pubDate>
+                <pubDate>Fri, 24 Oct 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -1351,7 +1498,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 19:55:42 +0000</pubDate>
+                <pubDate>Sun, 19 Oct 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -1531,7 +1678,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 19:55:42 +0000</pubDate>
+                <pubDate>Fri, 17 Oct 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -1643,7 +1790,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 16 Sep 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -1700,7 +1847,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 19:55:42 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -1892,7 +2039,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 19:55:42 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -2039,7 +2186,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 19:55:42 +0000</pubDate>
+                <pubDate>Wed, 27 Aug 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2106,7 +2253,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 26 Aug 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -2145,7 +2292,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 19:55:42 +0000</pubDate>
+                <pubDate>Sun, 24 Aug 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -2173,7 +2320,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 19:55:42 +0000</pubDate>
+                <pubDate>Thu, 14 Aug 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -2297,7 +2444,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 19:55:42 +0000</pubDate>
+                <pubDate>Tue, 08 Jul 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -2332,7 +2479,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 19:55:42 +0000</pubDate>
+                <pubDate>Thu, 03 Jul 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -2559,7 +2706,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 19:55:42 +0000</pubDate>
+                <pubDate>Wed, 18 Jun 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -2582,7 +2729,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 19:55:42 +0000</pubDate>
+                <pubDate>Mon, 16 Jun 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -2743,7 +2890,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 19:55:42 +0000</pubDate>
+                <pubDate>Mon, 02 Jun 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -2899,7 +3046,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 19:55:42 +0000</pubDate>
+                <pubDate>Sun, 01 Jun 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -2923,7 +3070,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 19:55:42 +0000</pubDate>
+                <pubDate>Sat, 31 May 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -2962,7 +3109,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 19:55:42 +0000</pubDate>
+                <pubDate>Wed, 28 May 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -2980,7 +3127,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 19:55:42 +0000</pubDate>
+                <pubDate>Wed, 21 May 2014 22:38:54 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
