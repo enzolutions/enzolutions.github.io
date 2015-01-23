@@ -151,9 +151,9 @@
 
     <p>Last weekend I organize and participate in the initiative of <a href="http://drupal.org" target="_blank">Drupal</a> Community <a href="http://www.anexusit.com/blog/drupal-sprint-weekend-costa-rica" target="_blank">Global Sprint Weekend</a> with a location in Costa Rica.</p>
 
-<p>Among talks and contributions I found a interested request in Drupal 8 and I want to share with my the implementation.</p>
+<p>Among talks and contributions I found a interesting request in Drupal 8 and I want to share with my the implementation.</p>
 
-<p>I want to create a Multi Step Form, because Drupal 8 doesn't have an offitial release yet there are many stuff we easyly do in Drupal 7 but now in some way to need to learn again how to solve our problems in a different way or Drupal/Symfony Style.</p>
+<p>I want to create a Multi Step Form, because Drupal 8 doesn't have an official release yet there are many stuff we easily do in Drupal 7 but now in some way to need to learn again how to solve our problems in a different way or Drupal/Symfony Style.</p>
 
 <p>I will create a Multi Step Form to enable users to find a car providing Year, Body Style and Gas Mileage.</p>
 
@@ -164,7 +164,7 @@
 <pre><code>$ drupal generate:module
 </code></pre>
 
-<p>After generate the module we will use another comand to add a Form with properties required as you can see below</p>
+<p>After generate the module we will use another command to add a Form with properties required as you can see below</p>
 
 <pre><code>$ drupal generate:form:config
 </code></pre>
@@ -219,7 +219,7 @@ public function buildForm(array $form, FormStateInterface $form_state) {
 
 <h2>Get parent form</h2>
 
-<p>Instead call parent form <strong>buildForm</strong> at the end I will call at the begging to modify the form before the form is render.</p>
+<p>Instead of call parent functon <strong>buildForm</strong> at the end I will call at the beginning to modify the form before the form is render.</p>
 
 <pre><code>/**
  * {@inheritdoc}
@@ -230,7 +230,7 @@ public function buildForm(array $form, FormStateInterface $form_state) {
 
 <h2>Filter form elements by step</h2>
 
-<p>Now we need filter what elements will be render base in step value, as you can see in following snippet.</p>
+<p>Now we need filter what elements of form will be rendered based in step value, as you can see in following snippet.</p>
 
 <pre><code>if($this-&gt;step == 1) {
   $form['model'] = [
@@ -245,7 +245,7 @@ public function buildForm(array $form, FormStateInterface $form_state) {
 
 <h2>Change submit label</h2>
 
-<p>Now we need alter the label of submit buttom to inform end user there is a next step or if we reach the end of multi step.</p>
+<p>Now we need alter the label of submit button to inform end user that there is a next step or if we reach the end of multi step.</p>
 
 <p>In our case we only have 3 steps and the code will be like this</p>
 
@@ -263,7 +263,7 @@ return $form;
 
 <h2>Enable Multi Step</h2>
 
-<p>At the end we need enable the Multi Step Form behaviour, to do this is neccessary modify the method <strong>submitForm</strong> forcing Form Rebuild if we don't reach yet the last step of Multi Step using the method <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Form!FormState.php/function/FormState%3A%3AsetRebuild/8" target="_blank">setRebuild()</a> part of <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormState.php/class/FormState/8" target="_blank">Form State</a>.</p>
+<p>At the end we need enable the Multi Step Form behaviour, to do this is necessary modify the method <strong>submitForm</strong> forcing Form Rebuild if we don't reach yet the last step of Multi Step using the method <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Form!FormState.php/function/FormState%3A%3AsetRebuild/8" target="_blank">setRebuild()</a> part of <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21FormState.php/class/FormState/8" target="_blank">Form State</a>.</p>
 
 <p>The submitForm method will be similar to following code</p>
 
@@ -292,7 +292,7 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-01-21T22:38:54+0000">2015-01-21T22:38:54+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-01-21T17:11:25+0000">2015-01-21T17:11:25+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>

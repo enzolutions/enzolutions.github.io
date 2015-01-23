@@ -155,7 +155,7 @@
 
 <h1>Installation</h1>
 
-<p>Looks the same as Drupal 8, check the following image and let me know if you aren't agree</p>
+<p>Looks the same as Drupal 8, check the following image and let me know if you're not agree</p>
 
 <p><img src="http://enzolutions.com/assets/img/installing_backdrop_cms.png"/></p>
 
@@ -167,17 +167,17 @@
 
 <h1>Modules UI</h1>
 
-<p>The modules menu is named now Functionality and as you see in the following image the core implement a feature implemented by <a href="https://www.drupal.org/project/module_filter" target="_blank"></a>module module_filter in Drupal 7.</p>
+<p>The modules menu is named now Functionality and as you can see in the following image, the Backdrop CMS core implement a feature implemented by module <a href="https://www.drupal.org/project/module_filter" target="_blank">module_filter</a> in Drupal 7.</p>
 
 <p><img src="http://enzolutions.com/assets/img/backdrop_admin_ui.png"/></p>
 
 <h1>Layouts</h1>
 
-<p>In <strong>example.com/admin/structure/layouts</strong> you can find a new concept <strong>Layouts</strong>, Layouts is an implementation similar to <a href="https://www.drupal.org/project/panels" target="_blank">Panels</a> Layouts. By default there is two Layout Admin and Default</p>
+<p>In <strong>example.com/admin/structure/layouts</strong> you can find a new concept <strong>Layouts</strong>, Layouts is an implementation similar to <a href="https://www.drupal.org/project/panels" target="_blank">Panels</a> Layouts. By default there are two layouts Admin and Default</p>
 
 <p><img src="http://enzolutions.com/assets/img/backdrop_layout_ui.png"/></p>
 
-<p>You can create your own Layouts and apply this layouts using a matching by URL and you can add contidions, as you can see in the following image.</p>
+<p>You can create your own Layouts and apply this layouts using a match by URL and/or you can add conditions, as you can see in the following image.</p>
 
 <p><img src="http://enzolutions.com/assets/img/backdrop_new_layout.png"/></p>
 
@@ -187,7 +187,7 @@
 
 <h1>Module Migration</h1>
 
-<p>Well maybe this is the part every buddy was expecting, OK to test I decide to check the most used module from <a href="https://www.drupal.org/project/usage" target="_blank">Usage</a> project.</p>
+<p>Well maybe this is the part every buddy was expecting, OK to test I decide to check the list of most used modules in Drupal from <a href="https://www.drupal.org/project/usage" target="_blank">Usage</a> project.</p>
 
 <p>I decide to test with <a href="https://www.drupal.org/project/token" target="_blank">Token</a> the #4 most used module in Drupal with 746,542 installations reported until Nov 15, 2014.</p>
 
@@ -195,11 +195,11 @@
 
 <h2>Enable module in Backdrop</h2>
 
-<p>The structure of Modules in Backdrop is the same as Drupal 7, but we need to apply couple changes to avoid Backdrop reporte the module as invalid as you can see in the following image.</p>
+<p>he structure of Modules in Backdrop is the same as Drupal 7, but we need to apply couple changes to avoid Backdrop report the module was invalid as you can see in the following image.</p>
 
 <p><img src="http://enzolutions.com/assets/img/backdrop_module_valid_invalid.png"/></p>
 
-<p>The only require one change in file <strong>token.info</strong> replacing core to <strong>backdrop</strong>. Check how must looks the file to be process by Backdrop</p>
+<p>The only required change in file token.info is replace core to <strong>backdrop</strong>. Check how token.info must looks the file to be process by Backdrop</p>
 
 <pre><code>name = Token
 description = Provides a user interface for the Token API and some missing core tokens.
@@ -221,13 +221,13 @@ backdrop = 1.x
 
 <h3>Replace function system_get_date_types</h3>
 
-<p>The function <a href="https://api.drupal.org/api/drupal/modules!system!system.module/function/system_get_date_types/7" target="_blank">system_get_date_types</a> doesn't exist in Backdrop, but after some review in source code of core I detect this function was replaced by <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_get_date_formats/1" target="_blank">system_get_date_formats</a>.</p>
+<p>The function <a href="https://api.drupal.org/api/drupal/modules!system!system.module/function/system_get_date_types/7" target="_blank">system_get_date_types</a> does not exist in Backdrop, but after some reviews in source code of core I detect this function was replaced by <a href="https://api.backdropcms.org/api/backdrop/core%21modules%21system%21system.module/function/system_get_date_formats/1" target="_blank">system_get_date_formats</a>.</p>
 
 <p>Also in Drupal 7 this function return a multidimensional array, and each array entry has a title index, in backdrop this index was replaced by <strong>label</strong></p>
 
 <h3>Replace cache_get and cache_set</h3>
 
-<p>These functions were replaced by function <strong>cache</strong> this function receive a bin name and return a Cache class with methods set and get.</p>
+<p>These functions were replaced by function <strong>cache</strong>, this function receive a bin name and return a Cache class with methods set and get.</p>
 
 <p>The default cache class in Backdrop is <a href="https://api.backdropcms.org/api/backdrop/core%21includes%21cache.inc/class/BackdropDatabaseCache/1" target="_blank">BackdropDatabaseCache</a></p>
 
@@ -273,7 +273,7 @@ print 'Node ID: ' . $nid . "\n";
 <pre><code>Node ID: 1
 </code></pre>
 
-<p>Testing at least this simple transformation is working, I am not saying the migration process of a module to Backdrop is a piece of cake, but until know looks like is not a titanic project for sure any case is different.</p>
+<p>At least this simple transformation is working, I am not saying the migration process of a module to Backdrop is a piece of cake, but until now looks like is not a titanic project for sure any case is different.</p>
 
 <p>You can check more details about migrate module to Backdrop in video <a target="_blank" href="https://www.youtube.com/watch?v=by8mMhIpARA">Porting a Module to Backdrop - Basics</a>.</p>
 
@@ -283,7 +283,7 @@ print 'Node ID: ' . $nid . "\n";
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2014-12-29T22:38:54+0000">2014-12-29T22:38:54+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2014-12-29T17:11:25+0000">2014-12-29T17:11:25+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
