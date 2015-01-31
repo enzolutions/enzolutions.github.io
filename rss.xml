@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Welcome to [enzo]lutions</title>
-        <link>http://localhost:4000</link>
+        <link>http://enzolutions.com</link>
         <description>RSS feed for Welcome to [enzo]lutions</description>
-        <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
                 <title>What is Drupal Console for me</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/drupal_console_logo.png"/> Maybe you hear about the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> or maybe not because is an independent project related with <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a>.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/drupal_console_logo.png"/> Maybe you hear about the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> or maybe not because is an independent project related with <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a>.</p>
 
 <p>If you are a older Drupal user/developer you could find some similarities with <a href="https://github.com/drush-ops/drush" target="_blank">Drush</a> Project, and to be honest there are some similarities.</p>
 
@@ -78,9 +78,9 @@ router
 
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2015/01/25/what-is-drupal-console-for-me/</link>
-                <pubDate>Sun, 25 Jan 2015 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
+                <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</link>
+                <pubDate>Sun, 25 Jan 2015 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
             </item>
                     <item>
                 <title>How to create a Multi Step Form in Drupal 8</title>
@@ -225,13 +225,13 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
-                <pubDate>Wed, 21 Jan 2015 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
+                <pubDate>Wed, 21 Jan 2015 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to overwrite Backbone Model save function</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
 
 <p>Backbone define some <a href="http://es.wikipedia.org/wiki/Representational_State_Transfer" target="_blank">REST</a> states to operate over models for instance:</p>
 
@@ -294,9 +294,9 @@ node.save(userDetails, {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
+                <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
+                <pubDate>Tue, 20 Jan 2015 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
                 <title>Backdrop CMS First impressions</title>
@@ -308,33 +308,33 @@ node.save(userDetails, {
 
 <p>Looks the same as Drupal 8, check the following image and let me know if you're not agree</p>
 
-<p><img src="http://localhost:4000/assets/img/installing_backdrop_cms.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/installing_backdrop_cms.png"/></p>
 
 <h1>File Structure</h1>
 
 <p>The files structure of Backdrop is so similar to Drupal 8 check in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/backdrop_file_structure.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/backdrop_file_structure.png"/></p>
 
 <h1>Modules UI</h1>
 
 <p>The modules menu is named now Functionality and as you can see in the following image, the Backdrop CMS core implement a feature implemented by module <a href="https://www.drupal.org/project/module_filter" target="_blank">module_filter</a> in Drupal 7.</p>
 
-<p><img src="http://localhost:4000/assets/img/backdrop_admin_ui.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/backdrop_admin_ui.png"/></p>
 
 <h1>Layouts</h1>
 
 <p>In <strong>example.com/admin/structure/layouts</strong> you can find a new concept <strong>Layouts</strong>, Layouts is an implementation similar to <a href="https://www.drupal.org/project/panels" target="_blank">Panels</a> Layouts. By default there are two layouts Admin and Default</p>
 
-<p><img src="http://localhost:4000/assets/img/backdrop_layout_ui.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/backdrop_layout_ui.png"/></p>
 
 <p>You can create your own Layouts and apply this layouts using a match by URL and/or you can add conditions, as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/backdrop_new_layout.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/backdrop_new_layout.png"/></p>
 
 <p>Backdrop doesn't have a menu to get the list of block generated via code, this list of block is only available when edit a Layout and add a block as you can see in the following imagen.</p>
 
-<p><img src="http://localhost:4000/assets/img/backdrop_layout_add_block.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/backdrop_layout_add_block.png"/></p>
 
 <h1>Module Migration</h1>
 
@@ -348,7 +348,7 @@ node.save(userDetails, {
 
 <p>he structure of Modules in Backdrop is the same as Drupal 7, but we need to apply couple changes to avoid Backdrop report the module was invalid as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/backdrop_module_valid_invalid.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/backdrop_module_valid_invalid.png"/></p>
 
 <p>The only required change in file token.info is replace core to <strong>backdrop</strong>. Check how token.info must looks the file to be process by Backdrop</p>
 
@@ -432,17 +432,17 @@ print 'Node ID: ' . $nid . "\n";
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
+                <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
+                <pubDate>Mon, 29 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
                 <title>How to create an Authentication Provider in Drupal 8</title>
-                <description><![CDATA[<p>Some weeks ago I show you <a href="http://localhost:4000/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8" target="_blank">How to create a Rest Resource in Drupal 8</a> and as I explain in that post we use the Authentication Provider <strong>Basic Auth</strong> as you can see in the following image.</p>
+                <description><![CDATA[<p>Some weeks ago I show you <a href="http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8" target="_blank">How to create a Rest Resource in Drupal 8</a> and as I explain in that post we use the Authentication Provider <strong>Basic Auth</strong> as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/restui_bundle_entities_settings.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/restui_bundle_entities_settings.png"/></p>
 
-<p>Right now is the unique Authentication Provider available to use in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> scenery. If you want to read more about CORS you can read the blog entry <a href="http://localhost:40002014/05/31/what-is-cross-origin-resource-sharing-cors" target="_blank">What is Cross-Origin Resource Sharing (CORS)</a>.</p>
+<p>Right now is the unique Authentication Provider available to use in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> scenery. If you want to read more about CORS you can read the blog entry <a href="http://enzolutions.com2014/05/31/what-is-cross-origin-resource-sharing-cors" target="_blank">What is Cross-Origin Resource Sharing (CORS)</a>.</p>
 
 <p>But what about if <strong>Basic Auth</strong> doesn't fit with your needs, well I will show you how to create a custom Authentication Provider.</p>
 
@@ -483,7 +483,7 @@ public function buildForm(array $form, FormStateInterface $form_state) {
 
 <p>The layout to enter allowed IP consumer will looks similar to this image</p>
 
-<p><img src="http://localhost:4000/assets/img/allowed_ip_resources.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/allowed_ip_resources.png"/></p>
 
 <p>The code to save that values are generated by <strong>Drupal Console</strong>, in the same way the Routing is created. Be sure you change the values to your convenience after generate the form.</p>
 
@@ -617,7 +617,7 @@ public function authenticate(Request $request) {
 
 <p>Using the <a href="https://www.drupal.org/project/restui/git-instructions" target="_blank">Rest UI</a>(I recommend to use the git version until Drupal 8 get a first release) module we enable the REST Resource and enable our Custom Authentication Provider, as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/custom_authentication_provider.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/custom_authentication_provider.png"/></p>
 
 <h2>Access Denied</h2>
 
@@ -631,7 +631,7 @@ public function authenticate(Request $request) {
 
 <p>When we enable any REST Resource in Drupal 8 a new set of  permissions is created, in our case we have to assign the permission <strong>Access GET on Bundles by entities resource</strong> to Anonymous user as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/rest_anonymous_permission.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/rest_anonymous_permission.png"/></p>
 
 <h2>Access Denied AGAIN</h2>
 
@@ -676,9 +676,9 @@ public function authenticate(Request $request) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
+                <pubDate>Sun, 28 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to use Drupal 8 state in Cron to resume a process.</title>
@@ -766,13 +766,13 @@ if ($last_key) {
 
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
+                <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
+                <pubDate>Fri, 26 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
                 <title>A Drupal Guy in a Backbone Conference</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/backbonejs_logo.png"/> Past Dic 15th and 16th I attend the 3rd Backbone Conference in Cambridge, Massachusetts, USA.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs_logo.png"/> Past Dic 15th and 16th I attend the 3rd Backbone Conference in Cambridge, Massachusetts, USA.</p>
 
 <p>I'm a Drupal Backend Developer, so my experience in Front End is limited to small pets projects I have been working just for fun like <a href="http://github.com/enzolutions/generator-marionette-drupal" target="_blank">http://github.com/enzolutions/generator-marionette-drupal</a>.</p>
 
@@ -805,9 +805,9 @@ if ($last_key) {
 
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
+                <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
+                <pubDate>Wed, 17 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
                 <title>How to create a Rest Resource in Drupal 8</title>
@@ -1001,13 +1001,13 @@ use Psr\Log\LoggerInterface;
 
 <p>This module enable a UI to set the Authentication and format for each RESTful method implemented as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/restui_bundle_entities_settings.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/restui_bundle_entities_settings.png"/></p>
 
 <p>Using this setting the access to Resource will be granted or denied.</p>
 
 <p>Using the Chrome Application <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm">Postman - REST Client</a> you can execute an authenticated request to URL <strong>http://example.com/bundles/node</strong> as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/postman_rest_request.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/postman_rest_request.png"/></p>
 
 <p>If all is working as expected you will get a similar result to next json output.</p>
 
@@ -1019,9 +1019,9 @@ use Psr\Log\LoggerInterface;
 
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
+                <pubDate>Tue, 16 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to create a Field Formatter in Drupal 8</title>
@@ -1037,7 +1037,7 @@ use Psr\Log\LoggerInterface;
 
 <p>Now if you choose an image field the default format is Image as you can see in the following snapshot.</p>
 
-<p><img src="http://localhost:4000/assets/img/image_field_formatter.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/image_field_formatter.png"/></p>
 
 <p>Even if you don't set the option to link to original image you will get the image in HTML format as you see in the following sample of JSON response.</p>
 
@@ -1057,9 +1057,9 @@ use Psr\Log\LoggerInterface;
 ]
 </code></pre>
 
-<p>The previous output was generated by a view selecting articles with images, if you want import this view in your system just download the file <a href="http://localhost:4000/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
+<p>The previous output was generated by a view selecting articles with images, if you want import this view in your system just download the file <a href="http://enzolutions.com/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/configuration_management_view_import.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_view_import.png"/></p>
 
 <p>If you want read more about Configuration Management in Drupal 8 you can read the post entry <a href="{site.url}}/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a></p>
 
@@ -1244,7 +1244,7 @@ use \InvalidArgumentException;
 
 <p>After enable our custom module we just need edit our view and edit the field to use new Raw Formatter as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/image_field_raw_formatter.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/image_field_raw_formatter.png"/></p>
 
 <p>After save the view and run again the output will be totally different and perfect to use in RESTful services to avoid HTML parsing to extract the image path. check the output example below.</p>
 
@@ -1268,9 +1268,9 @@ use \InvalidArgumentException;
 
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
+                <pubDate>Tue, 09 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>Resetting the administrator password with sql-query in Drupal 8</title>
@@ -1325,9 +1325,9 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
+                <pubDate>Sun, 07 Dec 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to work with Drupal 8 forms with Ajax.</title>
@@ -1421,13 +1421,13 @@ if(empty($form_state_complete_version)){
 
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
+                <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
+                <pubDate>Tue, 25 Nov 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
                 <title>How to validate Bower files.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
 
 <ul>
 <li>Add a bower.json files to our project.</li>
@@ -1501,13 +1501,13 @@ bowerJson.read('./bower.json', function (err, json) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files/</guid>
+                <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
+                <pubDate>Fri, 24 Oct 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
                 <title>Apache issues after upgrade to Mac OS X Yosemite.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://localhost:4000/assets/img/mac_osx_yosemite.png"/> Last night I had the <em>brilliant</em> idea of upgrade to latest version of Mac OS X <a href="http://www.apple.com/osx/" target="_blank">Yosemite</a> and the upgrade process itself was slow as usual but without any apparent error.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/mac_osx_yosemite.png"/> Last night I had the <em>brilliant</em> idea of upgrade to latest version of Mac OS X <a href="http://www.apple.com/osx/" target="_blank">Yosemite</a> and the upgrade process itself was slow as usual but without any apparent error.</p>
 
 <p>The problems popup when I decide continue the development of <a href="https://github.com/enzolutions/generator-marionette-drupal" target="_blank">Yeoman Marionette Drupal generator</a> against Drupal 8.</p>
 
@@ -1570,17 +1570,17 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 &lt;/VirtualHost&gt;
 </code></pre>
 
-<p>After this changes is probable your PHP version require some tweaks, in this case I recommend read the blog entry "<a href="http://localhost:4000/articles/2014/10/17/manage-php-versions-with-phpbrew">Manage PHP versions with Phpbrew</a>".</p>
+<p>After this changes is probable your PHP version require some tweaks, in this case I recommend read the blog entry "<a href="http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew">Manage PHP versions with Phpbrew</a>".</p>
 
 <p>I hope you find this article useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
+                <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
+                <pubDate>Sun, 19 Oct 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
                 <title>Manage PHP versions with Phpbrew.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://localhost:4000/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
 
 <p>To resolve this situation described above nowadays the common recommendation is install a virtual machine like <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> or <a href="https://www.docker.com/" target="_blank">Docker</a> and off course works but if you are not a big fan of <em>Virtual Machines</em> like me and specially to only change the PHP version I have good news you can resolve your problems using the project <a href="http://phpbrew.github.io/phpbrew/" target="_blank">Phpbrew</a>.</p>
 
@@ -1754,13 +1754,13 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
+                <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
+                <pubDate>Fri, 17 Oct 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
                 <title>How to pass parameters to RequireJS modules</title>
-                <description><![CDATA[<p>RequireJS is a great library for managing JavaScript dependencies and create JavaScript modules to encapsulate concepts in your application. If you are totally new with RequiteJS maybe you want to read the post entry <a target='_blank' href="http://localhost:4000//articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>.</p>
+                <description><![CDATA[<p>RequireJS is a great library for managing JavaScript dependencies and create JavaScript modules to encapsulate concepts in your application. If you are totally new with RequiteJS maybe you want to read the post entry <a target='_blank' href="http://enzolutions.com//articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>.</p>
 
 <h1>The Problem</h1>
 
@@ -1866,9 +1866,9 @@ function (Marionette, Communicator) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
+                <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
+                <pubDate>Tue, 16 Sep 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
                 <title>How to enable CORS requests against Drupal 8</title>
@@ -1876,7 +1876,7 @@ function (Marionette, Communicator) {
 
 <p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
 
-<p>The problem I found with <a href="http://localhost:4000/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
 
 <p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
 
@@ -1923,9 +1923,9 @@ Header always set Access-Control-Allow-Headers: Authorization
 
 <p>I expect you have found this entry useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
+                <pubDate>Mon, 08 Sep 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to create an interactive command in Node.js</title>
@@ -2111,13 +2111,13 @@ inquirer.prompt(preguntas, function(respuestas) {
 
 <p>Depending on user responses the result will be different, but similar to the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/nodejs_interactive.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/nodejs_interactive.png"/></p>
 
 <p>I hope you have found this blog useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
+                <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
+                <pubDate>Mon, 08 Sep 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
                 <title>Understanding Configuration Management in Drupal 8</title>
@@ -2142,7 +2142,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 
 <p>You don't need install Configuration Management module, because is part of Drupal 8 Core and is already installed when you complete a standard Drupal 8 installation, as you can see in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/configuration_management_module_enable.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_module_enable.png"/></p>
 
 <p>As you can imagine, you can't disable the Configuration Management module.</p>
 
@@ -2154,7 +2154,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 
 <p>The administrator of <strong>Devel#1</strong> has to go page: example.com/admin/config/development/configuration/full/export the UI will looks similar to image below.</p>
 
-<p><img src="http://localhost:4000/assets/img/configuration_management_full_export.png"></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_full_export.png"></p>
 
 <p>After press the button Export you will get a zip file named <strong>config.tar.gz</strong>, after you uncompress the zip file you will get a config folder with severals files in <a target="_blank" href="http://symfony.com/doc/current/components/yaml/yaml_format.html">YAML</a> format and each one represent a isolate piece of configuration of our site. Below you can a partial list of files created by export.</p>
 
@@ -2205,7 +2205,7 @@ $ sudo chmod -R 755 sites/default/config/staging/
 
 <p>Until here all looks OK, but If you go to the page example.com/admin/config/development/configuration you will get the following error</p>
 
-<p><img src="http://localhost:4000/assets/img/configuration_management_sync_error.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
 
 <p>We will solve this issue in next section.</p>
 
@@ -2249,7 +2249,7 @@ langcode: en
 
 <p>After change the UUID and change the permissions, if you visit again the page example.com/admin/config/development/configuration you will see all changes, deletions, renames, and additions as you can see in the following image:</p>
 
-<p><img src="http://localhost:4000/assets/img/configuration_management_sync.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/configuration_management_sync.png"/></p>
 
 <p>You can review the differences and remove some files from staging folder if you are not happy with the result and finally execute the Import All process.</p>
 
@@ -2262,13 +2262,13 @@ langcode: en
 
 <p>I hope you have found this article useful.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
+                <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
+                <pubDate>Wed, 27 Aug 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>Grunt: How to list available tasks</title>
-                <description><![CDATA[<p>In the blog entry <a href="http://localhost:4000/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a> I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good idea execute tasks that do not know what they do .</p>
+                <description><![CDATA[<p>In the blog entry <a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a> I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good idea execute tasks that do not know what they do .</p>
 
 <p>Fortunately there is a plugin that allows  Grunt toe review tasks available, this plugin is <a href="https://github.com/ben-eb/grunt-available-tasks">grunt-available-tasks</a>. Lets see how we can implement it in our  project.</p>
 
@@ -2323,15 +2323,15 @@ langcode: en
 
 <p>The above command would get an output  similar to the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/grunt-tasks.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/grunt-tasks.png"/></p>
 
 <p>The image above was executed within the project <a href="https://github.com/enzolutions/community-bookstore">Community Bookstore</a>. See the full configuration file at <a href="https://github.com/enzolutions/community-bookstore/blob/master/frontend/Gruntfile.js">https://github.com/enzolutions/community-bookstore/blob/master/frontend/Gruntfile.js</a>.</p>
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
+                <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
+                <pubDate>Tue, 26 Aug 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
                 <title>How to Generate TOC in Github/BitBucket projects</title>
@@ -2368,9 +2368,9 @@ langcode: en
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
+                <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
+                <pubDate>Sun, 24 Aug 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
                 <title>Mi Tribu</title>
@@ -2396,13 +2396,13 @@ langcode: en
 
 <p>Pura Vida.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/08/14/mi-tribu/</guid>
+                <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
+                <pubDate>Thu, 14 Aug 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
                 <title>Introduction to Bower</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/bower-logo.png"/> Continuing with the serie <em>Hot &amp; Sexy tools</em> available these days for web developers started with the entry of Blog <a target="_blank" href="http://localhost:4000/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> Continuing with the serie <em>Hot &amp; Sexy tools</em> available these days for web developers started with the entry of Blog <a target="_blank" href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
 
 <p>Bower by definition is a package manager for the web, now that simple English means a tool that allows us to define required libraries in our web applications and the bower detect the dependencies of required packages.</p>
 
@@ -2520,9 +2520,9 @@ bower install       jQuery#2.1.1
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/07/08/introduction-to-bower/</guid>
+                <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
+                <pubDate>Tue, 08 Jul 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
                 <title>How to configure MySQL to import large database</title>
@@ -2553,15 +2553,15 @@ $
 
 <p>Then you just need restart the MySQL server and try to import the database again.</p>
 
-<p>You can find my version of my.cnf <a target="_blank" href="http://localhost:4000/assets/attaches/my.cnf.txt">here</a>.</p>
+<p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
+                <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
+                <pubDate>Thu, 03 Jul 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
                 <title>Introduction to Grunt</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/grunt-logo.png"/> Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/grunt-logo.png"/> Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.</p>
 
 <p>From my own experience I know how difficult it is to have enough time to learn all these Sexy tools, I'll try to explain it in the most practical and easiest way possible.</p>
 
@@ -2782,15 +2782,15 @@ Done, without errors.
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/06/18/introduction-to-grunt/</guid>
+                <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
+                <pubDate>Wed, 18 Jun 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
                 <title>Yeoman Generator: Marionette JS + Drupal</title>
                 <description><![CDATA[<p><a href="http://yeoman.io">Yeoman</a> <a href="http://marionettejs.com">MarionetteJS</a> + <a href="drupical.org">Drupal</a> generator</p>
 
-<p>Today I release the version 0.1.0-beta of <a href="http://localhost:4000/projects/yeoman_generator_marionette_drupal">Yeoman Generator: Marionette + Drupal</a>.</p>
+<p>Today I release the version 0.1.0-beta of <a href="http://enzolutions.com/projects/yeoman_generator_marionette_drupal">Yeoman Generator: Marionette + Drupal</a>.</p>
 
 <p>If you want to create your own version of this generator, you can fork or download my version at</p>
 
@@ -2805,9 +2805,9 @@ Done, without errors.
 
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
+                <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
+                <pubDate>Mon, 16 Jun 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
                 <title>Routing & Controlling with MarionetteJS</title>
@@ -2829,7 +2829,7 @@ Done, without errors.
 <li>And much, much more</li>
 </ul>
 
-<p>In this example I will take the structure of libraries and dependencies explained in the blog entry <a target="_blank" href="http://localhost:4000/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a> to create a MarionetteJS application.</p>
+<p>In this example I will take the structure of libraries and dependencies explained in the blog entry <a target="_blank" href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a> to create a MarionetteJS application.</p>
 
 <h1>1. Router Module.</h1>
 
@@ -2966,9 +2966,9 @@ MyApp.addInitializer(function(options) {
 
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
+                <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
+                <pubDate>Mon, 02 Jun 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
                 <title>What is and how it works RequireJS</title>
@@ -3118,13 +3118,13 @@ require( ["MyApp"], function (MyApp) {
 
 <p>It might seem a waste of time doing it this way as it is in the same file, but the idea is to create a module for file and using the configuration of RequireJS load all the libraries that define modules and then use these modules in our application.</p>
 
-<p>You can download the <a target="_blank" href="http://localhost:4000/projects/marionettejs_skeleton_app">Marionette App Skeleton</a> repository which implements the concepts discussed here.</p>
+<p>You can download the <a target="_blank" href="http://enzolutions.com/projects/marionettejs_skeleton_app">Marionette App Skeleton</a> repository which implements the concepts discussed here.</p>
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
+                <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
+                <pubDate>Sun, 01 Jun 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
                 <title>What is Cross-Origin Resource Sharing (CORS)</title>
@@ -3134,7 +3134,7 @@ require( ["MyApp"], function (MyApp) {
 
 <p>Lets imagine the following scenery: we have a frontend application using the domain http://a.com and this application wants to use data provided by a  backend site located in domain http://b.com. For security this type of communication is blocked and the end user will be only able to get the information from http://a.com, this scenario is exemplified in the following image.</p>
 
-<p><img src="http://localhost:4000/assets/img/crossdomain.png"/></p>
+<p><img src="http://enzolutions.com/assets/img/crossdomain.png"/></p>
 
 <p>To enable this kind of communication is requiered that your backed server (http//b.com) returns the specific HTTP Headers to enable CORS comunication. Below you can see an example of HTTP Header required.</p>
 
@@ -3146,9 +3146,9 @@ Access-Control-Allow-Origin:http://localhost:8080
 
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
+                <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
+                <pubDate>Sat, 31 May 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
                 <title>How to configure MySQL to import large database</title>
@@ -3185,9 +3185,9 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
+                <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
+                <pubDate>Wed, 28 May 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
                 <title>My blog is alive again!</title>
@@ -3203,9 +3203,9 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 
 <p>See you around.</p>
 ]]></description>
-                <link>http://localhost:4000/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 16:06:19 +0000</pubDate>
-                <guid>http://localhost:4000/articles/2014/05/21/my-blog-is-alive-again/</guid>
+                <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
+                <pubDate>Wed, 21 May 2014 16:08:48 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
 </rss>
