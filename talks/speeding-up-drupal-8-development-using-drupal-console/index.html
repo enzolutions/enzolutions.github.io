@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Drupal 8 Console (scaffolding module generator)</title>
+
+		<meta name="description" content="Drupal 8 Console">
+		<meta name="author" content="Jesus Manuel Olivas / enzo Eduardo Garcia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style"
+					content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,
+		maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+		<link rel="stylesheet" href="lib/css/tomorrow-night-bright.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet
+		<script> 	document.write( '<link rel="stylesheet" href="css/print/' + (
+		window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css"
+		type="text/css" media="print">' ); </script>
+		-->
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container displayed as slide -->
+			<div class="slides">
+
+				<section>
+					<h1 class="medium">Drupal Console</h1>
+					<h2></h2>
+					<br/>
+					<h3>DrupalCamp London 2015</h3>
+					<p>
+						<br/>
+						<a href="http://bit.ly/console-london">http://bit.ly/console-london</a>
+					</p>
+				</section>
+
+				<section>
+					<h1 class="medium">Speeding up Drupal 8 development using Drupal Console</h1>
+					<aside class="notes">
+						<p>
+							Probably a title like 'Speeding up Drupal 8 development using Drupal Console' is more apropiated for this presentation.
+						</p>
+						<p>
+							Since project was started and even when this session was propossed the project has been evolving and now is no
+						</p>
+					</aside>
+				</section>
+
+				<section>
+					<h2>About enzo - Eduardo Garcia</h2>
+					<hr>
+					<div class="half">
+						<img src="assets/images/enzolutions.jpg">
+					</div>
+					<div class="half text-left">
+						<p>
+							<h3 class="name">CTO / Anexus IT</h3>
+						</p>
+						<hr/>
+						<div class="text-small">
+							<p>
+							<a href="http://anexusit.com/" target="_blank">http://anexuxsit.com/</a>
+							<a href="http://enzolutions.com/" target="_blank">http://enzolutions.com/</a>
+							<a href="https://github.com/enzolutions" target="_blank">https://github.com/enzolutions</a>
+							</p>
+						</div>
+						<div  class="text-small">
+							<p>Reach me at: <br/>
+							<a href="https://twitter.com/enzolutions" target="_blank">@enzolutions</a>
+							</p>
+						</div>
+						<div>
+							<p class="text-small">
+								Candidate to Director at Large in Drupal Association
+							</p>
+						</div>
+					</div>
+				</section>
+
+					<section>
+						<h2>Maintainers</h2>
+						<div class="quarter">
+							<img src="assets/images/jmolivas.jpg" class="avatar-small">
+							<p><a href="http://jmolivas.com" target="_blank">Jesus Manuel Olivas</a></p>
+						</div>
+						<div class="quarter">
+							<img src="assets/images/dmouse.jpg" class="avatar-small">
+							<p><a href="http://dmouse.net" target="_blank">David Flores</a></p>
+						</div>
+						<div class="quarter">
+							<img src="assets/images/enzolutions.jpg" class="avatar-small">
+							<p><a href="http://enzolutions.com" target="_blank">enzo - Eduardo García</a></p>
+						</div>
+						<div class="quarter">
+							<img src="assets/images/omero.jpg" class="avatar-small">
+							<p><a href="http://7sabores.com/users/omers" target="_blank">Omar Aguirre</a></p>
+						</div>
+					</section>
+
+				<section>
+					<section>
+						<h2>What is the Drupal Console?</h2>
+						<hr/>
+						<aside class="notes">
+							<p>
+							Some of you may have begun to explore Drupal 8 already,
+							for those of you that have not had a chance yet I can tell you that there is a whole new set of concepts.
+						</p>
+						<p>
+							Drupal 8 is more advanced compared to its predecessor,
+							writing a module involves a lot of boilerplate code,
+							there is also a lot of things you need to know and do
+							just to get started with building a new module and these can be
+							repetitive and tedious therefore create opportunities for errors.
+						</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3 class="title">
+							The Drupal Console is an effort to bring The Symfony Console Component to Drupal 8.
+						</h3>
+						<aside class="notes">
+							<p>
+								Fortunately, a lot of that code can be generated automatically
+								using a tool called the Drupal Console.
+							</p>
+							<p>
+							Drupal Console is a project that takes the Symfony Console
+							component and makes it available on Drupal to automatically
+							generate most of the new Drupal 8 module requirements.
+							</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3 class="title">
+							The purpose of this project is to leverage the Symfony Console Component.
+						</h3>
+						<br/>
+						<h3 class="title">
+							The Console is a CLI tool that automates the creation of Drupal 8 modules and other recurring tasks.
+						</h3>
+						<aside class="notes">
+							<p>
+								Drupal Console is another cool addition to the
+								Proudly Found Elsewhere school of thought as it
+								leverages the Symfony Console component to handle the CLI part.
+							</p>
+							<p>
+								This tool does not only generates the module code,
+								also helps you interact with your Drupal installation.
+							</p>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Why should you care about it?</h2>
+						<hr/>
+					</section>
+					<section>
+						<h2>Drupal learning curve</h2>
+						<img class="no-border" src="assets/images/learning-curve-drupal.jpg">
+						<aside class="notes">
+							As we all now and have experienced Drupal 8 is little more complex that other CMS projects.
+						</aside>
+					</section>
+					<section>
+						<h2>Drupal 8 learning curve</h2>
+						<img class="no-border" src="assets/images/learning-curve-drupal-8.jpg">
+						<aside class="notes">
+							What may do not know is Drupal 8 is technically advanced compared to its predecessor.
+						</aside>
+					</section>
+					<section>
+						<h2>A lot of new concepts</h2>
+
+						<img class="no-border" src="assets/images/drupal-8-changes.png">
+						<aside class="notes">
+							<ul>
+								<li>Namespaces</li>
+								<li>Services</li>
+								<li>Service Container</li>
+								<li>Dependency Injection</li>
+								<li>Object Oriented Programing</li>
+								<li>Controllers</li>
+								<li>Annotations</li>
+								<li>Controllers, Plugins</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<h3>A lot of code to write</h3>
+						<img class="no-border" src="assets/images/generate-controller.png">
+						<aside class="notes">
+						<p>Creating a simple page to read an argument form the URL and use two services from the service container:</p>
+						<br/>
+						<ul>
+							<li>2 new files must be created (Route & Controller Class).</li>
+							<li>7 lines of code for route registration.</li>
+							<li>55 lines of code on the Controller class.</li>
+						</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h3>A lot of directories & files</h3>
+						<img class="no-border" src="assets/images/generate-entity-content.png">
+						<aside class="notes">
+						<p>Creating a entity content:</p>
+						<br/>
+						<ul>
+							<li>13 files must be created/update</li>
+							<li>Hundreds lines of code Classes, Routing, Controllers, Formsm, etc.</li>
+						</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>How does it help?</h2>
+						<hr/>
+					</section>
+
+					<section>
+						<h2>Out of the box</h2>
+						<ul class="bullets">
+							<li>Generates module and info files.</li>
+							<li>Generates PSR-4 compliant directory structure for a module.</li>
+							<li>Registers routes on YML files and maps to controllers and forms in PHP Classes.</li>
+							<li>Creates classes adding namespaces, uses and also extends and implements keywords when required.</li>
+							<li>Supports adding services using Dependency Injection on class generation.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Out of the box (cont)</h2>
+						<ul class="bullets">
+							<li>Takes advantage of the Symfony Console Component.</li>
+							<li>Takes advantage of the Twig Component in order to generate PHP, YML and other files.</li>
+							<li>Takes advantage of OOP and modern development practices.</li>
+							<li>No plans to support previous versions of Drupal.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Who will benefit from using it?</h2>
+						<br/>
+						<p>
+							<p><strong>Drupal Trainers & Consultors</strong></p>
+							Training developers on Drupal 8.
+						</p>
+						<br/>
+						<p>
+							<p><strong>Module Maintainers & Developers</strong></p>
+							Creating contributed modules to Drupal 8.
+						</p>
+						<br/>
+						<p>
+							<p><strong>Drupal Shops</strong></p>
+							Reducing development time for Drupal 8 projects.
+						</p>
+					</section>
+	</section>
+
+	<section>
+		<section>
+			<h2>Where do I find the project?</h2>
+			<br/>
+			<p>
+				Project Landing page
+			</p>
+			<p>
+				<a href="http://drupalconsole.com">
+					http://drupalconsole.com/
+				</a>
+			</p>
+			<br/>
+			<p>
+				Do you have a Drupal user account?
+			</p>
+			<p>
+				<a href="https://drupal.org/project/console">
+					https://drupal.org/project/console
+				</a>
+			</p>
+			<p>
+				<br/>
+				Do you have a Github account?
+			</p>
+			<p>
+			<a href="http://bit.ly/console-code">http://bit.ly/console-code</a>
+			</p>
+		</section>
+
+		<section>
+			<h2>How about docs and help?</h2>
+			<br/>
+			<p>
+				Documentation book at:
+			</p>
+			<p>
+				<a href="http://bit.ly/console-book">http://bit.ly/console-book</a>
+			</p>
+			<br/>
+			<br/>
+			<p>
+				Please RTFM and then ping us at:
+			</p>
+				<a href="http://bit.ly/console-chat">http://bit.ly/console-chat</a>
+		</section>
+
+		<section>
+			<h2>How to download Console</h2>
+		</section>
+
+		<section>
+			<h2>Using the Installer</h2>
+<p>
+Install the Console locally by running the installer in your project directory:
+</p>
+
+<pre><code class="bash">
+$ curl -LSs http://drupalconsole.com/installer | php
+
+</code></pre>
+<p>Access console from anywhere on your system</p>
+<pre><code class="bash">
+$ mv console.phar /usr/local/bin/drupal
+
+</code></pre>
+<p>You can now execute console using:</p>
+<pre><code class="bash">
+$ drupal generate:module
+
+</code></pre>
+		</section>
+
+		<section>
+			<h2>Using Composer</h2>
+<p>You can use composer to install console globally using the following command:</p>
+<pre><code class="bash">
+$ composer global require drupal/console:@stable
+
+</code></pre>
+<p>Add the binary directory to your class path</p>
+<pre><code class="bash">
+$ echo "PATH=$PATH:~/.composer/vendor/bin" > ~/.bash_profile
+
+</code></pre>
+<p>You can now execute console using:</p>
+<pre><code class="bash">
+$ console
+
+</code></pre>
+		</section>
+
+		<section>
+			<h2>Download the phar file</h2>
+<p>You can download the latest version of Console from the repository releases page at:</p>
+<br/>
+<p><a href="http://bit.ly/console-releases">http://bit.ly/console-releases</a></p>
+<br/>
+<p>Make sure you download the console.phar file from the most current release.</p>
+<pre><code class="bash">
+$ php console.phar
+
+</code></pre>
+		</section>
+
+		<section>
+			<h3>Using the installer</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/installer.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h2>Updating the project</h2>
+			<p>The easiest and recommended way of updating Console is using the self-update command.</p>
+			<br/>
+			<p>Depending on the download method:</p>
+<pre><code class="bash">
+$ drupal self-update
+
+$ console self-update
+
+$ php console.phar self-update
+
+</code></pre>
+		</section>
+
+		<section>
+			<h3>Using the self-update command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/self-update.mp4" type="video/mp4">
+			</video>
+		</section>
+
+	</section>
+	<section>
+		<section>
+			<h2>Available Commands</h2>
+		</section>
+
+		<section>
+<h3>Generators</h3>
+<pre><code class="bash">
+generate
+ generate:authentication:provider   Generate an Authentication Provider
+ generate:command                   Generate commands for the console.
+ generate:controller                Generate & Register a controller
+ generate:entity:config             Generate a new "EntityConfig"
+ generate:entity:content            Generate a new "EntityContent"
+ generate:form:config               Generate a new "ConfigFormBase"
+ generate:module                    Generate a module.
+ generate:plugin:block              Generate a plugin block
+ generate:plugin:imageeffect        Generate image effect plugin.
+ generate:plugin:rest:resource      Generate plugin rest resource
+ generate:service                   Generate service
+
+</code></pre>
+		</section>
+
+		<section>
+			<h3>Using the generate:module command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-module.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using the generate:service command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-service.mp4" type="video/mp4">
+			</video>
+		</section>
+
+
+		<section>
+			<h3>Using the generate:controller command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-controller.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using the generate:form:config command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-form-config.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using the generate:plugin:block command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-plugin-block.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using generate:entity:content command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-entity-content.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+<h3>Other commands</h3>
+<pre><code class="bash text-medium">
+ drush                  Run drush from console.
+ self-update            Update the console to latest version.
+cache
+ cache:rebuild          Rebuild and clear all site caches.
+config
+ config:debug           Show the current configuration.
+container
+ container:debug        Displays current services for an application.
+migrate
+ migrate:debug          Display current migration available for the application
+ migrate:execute        Execute a migration available for application
+module
+ module:debug           Display current modules available for application
+ module:download        Install module or modules in the application
+ module:install         Install module or modules in the application
+ module:uninstall       Install module or modules in the application
+rest
+ rest:debug             Display current rest resource for the application
+router
+ router:debug           Displays current routes for the application
+ router:rebuild         Rebuild routes for the application
+
+</code></pre>
+		</section>
+
+		<section>
+			<h3>Using the --shell option</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/drush.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using config:debug command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/config-debug.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using module:* commands</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/module-webprofiler.mp4" type="video/mp4">
+			</video>
+		</section>
+
+		<section>
+			<h3>Using generate:command command</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/generate-command.mp4" type="video/mp4">
+			</video>
+		</section>
+
+	</section>
+
+	<section>
+		<section>
+			<h2>How to contribute</h2>
+			<hr/>
+		</section>
+
+		<section>
+			<p>
+			<h2>Contribute code</h2>
+			<a href="http://bit.ly/console-code">http://bit.ly/console-code</a>
+		</p>
+		<br/>
+		<p>
+			<h2>Contribute documentation</h2>
+			<a href="http://bit.ly/console-book">http://bit.ly/console-book</a>
+		</p>
+		<br/>
+		</section>
+
+		<section>
+			<h2>Translations</h2>
+			<br/>
+			<ul class="bullets">
+				<li><strong>en:</strong> The Module name.</li>
+				<li><strong>es:</strong> Nombre del módulo.</li>
+				<li><strong>fr:</strong> Le Nom du Module.</li>
+				<li><strong>pt:</strong> O nome do módulo.</li>
+			</ul>
+			<br/><br/>
+			<p>
+				<a href="http://bit.ly/console-translations">http://bit.ly/console-translations</a>
+			</p>
+		</section>
+
+		<section>
+			<h2>
+				<h3 class="title">Spread the word and love about it</h3>
+				<br/>
+				<h3 class="title">@drupalconsole</h3>
+				<h3 class="title">#drupalconsole</h3>
+			</h2>
+		</section>
+
+		<section>
+			<h2>Project Requirements</h2>
+			<br/>
+			<ul class="bullets">
+				<li><a href=" http://git-scm.com/downloads">Git</a></li>
+				<li><a href="https://getcomposer.org/">Composer</a></li>
+				<li><a href="http://box-project.org/">Box</a></li>
+				<li><a href="https://www.drupal.org/node/3060/release">Drupal 8</a></li>
+			</ul>
+			<p>
+				<br/>
+				<a href="http://bit.ly/console-project-requirements">http://bit.ly/console-project-requirements</a>
+			</p>
+		</section>
+
+		<section>
+			<h2>Getting the project</h2>
+			<p>Fork your own copy of the Console repository</p>
+			<p>
+			<a href="http://bit.ly/console-fork">http://bit.ly/console-fork</a>
+			</p>
+			<br/>
+			<p>Get a copy of your cloned repository in your machine.</p>
+<pre><code class="bash">
+$ git clone git@github.com:[your-git-user-here]/DrupalAppConsole.git
+
+</code></pre>
+<br/>
+<p>Download dependencies via componser.</p>
+<pre><code class="bash">
+$ cd /path/to/DrupalAppConsole
+$ composer update --no-dev
+
+</code></pre>
+		</section>
+		<section>
+			<h3>Contributors</h3>
+			<p>
+				<br/>
+				<img src="assets/images/contributors-map.png" class="no-border">
+				<br/>
+			</p>
+		</section>
+
+
+	</section>
+
+	<section>
+		<h2>Roadmap</h2>
+		<br/>
+		<ul class="bullets">
+			<li>Keep in sync with Drupal releases Beta, RC, etc.</li>
+			<li>Improve translations.</li>
+			<li>Update documentation.</li>
+			<li>Detect, review and fix issues.</li>
+			<li>Merge Pull Requests.</li>
+			<li>Verbose code-output for learning.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Questions & Feedback</h2>
+		<hr/>
+		<h3 class="title">Feel free to stalk me and ask any question during DrupalCamp or ping us at:</h3>
+		<br/>
+		<h3>@enzolutions @drupalconsole</h3>
+		<br/>
+		<h3 class="title">Presentation slides:</h3>
+		<p>
+			<a href="http://bit.ly/console-bogota">http://bit.ly/console-london</a>
+		</p>
+	</section>
+
+	</section>
+
+			</div>
+		</div>
+
+    <footer>
+   		<div class="align-left">
+   			  <img src="assets/images/blinkreaction-logo.png" class="no-border">
+   		</div>
+   		<div class="align-center">
+   			  <img src="assets/images/indava-logo.png" class="no-border">
+   		</div>
+   		<div class="align-right">
+   			  <img src="assets/images/anexusit-logo.png" class="no-border">
+   		</div>
+    </footer>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script type="text/javascript" src="lib/js/jquery.min.js"></script>
+
+		<script>
+
+
+			var contributors = [
+				'albertvolkman', 'alexweber', 'azarzag', 'bojanz', 'brantwynn',
+				'cordoval', 'crell', 'danielnv18', 'dmouse', 'egulias', 'enzolutions',
+				'esod', 'itsekhmistro', 'flocondetoile', 'jjcarrion', 'jmolivas',
+				'joshuataylor', 'martinfrances107', 'mimioc', 'mmenavas', 'omero',
+				'rpayanm', 'vacho'
+			];
+
+			$.each(contributors, function( index, value ) {
+  				$('.contributors').append('<div class="contributor">' +
+  					'<img src="assets/images/contributors/'+value+'.jpg">' +
+  					'<div class="username">' + value + '</div></div>');
+			});
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/leap/leap.js', async: true }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+		<link rel="stylesheet" href="assets/css/custom.css">
+
+	</body>
+</html>
