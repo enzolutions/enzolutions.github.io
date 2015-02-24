@@ -513,19 +513,28 @@ module
 </code></pre>
 		</section>
 
-<section>
+<section class="present" style="top: -286px; display: block;">
 			<h3>Site Interaction commands 2/2</h3>
 <pre><code class="bash text-medium">
+module
+   module:debug         Display current modules available <span class="keyword">for</span> application
+   module:download      Install module or modules <span class="keyword">in</span> the application
+   module:install       Install module or modules <span class="keyword">in</span> the application
+   module:uninstall     Install module or modules <span class="keyword">in</span> the application
+
 rest
    rest:debug           Display current rest resource <span class="keyword">for</span> the application
    rest:disable         Disable a rest resource <span class="keyword">for</span> the application
    rest:enable          Enable a rest resource <span class="keyword">for</span> the application
+
 router
    router:debug         Displays current routes <span class="keyword">for</span> the application
    router:rebuild       Rebuild routes <span class="keyword">for</span> the application
+
 site
    site:maintenance     Switch site into maintenance mode
    site:mode            Switch system performance configuration
+
 test
    test:debug           List Test Units available <span class="keyword">for</span> the application.
 
