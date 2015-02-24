@@ -482,49 +482,74 @@ generate
 		<section>
 			<h3>Using generate:entity:content command</h3>
 			<video preload="none" controls width="720" height="530">
-				<source src="assets/video/generate-entity-content.mp4" type="video/mp4">
+				<source src="assets/video/generate-entity-content-short.mp4" type="video/mp4">
 			</video>
 		</section>
 
 		<section>
-<h3>Other commands</h3>
+<h3>Site Interaction commands 1/2</h3>
 <pre><code class="bash text-medium">
- drush                  Run drush from console.
- self-update            Update the console to latest version.
+drush                   Run drush from console.
+self-update             Update the console to latest version.
+
 cache
- cache:rebuild          Rebuild and clear all site caches.
+   cache:rebuild        Rebuild and clear all site caches.
 config
- config:debug           Show the current configuration.
+   config:debug         Show the current configuration.
+   config:edit          Edit the selected configuration.
+   config:<span class="keyword">export</span>        Export current application configuration.
+   config:override      Override config value <span class="keyword">in</span> active configuration.
 container
- container:debug        Displays current services for an application.
+   container:debug      Displays current services <span class="keyword">for</span> an application.
 migrate
- migrate:debug          Display current migration available for the application
- migrate:execute        Execute a migration available for application
+   migrate:debug        Display current migration available <span class="keyword">for</span> the application
+   migrate:execute      Execute a migration available <span class="keyword">for</span> application
 module
- module:debug           Display current modules available for application
- module:download        Install module or modules in the application
- module:install         Install module or modules in the application
- module:uninstall       Install module or modules in the application
-rest
- rest:debug             Display current rest resource for the application
-router
- router:debug           Displays current routes for the application
- router:rebuild         Rebuild routes for the application
+   module:debug         Display current modules available <span class="keyword">for</span> application
+   module:download      Install module or modules <span class="keyword">in</span> the application
+   module:install       Install module or modules <span class="keyword">in</span> the application
+   module:uninstall     Install module or modules <span class="keyword">in</span> the application
 
 </code></pre>
 		</section>
 
-		<section>
-			<h3>Using the --shell option</h3>
-			<video preload="none" controls width="720" height="530">
-				<source src="assets/video/drush.mp4" type="video/mp4">
+<section>
+			<h3>Site Interaction commands 2/2</h3>
+<pre><code class="bash text-medium">
+rest
+   rest:debug           Display current rest resource <span class="keyword">for</span> the application
+   rest:disable         Disable a rest resource <span class="keyword">for</span> the application
+   rest:enable          Enable a rest resource <span class="keyword">for</span> the application
+router
+   router:debug         Displays current routes <span class="keyword">for</span> the application
+   router:rebuild       Rebuild routes <span class="keyword">for</span> the application
+site
+   site:maintenance     Switch site into maintenance mode
+   site:mode            Switch system performance configuration
+test
+   test:debug           List Test Units available <span class="keyword">for</span> the application.
+
+</code></pre>
+		</section>
+		
+<section class="present">
+			<h3>Using site:maintenance command</h3>
+			<video preload="none" controls="" width="720" height="530">
+				<source src="assets/video/site-maintenance.mp4" type="video/mp4">
 			</video>
 		</section>
-
+		
+<section class="future" >
+			<h3>Using site:mode command</h3>
+			<video preload="none" controls="" width="720" height="530">
+				<source src="assets/video/site-mode.mp4" type="video/mp4">
+			</video>
+		</section>		
+				
 		<section>
-			<h3>Using config:debug command</h3>
+			<h3>Using config commands</h3>
 			<video preload="none" controls width="720" height="530">
-				<source src="assets/video/config-debug.mp4" type="video/mp4">
+				<source src="assets/video/config.mp4" type="video/mp4">
 			</video>
 		</section>
 
