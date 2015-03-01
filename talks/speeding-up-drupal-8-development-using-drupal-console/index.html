@@ -54,6 +54,8 @@
 
 				<section>
 					<h1 class="medium">Speeding up Drupal 8 development using Drupal Console</h1>
+				<h3 class="title">@drupalconsole</h3>
+				<h3 class="title">#drupalconsole</h3>
 					<aside class="notes">
 						<p>
 							Probably a title like 'Speeding up Drupal 8 development using Drupal Console' is more apropiated for this presentation.
@@ -77,7 +79,7 @@
 						<hr/>
 						<div class="text-small">
 							<p>
-							<a href="http://anexusit.com/" target="_blank">http://anexuxsit.com/</a>
+							<a href="http://anexusit.com/" target="_blank">http://anexusit.com/</a>
 							<a href="http://enzolutions.com/" target="_blank">http://enzolutions.com/</a>
 							<a href="https://github.com/enzolutions" target="_blank">https://github.com/enzolutions</a>
 							</p>
@@ -486,59 +488,59 @@ generate
 			</video>
 		</section>
 
-		<section>
-<h3>Site Interaction commands 1/2</h3>
-<pre><code class="bash text-medium">
-drush                   Run drush from console.
-self-update             Update the console to latest version.
-
-cache
-   cache:rebuild        Rebuild and clear all site caches.
-
-config
-   config:debug         Show the current configuration.
-   config:edit          Edit the selected configuration.
-   config:export        Export current application configuration.
-   config:override      Override config value in active configuration.
-
-container
-   container:debug      Displays current services for an application.
-
-migrate
-   migrate:debug        Display current migration available for the application
-   migrate:execute      Execute a migration available for application
-
-</code></pre>
-        </section>
-
-<section>
-            <h3>Site Interaction commands 2/2</h3>
+		<section class="present" style="top: -286px; display: block;">
+			<h3>Site Interaction commands 2/2</h3>
 <pre><code class="bash text-medium">
 module
-   module:debug         Display current modules available for application
-   module:download      Install module or modules in the application
-   module:install       Install module or modules in the application
-   module:uninstall     Install module or modules in the application
+   module:debug         Display current modules available <span class="keyword">for</span> application
+   module:download      Install module or modules <span class="keyword">in</span> the application
+   module:install       Install module or modules <span class="keyword">in</span> the application
+   module:uninstall     Install module or modules <span class="keyword">in</span> the application
 
 rest
-   rest:debug           Display current rest resource for the application
-   rest:disable         Disable a rest resource for the application
-   rest:enable          Enable a rest resource for the application
+   rest:debug           Display current rest resource <span class="keyword">for</span> the application
+   rest:disable         Disable a rest resource <span class="keyword">for</span> the application
+   rest:enable          Enable a rest resource <span class="keyword">for</span> the application
 
 router
-   router:debug         Displays current routes for the application
-   router:rebuild       Rebuild routes for the application
+   router:debug         Displays current routes <span class="keyword">for</span> the application
+   router:rebuild       Rebuild routes <span class="keyword">for</span> the application
 
 site
    site:maintenance     Switch site into maintenance mode
    site:mode            Switch system performance configuration
 
 test
-   test:debug           List Test Units available for the application.
+   test:debug           List Test Units available <span class="keyword">for</span> the application.
 
 </code></pre>
-        </section>
-		
+		</section>
+
+<section>
+			<h3>Site Interaction commands 2/2</h3>
+<pre><code class="bash text-medium">
+rest
+   rest:debug           Display current rest resource <span class="keyword">for</span> the application
+   rest:disable         Disable a rest resource <span class="keyword">for</span> the application
+   rest:enable          Enable a rest resource <span class="keyword">for</span> the application
+router
+   router:debug         Displays current routes <span class="keyword">for</span> the application
+   router:rebuild       Rebuild routes <span class="keyword">for</span> the application
+site
+   site:maintenance     Switch site into maintenance mode
+   site:mode            Switch system performance configuration
+test
+   test:debug           List Test Units available <span class="keyword">for</span> the application.
+
+</code></pre>
+		</section>
+		<section>
+			<h3>Using config commands</h3>
+			<video preload="none" controls width="720" height="530">
+				<source src="assets/video/config.mp4" type="video/mp4">
+			</video>
+		</section>
+
 		<section>
 			<h3>Using module:* commands</h3>
 			<video preload="none" controls width="720" height="530">
@@ -645,7 +647,7 @@ $ composer update --no-dev
 
 	</section>
 
-<section>  
+<section>
         <h2>Roadmap</h2>
         <br>
         <ul class="bullets">
