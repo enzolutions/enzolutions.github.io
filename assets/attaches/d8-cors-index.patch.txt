@@ -1,0 +1,45 @@
+diff --git a/index.php b/index.php
+index 53392f9..ecbe522 100644
+--- a/index.php
++++ b/index.php
+@@ -17,12 +17,30 @@
+ $autoloader = require_once 'autoload.php';
+ try {
+ 
++  if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
++    $response = new Response(200);
++    $response->headers->set('Access-Control-Allow-Origin', '*');
++    $response->headers->set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PATCH, DELETE');
++    $response->headers->set('Access-Control-Allow-Headers', 'Authorization');
++    $response->send();
++    exit;
++  }
++
+   $request = Request::createFromGlobals();
+   $kernel = DrupalKernel::createFromRequest($request, $autoloader, 'prod');
++
+   $response = $kernel
+-      ->handle($request)
+-      // Handle the response object.
+-      ->prepare($request)->send();
++    ->handle($request)
++    // Handle the response object.
++    ->prepare($request);
++
++  // Enable CORS requests, Change '*' for any specific domain or ip address
++  $response->headers->set('Access-Control-Allow-Origin', '*');
++  $response->headers->set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PATCH, DELETE');
++  $response->headers->set('Access-Control-Allow-Headers', 'Authorization');
++
++  $response->send();
++
+   $kernel->terminate($request, $response);
+ }
+ catch (HttpExceptionInterface $e) {
+@@ -41,4 +59,4 @@
+   http_response_code(500);
+   print $message;
+   throw $e;
+-}
++}
+\ No newline at end of file
