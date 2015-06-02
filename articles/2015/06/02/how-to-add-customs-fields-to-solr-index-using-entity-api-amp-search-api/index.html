@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>What is Drupal Console for me</title>
+    <title>How to add customs fields to SOLR index using Entity API &amp; Search API</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -132,102 +132,119 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/" rel="bookmark" title="What is Drupal Console for me">What is Drupal Console for me</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/" rel="bookmark" title="How to add customs fields to SOLR index using Entity API &amp; Search API">How to add customs fields to SOLR index using Entity API &amp; Search API</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/drupal_console_logo.png"/> Maybe you hear about the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> or maybe not because is an independent project related with <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a>.</p>
+    <p>Nowadays the ability to search in website almost compulsory and most of the times is took for granted.</p>
 
-<p>If you are a older Drupal user/developer you could find some similarities with <a href="https://github.com/drush-ops/drush" target="_blank">Drush</a> Project, and to be honest there are some similarities.</p>
+<p>Using Drupal we have two main options <a href="http://lucene.apache.org/solr/">SOLR</a> and <a href="https://www.elastic.co/">Elastic Search</a>. 
+Today I will explore how to work SOLR server.</p>
 
-<p>But if you are a <a href="http://symfony.com">Symfony</a> developer you will find some similarities with <a href="http://symfony.com/doc/current/components/console/introduction.html" target="_blank">Console Component</a> and actually it's what it is, Drupal Console is an implementation of Symfony Component to meet the Drupal 8 Way.</p>
+<p>In Drupal there are two popular modules to connect it with <strong>SOLR</strong> <a href="https://www.drupal.org/project/apachesolr">apachesolr</a> and 
+ <a href="https://www.drupal.org/project/search_api">search_api</a> and I decided to use <strong>search_api</strong> to interact with SOLR in 
+this article.</p>
 
-<p>The Drupal Console, embrace the principles of Drupal 8 about using Symfony 2 components and other libraries to solve the commons problems instead to reinvent the wheel for everything, that concept is called <a href="http://fuseinteractive.ca/blog/im-lazy-here-have-pie" target="_blank">PIE</a> ( Proudly Invented Elsewhere).</p>
+<h1>The problem</h1>
 
-<p>Using the Symfony <a href="http://symfony.com/doc/current/components/console/introduction.html" target="_blank">Console Component</a> <a href="http://dmouse.net/">David Flores</a> and <a href="http://jmolivas.com/" target="_blank">Jesus Olivas</a> start a project to implement the same concept from Symfony to Drupal 8.</p>
+<p>Lets imagine this problem: We have an Event content type with a Date field to determine the start date and end date (optional).</p>
 
-<p>One of the incentives to create the project Drupal Console was have a pet project to force them to learn the Drupal 8 way.</p>
+<p>Using Search API that field could be indexed without mayor problems, but if we try to do a view to list all event in a date range
+ is difficult because Views modules doesn't provide the Between operator for SOLR views, this operator is only available
+ for views using <strong>Entity Fields</strong></p>
 
-<p>But now the project is not a pet project anymore, you can see the full list of contributors at <a href="https://github.com/hechoendrupal/DrupalAppConsole/graphs/contributors" target="_blank">https://github.com/hechoendrupal/DrupalAppConsole/graphs/contributors</a> and if you want be part of this project just drop a message using the <a href="https://gitter.im" target="_blank">Gitter</a> room <a href="https://gitter.im/hechoendrupal/DrupalAppConsole">https://gitter.im/hechoendrupal/DrupalAppConsole
-</a>.</p>
+<h1>The Solution</h1>
 
-<p>The majority of commands in Drupal Console require a Drupal 8 instance, because the bootstrap of Drupal 8 is loaded to have access to all classes and libraries used in Drupal 8, to avoid re invent the wheel. But of course you can contribute commands without a dependency of Drupal 8.</p>
+<p>Because all events have minute granularity we can't use <strong>equal</strong> operator to determine if an event belongs to a specific day, to 
+solve that problem we add extra information to SOLR creating two new fields to store the day event in timestamp in order to be 
+able to use the equal operator.</p>
 
-<p>Right now the Drupal Console has 28 commands listed below</p>
+<p>To create these new fields in our node entities we will use <a href="http://drupal.org/project/entity">Entity API</a> and more specifically 
+hook <a href="http://www.drupalcontrib.org/api/drupal/contributions!entity!entity.api.php/function/hook_entity_property_info_alter/7">hook_entity_property_info_alter</a>.</p>
 
-<pre><code>$ drupal list
-Drupal Console version 0.6.5
+<p>Let me show you an implementation example.</p>
 
-Available commands:
- cr                              Rebuild and clear all site caches.
- drush                           Run drush from console.
- help                            Displays help for a command
- list                            Lists commands
- self-update                     Update the console to latest version.
-cache
- cache:rebuild                   Rebuild and clear all site caches.
-config
- config:debug                    Show the current configuration.
-container
- container:debug                 Displays current services for an application.
-generate
- generate:command                Generate commands for the console.
- generate:controller             Generate &amp; Register a controller
- generate:entity:config          Generate a new "EntityConfig"
- generate:entity:content         Generate a new "EntityContent"
- generate:form:config            Generate a new "ConfigFormBase"
- generate:module                 Generate a module.
- generate:plugin:block           Generate a plugin block
- generate:plugin:imageeffect     Generate image effect plugin.
- generate:plugin:rest:resource   Generate plugin rest resource
- generate:service                Generate service
-migrate
- migrate:debug                   Display current migration available for the application
- migrate:execute                 Execute a migration available for application
-module
- module:debug                    Display current modules available for application
- module:download                 Install module or modules in the application
- module:install                  Install module or modules in the application
- module:uninstall                Install module or modules in the application
-router
- router:debug                    Displays current routes for the application
- router:rebuild                  Rebuild routes for the application
+<pre><code>/**
+ * Implements hook_entity_property_info_alter().
+ */
+function MYMODULE_entity_property_info_alter(&amp;$info) {
+  $info['node']['properties']['event_start_day'] = array(
+    'type' =&gt; 'integer',
+    'label' =&gt; t('Event Start Day'),
+    'sanitized' =&gt; TRUE,
+    'getter callback' =&gt; 'MYMODULE_search_api_property_event_start_day_getter_callback',
+  );
+  $info['node']['properties']['event_end_day'] = array(
+    'type' =&gt; 'integer',
+    'label' =&gt; t('Event End Day'),
+    'sanitized' =&gt; TRUE,
+    'getter callback' =&gt; 'MYMODULE_search_search_api_property_event_end_day_getter_callback',
+  );
+}
 </code></pre>
 
-<p>Most of them are oriented to generate code to speed up the process of development for Drupal 8, but in the same way of Symfony Console has commands to interact with Cache, Migrate and Database you can contribute modules for any purpose, so your imagination is the limit.</p>
+<p>As you can see we are modifying entity definition to include two new properties <strong>event_start_day</strong> and <strong>event_end_day</strong>,
+probably the most information is the <strong>getter callback</strong> which is a function used to calculate the proper values for each 
+property.</p>
 
-<p>In my personal case I'm the contributor of commands related with Drupal 8 Migrate and Modules integration. My inspiration to create these commands wasn't to replace Drush, my ideas was to really understand how the Migration process works and be aware the module activation process.</p>
+<p>The functions defined in getter callback is used by Search API in the process of indexing to store the value in SOLR index.</p>
 
-<p>After complete these commands now I can say I understand how Drupal 8 Migrate process works and how a module is installed and uninstalled.</p>
+<p>Let me show an example of implementation of those getter functions.</p>
 
-<p>But the learning process doesn't end in Drupal 8 components, when I try to create the command <a href="https://github.com/enzolutions/DrupalAppConsole/blob/module-command/src/Command/ModuleDownloadCommand.php" target="_blank">module:download</a> I have to declare libraries <a href="https://github.com/alchemy-fr/Zippy" target="_blank">Zippy</a> and
-<a href="https://github.com/ARTACK/DOMQuery" target="_blank">DOMQuery</a> as dependencies using <a href="https://getcomposer.org" target="_blank">Composer</a>. Why code that libraries myself if I can use code create for non Drupal Developers :P.</p>
+<pre><code>/**
+ * Getter callback for event start day.
+ */
+function MYMODULE_search_api_property_event_start_day_getter_callback($item) {
+  return strtotime(substr($item-&gt;field_event_date[LANGUAGE_NONE][0]['value'], 0, 10)); 
+}
 
-<p>So right now we are looking for testers and coders for new commands to improve the Drupal Console, if you think you can contribute with Drupal Console core you are more than welcome.</p>
+/**
+ * Getter callback for event end day.
+ */
+function MYMODULE_search_search_api_property_event_end_day_getter_callback($item) {
+  // Set time at midnight of end day of event
+  if($item-&gt;field_event_date[LANGUAGE_NONE][0]['value2'] != '') {
+    return strtotime(substr($item-&gt;field_event_date[LANGUAGE_NONE][0]['value2'], 0, 10)) + 86399;
+  }
+  else {
+    return strtotime(substr($item-&gt;field_event_date[LANGUAGE_NONE][0]['value'], 0, 10)) + 86399;
+  }
+}
+</code></pre>
 
-<p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
+<p>Off course you can implement any logic required here, the variable $item is an object representing a Drupal node.</p>
+
+<p>After clear your cache the new fields will be able to select to be indexed by SOLR, you can do this accessing the URL 
+<strong>http://example.com/admin/config/search/search_api/index/san_mateo_content_index/fields</strong> as you can see in the following 
+image.</p>
+
+<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/entity_fields_solr_index_search_api.png"/></p>
+
+<p>When the process of re-index run again the new fields will be stored in SOLR and will be able to be selected in a View.</p>
+
+<p>I hope you found this post useful.</p>
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-01-25T14:20:58+0000">2015-01-25T14:20:58+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-06-02T14:20:58+0000">2015-06-02T14:20:58+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                    Drupa, Drupal, 8, Console
+                    Drupal, Entity API, Search API, SOLR
                 </li>
                                         <li>
                     <i class="fa fa-folder"></i>
