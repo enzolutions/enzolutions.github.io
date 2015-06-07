@@ -6,6 +6,120 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to check php compatibility</title>
+                <description><![CDATA[<p>Sometimes do you receive the scary mission of validate if your <a href="http://www.php.net">PHP</a> project will continue working if we upgrade or
+downgrade the PHP version used in production server.</p>
+
+<p>As you can imagine this is really complex task because you have create about what pieces of code must to be changes in
+order to continue working under new server conditions and any omission could be and would be a huge responsibility above
+your shoulders.</p>
+
+<p>Therefore, what you can do? trust in your good judge about code compatibility sounds like a bad approach and indeed it's 
+a terrible approach even though if you really believe do you know really well the application.</p>
+
+<p>Fortunately, there are some open source project to enable you to do this check automatically and today I will talk more 
+specifically about the project <a href="https://github.com/wimg/PHPCompatibility">PHPCompatibility</a>.</p>
+
+<h1>Install PHP CodeSniffer</h1>
+
+<p>It's possible install PHP CodeSniffer using PEAR, but I would recommend use composer instead of.</p>
+
+<p>Is necessary inform to you system where PHP CodeSniffer binary <strong>phpcs</strong> could found after install with composer using 
+the following command.</p>
+
+<pre><code>export PATH=~/.composer/vendor/bin:$PATH
+</code></pre>
+
+<p>After that we must execute composer to install PHP CodeSniffer using the following command.</p>
+
+<pre><code>composer global require "squizlabs/php_codesniffer=2.*"
+</code></pre>
+
+<p>To check the installation was success we could check running this command. This command will list the installed coding standards.</p>
+
+<pre><code>$ phpcs -i
+The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz and Zend
+</code></pre>
+
+<p>Those code standards are located at <strong>~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards</strong></p>
+
+<h1>Installing PHPCompatibility code standard.</h1>
+
+<p>To download PHPCompatibility code standard we have to follow these instructions.</p>
+
+<pre><code>$ ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+$ git clone https://github.com/wimg/PHPCompatibility.git
+</code></pre>
+
+<p>Using <strong>phpcs -i</strong> we can double check the new code standard is available to be used.</p>
+
+<pre><code>$ phpcs -i
+The installed coding standards are MySource, PEAR, PHPCompatibility, PHPCS, PSR1, PSR2, Squiz and Zend
+</code></pre>
+
+<h1>Checking compatibility</h1>
+
+<p>Firstly, you have to define if you a report including errors or warnings or both, in my case I want to exclude warning 
+just to focus in fatal error of php I could get after a PHP upgrade in my production server using the following configuration 
+for <strong>phpcs</strong>.</p>
+
+<pre><code>phpcs --config-set error_severity 1
+phpcs --config-set warning_severity 0
+</code></pre>
+
+<h2>Executive report</h2>
+
+<p>If you want to show to your superior and executive report about how but will be an upgrade/downgrade of PHP version in your
+ application, you can get an overview report using the following command.</p>
+
+<pre><code>$ phpcs --report=source --standard=PHPCompatibility --extensions=php,inc,module,install --runtime-set testVersion 5.5 -pvs .
+</code></pre>
+
+<p>The command about analyze all files with extension .php, .inc, .module and .install because and I want to analyze a <a href="http://drupal.org">Drupal</a> 
+project, moreover, I want to check the compatibility of this project with PHP 5.5 showing the progress of this analysis.</p>
+
+<p>This command will generate an output similar to following list.</p>
+
+<pre><code>PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
+----------------------------------------------------------------------
+SOURCE                                                           COUNT
+----------------------------------------------------------------------
+PHPCompatibility.PHP.RemovedExtensions                           365
+PHPCompatibility.PHP.DeprecatedNewReference                      153
+PHPCompatibility.PHP.ForbiddenNamesAsInvokedFunctions            6
+PHPCompatibility.PHP.DeprecatedFunctions                         3
+----------------------------------------------------------------------
+A TOTAL OF 527 SNIFF VIOLATIONS WERE FOUND IN 4 SOURCES
+----------------------------------------------------------------------
+
+Time: 3 mins, 46.3 secs; Memory: 185.25Mb
+</code></pre>
+
+<p>To evaluate the statement of work to be prepared for the PHP version change, we can get a detail report in a file using 
+this command.</p>
+
+<pre><code>phpcs --standard=PHPCompatibility --extensions=php,inc,module,install --report-full=/Users/enzo/Desktop/CS-report.txt --runtime-set testVersion 5.5 -pvs .
+</code></pre>
+
+<p>The command above will produce an output similar to this.</p>
+
+<pre><code>FILE: /Users/enzo/drupal/includes/common.inc
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1797 | ERROR | 'clone' is a reserved keyword introduced in PHP version
+      |       | 5.0 and cannot be invoked as a function (T_CLONE)
+      |       | (PHPCompatibility.PHP.ForbiddenNamesAsInvokedFunctions)
+----------------------------------------------------------------------
+</code></pre>
+
+<p>I hope you found this post useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</link>
+                <pubDate>Sun, 07 Jun 2015 15:51:44 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</guid>
+            </item>
+                    <item>
                 <title>How to add customs fields to SOLR index using Entity API &amp; Search API</title>
                 <description><![CDATA[<p>Nowadays the ability to search in website almost compulsory and most of the times is took for granted.</p>
 
@@ -96,7 +210,7 @@ image.</p>
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</link>
-                <pubDate>Tue, 02 Jun 2015 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 02 Jun 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</guid>
             </item>
                     <item>
@@ -146,7 +260,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</link>
-                <pubDate>Tue, 26 May 2015 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 26 May 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</guid>
             </item>
                     <item>
@@ -199,7 +313,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</guid>
             </item>
                     <item>
@@ -256,7 +370,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>Como se puede imaginar le estoy pidiendo que voten por mí. Pero también los invito a comprobar todos los candidatos y determinar cual coincide mejor con su forma de pensar y sentir. También no se olvide de invitar a sus amigos a votar.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</guid>
             </item>
                     <item>
@@ -333,7 +447,7 @@ router
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</link>
-                <pubDate>Sun, 25 Jan 2015 14:22:31 +0000</pubDate>
+                <pubDate>Sun, 25 Jan 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
             </item>
                     <item>
@@ -480,7 +594,7 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
-                <pubDate>Wed, 21 Jan 2015 14:22:31 +0000</pubDate>
+                <pubDate>Wed, 21 Jan 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
             </item>
                     <item>
@@ -549,7 +663,7 @@ node.save(userDetails, {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 20 Jan 2015 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
@@ -687,7 +801,7 @@ print 'Node ID: ' . $nid . "\n";
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Mon, 29 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
@@ -931,7 +1045,7 @@ public function authenticate(Request $request) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Sun, 28 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1021,7 +1135,7 @@ if ($last_key) {
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Fri, 26 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
@@ -1060,7 +1174,7 @@ if ($last_key) {
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Wed, 17 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -1274,7 +1388,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 16 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1523,7 +1637,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 09 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1580,7 +1694,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 14:22:31 +0000</pubDate>
+                <pubDate>Sun, 07 Dec 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1676,7 +1790,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 25 Nov 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -1756,7 +1870,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 14:22:31 +0000</pubDate>
+                <pubDate>Fri, 24 Oct 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -1829,7 +1943,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 14:22:31 +0000</pubDate>
+                <pubDate>Sun, 19 Oct 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -2009,7 +2123,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 14:22:31 +0000</pubDate>
+                <pubDate>Fri, 17 Oct 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -2121,7 +2235,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 16 Sep 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -2313,7 +2427,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 14:22:31 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -2370,7 +2484,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 14:22:31 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -2517,7 +2631,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 14:22:31 +0000</pubDate>
+                <pubDate>Wed, 27 Aug 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2584,7 +2698,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 26 Aug 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -2623,7 +2737,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 14:22:31 +0000</pubDate>
+                <pubDate>Sun, 24 Aug 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -2651,7 +2765,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 14:22:31 +0000</pubDate>
+                <pubDate>Thu, 14 Aug 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -2775,7 +2889,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 14:22:31 +0000</pubDate>
+                <pubDate>Tue, 08 Jul 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -2810,7 +2924,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 14:22:31 +0000</pubDate>
+                <pubDate>Thu, 03 Jul 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -3037,7 +3151,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 14:22:31 +0000</pubDate>
+                <pubDate>Wed, 18 Jun 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -3060,7 +3174,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 14:22:31 +0000</pubDate>
+                <pubDate>Mon, 16 Jun 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -3221,7 +3335,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 14:22:31 +0000</pubDate>
+                <pubDate>Mon, 02 Jun 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -3377,7 +3491,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 14:22:31 +0000</pubDate>
+                <pubDate>Sun, 01 Jun 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -3401,7 +3515,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 14:22:31 +0000</pubDate>
+                <pubDate>Sat, 31 May 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -3440,7 +3554,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 14:22:31 +0000</pubDate>
+                <pubDate>Wed, 28 May 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -3458,7 +3572,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 14:22:31 +0000</pubDate>
+                <pubDate>Wed, 21 May 2014 15:51:44 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>

@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>How to overwrite Backbone Model save function</title>
+    <title>How to check php compatibility</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -132,94 +132,139 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" rel="bookmark" title="How to overwrite Backbone Model save function">How to overwrite Backbone Model save function</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/" rel="bookmark" title="How to check php compatibility">How to check php compatibility</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
+    <p>Sometimes do you receive the scary mission of validate if your <a href="http://www.php.net">PHP</a> project will continue working if we upgrade or
+downgrade the PHP version used in production server.</p>
 
-<p>Backbone define some <a href="http://es.wikipedia.org/wiki/Representational_State_Transfer" target="_blank">REST</a> states to operate over models for instance:</p>
+<p>As you can imagine this is really complex task because you have create about what pieces of code must to be changes in
+order to continue working under new server conditions and any omission could be and would be a huge responsibility above
+your shoulders.</p>
 
-<ul>
-<li>Model Fetch: <strong>GET</strong></li>
-<li>Model New: <strong>POST</strong></li>
-<li>Model Update: <strong>PUT</strong></li>
-</ul>
+<p>Therefore, what you can do? trust in your good judge about code compatibility sounds like a bad approach and indeed it's 
+a terrible approach even though if you really believe do you know really well the application.</p>
 
-<p>But is possible our API doesn't implement all REST States, for instance <a href="http://www.drupal.org" target="_blank">Drupal</a> 8 (version in development) don't implement the method PUT to save Drupal Entities yet.</p>
+<p>Fortunately, there are some open source project to enable you to do this check automatically and today I will talk more 
+specifically about the project <a href="https://github.com/wimg/PHPCompatibility">PHPCompatibility</a>.</p>
 
-<p>In exchange the REST State PATCH is used by Drupal to save models.</p>
+<h1>Install PHP CodeSniffer</h1>
 
-<p>So if I try to create a regular Model as you can see in the following snippet.</p>
+<p>It's possible install PHP CodeSniffer using PEAR, but I would recommend use composer instead of.</p>
 
-<pre><code>Node = Backbone.Model.extend({
-        initialize: function(){
-            alert("Welcome to this world");
-        }
-    });
+<p>Is necessary inform to you system where PHP CodeSniffer binary <strong>phpcs</strong> could found after install with composer using 
+the following command.</p>
 
-var node = new Node({ id: 1, title: 'Node Sample in Backbone'});
-
-node.save(userDetails, {
-    success: function (user) {
-        alert(user.toJSON());
-    }
-})
+<pre><code>export PATH=~/.composer/vendor/bin:$PATH
 </code></pre>
 
-<p>The code above will execute an Ajax call using PUT method.</p>
+<p>After that we must execute composer to install PHP CodeSniffer using the following command.</p>
 
-<p>If you are a Drupal Developer you will notice the model doesn't match the Drupal Entity structure with language and deltas, but I just want to show a simply logic about Backbone save.</p>
-
-<p>Now let me show you how we can overwrite the save function to change the REST method.</p>
-
-<pre><code>Node = Backbone.Model.extend({
-        initialize: function(){
-            alert("Welcome to this world");
-        },
-        save: function(attrs, options) {
-          options.patch = true;
-          // Proxy the call to the original save function
-          Backbone.Model.prototype.save.call(this, attrs, options);
-        }
-    });
-
-var node = new Node({ id: 1, title: 'Node Sample in Backbone'});
-
-node.save(userDetails, {
-    success: function (user) {
-        alert(user.toJSON());
-    }
-})
+<pre><code>composer global require "squizlabs/php_codesniffer=2.*"
 </code></pre>
 
-<p>Now our model will execute and Ajax request using PATCH method.</p>
+<p>To check the installation was success we could check running this command. This command will list the installed coding standards.</p>
 
-<p>I used this technique to enable the library <a href="https://github.com/enzolutions/backbone.drupal" target="_blank">Backbone.Drupal</a> send models to Drupal 8 using REST method PATCH.</p>
+<pre><code>$ phpcs -i
+The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz and Zend
+</code></pre>
 
-<p>I hope you found this blog entry useful.</p>
+<p>Those code standards are located at <strong>~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards</strong></p>
+
+<h1>Installing PHPCompatibility code standard.</h1>
+
+<p>To download PHPCompatibility code standard we have to follow these instructions.</p>
+
+<pre><code>$ ~/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+$ git clone https://github.com/wimg/PHPCompatibility.git
+</code></pre>
+
+<p>Using <strong>phpcs -i</strong> we can double check the new code standard is available to be used.</p>
+
+<pre><code>$ phpcs -i
+The installed coding standards are MySource, PEAR, PHPCompatibility, PHPCS, PSR1, PSR2, Squiz and Zend
+</code></pre>
+
+<h1>Checking compatibility</h1>
+
+<p>Firstly, you have to define if you a report including errors or warnings or both, in my case I want to exclude warning 
+just to focus in fatal error of php I could get after a PHP upgrade in my production server using the following configuration 
+for <strong>phpcs</strong>.</p>
+
+<pre><code>phpcs --config-set error_severity 1
+phpcs --config-set warning_severity 0
+</code></pre>
+
+<h2>Executive report</h2>
+
+<p>If you want to show to your superior and executive report about how but will be an upgrade/downgrade of PHP version in your
+ application, you can get an overview report using the following command.</p>
+
+<pre><code>$ phpcs --report=source --standard=PHPCompatibility --extensions=php,inc,module,install --runtime-set testVersion 5.5 -pvs .
+</code></pre>
+
+<p>The command about analyze all files with extension .php, .inc, .module and .install because and I want to analyze a <a href="http://drupal.org">Drupal</a> 
+project, moreover, I want to check the compatibility of this project with PHP 5.5 showing the progress of this analysis.</p>
+
+<p>This command will generate an output similar to following list.</p>
+
+<pre><code>PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
+----------------------------------------------------------------------
+SOURCE                                                           COUNT
+----------------------------------------------------------------------
+PHPCompatibility.PHP.RemovedExtensions                           365
+PHPCompatibility.PHP.DeprecatedNewReference                      153
+PHPCompatibility.PHP.ForbiddenNamesAsInvokedFunctions            6
+PHPCompatibility.PHP.DeprecatedFunctions                         3
+----------------------------------------------------------------------
+A TOTAL OF 527 SNIFF VIOLATIONS WERE FOUND IN 4 SOURCES
+----------------------------------------------------------------------
+
+Time: 3 mins, 46.3 secs; Memory: 185.25Mb
+</code></pre>
+
+<p>To evaluate the statement of work to be prepared for the PHP version change, we can get a detail report in a file using 
+this command.</p>
+
+<pre><code>phpcs --standard=PHPCompatibility --extensions=php,inc,module,install --report-full=/Users/enzo/Desktop/CS-report.txt --runtime-set testVersion 5.5 -pvs .
+</code></pre>
+
+<p>The command above will produce an output similar to this.</p>
+
+<pre><code>FILE: /Users/enzo/drupal/includes/common.inc
+----------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------
+ 1797 | ERROR | 'clone' is a reserved keyword introduced in PHP version
+      |       | 5.0 and cannot be invoked as a function (T_CLONE)
+      |       | (PHPCompatibility.PHP.ForbiddenNamesAsInvokedFunctions)
+----------------------------------------------------------------------
+</code></pre>
+
+<p>I hope you found this post useful.</p>
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-01-20T15:51:44+0000">2015-01-20T15:51:44+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-06-07T15:51:44+0000">2015-06-07T15:51:44+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                    Backbone, Javascript, Rest, Drupal
+                    PHP, Code, Sniffer
                 </li>
                                         <li>
                     <i class="fa fa-folder"></i>
