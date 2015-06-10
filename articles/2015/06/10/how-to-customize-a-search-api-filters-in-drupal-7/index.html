@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>How to enable CORS in Drupal 8 in non Apache webservers</title>
+    <title>How to customize a Search API filters in Drupal 7</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -132,75 +132,97 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" rel="bookmark" title="How to enable CORS in Drupal 8 in non Apache webservers">How to enable CORS in Drupal 8 in non Apache webservers</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/" rel="bookmark" title="How to customize a Search API filters in Drupal 7">How to customize a Search API filters in Drupal 7</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p>As you maybe know <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a> is almost ready to be released, could be in next
-<a href="https://events.drupal.org/barcelona2015">DrupalCon Europe</a> held in Barcelona.</p>
+    <p>Last week I show you <a href="http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/">How to add customs fields to SOLR index using Entity API &amp; Search API</a>, 
+continues with that line of concept I will to show you how to manipulate a Search API query to include a custom logic in 
+your queries.</p>
 
-<p>However if you are interested in CORS applications you must to wait until Drupal 8.1 to get native support to CORS in Drupal
-more information at <a href="https://www.drupal.org/node/1869548#comment-9365043">issue</a>.</p>
+<p>Firstly, let imagine an hypothetical scenery when we need to run a different query for anonymous and registered users.</p>
 
-<p>Long time ago I wrote the article <a href="http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">How to enable CORS requests against Drupal 8</a>
-but that approach only works in environments using Apache Web Server, but in servers using a non Apache web server like
- <a href="http://nginx.org/">Ngix</a> that solution is useless. Today I face that problem in <a href="https://pantheon.io">Pantheon</a>.</p>
+<p>Using the custom fields created in previous referenced above we will show today's list of events, in the other hand for 
+registered users we will show events in progress (including multi day events) and events coming soon.</p>
 
-<p>Therefore, I implemented a solution hacking the file index.php to enable CORS. Let me split the change in two stages.</p>
+<h1>Alter Search API query.</h1>
 
-<p>Firstly we have to guarantee the REST method OPTIONS return the proper value, because Drupal 8 can't handle that request right now, check the code to implement that</p>
+<p>To modify our queries we will use hook <a href="http://www.drupalcontrib.org/api/drupal/contributions!search_api!search_api.api.php/function/hook_search_api_query_alter/7">hook_search_api_query_alter()</a> 
+as you can see in the following example</p>
 
-<pre><code>  if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    $response = new Response(200);
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Origin', '*');
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PATCH, DELETE');
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Headers', 'Authorization');
-    $response-&gt;send();
-    exit;
-  }
+<pre><code>function MYMODULE_search_api_query_alter(SearchApiQueryInterface $query) {
+  global $user;
+  // Filter from where the Search API query will be trigger 
+  if(arg(0) == 'events' &amp;&amp; arg(1) == 'list') {
+
+    $start_day = strtotime(date('Y-m-d'));
+
+    if($user-&gt;uid == 0 ) {
+      $query-&gt;condition('event_start_day', $start_day, '&lt;=');
+      $query-&gt;condition('event_end_day', $start_day, '&gt;=');
+    }
+    else {
+      // Select events in progress
+      $left_filter = $query-&gt;createFilter('AND');
+      $left_filter-&gt;condition('event_start_day', $start_day, '&lt;=');
+      $left_filter-&gt;condition('event_end_day', $start_day, '&gt;=');
+
+      // Select events with a start date in the future
+      $right_filter = $query-&gt;createFilter('AND');
+      $right_filter-&gt;condition('event_start_day', time(), '&gt;=');
+
+      $main_filter = $query-&gt;createFilter('OR');
+      $main_filter-&gt;filter($left_filter);
+      $main_filter-&gt;filter($right_filter);
+
+      $query-&gt;filter($main_filter);
+     }
+}     
 </code></pre>
 
-<p>Secondly, we have to modify normal requests to enable remote requests from any source desired, as you can see in the following snippet of code</p>
+<p>Let dissect the previous piece of code. If user is anonymous we will <a href="http://www.drupalcontrib.org/api/drupal/contributions%21search_api%21includes%21query.inc/function/SearchApiQueryInterface%3A%3Acondition/7">SearchApiQueryInterface::condition</a> method 
+to include new filters to determine events who are happening today, even though if those events are multi day events.</p>
 
-<pre><code>  $response = $kernel
-      -&gt;handle($request)
-      // Handle the response object.
-      -&gt;prepare($request);
+<p>In the case of registered users, the same method is used but with a subtle variation. By default all conditions are added 
+using an <strong>AND</strong> operator which is fine most of the times. However, in our case is required include to groups of validation 
+in same query for that reason an <strong>OR</strong> operator is required.</p>
 
-  // Enable CORS requests, Change '*' for any specific domain or ip address
-  $response-&gt;headers-&gt;set('Access-Control-Allow-Origin', '*');
-  $response-&gt;headers-&gt;set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PATCH, DELETE');
-  $response-&gt;headers-&gt;set('Access-Control-Allow-Headers', 'Authorization');
+<p>Using the <a href="http://www.drupalcontrib.org/api/drupal/contributions%21search_api%21includes%21query.inc/function/SearchApiQueryInterface%3A%3AcreateFilter/7">SearchApiQueryInterface::createFilter</a> is 
+possible create groups of filters using AND or OR operator.</p>
+
+<p>In addition, using <a href="http://www.drupalcontrib.org/api/drupal/contributions%21search_api%21includes%21query.inc/function/SearchApiQueryInterface%3A%3Afilter/7">SearchApiQueryInterface::filter</a> is possible 
+include those group of filters inside a <strong>SearchApiQueryInterface</strong> object.</p>
+
+<p>In summary the snippet of code above create a filter similar to</p>
+
+<pre><code>(event_start_day &lt;= time() AND event_end_day &gt;= time()) OR (event_start_day &gt;= time())
 </code></pre>
 
-<p>You can apply this <a href="http://enzolutions.com/assets/attaches/d8-cors-index.patch.txt">patch</a> against Drupal 8 beta 10.</p>
+<p>You can create any combination of filters required in your logic.</p>
 
-<p>I know there are initiatives to enable this feature using contributed modules, but meanwhile we get a definite solution, 
-this is temporary solution flexible enough using Drupal 8 style to start using Drupal as backend in a Decoupled solution.</p>
-
-<p>I hope you found this post useful.</p>
+<p>I hope you found this article useful.</p>
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-05-26T11:45:42+0000">2015-05-26T11:45:42+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-06-10T11:45:42+0000">2015-06-10T11:45:42+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                    Drupal8, Drupal, CORS
+                    Drupal, Search API
                 </li>
                                         <li>
                     <i class="fa fa-folder"></i>

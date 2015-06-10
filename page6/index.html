@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>How to enable CORS in Drupal 8 in non Apache webservers</title>
+    <title>Welcome to [enzo]lutions</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -129,107 +129,30 @@
 <a href="http://enzolutions.com/rss.xml" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> Feed</a>
     </div>
 
-  .
-<article class="post">
-  <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" rel="bookmark" title="How to enable CORS in Drupal 8 in non Apache webservers">How to enable CORS in Drupal 8 in non Apache webservers</a></h1>
-      </div><!--/ .headline-wrap -->
-  <div class="article-wrap">
-    <div class="social-share">
-  <ul class="inline-list">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
-    </li>
-    <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
-    </li>
-  </ul>
+        <div id="index">
+    <h3><a href="http://enzolutions.com/posts/">Recent Posts</a></h3>
+                <article>
+        <h2><a href="http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/" title="My blog is alive again!">My blog is alive again!</a></h2>
+            </article>
+      
+    <ul class="pagination inline-list">
+          <li>
+                <a class="prev" href="http://enzolutions.com/page5/">
+                    &laquo; Newer
+                </a>
+            </li>
+    
+                  <li><a href="http://enzolutions.com/">1</a></li>
+                        <li><a href="http://enzolutions.com/page2/">2</a></li>
+                        <li><a href="http://enzolutions.com/page3/">3</a></li>
+                        <li><a href="http://enzolutions.com/page4/">4</a></li>
+                        <li><a href="http://enzolutions.com/page5/">5</a></li>
+                        <li><span class="active">6</span></li>
+          
+      </ul>
 </div>
 
-    <p>As you maybe know <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a> is almost ready to be released, could be in next
-<a href="https://events.drupal.org/barcelona2015">DrupalCon Europe</a> held in Barcelona.</p>
-
-<p>However if you are interested in CORS applications you must to wait until Drupal 8.1 to get native support to CORS in Drupal
-more information at <a href="https://www.drupal.org/node/1869548#comment-9365043">issue</a>.</p>
-
-<p>Long time ago I wrote the article <a href="http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">How to enable CORS requests against Drupal 8</a>
-but that approach only works in environments using Apache Web Server, but in servers using a non Apache web server like
- <a href="http://nginx.org/">Ngix</a> that solution is useless. Today I face that problem in <a href="https://pantheon.io">Pantheon</a>.</p>
-
-<p>Therefore, I implemented a solution hacking the file index.php to enable CORS. Let me split the change in two stages.</p>
-
-<p>Firstly we have to guarantee the REST method OPTIONS return the proper value, because Drupal 8 can't handle that request right now, check the code to implement that</p>
-
-<pre><code>  if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
-    $response = new Response(200);
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Origin', '*');
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PATCH, DELETE');
-    $response-&gt;headers-&gt;set('Access-Control-Allow-Headers', 'Authorization');
-    $response-&gt;send();
-    exit;
-  }
-</code></pre>
-
-<p>Secondly, we have to modify normal requests to enable remote requests from any source desired, as you can see in the following snippet of code</p>
-
-<pre><code>  $response = $kernel
-      -&gt;handle($request)
-      // Handle the response object.
-      -&gt;prepare($request);
-
-  // Enable CORS requests, Change '*' for any specific domain or ip address
-  $response-&gt;headers-&gt;set('Access-Control-Allow-Origin', '*');
-  $response-&gt;headers-&gt;set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PATCH, DELETE');
-  $response-&gt;headers-&gt;set('Access-Control-Allow-Headers', 'Authorization');
-</code></pre>
-
-<p>You can apply this <a href="http://enzolutions.com/assets/attaches/d8-cors-index.patch.txt">patch</a> against Drupal 8 beta 10.</p>
-
-<p>I know there are initiatives to enable this feature using contributed modules, but meanwhile we get a definite solution, 
-this is temporary solution flexible enough using Drupal 8 style to start using Drupal as backend in a Decoupled solution.</p>
-
-<p>I hope you found this post useful.</p>
-
-    <hr />
-    <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-05-26T11:45:42+0000">2015-05-26T11:45:42+0000</time>.</p>
-      
-              <ul class="list-unstyled">
-                            <li>
-                    <i class="fa fa-tags"></i>
-                    Drupal8, Drupal, CORS
-                </li>
-                                        <li>
-                    <i class="fa fa-folder"></i>
-                    articles
-                </li>
-                    </ul>
-          </footer>
-  </div><!-- /.article-wrap -->
-    <section>
-    <h3>Comments</h3>
-    <div id="disqus_thread"></div>
-    <noscript>
-      Please enable JavaScript to view the
-      <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-
-      <script type="text/javascript">
-        var disqus_shortname = 'enzolutions';
-
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-  </article>
-
+  
 </div><!-- /#main -->
 
 <div class="footer-wrap">
@@ -248,17 +171,5 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-
-      <!-- Google Analytics Tracker -->
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-17944133-1', 'enzolutions.com');
-        ga('send', 'pageview');
-      </script>
-      <!-- End of Google Analytics Tracker -->
- </body> 
+</body>
 </html>
