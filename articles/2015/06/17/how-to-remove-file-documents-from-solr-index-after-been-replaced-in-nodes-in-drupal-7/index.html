@@ -4,10 +4,10 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>How to validate Bower files.</title>
+    <title>How to remove file documents from SOLR index after been replaced in nodes in Drupal 7</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
-<meta name="description" content="Script to validate Bower files before to publish" />
+<meta name="description" content="Enzo's blog" />
 <meta name="keywords" content="" />
 
 
@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Welcome to [enzo]lutions">
-<meta property="og:description" content="Script to validate Bower files before to publish">
+<meta property="og:description" content="Enzo's blog">
 <meta property="og:url" content="http://localhost:4000">
 <meta property="og:site_name" content="Welcome to [enzo]lutions">
 
@@ -132,105 +132,126 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files/" rel="bookmark" title="How to validate Bower files.">How to validate Bower files.</a></h1>
+          <h1><a href="http://localhost:4000/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/" rel="bookmark" title="How to remove file documents from SOLR index after been replaced in nodes in Drupal 7">How to remove file documents from SOLR index after been replaced in nodes in Drupal 7</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
+    <p>If you have revisions enabled in your content types, it keeps all your old files on the server (associated with old revisions), 
+so replacing a file definitely is harder.</p>
 
-<ul>
-<li>Add a bower.json files to our project.</li>
-<li>Create a release matching the info in our bower file.</li>
-<li>Run <em>bower register</em> command to share our project.</li>
-</ul>
+<p>Even though if you don't have revisions enabled, if you try to remove it and add it again to the node, the name/link is 
+updated, but since a file with that name is kept on the server and there is a name duplication, Drupal adds those "_0", 
+"_1" etc suffixes to future uploaded versions of that file's name.</p>
 
-<h1>The Problem</h1>
+<p>In term of node render is not a problem, but in terms of SOLR indexing all those files will be indexed, so instead of get 
+one record for a match is possible get N records where N is the number of time do you overwrite the same file.</p>
 
-<p>The problem I found is the publishing process don't validate the bower.json, so is probable after publish when people try to use your library even if the system detect the library is available they get an awful error like this</p>
+<p>Then, to resolve this annoying behavior I will show you a solution to remove a file document from SOLR index if a file is 
+removed from a node. this solution use <a href="https://www.drupal.org/project/entity">Entity API</a> module so it should be added 
+as a dependency in your module .info file.</p>
 
-<pre><code>bower backform#~0.0.1-alpha EMALFORMED Failed to read /var/folders/bh/8fr0bx9113n0plkjjkt2s5d40000gn/T/enzo/bower/backform-20375-ST4wT6/bower.json
+<pre><code>/**
+ * Implements hook_node_update().
+ */
+function MYMODULE_node_update($node) {
 
-Additional error details:
-Unexpected token n
-</code></pre>
+  // Array of content types to act on.
+  if (in_array($node-&gt;type, array('article', 'blog_post'))) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $original_wrapper = entity_metadata_wrapper('node', $node-&gt;original);
 
-<h1>The solution.</h1>
+    // Array of file fields to act on.
+    foreach (array('field_public_files', 'field_private_files') as $field) {
+      if (!isset($original_wrapper-&gt;{$field})) {
+        continue;
+      }
+      $current_files = array();
+      $original_files = array();
 
-<p>Fortunately there is a NodeJS package to validate the bower.json before to publish.</p>
+      // Get files that were attached to the original node (before update).
+      foreach ($original_wrapper-&gt;{$field}-&gt;value() as $file) {
+        $original_files[] = $file['fid'];
+      }
+      // Stop if there were no files previously attached.
+      if (empty($original_files)) {
+        continue;
+      }
 
-<p>We need to install the package with the following command.</p>
+      // Get files currently attached to the node (after update).
+      foreach ($wrapper-&gt;{$field}-&gt;value() as $file) {
+        $current_files[] = $file['fid'];
+      }
 
-<pre><code>$ npm install bower-json
-</code></pre>
+      // Delete files that were in the original node but were removed during this update
+      $deleted_files = array_diff($original_files, $current_files);
+      if(!empty($deleted_files)) {
+       $env_id = apachesolr_default_environment();
+       $solr = apachesolr_get_solr($env_id);
+       foreach ($deleted_files as $fid) {
+         $file_id = apachesolr_document_id($fid, 'file') . '-' . $node-&gt;nid;
 
-<p>Execute this command inside the folder of your library or use the option <em>-g</em> to install globally is up to you.</p>
-
-<p>Now we will use the following NodeJS scrit to validate the bower.json file, let name this script as <strong>check_bower.js</strong></p>
-
-<pre><code>var bowerJson = require('bower-json');
-
-// Can also be used by simply calling bowerJson()
-bowerJson.read('./bower.json', function (err, json) {
-    if (err) {
-        console.error('There was an error reading the file');
-        console.error(err.message);
-        return;
+         // Remove file document from SOLR index, re-index is not required,
+         $solr-&gt;deleteByQuery("id:$file_id");
+       }
+      }
     }
+      $deleted_files = array_diff($original_files, $current_files);
+      if(!empty($deleted_files)) {
 
-    console.log('JSON: ', json);
-});
+    }
+  }
+}
 </code></pre>
 
-<p>To use this script execute the following command.</p>
+<p>The code above react when a node is updated for specific content types and specific fields, using function <a href="http://www.drupalcontrib.org/api/drupal/contributions!entity!entity.module/function/entity_metadata_wrapper/7">entity_metadata_wrapper</a> 
+we can determine the information of our node before update and after update.</p>
 
-<pre><code>$ node check_bower.js
+<p>After calculate if some files were deleted the logic to delete the file document from SOLR is applied, let me see that code 
+in detail</p>
+
+<pre><code>$env_id = apachesolr_default_environment();
+$solr = apachesolr_get_solr($env_id);
+foreach ($deleted_files as $fid) {
+ $file_id = apachesolr_document_id($fid, 'file') . '-' . $node-&gt;nid;
+
+ // Remove file document from SOLR index, re-index is not required,
+ $solr-&gt;deleteByQuery("id:$file_id");
+}
 </code></pre>
 
-<p>As you can imagine you will get the same error in the first execution, so you need to work in your file until you get an output similar to this</p>
+<p>Firstly, a SOLR object instance is declared in my example I use the default SOLR instance, if you have more than one instance 
+is necessary to change the logic to use your proper instance.</p>
 
-<pre><code>JSON:  { name: 'backform',
-  main: [ 'src/backform.js' ],
-  version: '0.0.1-alpha',
-  homepage: 'https://github.com/AmiliaApp/backform',
-  author: { name: 'Martin Drapeau', email: 'martindrapeau@gmail.com' },
-  description: 'Backform takes a Backbone model and transforms it into an HTML form',
-  keywords: [ 'backbone', 'form', 'underscore' ],
-  license: 'MIT',
-  ignore: [ '**/.*', 'node_modules', 'bower_components', 'test', 'tests' ],
-  dependencies: { backbone: '1.0.0 - 1.1.2', underscore: '1.4.4 - 1.6.0' } }
-</code></pre>
+<p>Using <a href="http://www.drupalcontrib.org/api/drupal/contributions!apachesolr!apachesolr.module/function/apachesolr_document_id/6">apachesolr_document_id</a>
+the SOLR is is calculated using File ID, File type and providing the specific relation to the specific node subject of 
+update, because in some Drupal installs a file could be associated to several nodes.</p>
 
-<p>You can see a bower file sample at <a href="https://github.com/enzolutions/backbone.drupal/blob/master/bower.json" target="_blank">https://github.com/enzolutions/backbone.drupal/blob/master/bower.json</a>.</p>
+<p>Finally, using <a href="http://www.drupalcontrib.org/api/drupal/contributions!search_api_solr!includes!solr_connection.interface.inc/function/SearchApiSolrConnectionInterface%3A%3AdeleteByQuery/7">deleteByQuery</a> method the delete is requested, 
+this delete is applied immediately, SOLR re-index is not required.</p>
 
-<p>Last but not least important use the <a href="http://bower.io/docs/creating-packages">documentation</a> about what elements must be used in a a bower.json to be valid.</p>
-
-<h1>Readers Contribution</h1>
-
-<p>One of my readers <a href="https://disqus.com/by/jhabdas/">Josh Habdas</a> recommend also the tool <a href="http://package-json-validator.com/">Package.json validator</a> to validate before to send.</p>
-
-<p>I hope you found this blog entry useful.</p>
+<p>I expect you found this article useful.</p>
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2014-10-24T19:32:57+0000">2014-10-24T19:32:57+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-06-17T19:32:57+0000">2015-06-17T19:32:57+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                    NodeJS, Bower
+                    SOLR, Drupal
                 </li>
                                         <li>
                     <i class="fa fa-folder"></i>
