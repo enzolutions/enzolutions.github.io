@@ -232,21 +232,21 @@ foreach ($deleted_files as $fid) {
 }
 </code></pre>
 
-<p>Firstly, a SOLR object instance is declared in my example I use the default SOLR instance, if you have more than one instance 
-is necessary to change the logic to use your proper instance.</p>
+<p>Firstly, a SOLR object instance is declared. In my example I use the default SOLR instance, if you have more than one instance 
+of SOLR is necessary to change the logic to use the proper instance.</p>
 
-<p>Using <a href="http://www.drupalcontrib.org/api/drupal/contributions!apachesolr!apachesolr.module/function/apachesolr_document_id/6">apachesolr_document_id</a>
-the SOLR is is calculated using File ID, File type and providing the specific relation to the specific node subject of 
+<p>Using <a href="http://www.drupalcontrib.org/api/drupal/contributions!apachesolr!apachesolr.module/function/apachesolr_document_id/6">apachesolr_document_id</a> function 
+the SOLR ID is calculated using the <strong>fid</strong>, <strong>file</strong> type and providing the specific relation to the specific node subject of 
 update, because in some Drupal installs a file could be associated to several nodes.</p>
 
-<p>Finally, using <a href="http://www.drupalcontrib.org/api/drupal/contributions!search_api_solr!includes!solr_connection.interface.inc/function/SearchApiSolrConnectionInterface%3A%3AdeleteByQuery/7">deleteByQuery</a> method the delete is requested, 
+<p>Finally, using <a href="http://www.drupalcontrib.org/api/drupal/contributions!search_api_solr!includes!solr_connection.interface.inc/function/SearchApiSolrConnectionInterface%3A%3AdeleteByQuery/7">deleteByQuery</a> method the delete from SOLR index is requested, 
 this delete is applied immediately, SOLR re-index is not required.</p>
 
 <p>I expect you found this article useful.</p>
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-06-17T19:34:50+0000">2015-06-17T19:34:50+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-06-17T16:38:36+0000">2015-06-17T16:38:36+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
