@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+    <title>How to merge YAML files</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Spress" />
+<meta name="description" content="Enzo's blog" />
+<meta name="keywords" content="" />
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Welcome to [enzo]lutions">
+<meta name="twitter:description" content="{ page.description | default(site.description) }}">
+<meta name="twitter:site" content="@enzolutions">
+<meta name="twitter:creator" content="@">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://enzolutions.com/">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Welcome to [enzo]lutions">
+<meta property="og:description" content="Enzo's blog">
+<meta property="og:url" content="http://enzolutions.com">
+<meta property="og:site_name" content="Welcome to [enzo]lutions">
+
+<link rel="canonical" href="http://enzolutions.com">
+<link href="http://enzolutions.com/rss.xml" type="application/atom+xml" rel="alternate" title="Welcome to [enzo]lutions">
+<link rel="author" href="enzolutions">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://enzolutions.com/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+  <script src="http://enzolutions.com/assets/js/vendor/html5shiv.min.js"></script>
+  <script src="http://enzolutions.com/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://enzolutions.com/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://enzolutions.com/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://enzolutions.com/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://enzolutions.com/assets/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://enzolutions.com/assets/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://enzolutions.com/assets/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://enzolutions.com/assets/images/apple-touch-icon-144x144-precomposed.png">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+<link rel="stylesheet" href="http://enzolutions.com/assets/css/highlight-theme.css">
+  </head>
+
+  <body class="home">
+    <!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+    <div class="navigation-wrapper">
+  <div class="site-name">
+    <a href="http://enzolutions.com">[enzo]lutions</a>
+  </div><!-- /.site-name -->
+  <div class="top-navigation">
+          <ul class="inline">
+                    <li>
+            <a href="http://enzolutions.com/"  >
+              Home</a>
+          </li>
+                    <li>
+            <a href="http://enzolutions.com/company"  >
+              Company</a>
+          </li>
+                    <li>
+            <a href="http://enzolutions.com/projects"  >
+              Projects</a>
+          </li>
+                    <li>
+            <a href="http://enzolutions.com/talks"  >
+              Talks</a>
+          </li>
+                </ul>
+      </div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+          <div class="image-wrap">
+  <img src="http://enzolutions.com/assets/images/blog_header_baby_turtle.png" alt="feature image">
+  <span class="image-credit">Photo Credit: <a target="_blank" href="https://twitter.com/yersika">Yersika Ferreira</a></span>
+</div><!-- /.image-wrap -->
+    
+  <div id="main" role="main">
+    <div class="article-author-side">
+      <img src="http://enzolutions.com/assets/images/enzo.png" class="bio-photo" alt="enzo - Eduardo Garcia bio photo">
+
+<h3>enzo - Eduardo Garcia</h3>
+<p>Home of crazy things I did just for fun</p>
+
+<p> <a href="http://en.wikipedia.org/wiki/Costa_Rica" target="_blank"><img class="alignleft" src="http://enzolutions.com/assets/img/flags/cr.png" /></a> Current location</p>
+
+
+<a href="http://twitter.com/enzolutions" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+
+<a href="http://facebook.com/enzolutions" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+
+<a href="http://plus.google.com/105943717171843527124" class="author-social" target="_blank"><i class="fa fa-fw fa-google-plus-square"></i> Google+</a>
+
+
+<a href="http://github.com/enzolutions" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+
+<a href="http://linkedin.com/in/edugarcia" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+
+<a href="http://enzolutions.com/rss.xml" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> Feed</a>
+    </div>
+
+  .
+<article class="post">
+  <div class="headline-wrap">
+          <h1><a href="http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/" rel="bookmark" title="How to merge YAML files">How to merge YAML files</a></h1>
+      </div><!--/ .headline-wrap -->
+  <div class="article-wrap">
+    <div class="social-share">
+  <ul class="inline-list">
+    <li class="facebook">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+    </li>
+    <li class="twitter">
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+    </li>
+    <li class="googleplus">
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+    </li>
+  </ul>
+</div>
+
+    <p>By definition a <a href="http://yaml.org/">YAML</a> is a human friendly data serialization standard for all programming languages. 
+and in a less formal definition YAML is a great format for your configuration files, because YAML files are as expressive 
+as XML files and as readable as INI files.</p>
+
+<p>Currently I am using YAML files for configuration in my <a href="http://drupal.org">Drupal</a>, <a href="http://silex.sensiolabs.org/">Silex</a> 
+and <a href="http://symfony.com/">Symfony</a> projects. Until now I could say is a good way to save information but I don't an strong 
+preference versus other formats however is use to use, so no regrets.</p>
+
+<p>However a YAML file could represent anything, in my case I have to totally different examples.</p>
+
+<p>The first one from <a href="http://drupalconsole.com">Drupal Console</a> 
+project where YAML files are used to store the translations string as you can see for <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/config/translations/console.en.yml">English</a> and <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/config/translations/console.es.yml">Spanish</a>. Check
+ an extract of translation.</p>
+
+<pre><code>application:
+    console:
+        arguments:
+            drupal: 'Ruta a la raíz de Drupal'
+            shell: 'Iniciar el shell.'
+            env: 'Nombre del ambiente.'
+            no-debug: 'Desactivar el modo de depuración.'
+            learning: 'Generar código con explicaciones.'
+            generate-chain: 'Imprimir opciones y argumentos como yaml para ser usado el comando chain'
+        messages:
+            completed: 'Ahora puedes empezar a usar el código generado!'
+            chain:
+                generated: 'A continuación puede observar la representación en yaml del último comando ejecutado, puede copiarlo en ~/.console/chain/sample.yml para ejecutarlo en una secuencia de comandos'
+            generated: 'You can now start using the generated code!'
+            files:
+                generated: 'Ahora puede comenzar a usar el código generado!'
+                copied: 'Los archivos fueron copiados'
+            learning:
+                route: "Con el fin de crear páginas es necesario definir rutas para ellas.\nUna ruta asigna una URL a un controlador. Se define con qué función\no método será llamado cuando se accede a una URL.\nSi el usuario accede la ruta http://drupal8.dev/,\nel sistema buscará una ruta con ese camino. En este caso, si encuentra una\nejecutara la devolución de la llamada _controller.\nEn este caso, la devolución de llamada es definida como un nombre de clase\n(\"\\Drupal\\\\Controller\\\")\ny un método (\"\")."
+        errors:
+            invalid-command: 'Comando "%s" no está definido.'
+</code></pre>
+
+<p>The second one from <a href="http://drupal.org">Drupal</a> where is used by <a href="https://www.drupal.org/drupal-8.0/features#configuration">Configuration Management</a> to export and import configuration across environments. 
+Let me show you an example of a basic content type.</p>
+
+<pre><code>uuid: fc366933-16eb-4b1a-9a00-e13c27814225
+langcode: en
+status: true
+dependencies: {  }
+name: 'Basic page'
+type: page
+description: 'Use &lt;em&gt;basic pages&lt;/em&gt; for your static content, such as an ''About us'' page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
+</code></pre>
+
+<p>Now with all these YAML surrounded in our applications, a new kind of common and challenging tasks appear, in the case of 
+Drupal Console project, because the project is in active development, new features and fixes are included constantly in 
+code base and their translation are located in <strong>console.en.yml</strong>, this file is always quite ahead than translations, and 
+try to update without loose current translations is a slow and manual process.</p>
+
+<p>As programmers we hate manual tasks and in this particular cases we always says "If only there be a command or util to do this silly task", 
+well I did to my self that question and my answer was include in the <strong>Drupal Console</strong> release <a href="https://github.com/hechoendrupal/DrupalConsole/releases/tag/0.7.15">0.7.15</a> a new command 
+ <strong>yaml:merge</strong></p>
+
+<p>To execute this command you need at least two YAML files to merge, as you can see in the following batch sentence.</p>
+
+<pre><code>$ drupal yaml:merge new.yml console.en.yml console.es.yml
+</code></pre>
+
+<p>What will happen after execute this command is a new file named <strong>new.yml</strong> containing all <strong>console.en.yml</strong> entries and 
+entries translated in <strong>console.es.yml</strong> will overwrite entries, in this way new translation will be maintain and new entries 
+will be included in the new file.</p>
+
+<p>Is possible to set the last file and destination to have an immediately overwrite, but a new file is advice to check the results.</p>
+
+<p>Remember is possible to include as many YAML files are required, the YAML files in the right side of command will always overwrite their entries.</p>
+
+<p>The Drupal Console has this kind of problems because there are different sources of contributions and different amount of contributions for language, but 
+in the future I can image in Drupal we could have similar kind of requirements when the same piece of configuration is updated in different environment and 
+we have the need of merge in one solution.</p>
+
+<p>If you are not a user of <strong>Drupal Console</strong> but you need this command, don't worry if you don't have a Drupal environment, 
+Drupal Console is a <a href="http://php.net/manual/en/intro.phar.php">Phar</a> application completely independent of Drupal for some command like <strong>yaml:merge</strong>. So just install it, 
+do your job and remove if it's not required anymore.</p>
+
+<p>I hope you found this article useful.</p>
+
+    <hr />
+    <footer role="contentinfo">
+            <p class="byline">Published on <time datetime="2015-07-08T20:53:31+0000">2015-07-08T20:53:31+0000</time>.</p>
+      
+              <ul class="list-unstyled">
+                            <li>
+                    <i class="fa fa-tags"></i>
+                    Yaml, Silex, Symfony, Console
+                </li>
+                                        <li>
+                    <i class="fa fa-folder"></i>
+                    articles
+                </li>
+                    </ul>
+          </footer>
+  </div><!-- /.article-wrap -->
+    <section>
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+
+      <script type="text/javascript">
+        var disqus_shortname = 'enzolutions';
+
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+  </article>
+
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <footer>
+    <span>&copy; 2015 enzo - Eduardo Garcia.
+            Design by <a target="_blank" href="https://mademistakes.com/">Michael Rose</a>,
+          </li> Powered by <a target="_blank"href="http://spress.yosymfony.com">Spress</a> using the <a target="_blank" href="https://github.com/enzolutions/spress-tinto-theme/">Tinto</a> theme.</span>
+<br/>
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://enzolutions.com/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://enzolutions.com/assets/js/scripts.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>
