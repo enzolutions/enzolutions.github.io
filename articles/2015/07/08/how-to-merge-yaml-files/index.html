@@ -154,7 +154,7 @@ and in a less formal definition YAML is a great format for your configuration fi
 as XML files and as readable as INI files.</p>
 
 <p>Currently I am using YAML files for configuration in my <a href="http://drupal.org">Drupal</a>, <a href="http://silex.sensiolabs.org/">Silex</a> 
-and <a href="http://symfony.com/">Symfony</a> projects. Until now I could say is a good way to save information but I don't an strong 
+and <a href="http://symfony.com/">Symfony</a> projects. Until now I could say is a good way to save information but I don't have a strong 
 preference versus other formats however is use to use, so no regrets.</p>
 
 <p>However a YAML file could represent anything, in my case I have to totally different examples.</p>
@@ -189,17 +189,18 @@ project where YAML files are used to store the translations string as you can se
 <p>The second one from <a href="http://drupal.org">Drupal</a> where is used by <a href="https://www.drupal.org/drupal-8.0/features#configuration">Configuration Management</a> to export and import configuration across environments. 
 Let me show you an example of a basic content type.</p>
 
-<pre><code>uuid: fc366933-16eb-4b1a-9a00-e13c27814225
+<pre><code>uuid: f5c966ac-b9a8-4ab8-b335-5380c6bb8524
+name: drupal8.dev
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
 langcode: en
-status: true
-dependencies: {  }
-name: 'Basic page'
-type: page
-description: 'Use &lt;em&gt;basic pages&lt;/em&gt; for your static content, such as an ''About us'' page.'
-help: ''
-new_revision: false
-preview_mode: 1
-display_submitted: false
+default_langcode: en
 </code></pre>
 
 <p>Now with all these YAML surrounded in our applications, a new kind of common and challenging tasks appear, in the case of 
@@ -236,7 +237,7 @@ do your job and remove if it's not required anymore.</p>
 
     <hr />
     <footer role="contentinfo">
-            <p class="byline">Published on <time datetime="2015-07-08T20:53:31+0000">2015-07-08T20:53:31+0000</time>.</p>
+            <p class="byline">Published on <time datetime="2015-07-08T21:17:00+0000">2015-07-08T21:17:00+0000</time>.</p>
       
               <ul class="list-unstyled">
                             <li>
