@@ -4,10 +4,10 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>What is and how it works RequireJS</title>
+    <title>How to download remote files with Silex/Symfony</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
-<meta name="description" content="Explanation about how to implement RequireJS." />
+<meta name="description" content="Enzo's blog" />
 <meta name="keywords" content="" />
 
 
@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Welcome to [enzo]lutions">
-<meta property="og:description" content="Explanation about how to implement RequireJS.">
+<meta property="og:description" content="Enzo's blog">
 <meta property="og:url" content="http://enzolutions.com">
 <meta property="og:site_name" content="Welcome to [enzo]lutions">
 
@@ -132,179 +132,132 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/" rel="bookmark" title="What is and how it works RequireJS">What is and how it works RequireJS</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" rel="bookmark" title="How to download remote files with Silex/Symfony">How to download remote files with Silex/Symfony</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p><a target="_blank" href="http://requirejs.org/">RequireJS</a> is a JavaScript library that allows us to isolate the components of our JS application as modules and resolve their dependencies.</p>
+    <p>As a new developer of Silex/Symfony I found really excited some components available to use with <a href="http://silex.sensiolabs.org/">Silex</a> and <a href="symfony.com">Symfony</a>. Today 
+I want to talk about <a href="https://github.com/guzzle/guzzle">Guzzle</a> and <a href="https://github.com/alchemy-fr/Zippy">Zippy</a>, I am going to show you how to use both 
+to download and handle remote zip/gz files in your application.</p>
 
-<p>RequireJS implements the design pattern of software <a target="_blank" href="http://en.wikipedia.org/wiki/Asynchronous_module_definition">AMD</a> (Asynchronous Module Definition) which you could say is very similar to <a target="_blank" href="http://en.wikipedia.org/wiki/Dependency_injection">Dependency injection</a> implemented by frameworks like <a target="_blank" href="http://symfony.com/">Symfony</a>.</p>
+<h1>Installing with composer.</h1>
 
-<p>Let's check how we can use in our JS application in simple steps.</p>
+<p>Firstly, we need to add the dependency in our <strong>composer.json</strong> file as you can see in the following snippet.</p>
 
-<h2>1. Define entry point for RequireJS.</h2>
-
-<p>We must download the lastest version of RequireJS library available on the website <a target="_blank" href="http://requirejs.org">http://requirejs.org</a>, after download will put in a directory called libs just for purposes of this example (tested with version 2.1.11).</p>
-
-<p>Now we need to  define a html file and could named index.html where RequireJS is loading as shown below.</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;script data-main="libs/main" src="libs/require.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<pre><code>{
+    "require": {
+        "guzzlehttp/guzzle": "~6.0.1",
+        "alchemy/zippy": "0.2.*@dev"
+    }
+}
 </code></pre>
 
-<p>As you can see the inclusión is done with the script tag at the end of the HTML tag body, but it could also be done within the head tag.</p>
+<p>After include these new dependencies you must to run the composer update as you can see in the following bash sentence.</p>
 
-<p>It's also possible to include RequireJS remotely using the URL <a target="_blank" href="http://requirejs.org/docs/release/2.1.11/minified/require.js">http://requirejs.org/docs/release/2.1.11/minified/require.js</a> or similar, but it is a desition of the reader.</p>
-
-<p>As can be seen RequireJS  use the meta-data property <em>data-main</em>(, with this property we can define the entry point for RequireJS configuration, which is a relative path for the file we choose to load teh RequireJS configuraton (is necesarry exlude the js extension).</p>
-
-<h2>2. Configure RequireJS</h2>
-
-<p>In the file libs/main.js we define the RequireJS options. The first thing we should to define is which JS libraries will use in our application as shown below.</p>
-
-<pre><code>require.config({
-    baseUrl: 'libs',
-    paths : {
-      backbone : 'backbone',
-      underscore : 'underscore',
-      jquery : 'jquery',
-      marionette : 'backbone.marionette',
-      wreqr : 'backbone.wreqr',
-      eventbinder : 'backbone.eventbinder',
-      babysitter : 'backbone.babysitter'
-  }
-});
+<pre><code>$ composer update
 </code></pre>
 
-<p>All files are seek in the directory defined using the <em>baseUrl</em> property, and the <em>paths</em> property allow define the location of the libraries required with a key to refer to the library later. The js extension is not required and will be added by RequireJS later.</p>
+<h1>Usage</h1>
 
-<p>As its name suggests the pattern AMD makes an asynchronous load of packages. But because not all the libraries implement the AMD pattern, is likely to a library A try to use a function defined in library B not yet loaded causing a fatal error.</p>
+<p>With those new vendors you only need to use the, as you can see in the following code.</p>
 
-<p>To resolve this issue we use the property <em>Shim</em> part of  RequireJS configuration, as we see below.</p>
+<pre><code>&lt;?php
 
-<pre><code>require.config({,
-  shim : {
-    jquery : {
-      exports : 'jQuery'
-    },
-    underscore : {
-      exports : '_'
-    },
-    backbone : {
-      deps : ['jquery', 'underscore'],
-      exports : 'Backbone'
-    },
-    wreqr: {
-      deps : ['backbone']
-    },
-    eventbinder : {
-      deps : ['backbone']
-    },
-    babysitter : {
-      deps: ['backbone']
-    },
-    marionette : {
-      deps: ['wreqr', 'eventbinder', 'babysitter'],
-      exports : 'Marionette'
-    }
-  }
-});
+use Alchemy\Zippy\Zippy;
+use GuzzleHttp\Client;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 </code></pre>
 
-<p>Using Shim we can define dependencies between libraries and allow to export global variables that can be used within other libraries such as jQuery library which  export  the variable jQuery.</p>
+<p>Now inside any method of your class is possible to request to create a client of Guzzle, in general terms Guzzle is like a 
+headless browser.</p>
 
-<p>The configuration with the Shim is a replacement for Order plugin used before version 2.0 of RequireJS.</p>
+<pre><code>$client =  new Client();
 
-<p>The exports variable can also be an anonymous function to return the call noConflict function, if the library supports it.</p>
+// Destination file to download the release
+$destination = tempnam(sys_get_temp_dir(), 'file.') . "tar.gz";
 
-<p>Using the <em>deps</em> property, you can define multiple dependencies of libraries should be loaded before including the library that are defining, such as backbone that depends on jquery and underscore to be used.</p>
+// Get and save file
+$client-&gt;get($remote_zip_file_path, ['save_to' =&gt; $destination]);
 
-<p>Of course if we want to use the library with RequireJS  and supports AMD configuration pattern Shim isn't required.</p>
+// Handle Zip file to extract in your system
+$zippy = Zippy::load();
+$archive = $zippy-&gt;open($destination);
+$archive-&gt;extract('./');
 
-<h2>3. How to execute code required.</h2>
-
-<p>Once defined libraries and its dependencies if necessary, we can now rewrite the code we need as shown below.</p>
-
-<pre><code>// Loading dependences and execute Marionette App
-require( ["marionette"], function (Marionette) {
-    // set up the app instance
-    var MyApp = new Marionette.Application();
- 
-    MyApp.on("initialize:after", function(){
-      alert("Application has started!");
-    });
- 
-    MyApp.start();
-});
+try {
+  $fs = new Filesystem();
+  $fs-&gt;rename($remote_zip_file_name, './' . $new_folder_name);
+} catch (IOExceptionInterface $e) {
+  print 'Error renaming folder';
+}
 </code></pre>
 
-<p>The above code checks that all the libraries needed to run Marionette are loaded before executing the code and get the exported global variable as a parameter.</p>
+<p>In the code above we are assuming we have the path to file and name and we want to rename the folder after extract, the code 
+also could be improved include a try catch section for extract process.</p>
 
-<p>In the anonymous function will create a Marionette Application and start it, As result we  will get an alert with the message "Application has started".</p>
+<p>As you can see a complex task like that normally in handle by <a href="http://php.net/manual/en/book.curl.php">CURL</a> but Guzzle is more powerful and 
+his implementation is easier to understand.</p>
 
-<p>The require function has the same effect of an anonymous function, meaning that run without problems but can not be used later.</p>
+<h1>Drupal usage.</h1>
 
-<h2>4. How to create named modules.</h2>
+<p>Because now <a href="http://drupal.org">Drupal</a> 8 include several Symfony components and other useful components, the code above could be rewrite 
+using Drupal 8 wrapper, let me show you the re implementation.</p>
 
-<p>If we want encapsulate our App we must create named modules using the funcion <em>define</em>; The diference with require function is  an extra parameter that is used to name the module and returns an object or variable that will be used when the module is instantiated.</p>
+<pre><code>use Drupal\Core\Archiver\ArchiveTar;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
-<p>Then consider the previous example as a named module.</p>
-
-<pre><code>define( 'MyApp', ["marionette"], function (Marionette) {
- 
-    // set up the app instance
-    var MyApp = new Marionette.Application();
- 
-    MyApp.on("initialize:after", function(){
-      alert("Application has started!");
-    });
- 
-    // export the app from this module
-    return MyApp;
-});
- 
-// Fetch and execute Marionette App
-require( ["MyApp"], function (MyApp) {
-    // Execute App
-    MyApp.start();
-});
 </code></pre>
 
-<p>As you see we register a named module <em>MyApp</em> and  returns an object defined in Marionette.</p>
+<pre><code>$client =  new Drupal::httpClient();
 
-<p>Then with a <em>require</em> function the module is loaded, it receives as parameters the object returns by the module and can thus start our application.</p>
+// Destination file to download the release
+$destination = tempnam(sys_get_temp_dir(), 'file.') . "tar.gz";
 
-<p>It might seem a waste of time doing it this way as it is in the same file, but the idea is to create a module for file and using the configuration of RequireJS load all the libraries that define modules and then use these modules in our application.</p>
+// Get and save file
+$client-&gt;get($remote_zip_file_path, ['save_to' =&gt; $destination]);
 
-<p>You can download the <a target="_blank" href="http://enzolutions.com/projects/marionettejs_skeleton_app">Marionette App Skeleton</a> repository which implements the concepts discussed here.</p>
+// Handle Zip file to extract in your system
+$archiver = new ArchiveTar($destination, 'gz');
+$archiver-&gt;extract('./');
+fclose($destination . '.tar.gz');
 
-<p>I hope you have been to his liking.</p>
+try {
+  $fs = new Filesystem();
+  $fs-&gt;rename($remote_zip_file_name, './' . $new_folder_name);
+} catch (IOExceptionInterface $e) {
+  print 'Error renaming folder';
+}
+</code></pre>
+
+<p>As you see is similar and we don't have to modify the Drupal 8 composer.json file, to include components because they are 
+already included in Drupal 8 core at least until beta 12.</p>
+
+<p>If you want to check a complete implementation of this logic, you can check the source code of <a href="http://drupalconsole.com">Drupal Console</a> project commands 
+<a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/src/Command/ModuleDownloadCommand.php">module:download</a> and <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/src/Command/SiteNewCommand.php">site:new</a></p>
+
+<p>I hope you found this article useful.</p>
 
     <hr />
     <footer role="contentinfo">
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                    Ajax, Javascript, RequireJS, MarionetteJS
+                    Guzzle, Silex, Symfony, Zip, Drupal
                 </li>
                                         <li>
                     <i class="fa fa-folder"></i>
