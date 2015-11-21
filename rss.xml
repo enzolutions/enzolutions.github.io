@@ -6,6 +6,172 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to manipulate an Entity:Block programmatically in Drupal 8</title>
+                <description><![CDATA[<p>This is my first post after Drupal 8 got his first official release, now it's time to start to do some basic stuff using the
+Drupal 8 way, even I have been working a lot with Drupal 8 core, there are some typical things that I found still a little bit strange. But being honest if more my fault that Drupal 8 fault; All we have to just adjust own mental mindsets.</p>
+
+<p>Today I want to show you how to deal with Block in Drupal 8 because yesterday I expend several hours trying to understand how to manipulate a block to extend a functionality for <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
+
+<h1>Get a list of blocks</h1>
+
+<p>This looks an easy task, but there are some considerations you must take into account.</p>
+
+<p>First, Do you need a list of all <em>Blocks</em> available or all <em>Blocks</em> enabled?</p>
+
+<p>Why this separation is important, well as you maybe know or hear in Drupal 8 blocks are plugins and use <a href="https://www.drupal.org/node/1882526">annotations</a> to expose to Drupal 8 their existence. Therefore, we could get a list of blocks but they will not be <a href="https://api.drupal.org/api/drupal/core!modules!block!src!Entity!Block.php/8">Entity:Block</a> objects, we could get just their definition, this is important because you can't manipulate them, so you just can use as extra information in your logic.</p>
+
+<p>Only blocks that are enabled and assigned into a theme and in a region are Entity:Block instances.</p>
+
+<h2>Get available blocks</h2>
+
+<p>Using the service <strong><a href="https://api.drupal.org/api/drupal/core!core.services.yml/service/plugin.manager.block/8">plugin.manager.block</a></strong> we will get all blocks available definition.</p>
+
+<pre><code>$blockManager = \Drupal::service('plugin.manager.block');
+$contextRepository = \Drupal::service('context.repository');
+
+// Get blocks definition
+$definitions = $blockManager-&gt;getDefinitionsForContexts($contextRepository-&gt;getAvailableContexts());
+
+print_r($definitions['help_block']);
+</code></pre>
+
+<p>Executing the code above we will an output for <em>help_block</em> similar to the following snippet.</p>
+
+<pre><code>Array
+(
+    [admin_label] =&gt; Drupal\Core\StringTranslation\TranslatableMarkup Object
+        (
+            [string:protected] =&gt; Help
+            [translatedMarkup:protected] =&gt;
+            [options:protected] =&gt; Array
+                (
+                )
+
+            [stringTranslation:protected] =&gt;
+            [arguments:protected] =&gt; Array
+                (
+                )
+
+        )
+
+    [category] =&gt; Help
+    [derivative] =&gt;
+    [id] =&gt; help_block
+    [class] =&gt; Drupal\help\Plugin\Block\HelpBlock
+    [provider] =&gt; help
+)
+</code></pre>
+
+<p>As you can see in valuable information about the block but it's not a real Entity:Block instances.</p>
+
+<h2>Get a list of all Entity:Block available</h2>
+
+<p>Using <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3AentityQuery/8">Drupal:entityQuery</a> we can build a kind of SQL query for a specific entity in this case for Block entities. The following piece of code gets the full list of blocks available.</p>
+
+<pre><code>$ids = \Drupal::entityQuery('block')-&gt;execute();
+</code></pre>
+
+<p>Off course we can filter the results, for instance, we could use the condition plugin to fetch all block related with help module, as you can see in the following snippet of code.</p>
+
+<pre><code>$ids = \Drupal::entityQuery('block')
+    -&gt;condition('plugin', 'help_block')
+    -&gt;execute();
+
+print_r($ids);
+</code></pre>
+
+<p>After executing the code above we could get an output similar this:</p>
+
+<pre><code>Array
+(
+    [bartik_help] =&gt; bartik_help
+    [himalaya_help] =&gt; himalaya_help
+    [seven_help] =&gt; seven_help
+)
+</code></pre>
+
+<p>I got three Entity:Block ids, related to the three themes I have enabled in my system Bartik, Seven and <a href="https://www.drupal.org/project/himalaya">Himalaya</a>.</p>
+
+<h2>Loading an Entity:Block</h2>
+
+<p>Until now we get definition and Entity:Block ids, but not a real Entity:Block, let me show you how do that using the Drupal 8 EntityManager as you can see below.</p>
+
+<pre><code>$blockEntityManager = \Drupal::service('entity.manager')-&gt;getStorage('block');
+$block = $blockEntityManager-&gt;load('bartik_help');
+print_r($block);
+</code></pre>
+
+<p>The code above load the Entity:Block for <strong>bartik_help</strong>, if you execute this code in your custom module you will get an output like this.</p>
+
+<pre><code>Drupal\block\Entity\Block Object
+(
+    [id:protected] =&gt; bartik_help
+    [settings:protected] =&gt; Array
+        (
+            [id] =&gt; help_block
+            [label] =&gt; Help
+            [provider] =&gt; help
+            [label_display] =&gt; 0
+        )
+
+    [region:protected] =&gt; content
+    [weight:protected] =&gt; -30
+    [plugin:protected] =&gt; help_block
+    [visibility:protected] =&gt; Array
+        (
+        )
+......
+......
+    [dependencies:protected] =&gt; Array
+        (
+            [module] =&gt; Array
+                (
+                    [0] =&gt; help
+                )
+
+            [theme] =&gt; Array
+                (
+                    [0] =&gt; bartik
+                )
+
+        )
+
+    [provider] =&gt;
+)
+</code></pre>
+
+<h2>Create an Entity:Block</h2>
+
+<p>Last but not least, I will show you how to create and Entity:Block from code definition.</p>
+
+<p>Imagine did you created a block plugin using <strong>Drupal Console</strong> with id default_block.</p>
+
+<pre><code>$ drupal generate:plugin:block
+</code></pre>
+
+<p>If you want to enable that generated block programmatically, you can use the following snippet of code.</p>
+
+<pre><code>$blockEntityManager = \Drupal::service('entity.manager')-&gt;getStorage('block');
+$block = $blockEntityManager-&gt;-&gt;create(
+  array(
+      'id'=&gt; $plugin_id,
+      'plugin' =&gt; $plugin_id,
+      'theme' =&gt; $theme
+  )
+);
+$block-&gt;setRegion('content');
+$block-&gt;save();
+</code></pre>
+
+<p>In addition in the code above after create the Entity:Block I decided assign the <em>default_block</em> inside <em>Content</em> region for theme Bartik.</p>
+
+<p>I hope you found this article useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</link>
+                <pubDate>Sat, 21 Nov 2015 15:31:37 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</guid>
+            </item>
+                    <item>
                 <title>Understanding migrations in Drupal 8</title>
                 <description><![CDATA[<p>As you know Drupal 8 will be or was released at Nov 19 / 2015 (finally) depends on when you read this article.</p>
 
@@ -86,7 +252,7 @@
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</link>
-                <pubDate>Mon, 02 Nov 2015 17:28:39 +0000</pubDate>
+                <pubDate>Mon, 02 Nov 2015 15:31:37 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</guid>
             </item>
                     <item>
@@ -195,7 +361,7 @@
 <p>I hope you found this blog post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</link>
-                <pubDate>Sun, 11 Oct 2015 17:28:39 +0000</pubDate>
+                <pubDate>Sun, 11 Oct 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</guid>
             </item>
                     <item>
@@ -277,7 +443,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 <p>Muchas gracias for reading this article.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</link>
-                <pubDate>Sat, 12 Sep 2015 17:28:39 +0000</pubDate>
+                <pubDate>Sat, 12 Sep 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</guid>
             </item>
                     <item>
@@ -386,7 +552,7 @@ already included in Drupal 8 core at least until beta 12.</p>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/</link>
-                <pubDate>Thu, 09 Jul 2015 17:28:39 +0000</pubDate>
+                <pubDate>Thu, 09 Jul 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/</guid>
             </item>
                     <item>
@@ -478,7 +644,7 @@ do your job and remove if it's not required anymore.</p>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</link>
-                <pubDate>Wed, 08 Jul 2015 17:28:39 +0000</pubDate>
+                <pubDate>Wed, 08 Jul 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</guid>
             </item>
                     <item>
@@ -579,7 +745,7 @@ this delete is applied immediately, SOLR re-index is not required.</p>
 <p>I expect you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</link>
-                <pubDate>Wed, 17 Jun 2015 17:28:39 +0000</pubDate>
+                <pubDate>Wed, 17 Jun 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</guid>
             </item>
                     <item>
@@ -651,7 +817,7 @@ include those group of filters inside a <strong>SearchApiQueryInterface</strong>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</link>
-                <pubDate>Wed, 10 Jun 2015 17:28:39 +0000</pubDate>
+                <pubDate>Wed, 10 Jun 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</guid>
             </item>
                     <item>
@@ -767,7 +933,7 @@ FOUND 1 ERROR AFFECTING 1 LINE
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</link>
-                <pubDate>Sun, 07 Jun 2015 17:28:39 +0000</pubDate>
+                <pubDate>Sun, 07 Jun 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</guid>
             </item>
                     <item>
@@ -861,7 +1027,7 @@ image.</p>
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</link>
-                <pubDate>Tue, 02 Jun 2015 17:28:39 +0000</pubDate>
+                <pubDate>Tue, 02 Jun 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</guid>
             </item>
                     <item>
@@ -911,7 +1077,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</link>
-                <pubDate>Tue, 26 May 2015 17:28:39 +0000</pubDate>
+                <pubDate>Tue, 26 May 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</guid>
             </item>
                     <item>
@@ -964,7 +1130,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</guid>
             </item>
                     <item>
@@ -1021,7 +1187,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>Como se puede imaginar le estoy pidiendo que voten por mí. Pero también los invito a comprobar todos los candidatos y determinar cual coincide mejor con su forma de pensar y sentir. También no se olvide de invitar a sus amigos a votar.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 15:31:36 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</guid>
             </item>
                     <item>
@@ -1098,7 +1264,7 @@ router
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</link>
-                <pubDate>Sun, 25 Jan 2015 17:28:38 +0000</pubDate>
+                <pubDate>Sun, 25 Jan 2015 15:31:35 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
             </item>
                     <item>
@@ -1245,7 +1411,7 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
-                <pubDate>Wed, 21 Jan 2015 17:28:38 +0000</pubDate>
+                <pubDate>Wed, 21 Jan 2015 15:31:35 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1314,7 +1480,7 @@ node.save(userDetails, {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 20 Jan 2015 15:31:35 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
@@ -1452,7 +1618,7 @@ print 'Node ID: ' . $nid . "\n";
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Mon, 29 Dec 2014 15:31:35 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
@@ -1696,7 +1862,7 @@ public function authenticate(Request $request) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Sun, 28 Dec 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1786,7 +1952,7 @@ if ($last_key) {
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Fri, 26 Dec 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
@@ -1825,7 +1991,7 @@ if ($last_key) {
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Wed, 17 Dec 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -2039,7 +2205,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 16 Dec 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2288,7 +2454,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 09 Dec 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2345,7 +2511,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 17:28:38 +0000</pubDate>
+                <pubDate>Sun, 07 Dec 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2441,7 +2607,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 25 Nov 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -2521,7 +2687,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 17:28:38 +0000</pubDate>
+                <pubDate>Fri, 24 Oct 2014 15:31:34 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -2594,7 +2760,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 17:28:38 +0000</pubDate>
+                <pubDate>Sun, 19 Oct 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -2774,7 +2940,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 17:28:38 +0000</pubDate>
+                <pubDate>Fri, 17 Oct 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -2886,7 +3052,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 16 Sep 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -3078,7 +3244,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 17:28:38 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -3135,7 +3301,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 17:28:38 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -3282,7 +3448,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 17:28:38 +0000</pubDate>
+                <pubDate>Wed, 27 Aug 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -3349,7 +3515,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 26 Aug 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -3388,7 +3554,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 17:28:38 +0000</pubDate>
+                <pubDate>Sun, 24 Aug 2014 15:31:33 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -3416,7 +3582,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 17:28:38 +0000</pubDate>
+                <pubDate>Thu, 14 Aug 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -3540,7 +3706,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 17:28:38 +0000</pubDate>
+                <pubDate>Tue, 08 Jul 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -3575,7 +3741,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 17:28:38 +0000</pubDate>
+                <pubDate>Thu, 03 Jul 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -3802,7 +3968,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 17:28:38 +0000</pubDate>
+                <pubDate>Wed, 18 Jun 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -3825,7 +3991,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 17:28:38 +0000</pubDate>
+                <pubDate>Mon, 16 Jun 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -3986,7 +4152,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 17:28:38 +0000</pubDate>
+                <pubDate>Mon, 02 Jun 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -4142,7 +4308,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 17:28:38 +0000</pubDate>
+                <pubDate>Sun, 01 Jun 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -4166,7 +4332,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 17:28:38 +0000</pubDate>
+                <pubDate>Sat, 31 May 2014 15:31:32 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -4205,7 +4371,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 17:28:38 +0000</pubDate>
+                <pubDate>Wed, 28 May 2014 15:31:31 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -4223,7 +4389,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 17:28:38 +0000</pubDate>
+                <pubDate>Wed, 21 May 2014 15:31:31 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
