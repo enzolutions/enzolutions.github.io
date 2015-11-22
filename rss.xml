@@ -168,7 +168,7 @@ $block-&gt;save();
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</link>
-                <pubDate>Sat, 21 Nov 2015 15:31:37 +0000</pubDate>
+                <pubDate>Sat, 21 Nov 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</guid>
             </item>
                     <item>
@@ -252,7 +252,7 @@ $block-&gt;save();
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</link>
-                <pubDate>Mon, 02 Nov 2015 15:31:37 +0000</pubDate>
+                <pubDate>Mon, 02 Nov 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</guid>
             </item>
                     <item>
@@ -361,7 +361,7 @@ $block-&gt;save();
 <p>I hope you found this blog post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</link>
-                <pubDate>Sun, 11 Oct 2015 15:31:36 +0000</pubDate>
+                <pubDate>Sun, 11 Oct 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</guid>
             </item>
                     <item>
@@ -443,7 +443,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 <p>Muchas gracias for reading this article.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</link>
-                <pubDate>Sat, 12 Sep 2015 15:31:36 +0000</pubDate>
+                <pubDate>Sat, 12 Sep 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</guid>
             </item>
                     <item>
@@ -552,46 +552,45 @@ already included in Drupal 8 core at least until beta 12.</p>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/</link>
-                <pubDate>Thu, 09 Jul 2015 15:31:36 +0000</pubDate>
+                <pubDate>Thu, 09 Jul 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/</guid>
             </item>
                     <item>
                 <title>How to merge YAML files</title>
-                <description><![CDATA[<p>By definition a <a href="http://yaml.org/">YAML</a> is a human friendly data serialization standard for all programming languages. 
-and in a less formal definition YAML is a great format for your configuration files, because YAML files are as expressive 
+                <description><![CDATA[<p>By definition, a <a href="http://yaml.org/">YAML</a> is a human-friendly data serialization standard for all programming languages.
+But, in a less formal definition YAML is a great format for your configuration files, because, YAML files are as expressive
 as XML files and as readable as INI files.</p>
 
-<p>Currently I am using YAML files for configuration in my <a href="http://drupal.org">Drupal</a>, <a href="http://silex.sensiolabs.org/">Silex</a> 
+<p>Currently, I am using YAML files for configuration in my <a href="http://drupal.org">Drupal</a>, <a href="http://silex.sensiolabs.org/">Silex</a>
 and <a href="http://symfony.com/">Symfony</a> projects. Until now I could say is a good way to save information but I don't have a strong 
-preference versus other formats however is use to use, so no regrets.</p>
+preference versus other formats, however, is easy to use, so no regrets.</p>
 
-<p>However a YAML file could represent anything, in my case I have to totally different examples.</p>
+<p>However, a YAML file could represent anything, let me show you some examples.</p>
 
 <p>The first one from <a href="http://drupalconsole.com">Drupal Console</a> 
-project where YAML files are used to store the translations string as you can see for <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/config/translations/console.en.yml">English</a> and <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/config/translations/console.es.yml">Spanish</a>. Check
+project where YAML files are used to store the translations string as you can see for <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/config/translations/en/application.yml">English</a> and <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/config/translations/es/application.yml">Spanish</a>. Check
  an extract of translation.</p>
 
-<pre><code>application:
-    console:
-        arguments:
-            drupal: 'Ruta a la raíz de Drupal'
-            shell: 'Iniciar el shell.'
-            env: 'Nombre del ambiente.'
-            no-debug: 'Desactivar el modo de depuración.'
-            learning: 'Generar código con explicaciones.'
-            generate-chain: 'Imprimir opciones y argumentos como yaml para ser usado el comando chain'
-        messages:
-            completed: 'Ahora puedes empezar a usar el código generado!'
-            chain:
-                generated: 'A continuación puede observar la representación en yaml del último comando ejecutado, puede copiarlo en ~/.console/chain/sample.yml para ejecutarlo en una secuencia de comandos'
-            generated: 'You can now start using the generated code!'
-            files:
-                generated: 'Ahora puede comenzar a usar el código generado!'
-                copied: 'Los archivos fueron copiados'
-            learning:
-                route: "Con el fin de crear páginas es necesario definir rutas para ellas.\nUna ruta asigna una URL a un controlador. Se define con qué función\no método será llamado cuando se accede a una URL.\nSi el usuario accede la ruta http://drupal8.dev/,\nel sistema buscará una ruta con ese camino. En este caso, si encuentra una\nejecutara la devolución de la llamada _controller.\nEn este caso, la devolución de llamada es definida como un nombre de clase\n(\"\\Drupal\\\\Controller\\\")\ny un método (\"\")."
-        errors:
-            invalid-command: 'Comando "%s" no está definido.'
+<pre><code>console:
+    arguments:
+        drupal: 'Ruta a la raíz de Drupal'
+        shell: 'Iniciar el shell.'
+        env: 'Nombre del ambiente.'
+        no-debug: 'Desactivar el modo de depuración.'
+        learning: 'Generar código con explicaciones.'
+        generate-chain: 'Imprimir opciones y argumentos como YAML para ser usado el comando chain'
+        generate-inline: 'Imprimir opciones y argumentos de ejecución como llamada inline para ser usados en el futuro'
+        root: 'Define la raíz de Drupal que se utilizará en la ejecución de los comandos'
+        uri: 'URI del sitio en Drupal que se usará (para ambientes en multi-site o cuando esta usando un puerto alternativo)'
+    messages:
+        completed: '¡Ya puede empezar a usar el código generado!'
+        chain:
+            generated: 'A continuación puedes observar la representación en YAML del último comando ejecutado, puede copiarlo en ~/.console/chain/sample.yml para ejecutarlo en una secuencia de comandos'
+        inline:
+            generated: 'A continuación puedes encontrar la representación inline de este comando para volver a ejecutarlo más tarde'
+        generated: '¡Ya puedes empezar a usar el código generado!'
+        files:
+            generated: '¡Ya puedes comenzar a usar el código generado!'
 </code></pre>
 
 <p>The second one from <a href="http://drupal.org">Drupal</a> where is used by <a href="https://www.drupal.org/drupal-8.0/features#configuration">Configuration Management</a> to export and import configuration across environments. 
@@ -611,40 +610,51 @@ langcode: en
 default_langcode: en
 </code></pre>
 
-<p>Now with all these YAML surrounded in our applications, a new kind of common and challenging tasks appear, in the case of 
-Drupal Console project, because the project is in active development, new features and fixes are included constantly in 
-code base and their translation are located in <strong>console.en.yml</strong>, this file is always quite ahead than translations, and 
+<p>Now with all these YAML files surrounded our applications, a new kind of common and challenging tasks appears.</p>
+
+<p>In the case of
+Drupal Console project, because the project is in active development; new features and fixes are included constantly in
+the code base and their translation are allocated in several YAML files, those files are always quite ahead than their translations, and
 try to update without loose current translations is a slow and manual process.</p>
 
-<p>As programmers we hate manual tasks and in this particular cases we always says "If only there be a command or util to do this silly task", 
-well I did to my self that question and my answer was include in the <strong>Drupal Console</strong> release <a href="https://github.com/hechoendrupal/DrupalConsole/releases/tag/0.7.15">0.7.15</a> a new command 
+<p>As programmers, we hate manual tasks and in this particular case we always said "If only there be a command or util to do this silly task",
+well I did to myself that question and my answer was, include in <strong>Drupal Console</strong> release <a href="https://github.com/hechoendrupal/DrupalConsole/releases/tag/0.7.15">0.7.15</a> a new command
  <strong>yaml:merge</strong></p>
 
-<p>To execute this command you need at least two YAML files to merge, as you can see in the following batch sentence.</p>
+<p>To execute this command, you need at least two YAML files to merge, as you can see in the following batch sentence.</p>
 
 <pre><code>$ drupal yaml:merge new.yml console.en.yml console.es.yml
 </code></pre>
 
-<p>What will happen after execute this command is a new file named <strong>new.yml</strong> containing all <strong>console.en.yml</strong> entries and 
-entries translated in <strong>console.es.yml</strong> will overwrite entries, in this way new translation will be maintain and new entries 
-will be included in the new file.</p>
+<p>What will happen after executing this command is a new file named new.yml containing all <strong>console.en.yml</strong> entries and entries translated in <strong>console.es.yml</strong>, in this way new translations will be maintained and new entries will be included in the new file.</p>
 
-<p>Is possible to set the last file and destination to have an immediately overwrite, but a new file is advice to check the results.</p>
+<p>Is possible to set the same file as last parameters and destination to have an immediate overwrite, but a new file is recommended to check the results.</p>
 
-<p>Remember is possible to include as many YAML files are required, the YAML files in the right side of command will always overwrite their entries.</p>
+<p>If it's required you can include as many YAML files are required to merge, but, take into account that the YAML files in the right side of command will always overwrite their entries.</p>
 
 <p>The Drupal Console has this kind of problems because there are different sources of contributions and different amount of contributions for language, but 
 in the future I can image in Drupal we could have similar kind of requirements when the same piece of configuration is updated in different environment and 
 we have the need of merge in one solution.</p>
 
 <p>If you are not a user of <strong>Drupal Console</strong> but you need this command, don't worry if you don't have a Drupal environment, 
-Drupal Console is a <a href="http://php.net/manual/en/intro.phar.php">Phar</a> application completely independent of Drupal for some command like <strong>yaml:merge</strong>. So just install it, 
-do your job and remove if it's not required anymore.</p>
+Drupal Console is a <a href="http://php.net/manual/en/intro.phar.php">Phar</a> application completely independent of Drupal. To use a command like <strong>yaml:merge</strong>, just install it,
+do your job and remove it, if it's not required anymore.</p>
 
-<p>I hope you found this article useful.</p>
+<p>Other commands in Drupal Console related with YAML files are:</p>
+
+<pre><code>yaml:update:value
+yaml:update:key
+yaml:split
+yaml:diff
+</code></pre>
+
+<ul>
+<li>See more at: http://7sabores.com/blog/como-combinar-archivos-yaml#sthash.QT2JK5wz.dpuf
+I hope you found this article useful.</li>
+</ul>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</link>
-                <pubDate>Wed, 08 Jul 2015 15:31:36 +0000</pubDate>
+                <pubDate>Wed, 08 Jul 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</guid>
             </item>
                     <item>
@@ -745,7 +755,7 @@ this delete is applied immediately, SOLR re-index is not required.</p>
 <p>I expect you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</link>
-                <pubDate>Wed, 17 Jun 2015 15:31:36 +0000</pubDate>
+                <pubDate>Wed, 17 Jun 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</guid>
             </item>
                     <item>
@@ -817,7 +827,7 @@ include those group of filters inside a <strong>SearchApiQueryInterface</strong>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</link>
-                <pubDate>Wed, 10 Jun 2015 15:31:36 +0000</pubDate>
+                <pubDate>Wed, 10 Jun 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</guid>
             </item>
                     <item>
@@ -933,7 +943,7 @@ FOUND 1 ERROR AFFECTING 1 LINE
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</link>
-                <pubDate>Sun, 07 Jun 2015 15:31:36 +0000</pubDate>
+                <pubDate>Sun, 07 Jun 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</guid>
             </item>
                     <item>
@@ -1027,7 +1037,7 @@ image.</p>
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</link>
-                <pubDate>Tue, 02 Jun 2015 15:31:36 +0000</pubDate>
+                <pubDate>Tue, 02 Jun 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</guid>
             </item>
                     <item>
@@ -1077,7 +1087,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</link>
-                <pubDate>Tue, 26 May 2015 15:31:36 +0000</pubDate>
+                <pubDate>Tue, 26 May 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</guid>
             </item>
                     <item>
@@ -1130,7 +1140,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 15:31:36 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</guid>
             </item>
                     <item>
@@ -1187,7 +1197,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>Como se puede imaginar le estoy pidiendo que voten por mí. Pero también los invito a comprobar todos los candidatos y determinar cual coincide mejor con su forma de pensar y sentir. También no se olvide de invitar a sus amigos a votar.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 15:31:36 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</guid>
             </item>
                     <item>
@@ -1264,7 +1274,7 @@ router
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</link>
-                <pubDate>Sun, 25 Jan 2015 15:31:35 +0000</pubDate>
+                <pubDate>Sun, 25 Jan 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
             </item>
                     <item>
@@ -1411,7 +1421,7 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
-                <pubDate>Wed, 21 Jan 2015 15:31:35 +0000</pubDate>
+                <pubDate>Wed, 21 Jan 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1480,7 +1490,7 @@ node.save(userDetails, {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 15:31:35 +0000</pubDate>
+                <pubDate>Tue, 20 Jan 2015 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
@@ -1618,7 +1628,7 @@ print 'Node ID: ' . $nid . "\n";
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 15:31:35 +0000</pubDate>
+                <pubDate>Mon, 29 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
@@ -1862,7 +1872,7 @@ public function authenticate(Request $request) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 15:31:34 +0000</pubDate>
+                <pubDate>Sun, 28 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1952,7 +1962,7 @@ if ($last_key) {
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 15:31:34 +0000</pubDate>
+                <pubDate>Fri, 26 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
@@ -1991,7 +2001,7 @@ if ($last_key) {
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 15:31:34 +0000</pubDate>
+                <pubDate>Wed, 17 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -2205,7 +2215,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 15:31:34 +0000</pubDate>
+                <pubDate>Tue, 16 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2454,7 +2464,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 15:31:34 +0000</pubDate>
+                <pubDate>Tue, 09 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2511,7 +2521,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 15:31:34 +0000</pubDate>
+                <pubDate>Sun, 07 Dec 2014 15:51:40 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2607,7 +2617,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 15:31:34 +0000</pubDate>
+                <pubDate>Tue, 25 Nov 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -2687,7 +2697,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 15:31:34 +0000</pubDate>
+                <pubDate>Fri, 24 Oct 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -2760,7 +2770,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 15:31:33 +0000</pubDate>
+                <pubDate>Sun, 19 Oct 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -2940,7 +2950,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 15:31:33 +0000</pubDate>
+                <pubDate>Fri, 17 Oct 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -3052,7 +3062,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 15:31:33 +0000</pubDate>
+                <pubDate>Tue, 16 Sep 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -3244,7 +3254,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 15:31:33 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -3301,7 +3311,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 15:31:33 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -3448,7 +3458,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 15:31:33 +0000</pubDate>
+                <pubDate>Wed, 27 Aug 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -3515,7 +3525,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 15:31:33 +0000</pubDate>
+                <pubDate>Tue, 26 Aug 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -3554,7 +3564,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 15:31:33 +0000</pubDate>
+                <pubDate>Sun, 24 Aug 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -3582,7 +3592,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 15:31:32 +0000</pubDate>
+                <pubDate>Thu, 14 Aug 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -3706,7 +3716,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 15:31:32 +0000</pubDate>
+                <pubDate>Tue, 08 Jul 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -3741,7 +3751,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 15:31:32 +0000</pubDate>
+                <pubDate>Thu, 03 Jul 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -3968,7 +3978,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 15:31:32 +0000</pubDate>
+                <pubDate>Wed, 18 Jun 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -3991,7 +4001,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 15:31:32 +0000</pubDate>
+                <pubDate>Mon, 16 Jun 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -4152,7 +4162,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 15:31:32 +0000</pubDate>
+                <pubDate>Mon, 02 Jun 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -4308,7 +4318,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 15:31:32 +0000</pubDate>
+                <pubDate>Sun, 01 Jun 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -4332,7 +4342,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 15:31:32 +0000</pubDate>
+                <pubDate>Sat, 31 May 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -4371,7 +4381,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 15:31:31 +0000</pubDate>
+                <pubDate>Wed, 28 May 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -4389,7 +4399,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 15:31:31 +0000</pubDate>
+                <pubDate>Wed, 21 May 2014 15:51:39 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
