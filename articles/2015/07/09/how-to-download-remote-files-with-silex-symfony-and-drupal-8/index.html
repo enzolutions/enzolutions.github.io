@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>How to download remote files with Silex/Symfony</title>
+    <title>How to download remote files with Silex/Symfony and Drupal 8</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -132,24 +132,24 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" rel="bookmark" title="How to download remote files with Silex/Symfony">How to download remote files with Silex/Symfony</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/" rel="bookmark" title="How to download remote files with Silex/Symfony and Drupal 8">How to download remote files with Silex/Symfony and Drupal 8</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p>As a new developer of Silex/Symfony I found really excited some components available to use with <a href="http://silex.sensiolabs.org/">Silex</a> and <a href="symfony.com">Symfony</a>. Today 
+    <p>As a new developer of Silex/Symfony, I found really excited some components available to use with <a href="http://silex.sensiolabs.org/">Silex</a> and <a href="symfony.com">Symfony</a>. Today
 I want to talk about <a href="https://github.com/guzzle/guzzle">Guzzle</a> and <a href="https://github.com/alchemy-fr/Zippy">Zippy</a>, I am going to show you how to use both 
 to download and handle remote zip/gz files in your application.</p>
 
@@ -159,7 +159,7 @@ to download and handle remote zip/gz files in your application.</p>
 
 <pre><code>{
     "require": {
-        "guzzlehttp/guzzle": "~6.0.1",
+        "guzzlehttp/guzzle": "~6.1.1",
         "alchemy/zippy": "0.2.*@dev"
     }
 }
@@ -172,7 +172,7 @@ to download and handle remote zip/gz files in your application.</p>
 
 <h1>Usage</h1>
 
-<p>With those new vendors you only need to use the, as you can see in the following code.</p>
+<p>With those new vendors, you only need to use the, as you can see in the following code.</p>
 
 <pre><code>&lt;?php
 
@@ -209,13 +209,12 @@ try {
 <p>In the code above we are assuming we have the path to file and name and we want to rename the folder after extract, the code 
 also could be improved include a try catch section for extract process.</p>
 
-<p>As you can see a complex task like that normally in handle by <a href="http://php.net/manual/en/book.curl.php">CURL</a> but Guzzle is more powerful and 
-his implementation is easier to understand.</p>
+<p>As you can see is complex task like that normally is handle by CURL but as you can see Guzzle is more powerful and his implementation is easier to understand.</p>
 
 <h1>Drupal usage.</h1>
 
 <p>Because now <a href="http://drupal.org">Drupal</a> 8 include several Symfony components and other useful components, the code above could be rewrite 
-using Drupal 8 wrapper, let me show you the re implementation.</p>
+using Drupal 8 wrapper, let me show you the implementation.</p>
 
 <pre><code>use Drupal\Core\Archiver\ArchiveTar;
 use Symfony\Component\Filesystem\Filesystem;
@@ -244,11 +243,11 @@ try {
 }
 </code></pre>
 
-<p>As you see is similar and we don't have to modify the Drupal 8 composer.json file, to include components because they are 
-already included in Drupal 8 core at least until beta 12.</p>
+<p>As you can see is similar and we don't have to modify the Drupal 8 composer.json file, to include components because they are
+already included in Drupal 8 core.</p>
 
 <p>If you want to check a complete implementation of this logic, you can check the source code of <a href="http://drupalconsole.com">Drupal Console</a> project commands 
-<a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/src/Command/ModuleDownloadCommand.php">module:download</a> and <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/src/Command/SiteNewCommand.php">site:new</a></p>
+<a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/src/Command/Module/DownloadCommand.php">module:download</a> and <a href="https://github.com/hechoendrupal/DrupalConsole/blob/master/src/Command/Site/NewCommand.php">site:new</a></p>
 
 <p>I hope you found this article useful.</p>
 
