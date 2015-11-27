@@ -33,7 +33,7 @@ $output = $phpProcess-&gt;getOutput();
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/</link>
-                <pubDate>Fri, 27 Nov 2015 17:14:59 +0000</pubDate>
+                <pubDate>Fri, 27 Nov 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/</guid>
             </item>
                     <item>
@@ -199,12 +199,12 @@ $block-&gt;save();
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</link>
-                <pubDate>Sat, 21 Nov 2015 17:14:59 +0000</pubDate>
+                <pubDate>Sat, 21 Nov 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>Understanding migrations in Drupal 8</title>
-                <description><![CDATA[<p>As you know Drupal 8 will be or was released at Nov 19 / 2015 (finally) depends on when you read this article.</p>
+                <description><![CDATA[<p>As you know Drupal 8 was released at Nov 19 / 2015 (finally).</p>
 
 <p>One of the most recurrent questions is <strong>"It's time to create new projects in Drupal 8"</strong>, but there is another difficult question. <strong>"How I can migrate my current Drupal 7/6/* to Drupal 8"</strong></p>
 
@@ -216,7 +216,7 @@ $block-&gt;save();
 
 <p>The idea is if you plan to migrate from a specific source like Drupal, Wordpress, CQ5 etc you must write an integration to handle the transformation of content into Drupal 8 structure.</p>
 
-<p>Fortunately for us at least we a Drupal 8 core module related to Drupal named <strong>Migrate Drupal</strong>, this module contains some Migrate plugin to run the migration process between older Drupal versions to Drupal 8, but this module doesn't contain migration definitions since Drupal 8 beta 13</p>
+<p>Fortunately for us at least we have a Drupal 8 core module related to Drupal named <strong>Migrate Drupal</strong>, this module contains some Migrate plugin to run the migration process between older Drupal versions to Drupal 8, but this module doesn't contain migration definitions since Drupal 8 beta 13</p>
 
 <p>Therefore, the first step you need to do is install these modules, I will use the project <a href="http://drupalconsole.com">Drupal Console</a> for this tasks and I will continue using some commands available related with migration.</p>
 
@@ -225,28 +225,28 @@ $block-&gt;save();
 
 <h1>Where I can find migrations</h1>
 
-<p>After install modules Migration and Migrate Drupal, I guess you are waiting for something in UI to start to handle your migrations. Sadly there is nothing inside Drupal Core to provide a UI for migration, this responsibility rely on two contributed modules <a href="https://www.drupal.org/project/migrate_plus">Migrate Plus</a> and <a href="https://www.drupal.org/project/migrate_upgrade">Migrate Upgrade</a>.</p>
+<p>After install modules Migration and Migrate Drupal, I guess you are waiting for something in UI to start to handle your migrations. Sadly there is nothing inside Drupal Core to provide a UI for migration, this responsibility relies on two contributed modules <a href="https://www.drupal.org/project/migrate_plus">Migrate Plus</a> and <a href="https://www.drupal.org/project/migrate_upgrade">Migrate Upgrade</a>.</p>
 
-<p>Each module apply a different point of view about migrations, both IMHO looks like <em>Migrate Upgrade</em> it's in a more mature state. But I don't like the idea that you are only available to see all migrations available when you are running the migration itself.</p>
+<p>Each module apply a different point of view about migrations, both IMHO looks like <em>Migrate Upgrade</em> it's in a more mature state. But, there is always a but, I don't like the idea that you are only available to see all migrations available when you are running the migration itself.</p>
 
-<p>With a Drupal just released it's probably that you will be in a stage where you don't really know what are you doing, so I decided to implement some migration command inside <strong>Drupal Console</strong> project with my own point of view.</p>
+<p>With Drupal just released it's probably that you will be in a stage where you don't really know what are you doing, so I decided to implement some migration command inside <strong>Drupal Console</strong> project with my own point of view.</p>
 
 <h1>Loading migrations</h1>
 
-<p>As I said before I prefer load migrations but without running a migration yet, for that purpose I did a command <strong>migrate:setup</strong> as you can see in following CLI execution sample.</p>
+<p>As I said before I prefer load migrations but without running a migration yet. For that purpose, I did a command <strong>migrate:setup</strong> as you can see in following CLI execution sample.</p>
 
 <pre><code>$ drupal migrate:setup --db-type=mysql --db-host=127.0.0.1 --db-name=plato_tipico --db-user=root --db-pass=root --db-port=3306 --no-interaction
 </code></pre>
 
-<p>In the sample above I pass all parameteros using inline mode, but if you ommit any option, the command will start the interactive mode, remember remove the option *--no-interaction** to enable the interactive mode.</p>
+<p>In the sample above I pass all parameters using inline mode, but if you omit an option, the command will start the interactive mode. Remember to remove the option *--no-interaction** to enable the interactive mode.</p>
 
 <p>The command above will inspect your legacy DB and import all migrations available in Drupal 8 to be used with your legacy DB.</p>
 
-<p>All migration created will remain in your system, even after complete a migration process.</p>
+<p>All migration entities created will remain in your system, even after complete a migration process.</p>
 
 <h1>Get list of migrations</h1>
 
-<p>In order to get a list of migrations available in our system, you must execute the following command</p>
+<p>In order to get a list of migrations available in your system, you must execute the following command</p>
 
 <pre><code>$ drupal migrate:debug
 </code></pre>
@@ -257,14 +257,16 @@ $block-&gt;save();
 
 <h1>Execute a migration</h1>
 
-<p>After reviewing your system in term of migrations available, and you want to execute all migrations available for your legacy system you can execute the following command to start a full migration process.</p>
+<p>After reviewing your system in term of migrations available, we could execute all migrations available for your legacy system you can execute the following command to start a full migration process.</p>
 
 <pre><code>$ drupal migrate:execute all --db-type=mysql --db-host=127.0.0.1 --db-name=plato_tipico --db-user=root --db-pass=root --db-port=3306 --no-interaction
 </code></pre>
 
+<p>Below you can see how looks the migration process.</p>
+
 <p><img src="http://enzolutions.com/assets/img/console_migrate_execute.png"/></p>
 
-<p>The image above shows how the command report what migrations fail and what migration works. As you can see each migration is independent, the migration process is not interrupted if some of them fail.</p>
+<p>The image above shows how the command report what migrations fail and what migration works. As you can see each migration is independent and the migration process is not interrupted if some of them fail.</p>
 
 <p>But if you want to avoid to execute one of more migration to avoid any exception you can use the parameter <strong>--exclude</strong> providing the migration id(s) do you want to exclude, you can get those ids from <em>migrate:debug</em> command.</p>
 
@@ -272,18 +274,18 @@ $block-&gt;save();
 
 <h1>Where are located migrations.</h1>
 
-<p>Now you are wondering <strong>"Where are located migration"</strong> if they aren't in Migrate or Migrate Drupal, well migration are allocated in each specific module, for instance if you review in your Drupal Core modules in path <strong>/core/modules/book/migration_templates</strong> you will find some YAML files with the information necessary to create a Migration entity in your system. When you executed the command <strong>migrate:setup</strong> all migration_templates folder were parsed to create Migration Entities.</p>
+<p>Now you are wondering <strong>"Where are located migration"</strong> if they aren't in Migrate or Migrate Drupal. Well, migrations are allocated in each specific module, for instance if you review in your Drupal Core modules in path <strong>/core/modules/book/migration_templates</strong> you will find some YAML files with the information necessary to create a Migration entity in your system. When you executed the command <strong>migrate:setup</strong> all migration_templates folder were parsed to create Migration Entities.</p>
 
 <h1>Caveats</h1>
 
 <p>Right now there are mostly migrations available for Drupal 6, I guess the bet is related Drupal 6 are more critical to be migrated to Drupal 8.</p>
 
-<p>You can find more Drupal 7 migration proposed as issues in <a href="http://groups.drupal.org/imp">http://groups.drupal.org/imp</a> sandbox, in <a href="http://anexusit.com">Anexus</a> we propose around 70 migration entities for Drupal 7 and 10 of them were already accepted in Drupal 8 core and I promise to provide a list of all our Drupal 7 Migration in few weeks.</p>
+<p>You can find more Drupal 7 migration proposed as issues in <a href="http://groups.drupal.org/imp">http://groups.drupal.org/imp</a> sandbox, in <a href="http://anexusit.com">Anexus</a> we propose around 70 migration entities for Drupal 7 and 10 of them were already accepted in Drupal 8 core. I promise to provide a list of all our Drupal 7 Migration in few weeks.</p>
 
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</link>
-                <pubDate>Mon, 02 Nov 2015 17:14:59 +0000</pubDate>
+                <pubDate>Mon, 02 Nov 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</guid>
             </item>
                     <item>
@@ -394,7 +396,7 @@ $block-&gt;save();
 <p>I hope you found this blog post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</link>
-                <pubDate>Sun, 11 Oct 2015 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 11 Oct 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</guid>
             </item>
                     <item>
@@ -476,7 +478,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 <p>Muchas gracias for reading this article.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</link>
-                <pubDate>Sat, 12 Sep 2015 17:14:59 +0000</pubDate>
+                <pubDate>Sat, 12 Sep 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</guid>
             </item>
                     <item>
@@ -584,7 +586,7 @@ already included in Drupal 8 core.</p>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/</link>
-                <pubDate>Thu, 09 Jul 2015 17:14:59 +0000</pubDate>
+                <pubDate>Thu, 09 Jul 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/</guid>
             </item>
                     <item>
@@ -683,7 +685,7 @@ yaml:diff
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</link>
-                <pubDate>Wed, 08 Jul 2015 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 08 Jul 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</guid>
             </item>
                     <item>
@@ -784,7 +786,7 @@ this delete is applied immediately, SOLR re-index is not required.</p>
 <p>I expect you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</link>
-                <pubDate>Wed, 17 Jun 2015 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 17 Jun 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</guid>
             </item>
                     <item>
@@ -856,7 +858,7 @@ include those group of filters inside a <strong>SearchApiQueryInterface</strong>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</link>
-                <pubDate>Wed, 10 Jun 2015 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 10 Jun 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</guid>
             </item>
                     <item>
@@ -972,7 +974,7 @@ FOUND 1 ERROR AFFECTING 1 LINE
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</link>
-                <pubDate>Sun, 07 Jun 2015 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 07 Jun 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</guid>
             </item>
                     <item>
@@ -1066,7 +1068,7 @@ image.</p>
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</link>
-                <pubDate>Tue, 02 Jun 2015 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 02 Jun 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</guid>
             </item>
                     <item>
@@ -1116,7 +1118,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</link>
-                <pubDate>Tue, 26 May 2015 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 26 May 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</guid>
             </item>
                     <item>
@@ -1173,7 +1175,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>Como se puede imaginar le estoy pidiendo que voten por mí. Pero también los invito a comprobar todos los candidatos y determinar cual coincide mejor con su forma de pensar y sentir. También no se olvide de invitar a sus amigos a votar.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</guid>
             </item>
                     <item>
@@ -1226,7 +1228,7 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</guid>
             </item>
                     <item>
@@ -1303,7 +1305,7 @@ router
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</link>
-                <pubDate>Sun, 25 Jan 2015 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 25 Jan 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
             </item>
                     <item>
@@ -1450,7 +1452,7 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
-                <pubDate>Wed, 21 Jan 2015 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 21 Jan 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1519,7 +1521,7 @@ node.save(userDetails, {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 20 Jan 2015 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
@@ -1657,7 +1659,7 @@ print 'Node ID: ' . $nid . "\n";
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Mon, 29 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
@@ -1901,7 +1903,7 @@ public function authenticate(Request $request) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 28 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1991,7 +1993,7 @@ if ($last_key) {
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Fri, 26 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
@@ -2030,7 +2032,7 @@ if ($last_key) {
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 17 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -2244,7 +2246,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 16 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2493,7 +2495,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 09 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2550,7 +2552,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 07 Dec 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2646,7 +2648,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 25 Nov 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -2726,7 +2728,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 17:14:59 +0000</pubDate>
+                <pubDate>Fri, 24 Oct 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -2799,7 +2801,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 19 Oct 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -2979,7 +2981,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 17:14:59 +0000</pubDate>
+                <pubDate>Fri, 17 Oct 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -3091,7 +3093,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 16 Sep 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -3283,7 +3285,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 17:14:59 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -3340,7 +3342,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 17:14:59 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -3487,7 +3489,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 27 Aug 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -3554,7 +3556,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 26 Aug 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -3593,7 +3595,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 24 Aug 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -3621,7 +3623,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 17:14:59 +0000</pubDate>
+                <pubDate>Thu, 14 Aug 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -3745,7 +3747,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 17:14:59 +0000</pubDate>
+                <pubDate>Tue, 08 Jul 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -3780,7 +3782,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 17:14:59 +0000</pubDate>
+                <pubDate>Thu, 03 Jul 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -4007,7 +4009,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 18 Jun 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -4030,7 +4032,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 17:14:59 +0000</pubDate>
+                <pubDate>Mon, 16 Jun 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -4191,7 +4193,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 17:14:59 +0000</pubDate>
+                <pubDate>Mon, 02 Jun 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -4347,7 +4349,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 17:14:59 +0000</pubDate>
+                <pubDate>Sun, 01 Jun 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -4371,7 +4373,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 17:14:59 +0000</pubDate>
+                <pubDate>Sat, 31 May 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -4410,7 +4412,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 28 May 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -4428,7 +4430,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 17:14:59 +0000</pubDate>
+                <pubDate>Wed, 21 May 2014 20:25:11 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
