@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>How to include PHP code in Drupal 8 Views</title>
+    <title>How to execute an external PHP application inside Symfony/Drupal in a Sandbox</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -132,134 +132,54 @@
   .
 <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/" rel="bookmark" title="How to include PHP code in Drupal 8 Views">How to include PHP code in Drupal 8 Views</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/" rel="bookmark" title="How to execute an external PHP application inside Symfony/Drupal in a Sandbox">How to execute an external PHP application inside Symfony/Drupal in a Sandbox</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p>Did you recall the last time you tried to resolve an issue in your program using a small piece of PHP in your views using <a href="https://www.drupal.org/project/views_customfield">Views Custom Field</a> in Drupal 6 and  <a href="https://www.drupal.org/project/views_php">Views PHP</a> in Drupal 7? Don't lie everybody did that at least once.</p>
+    <p>I know this could be a weird situation, but, believe or not sometimes is required execute an external application, maybe because that application doesn't have and API or just because you just need to execute that and get the results.</p>
 
-<p>Even the fact those are accepted module by the Drupal security team, this solution is really dangerous because execute code using PHP function <a href="http://php.net/manual/es/function.eval.php">eval</a>, execute PHP code loaded from DB it's really bad in terms of security and stability.</p>
+<p>An easy thought could be just include the main file of that application, but maybe that is not possible because both applications could use similar namespaces or try to reload same libraries, for solve that is required to try to execute that application using a kind of <strong>Sandbox</strong>.</p>
 
-<p>Moreover, if someone is auditing your code, this one is the first bad practice the auditor will try to find in your code and you will get a nice recommendation that you must create your own view field handler to do that logic, in order to improve the quality of your code. But to be honest, I did that in the past and even I did that several times, I always found this process really hard.</p>
+<p>To accomplish that task, we can use the Symfony <a href="http://symfony.com/doc/current/components/process.html">Process</a> Component.</p>
 
-<p>Nowadays the Drupal community is excited about the release of the first official release of <a href="https://www.drupal.org/news/drupal-8.0.0-released">Drupal 8</a>, so I thought it's time to start with the classical posts about how to do our old practices in this new thing. Today I will share with you how to avoid the usage of Views PHP modules and be able to include PHP in your views but still pass the audit of your code :P.</p>
+<p>Let me show you a small piece of code that could be included in your Symfony or Drupal 8 application.</p>
 
-<p>In this post, I will use the project <a href="http://drupalconsole.com">Drupal Console</a> to facilitate my job.</p>
+<pre><code>use Symfony\Component\Process\PhpProcess;
 
-<h1>1. Create a Drupal 8 module.</h1>
+$php_script = file_get_contents($php_file);
 
-<p>To generate a module you have two options, the first one is using the interactive mode, where the application will ask you all options available in the command. Use the following command to execute the interactive mode, check the following image to see a classical execution.</p>
-
-<pre><code>$ drupal generate:module
+$phpProcess = new PhpProcess($php_script, $documentroot);
+$phpProcess-&gt;run();
+$output = $phpProcess-&gt;getOutput();
 </code></pre>
 
-<p><img src="http://enzolutions.com/assets/img/console_generate_module.png"/></p>
+<p>Firstly, we must read a PHP file path, defined in variable <em>$php_file</em> then using function <em>PhpProcess</em> execute that script using a specific DocumentRoot for our external application, that will avoid any issue of missing classes.</p>
 
-<p>The second option executes the command but passing all options inline as you can see below.</p>
+<p>Secondly, the process is executed and finally we could get the output after our external application is completed, this process is synchronous.</p>
 
-<pre><code>$ drupal generate:module --module="No Views PHP" --machine-name=no_views_php --module-path=/modules/custom --description="Custom views field to include PHP logic in views." --core=8.x --package=Other
-</code></pre>
+<p>Internally doesn't function will try to allocate the php-cli in your system to execute your application.</p>
 
-<h1>2. Generate a custom views field</h1>
-
-<p>Views are now in core of Drupal 8, and everything change. As I said before "Drupal 8 is just a new project with same name and logic". So if you knew something about views, well that is not too much useful in terms of code, but the logic, in general remains.</p>
-
-<p>In Drupal 8 views, everything is handled via Plugins and fields are not the exception, if you need to create a custom field you must generate a custom views plugin field. Fortunately, I did a generator in <strong>Drupal Console</strong> for this task, check the following command to generate a views plugin field.</p>
-
-<pre><code>$ drupal generate:plugin:views:field --module=no_views_php --class-name=PHPViewsField --title="PHP Field" --description="Enable to include and run PHP code in your modules as part of a view"
-</code></pre>
-
-<p>The command above will generate the following files:</p>
-
-<pre><code>Site path: /Users/enzo/www/drupal8-rc1
-1 - modules/custom/no_views_php/no_views_php.views.inc
-2 - modules/custom/no_views_php/src/Plugin//views/field/PHPViewsField.php
-</code></pre>
-
-<h1>3. Install your module.</h1>
-
-<p>Now we need to install our generated module with the following command.</p>
-
-<pre><code>$ drupal module:install no_views_php
-</code></pre>
-
-<p>Now if you edit the Frontpage view at <strong>http://example.com/admin/structure/views/view/frontpage</strong> you can use the custom field generated after change the mode from show <em>content</em> to show <em>fields</em> as you can see in the following image.</p>
-
-<p><img src="http://enzolutions.com/assets/img/views_custom_plugin.png"/></p>
-
-<p>Pro tip: If you don't see your generated field, try executing <strong>$ drupal cache:rebuild all</strong> again :P</p>
-
-<p>After applying the minimum configuration to the field, you will get a view preview similar to this image:</p>
-
-<p><img src="http://enzolutions.com/assets/img/view_frontpage_preview.png"/></p>
-
-<p>The view plugin field generated, by default, return a random string just to show that it's working. Now you have to do your magic in your custom module.</p>
-
-<h1>4. Implementing your logic</h1>
-
-<p>In order to implement your custom logic you have to edit the generated file <strong>modules/custom/no_views_php/src/Plugin//views/field/PHPViewsField.php</strong> and more specific inside the method <strong>render</strong>, this method receives an object of <a href="https://api.drupal.org/api/drupal/core!modules!views!src!ResultRow.php/class/ResultRow/8">Drupal\views\ResultRow</a> as a parameter.</p>
-
-<p>The default method generated looks like next snippet.</p>
-
-<pre><code>public function render(ResultRow $values) {
-  // Return a random text, here you can include your custom logic.
-    // Include any namespace required to call the method required to generte the
-    // output desired
-    $random = new Random();
-    return $random-&gt;name();
-}
-</code></pre>
-
-<p>Now I will change the logic to use the title field in row to print it reversed, as you can check in the following code.</p>
-
-<pre><code>public function render(ResultRow $values) {
-    // Return a random text, here you can include your custom logic.
-    // Include any namespace required to call the method required to generte the
-    // output desired
-    $title = strip_tags($this-&gt;view-&gt;field['title']-&gt;original_value);
-    return strrev($title);
-}
-</code></pre>
-
-<p>As a result now our field will look different, check the following image.</p>
-
-<p><img src="http://enzolutions.com/assets/img/view_frontpage_preview2.png"/></p>
-
-<p>As you can see this another silly implementation of a custom PHP, but now you can include in this class any service required to do your magic and transform each row in a view using other row fields as input.</p>
-
-<p>Even better you can include in your code a handler to throw an exception if is required, so your code could as complex and professional as you want.</p>
-
-<p>If you are wondering why don't contribute this as a replacement of Views PHP in Drupal 8, well I thought due we have a Drupal Console generator for that, it's not necessary. Inside Drupal Console project is the eternal discussion about what things must be a generator and what others must be contributed modules.</p>
-
-<p>Some of them became in both a generator and Drupal 8 modules, check out the following list</p>
-
-<ul>
-<li><a href="https://www.drupal.org/project/entity_rest_extra">Entity Rest Extra</a></li>
-<li><a href="https://www.drupal.org/project/ip_consumer_auth">IP Consumer Auth</a></li>
-<li><a href="https://www.drupal.org/project/image_raw_formatter">Image Raw Formatter</a></li>
-</ul>
-
-<p>I hope you found this blog post useful.</p>
+<p>I hope you found this article useful.</p>
 
     <hr />
     <footer role="contentinfo">
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                    Drupal8, Views, PHP
+                    Symfony, Drupal, PHP, Sandbox
                 </li>
                                         <li>
                     <i class="fa fa-folder"></i>

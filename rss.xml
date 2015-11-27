@@ -6,6 +6,37 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>How to execute an external PHP application inside Symfony/Drupal in a Sandbox</title>
+                <description><![CDATA[<p>I know this could be a weird situation, but, believe or not sometimes is required execute an external application, maybe because that application doesn't have and API or just because you just need to execute that and get the results.</p>
+
+<p>An easy thought could be just include the main file of that application, but maybe that is not possible because both applications could use similar namespaces or try to reload same libraries, for solve that is required to try to execute that application using a kind of <strong>Sandbox</strong>.</p>
+
+<p>To accomplish that task, we can use the Symfony <a href="http://symfony.com/doc/current/components/process.html">Process</a> Component.</p>
+
+<p>Let me show you a small piece of code that could be included in your Symfony or Drupal 8 application.</p>
+
+<pre><code>use Symfony\Component\Process\PhpProcess;
+
+$php_script = file_get_contents($php_file);
+
+$phpProcess = new PhpProcess($php_script, $documentroot);
+$phpProcess-&gt;run();
+$output = $phpProcess-&gt;getOutput();
+</code></pre>
+
+<p>Firstly, we must read a PHP file path, defined in variable <em>$php_file</em> then using function <em>PhpProcess</em> execute that script using a specific DocumentRoot for our external application, that will avoid any issue of missing classes.</p>
+
+<p>Secondly, the process is executed and finally we could get the output after our external application is completed, this process is synchronous.</p>
+
+<p>Internally doesn't function will try to allocate the php-cli in your system to execute your application.</p>
+
+<p>I hope you found this article useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/</link>
+                <pubDate>Fri, 27 Nov 2015 17:14:59 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfony-drupal-in-a-sandbox/</guid>
+            </item>
+                    <item>
                 <title>How to manipulate an Entity:Block programmatically in Drupal 8</title>
                 <description><![CDATA[<p>This is my first post after Drupal 8 got his first official release, now it's time to start to do some basic stuff using the
 Drupal 8 way, even I have been working a lot with Drupal 8 core, there are some typical things that I found still a little bit strange. But being honest if more my fault that Drupal 8 fault; All we have to just adjust own mental mindsets.</p>
@@ -168,7 +199,7 @@ $block-&gt;save();
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</link>
-                <pubDate>Sat, 21 Nov 2015 13:49:46 +0000</pubDate>
+                <pubDate>Sat, 21 Nov 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entity-block-programmatically-in-drupal-8/</guid>
             </item>
                     <item>
@@ -252,20 +283,20 @@ $block-&gt;save();
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</link>
-                <pubDate>Mon, 02 Nov 2015 13:49:46 +0000</pubDate>
+                <pubDate>Mon, 02 Nov 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8/</guid>
             </item>
                     <item>
                 <title>How to include PHP code in Drupal 8 Views</title>
                 <description><![CDATA[<p>Did you recall the last time you tried to resolve an issue in your program using a small piece of PHP in your views using <a href="https://www.drupal.org/project/views_customfield">Views Custom Field</a> in Drupal 6 and  <a href="https://www.drupal.org/project/views_php">Views PHP</a> in Drupal 7? Don't lie everybody did that at least once.</p>
 
-<p>Even the fact those are accepted module by Drupal security team, this solution is really dangerous because execute code using PHP function <a href="http://php.net/manual/es/function.eval.php">eval</a>, execute PHP code loaded from DB it's really bad in terms of security and stability.</p>
+<p>Even the fact those are accepted module by the Drupal security team, this solution is really dangerous because execute code using PHP function <a href="http://php.net/manual/es/function.eval.php">eval</a>, execute PHP code loaded from DB it's really bad in terms of security and stability.</p>
 
-<p>Moreover, if someone is auditing your code, this one is the first bad practice the auditor will try to find in your code and you will get a nice recommendation that you must create your own view field handler to do that in order to improve the quality of your code. But to be honest I did that in the past and even I did that several times, I always found this process really hard.</p>
+<p>Moreover, if someone is auditing your code, this one is the first bad practice the auditor will try to find in your code and you will get a nice recommendation that you must create your own view field handler to do that logic, in order to improve the quality of your code. But to be honest, I did that in the past and even I did that several times, I always found this process really hard.</p>
 
-<p>Nowadays the Drupal community is excited about the release of first release candidate for <a href="https://www.drupal.org/drupal-8.0.0-rc1">Drupal RC1</a>, so I though it's time to start with the classical posts about how to do our old practices in this new thing. Today I will share wit your how to avoid the usage of Views PHP modules and be able to include PHP in your views but still pass the audit of your code :P.</p>
+<p>Nowadays the Drupal community is excited about the release of the first official release of <a href="https://www.drupal.org/news/drupal-8.0.0-released">Drupal 8</a>, so I thought it's time to start with the classical posts about how to do our old practices in this new thing. Today I will share with you how to avoid the usage of Views PHP modules and be able to include PHP in your views but still pass the audit of your code :P.</p>
 
-<p>In this post I will use the project <a href="http://drupalconsole.com">Drupal Console</a> to facilitate my job.</p>
+<p>In this post, I will use the project <a href="http://drupalconsole.com">Drupal Console</a> to facilitate my job.</p>
 
 <h1>1. Create a Drupal 8 module.</h1>
 
@@ -276,16 +307,16 @@ $block-&gt;save();
 
 <p><img src="http://enzolutions.com/assets/img/console_generate_module.png"/></p>
 
-<p>The second option execute the command but passing all options inline as you can see below.</p>
+<p>The second option executes the command but passing all options inline as you can see below.</p>
 
 <pre><code>$ drupal generate:module --module="No Views PHP" --machine-name=no_views_php --module-path=/modules/custom --description="Custom views field to include PHP logic in views." --core=8.x --package=Other
 </code></pre>
 
 <h1>2. Generate a custom views field</h1>
 
-<p>Views are now in core of Drupal 8, and everything change. As I said before "Drupal 8 is just a new project with same name and logic". So if you knew something about views, well that is not too much useful in terms of code, but the logic in general remains.</p>
+<p>Views are now in core of Drupal 8, and everything change. As I said before "Drupal 8 is just a new project with same name and logic". So if you knew something about views, well that is not too much useful in terms of code, but the logic, in general remains.</p>
 
-<p>In Drupa 8 views everything in handle via Plugins and fields are not the exception, if you need to create a custom field you must generate a custom views plugin field. Fortunately I did a generator in <strong>Drupal Console</strong> for this task, check the following command to generate a views plugin field.</p>
+<p>In Drupal 8 views, everything is handled via Plugins and fields are not the exception, if you need to create a custom field you must generate a custom views plugin field. Fortunately, I did a generator in <strong>Drupal Console</strong> for this task, check the following command to generate a views plugin field.</p>
 
 <pre><code>$ drupal generate:plugin:views:field --module=no_views_php --class-name=PHPViewsField --title="PHP Field" --description="Enable to include and run PHP code in your modules as part of a view"
 </code></pre>
@@ -310,45 +341,47 @@ $block-&gt;save();
 
 <p>Pro tip: If you don't see your generated field, try executing <strong>$ drupal cache:rebuild all</strong> again :P</p>
 
-<p>After apply the minimal configuration to the field, you will get a view preview similar to this image:</p>
+<p>After applying the minimum configuration to the field, you will get a view preview similar to this image:</p>
 
 <p><img src="http://enzolutions.com/assets/img/view_frontpage_preview.png"/></p>
 
-<p>The view plugin field generated by default return a random string just to show that it's working. Now you have to do your magic in your custom module.</p>
+<p>The view plugin field generated, by default, return a random string just to show that it's working. Now you have to do your magic in your custom module.</p>
 
 <h1>4. Implementing your logic</h1>
 
-<p>In order to implement your custom logic you have to edit the generated file <strong>modules/custom/no_views_php/src/Plugin//views/field/PHPViewsField.php</strong> and more specific inside the method <strong>render</strong>, this method receive an object of <a href="https://api.drupal.org/api/drupal/core!modules!views!src!ResultRow.php/class/ResultRow/8">Drupal\views\ResultRow</a> as parameter.</p>
+<p>In order to implement your custom logic you have to edit the generated file <strong>modules/custom/no_views_php/src/Plugin//views/field/PHPViewsField.php</strong> and more specific inside the method <strong>render</strong>, this method receives an object of <a href="https://api.drupal.org/api/drupal/core!modules!views!src!ResultRow.php/class/ResultRow/8">Drupal\views\ResultRow</a> as a parameter.</p>
 
 <p>The default method generated looks like next snippet.</p>
 
-<p><code>public function render(ResultRow $values) {
-    // Return a random text, here you can include your custom logic.
-      // Include any namespace required to call the method required to generte the
-      // output desired
-      $random = new Random();
-      return $random-&gt;name();
-  }</code></p>
+<pre><code>public function render(ResultRow $values) {
+  // Return a random text, here you can include your custom logic.
+    // Include any namespace required to call the method required to generte the
+    // output desired
+    $random = new Random();
+    return $random-&gt;name();
+}
+</code></pre>
 
 <p>Now I will change the logic to use the title field in row to print it reversed, as you can check in the following code.</p>
 
-<p><code>public function render(ResultRow $values) {
-      // Return a random text, here you can include your custom logic.
-      // Include any namespace required to call the method required to generte the
-      // output desired
-      $title = strip_tags($this-&gt;view-&gt;field['title']-&gt;original_value);
-      return strrev($title);
-  }</code></p>
+<pre><code>public function render(ResultRow $values) {
+    // Return a random text, here you can include your custom logic.
+    // Include any namespace required to call the method required to generte the
+    // output desired
+    $title = strip_tags($this-&gt;view-&gt;field['title']-&gt;original_value);
+    return strrev($title);
+}
+</code></pre>
 
-<p>As result now our field will looks different, check the following image.</p>
+<p>As a result now our field will look different, check the following image.</p>
 
 <p><img src="http://enzolutions.com/assets/img/view_frontpage_preview2.png"/></p>
 
-<p>As you can see this another silly implementation of a custom PHP, but now you can include in this class any service required to do you magic and transform each row in a view using other row fields as input.</p>
+<p>As you can see this another silly implementation of a custom PHP, but now you can include in this class any service required to do your magic and transform each row in a view using other row fields as input.</p>
 
-<p>Even better you can include in your code a handler to throw an exception if is required, so you code could as complex an professional as you want.</p>
+<p>Even better you can include in your code a handler to throw an exception if is required, so your code could as complex and professional as you want.</p>
 
-<p>If you are wondering why don't contribute this as a replacement of views php in Drupal 8, well I though due we have a Drupal Console generator for that, it's not necessary. Inside Drupal Console project is the ethernal discussion about what things must be a generator and what others must be modules.</p>
+<p>If you are wondering why don't contribute this as a replacement of Views PHP in Drupal 8, well I thought due we have a Drupal Console generator for that, it's not necessary. Inside Drupal Console project is the eternal discussion about what things must be a generator and what others must be contributed modules.</p>
 
 <p>Some of them became in both a generator and Drupal 8 modules, check out the following list</p>
 
@@ -361,7 +394,7 @@ $block-&gt;save();
 <p>I hope you found this blog post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</link>
-                <pubDate>Sun, 11 Oct 2015 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 11 Oct 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views/</guid>
             </item>
                     <item>
@@ -443,7 +476,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 <p>Muchas gracias for reading this article.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</link>
-                <pubDate>Sat, 12 Sep 2015 13:49:46 +0000</pubDate>
+                <pubDate>Sat, 12 Sep 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology/</guid>
             </item>
                     <item>
@@ -551,7 +584,7 @@ already included in Drupal 8 core.</p>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/</link>
-                <pubDate>Thu, 09 Jul 2015 13:49:46 +0000</pubDate>
+                <pubDate>Thu, 09 Jul 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silex-symfony-and-drupal-8/</guid>
             </item>
                     <item>
@@ -650,7 +683,7 @@ yaml:diff
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</link>
-                <pubDate>Wed, 08 Jul 2015 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 08 Jul 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files/</guid>
             </item>
                     <item>
@@ -751,7 +784,7 @@ this delete is applied immediately, SOLR re-index is not required.</p>
 <p>I expect you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</link>
-                <pubDate>Wed, 17 Jun 2015 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 17 Jun 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7/</guid>
             </item>
                     <item>
@@ -823,7 +856,7 @@ include those group of filters inside a <strong>SearchApiQueryInterface</strong>
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</link>
-                <pubDate>Wed, 10 Jun 2015 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 10 Jun 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7/</guid>
             </item>
                     <item>
@@ -939,7 +972,7 @@ FOUND 1 ERROR AFFECTING 1 LINE
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</link>
-                <pubDate>Sun, 07 Jun 2015 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 07 Jun 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility/</guid>
             </item>
                     <item>
@@ -1033,7 +1066,7 @@ image.</p>
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</link>
-                <pubDate>Tue, 02 Jun 2015 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 02 Jun 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/</guid>
             </item>
                     <item>
@@ -1083,61 +1116,8 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>I hope you found this post useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</link>
-                <pubDate>Tue, 26 May 2015 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 26 May 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers/</guid>
-            </item>
-                    <item>
-                <title>Running for a position on Drupal Association At Large Director</title>
-                <description><![CDATA[<p>Today I decided to nominate myself as a candidate for a position on <a href="https://assoc.drupal.org/" target="_blank">Drupal Association</a> At <strong>Large Director</strong>.</p>
-
-<p>You can read more about the election process at <a href="https://assoc.drupal.org/blog/holly.ross.drupal/nominations-open-drupal-association-large-director" target="_blank">Nominations Open for Drupal Association At Large Director</a>.</p>
-
-<h1>Important dates</h1>
-
-<ul>
-<li>Self Nominations: 1 February,2015 through 20 February, 2015</li>
-<li>Elections process: 9 March, 2015 through 20 March, 2015</li>
-</ul>
-
-<p>So let me tell you something about my and my motivations to propose my name.</p>
-
-<h1>About Me</h1>
-
-<p>Colombian by birth, Costa Rican by choice, I have spent the last 13 years living in that narrow piece of land between North and South America. I co-founded and have been running a successful Drupal workshop called AnexusIT. I am 38, married and father of two brilliant kids: Axel and Zoe. I enjoy long walks through the hallways of Drupal Groups and have a knack for putting together community events.</p>
-
-<p>I got into Drupal 6 in early 2008 after working for many years building websites from scratch using PHP and after many months contributing to a couple of PHP projects with the intention to automate the way websites were built.</p>
-
-<h1>Experience</h1>
-
-<p>My first Drupal project was a real challenge simply because the deadlines were very tight (surprise surprise) and I had no idea how to start working on that thing. I was even the one who had to lead the way and teach others. Anyway, the process was very frustrating but even that the project was delivered with a delay of a few days I ended up hating the project but loving the CMS platform.</p>
-
-<p>My first contact with the community was in 2009 at the 1st Drupal Camp Centroamericano in Nicaragua were I did two lectures and learn a lot about the community and how strong the product could be.</p>
-
-<p>After two years working for other’s companies doing Drupal, I took the decision to start the first Drupal oriented workshop in Costa Rica around 2010. AnexusIT was the first company of it’s kind in Central America. I lead the technological and technical areas of the company. I get to wear many hats but Chief Technology Officer is my official title. My favorite role though, is Drupal developer, where I get to motivate, lead, supervise and encourage my peers while still coding for at least 8 hours every single day.</p>
-
-<p>After the Drupal Camp Centroamericano in Nicaragua I started to organising Drupal Meetups in Costa Rica and building up the Drupal community in Costa Rica. As result, we organised   the 1st Drupal Camp Costa Rica (and 3rd Drupal Camp Centroamericano) in late 2011. We have been hosting this event in Costa Rica yearly with the latest edition being held on August 2014.</p>
-
-<p>During all this time I was leading the community in Costa Rica without an official title, because we were lacking a formal structure. To remediate that, in January 2015, we (the community) founded a NGO called “Drupal Costa Rica” where I am the co-founder and first President. We are planning on using the NGO to facilitate the chores of putting together Drupal activities in Costa Rica.</p>
-
-<h1>Motivation</h1>
-
-<p>In recent years the DA has started looking more world-oriented with the inclusion of members from Europe and Australia, but even that the vision is still through the eyes of people from high develop countries.</p>
-
-<p>After some conversations with a friend from Vietnam <a href="http://de.linkedin.com/in/webtomme/" target="_blank">Tom Soqyu</a> about experiences of activities aimed at building a Drupal community and tasks oriented to create the First Drupal in Vietnam we detect we face similar problems because we live in non developer countries or emerging markets if you want to use other term.</p>
-
-<p>So what ideas I will support in Drupal association, well I love initiatives to sponsor speakers to training people in emergent countries specially if they speak the language of emerging country and french and english in many countries in africa. If I get a position in Drupal Association I will support project in that direction.</p>
-
-<p>So based in my experience of 5 years working with Drupal as Developer, Community Lead and Company Owner in an emergent country I want to bring to DA a different perspective about our challenges and ideas about how to improve the presence of Drupal in Latin America, Africa and Asia.</p>
-
-<h1>Contact me</h1>
-
-<p>Feel free to ask me any question via facebook, twitter, email or using the comments in this post.</p>
-
-<p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
-]]></description>
-                <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 13:49:46 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</guid>
             </item>
                     <item>
                 <title>Soy candidato por una posición en la Drupal Association como Large director</title>
@@ -1193,8 +1173,61 @@ this is temporary solution flexible enough using Drupal 8 style to start using D
 <p>Como se puede imaginar le estoy pidiendo que voten por mí. Pero también los invito a comprobar todos los candidatos y determinar cual coincide mejor con su forma de pensar y sentir. También no se olvide de invitar a sus amigos a votar.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</link>
-                <pubDate>Tue, 03 Feb 2015 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 03 Feb 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director/</guid>
+            </item>
+                    <item>
+                <title>Running for a position on Drupal Association At Large Director</title>
+                <description><![CDATA[<p>Today I decided to nominate myself as a candidate for a position on <a href="https://assoc.drupal.org/" target="_blank">Drupal Association</a> At <strong>Large Director</strong>.</p>
+
+<p>You can read more about the election process at <a href="https://assoc.drupal.org/blog/holly.ross.drupal/nominations-open-drupal-association-large-director" target="_blank">Nominations Open for Drupal Association At Large Director</a>.</p>
+
+<h1>Important dates</h1>
+
+<ul>
+<li>Self Nominations: 1 February,2015 through 20 February, 2015</li>
+<li>Elections process: 9 March, 2015 through 20 March, 2015</li>
+</ul>
+
+<p>So let me tell you something about my and my motivations to propose my name.</p>
+
+<h1>About Me</h1>
+
+<p>Colombian by birth, Costa Rican by choice, I have spent the last 13 years living in that narrow piece of land between North and South America. I co-founded and have been running a successful Drupal workshop called AnexusIT. I am 38, married and father of two brilliant kids: Axel and Zoe. I enjoy long walks through the hallways of Drupal Groups and have a knack for putting together community events.</p>
+
+<p>I got into Drupal 6 in early 2008 after working for many years building websites from scratch using PHP and after many months contributing to a couple of PHP projects with the intention to automate the way websites were built.</p>
+
+<h1>Experience</h1>
+
+<p>My first Drupal project was a real challenge simply because the deadlines were very tight (surprise surprise) and I had no idea how to start working on that thing. I was even the one who had to lead the way and teach others. Anyway, the process was very frustrating but even that the project was delivered with a delay of a few days I ended up hating the project but loving the CMS platform.</p>
+
+<p>My first contact with the community was in 2009 at the 1st Drupal Camp Centroamericano in Nicaragua were I did two lectures and learn a lot about the community and how strong the product could be.</p>
+
+<p>After two years working for other’s companies doing Drupal, I took the decision to start the first Drupal oriented workshop in Costa Rica around 2010. AnexusIT was the first company of it’s kind in Central America. I lead the technological and technical areas of the company. I get to wear many hats but Chief Technology Officer is my official title. My favorite role though, is Drupal developer, where I get to motivate, lead, supervise and encourage my peers while still coding for at least 8 hours every single day.</p>
+
+<p>After the Drupal Camp Centroamericano in Nicaragua I started to organising Drupal Meetups in Costa Rica and building up the Drupal community in Costa Rica. As result, we organised   the 1st Drupal Camp Costa Rica (and 3rd Drupal Camp Centroamericano) in late 2011. We have been hosting this event in Costa Rica yearly with the latest edition being held on August 2014.</p>
+
+<p>During all this time I was leading the community in Costa Rica without an official title, because we were lacking a formal structure. To remediate that, in January 2015, we (the community) founded a NGO called “Drupal Costa Rica” where I am the co-founder and first President. We are planning on using the NGO to facilitate the chores of putting together Drupal activities in Costa Rica.</p>
+
+<h1>Motivation</h1>
+
+<p>In recent years the DA has started looking more world-oriented with the inclusion of members from Europe and Australia, but even that the vision is still through the eyes of people from high develop countries.</p>
+
+<p>After some conversations with a friend from Vietnam <a href="http://de.linkedin.com/in/webtomme/" target="_blank">Tom Soqyu</a> about experiences of activities aimed at building a Drupal community and tasks oriented to create the First Drupal in Vietnam we detect we face similar problems because we live in non developer countries or emerging markets if you want to use other term.</p>
+
+<p>So what ideas I will support in Drupal association, well I love initiatives to sponsor speakers to training people in emergent countries specially if they speak the language of emerging country and french and english in many countries in africa. If I get a position in Drupal Association I will support project in that direction.</p>
+
+<p>So based in my experience of 5 years working with Drupal as Developer, Community Lead and Company Owner in an emergent country I want to bring to DA a different perspective about our challenges and ideas about how to improve the presence of Drupal in Latin America, Africa and Asia.</p>
+
+<h1>Contact me</h1>
+
+<p>Feel free to ask me any question via facebook, twitter, email or using the comments in this post.</p>
+
+<p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</link>
+                <pubDate>Tue, 03 Feb 2015 17:14:59 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director/</guid>
             </item>
                     <item>
                 <title>What is Drupal Console for me</title>
@@ -1270,7 +1303,7 @@ router
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</link>
-                <pubDate>Sun, 25 Jan 2015 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 25 Jan 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me/</guid>
             </item>
                     <item>
@@ -1417,7 +1450,7 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</link>
-                <pubDate>Wed, 21 Jan 2015 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 21 Jan 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1486,7 +1519,7 @@ node.save(userDetails, {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</link>
-                <pubDate>Tue, 20 Jan 2015 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 20 Jan 2015 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function/</guid>
             </item>
                     <item>
@@ -1624,7 +1657,7 @@ print 'Node ID: ' . $nid . "\n";
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</link>
-                <pubDate>Mon, 29 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Mon, 29 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions/</guid>
             </item>
                     <item>
@@ -1868,7 +1901,7 @@ public function authenticate(Request $request) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</link>
-                <pubDate>Sun, 28 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 28 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8/</guid>
             </item>
                     <item>
@@ -1958,7 +1991,7 @@ if ($last_key) {
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</link>
-                <pubDate>Fri, 26 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Fri, 26 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process/</guid>
             </item>
                     <item>
@@ -1997,7 +2030,7 @@ if ($last_key) {
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</link>
-                <pubDate>Wed, 17 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 17 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference/</guid>
             </item>
                     <item>
@@ -2211,7 +2244,7 @@ use Psr\Log\LoggerInterface;
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</link>
-                <pubDate>Tue, 16 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 16 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2460,7 +2493,7 @@ use \InvalidArgumentException;
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</link>
-                <pubDate>Tue, 09 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 09 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2517,7 +2550,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 <p>I hope you found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</link>
-                <pubDate>Sun, 07 Dec 2014 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 07 Dec 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8/</guid>
             </item>
                     <item>
@@ -2613,7 +2646,7 @@ if(empty($form_state_complete_version)){
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</link>
-                <pubDate>Tue, 25 Nov 2014 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 25 Nov 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax/</guid>
             </item>
                     <item>
@@ -2693,7 +2726,7 @@ bowerJson.read('./bower.json', function (err, json) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</link>
-                <pubDate>Fri, 24 Oct 2014 13:49:46 +0000</pubDate>
+                <pubDate>Fri, 24 Oct 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files/</guid>
             </item>
                     <item>
@@ -2766,7 +2799,7 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 <p>I hope you find this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</link>
-                <pubDate>Sun, 19 Oct 2014 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 19 Oct 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite/</guid>
             </item>
                     <item>
@@ -2946,7 +2979,7 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</link>
-                <pubDate>Fri, 17 Oct 2014 13:49:46 +0000</pubDate>
+                <pubDate>Fri, 17 Oct 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew/</guid>
             </item>
                     <item>
@@ -3058,7 +3091,7 @@ function (Marionette, Communicator) {
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</link>
-                <pubDate>Tue, 16 Sep 2014 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 16 Sep 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules/</guid>
             </item>
                     <item>
@@ -3250,7 +3283,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 <p>I hope you have found this blog useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</link>
-                <pubDate>Mon, 08 Sep 2014 13:49:46 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js/</guid>
             </item>
                     <item>
@@ -3307,7 +3340,7 @@ Header always set Access-Control-Allow-Headers: Authorization
 <p>I expect you have found this entry useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</link>
-                <pubDate>Mon, 08 Sep 2014 13:49:46 +0000</pubDate>
+                <pubDate>Mon, 08 Sep 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/</guid>
             </item>
                     <item>
@@ -3454,7 +3487,7 @@ langcode: en
 <p>I hope you have found this article useful.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</link>
-                <pubDate>Wed, 27 Aug 2014 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 27 Aug 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/</guid>
             </item>
                     <item>
@@ -3521,7 +3554,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</link>
-                <pubDate>Tue, 26 Aug 2014 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 26 Aug 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks/</guid>
             </item>
                     <item>
@@ -3560,7 +3593,7 @@ langcode: en
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</link>
-                <pubDate>Sun, 24 Aug 2014 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 24 Aug 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-github-bitbucket-projects/</guid>
             </item>
                     <item>
@@ -3588,7 +3621,7 @@ langcode: en
 <p>Pura Vida.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/08/14/mi-tribu/</link>
-                <pubDate>Thu, 14 Aug 2014 13:49:46 +0000</pubDate>
+                <pubDate>Thu, 14 Aug 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu/</guid>
             </item>
                     <item>
@@ -3712,7 +3745,7 @@ bower install       jQuery#2.1.1
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</link>
-                <pubDate>Tue, 08 Jul 2014 13:49:46 +0000</pubDate>
+                <pubDate>Tue, 08 Jul 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower/</guid>
             </item>
                     <item>
@@ -3747,7 +3780,7 @@ $
 <p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Thu, 03 Jul 2014 13:49:46 +0000</pubDate>
+                <pubDate>Thu, 03 Jul 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -3974,7 +4007,7 @@ Done, without errors.
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</link>
-                <pubDate>Wed, 18 Jun 2014 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 18 Jun 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/</guid>
             </item>
                     <item>
@@ -3997,7 +4030,7 @@ Done, without errors.
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</link>
-                <pubDate>Mon, 16 Jun 2014 13:49:46 +0000</pubDate>
+                <pubDate>Mon, 16 Jun 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal/</guid>
             </item>
                     <item>
@@ -4158,7 +4191,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</link>
-                <pubDate>Mon, 02 Jun 2014 13:49:46 +0000</pubDate>
+                <pubDate>Mon, 02 Jun 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/02/routing-controlling-with-marionettejs/</guid>
             </item>
                     <item>
@@ -4314,7 +4347,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</link>
-                <pubDate>Sun, 01 Jun 2014 13:49:46 +0000</pubDate>
+                <pubDate>Sun, 01 Jun 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/</guid>
             </item>
                     <item>
@@ -4338,7 +4371,7 @@ Access-Control-Allow-Origin:http://localhost:8080
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</link>
-                <pubDate>Sat, 31 May 2014 13:49:46 +0000</pubDate>
+                <pubDate>Sat, 31 May 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/</guid>
             </item>
                     <item>
@@ -4377,7 +4410,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</link>
-                <pubDate>Wed, 28 May 2014 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 28 May 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database/</guid>
             </item>
                     <item>
@@ -4395,7 +4428,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 <p>See you around.</p>
 ]]></description>
                 <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</link>
-                <pubDate>Wed, 21 May 2014 13:49:46 +0000</pubDate>
+                <pubDate>Wed, 21 May 2014 17:14:59 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again/</guid>
             </item>
             </channel>
