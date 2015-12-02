@@ -149,10 +149,11 @@
   </ul>
 </div>
 
-    <p>This is my first post after Drupal 8 got his first official release, now it's time to start to do some basic stuff using the
-Drupal 8 way, even I have been working a lot with Drupal 8 core, there are some typical things that I found still a little bit strange. But being honest if more my fault that Drupal 8 fault; All we have to just adjust own mental mindsets.</p>
+    <p>This is my first post after Drupal 8 got his first official release, now it's time to start to do some basic stuff using the Drupal 8 way.</p>
 
-<p>Today I want to show you how to deal with Block in Drupal 8 because yesterday I expend several hours trying to understand how to manipulate a block to extend a functionality for <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
+<p>Even I have been working a lot with Drupal 8 core, there are some typical things that I found still a little bit strange. But being honest if more my fault that Drupal 8 fault; All we have just to adjust own mental mindsets.</p>
+
+<p>Today I want to show you how to deal with Block in Drupal 8 because yesterday I spent several hours trying to understand how to manipulate a block to extend a functionality for <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
 
 <h1>Get a list of blocks</h1>
 
@@ -162,7 +163,7 @@ Drupal 8 way, even I have been working a lot with Drupal 8 core, there are some 
 
 <p>Why this separation is important, well as you maybe know or hear in Drupal 8 blocks are plugins and use <a href="https://www.drupal.org/node/1882526">annotations</a> to expose to Drupal 8 their existence. Therefore, we could get a list of blocks but they will not be <a href="https://api.drupal.org/api/drupal/core!modules!block!src!Entity!Block.php/8">Entity:Block</a> objects, we could get just their definition, this is important because you can't manipulate them, so you just can use as extra information in your logic.</p>
 
-<p>Only blocks that are enabled and assigned into a theme and in a region are Entity:Block instances.</p>
+<p>Only blocks that are enabled and assigned to a theme and in a region are Entity:Block instances.</p>
 
 <h2>Get available blocks</h2>
 
@@ -204,11 +205,11 @@ print_r($definitions['help_block']);
 )
 </code></pre>
 
-<p>As you can see in valuable information about the block but it's not a real Entity:Block instances.</p>
+<p>As you can see is valuable information about the block but it's not a real Entity:Block instances.</p>
 
 <h2>Get a list of all Entity:Block available</h2>
 
-<p>Using <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3AentityQuery/8">Drupal:entityQuery</a> we can build a kind of SQL query for a specific entity in this case for Block entities. The following piece of code gets the full list of blocks available.</p>
+<p>Using <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3AentityQuery/8">Drupal:entityQuery</a> class, we can build a kind of SQL query for a specific entity in this case for Block entities. The following piece of code gets the full list of blocks available.</p>
 
 <pre><code>$ids = \Drupal::entityQuery('block')-&gt;execute();
 </code></pre>
@@ -234,12 +235,12 @@ print_r($ids);
 
 <p>I got three Entity:Block ids, related to the three themes I have enabled in my system Bartik, Seven and <a href="https://www.drupal.org/project/himalaya">Himalaya</a>.</p>
 
-<h2>Loading an Entity:Block</h2>
+<h1>Loading an Entity:Block</h1>
 
-<p>Until now we get definition and Entity:Block ids, but not a real Entity:Block, let me show you how do that using the Drupal 8 EntityManager as you can see below.</p>
+<p>Until now we get definition of blocks and Entity:Block ids, but not a real Entity:Block, let me show you how do that using the Drupal 8 class use <a href="https://api.drupal.org/api/drupal/core%21modules%21block%21src%21Entity%21Block.php/class/Block/8">Drupal\block\Entity\Block</a> as you can see below.</p>
 
-<pre><code>$blockEntityManager = \Drupal::service('entity.manager')-&gt;getStorage('block');
-$block = $blockEntityManager-&gt;load('bartik_help');
+<pre><code>use Drupal\block\Entity\Block;
+$block = Block::load('bartik_help');
 print_r($block);
 </code></pre>
 
@@ -282,11 +283,11 @@ print_r($block);
 )
 </code></pre>
 
-<h2>Create an Entity:Block</h2>
+<h1>Create an Entity:Block</h1>
 
-<p>Last but not least, I will show you how to create and Entity:Block from code definition.</p>
+<p>Last but not least, I will show you how to create an Entity:Block from code definition.</p>
 
-<p>Imagine did you created a block plugin using <strong>Drupal Console</strong> with id default_block.</p>
+<p>Imagine did you created a block plugin using <strong>Drupal Console</strong> with id default_block. Using the following command.</p>
 
 <pre><code>$ drupal generate:plugin:block
 </code></pre>
@@ -305,7 +306,7 @@ $block-&gt;setRegion('content');
 $block-&gt;save();
 </code></pre>
 
-<p>In addition in the code above after create the Entity:Block I decided assign the <em>default_block</em> inside <em>Content</em> region for theme Bartik.</p>
+<p>Besides, I decided to assign the default_block inside Content region for theme Bartik, after creating the Entity:Block.</p>
 
 <p>I hope you found this article useful.</p>
 
