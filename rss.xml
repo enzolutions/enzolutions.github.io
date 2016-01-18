@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 16 Jan 2016 19:53:45 +0000</pubDate>
+                <pubDate>Mon, 18 Jan 2016 19:59:51 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 16 Jan 2016 19:53:45 +0000</pubDate>
+                <pubDate>Mon, 18 Jan 2016 19:59:51 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4643,6 +4643,66 @@ print_r($ticket);
                 <link>http://enzolutions.com/articles/2015/12/22/how-to-get-content-type-fields-in-drupal-8</link>
                 <pubDate>Tue, 22 Dec 2015 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2015/12/22/how-to-get-content-type-fields-in-drupal-8</guid>
+            </item>
+                    <item>
+                <title>Around the Drupal World in 120 Days</title>
+                <description><![CDATA[<p>Almost a year ago in 2015, I proposed my name in the <a href="https://assoc.drupal.org/election/8/candidates">elections</a> for Director at  Large in <a href="https://assoc.drupal.org">Drupal Association</a>. The slogan of my campaign was <strong>Let me be your voice</strong> with the idea to try to represent areas in the world outside develop countries.</p>
+
+<p>Check the video of my proposal.</p>
+
+<iframe src="https://player.vimeo.com/video/121906640" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<p><a target="_blank" href="http://v.youku.com/v_show/id_XMTQ0ODU1MTUwNA==.html">Version for China</a></p>
+
+<p>Sadly, I didn't get enough votes to get elected. But, the idea remains in my head; How I could to try to bring the knowledge to those emerging communities in Open Source and specifically in Drupal? How I could encourage people to create their solutions, using their language as a tool to empower their local community?</p>
+
+<p>Moreover, How I could do this without the endorsement of being a Director at Large for Drupal Association?</p>
+
+<p>Well, I got the conclusion that if I want to do a change and don't need to ask permission to anybody, and in the same way here in Costa Rica we started the Drupal Costa Rica community with our passion as our endorsement to build this idea.</p>
+
+<p>For that reason, I decided to put my money where my mouth is, regarding what I said in my video campaign, including an additional goal: promote the tool I have been co-working for almost 18 months the <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
+
+<p><strong>Drupal Console</strong> also includes an important component for local communities empowerment enabling people use the tool in their mother language.</p>
+
+<p>Fortunately, I got support from my business partner <strong>Kenny Abarca</strong> at <a href="http://anexusit.com">Anexus</a> to have a period of four months with a semi-sabbatical schedule to regarding work. Having 4-5 hours per day in duties to support our team regarding of Drupal 8 adoption and implementation.</p>
+
+<p>What I will do with the rest of my time, well, we agree that I will be traveling in several developed and developing countries participating in DrupalCamps, Drupal meetups to exchange experiences with local companies and developers. To try to do what I propose last year and promote the Drupal Console project.</p>
+
+<p>Also, Encouraging local communities to build technical documentation for themselves using their mother language to reduce their digital gap.</p>
+
+<p>With the idea settle, we create this agenda to visit seventeen cities in thirteen countries and three continents, we want to include Africa, but due budgets restrictions wasn't possible.</p>
+
+<iframe src="http://enzolutions.com/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<ul>
+<li>NYC, USA / Feb 10th - Feb 12th &#8594; Visiting local Drupal Workshops</li>
+<li>Mumbai India / Feb 13th - Feb 20th &#8594; <a href="http://events.drupal.org/asia2016">DrupalCon</a> / Pending BOF proposal</li>
+<li>Singapore, Singapore / Feb 21st - Feb 26th &#8594; <a href="http://groups.drupal.org/node/504398">Drupal Meetup</a> </li>
+<li>Hanoi, Vietnam / Feb 27th - Mar 6th &#8594; <a href="http://drupalcamp.vn">DrupalCamp</a></li>
+<li>Seoul, South Korea / Mar 7th - Mar 13th &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
+<li>Tokyo, Japan / Mar 14th - Mar 18th &#8594; Drupal Meetup </li>
+<li>Osaka, Japan / Mar 19th - Mar 22th &#8594; Drupal Meetup </li>
+<li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://groups.drupal.org/node/499003">DrupalCamp</a> </li>
+<li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
+<li>Chongqing, China / Apr 11st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
+<li>Bangkok, Thailand / Apr 20th - Apr 26th &#8594; Drupal Meetup </li>
+<li>Phnom Penh, Cambodia  / Apr 27th - May 3rd &#8594; Drupal 8 Intro </li>
+<li>Manila, Philippines  / May 4th - May 11th &#8594; DrupalCamp</li>
+<li>Hong Kong, Hong Kong / May 12th - May 15th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
+</ul>
+
+<p>After complete this trip, I expect to help those communities I plan to visit to help to improve their participation in global Drupal Community and for me, well, enhance my vision of the world.</p>
+
+<p>If you are wondering if I plan to propose my name for next <a href="https://assoc.drupal.org/blog/holly.ross.drupal/2016-drupal-association-board-election-details">election process</a> in Drupal Association. To be honest, I am still considering the possibility.</p>
+
+<p>If you are around those cities, and you want to talk about Drupal Communities, Drupal 8 and Drupal Console, please don't hesitate to email me to enzo@anexusit.com</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days</link>
+                <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days</guid>
             </item>
             </channel>
 </rss>

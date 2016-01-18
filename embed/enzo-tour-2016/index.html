@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.css" />
+    <script type="text/javascript" src="http://maps.google.cn/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/mobile/1.0b2/jquery.mobile-1.0b2.min.js"></script>
+    <style>
+        .ui-content {
+            padding: 0 !important;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            var map = new google.maps.Map(document.getElementById('map_canvas'), {
+                zoom: 2,
+                center: new google.maps.LatLng(5, -179),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false
+            });
+
+            var pos, marker, content, infowindow;
+
+            markers = [{
+                lat: 40.7058254,
+                lng: -74.1180868,
+                title: 'New York Meetup',
+                details: 'Feb 10 - Feb 12',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 19.0825223,
+                lng: 72.7411193,
+                title: 'DrupalCon Asia',
+                details: 'Feb 13 - Feb 20',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png",
+                event: 'http://events.drupal.org/asia2016'
+            }, {
+                lat: 1.3150701,
+                lng: 103.706934,
+                title: 'Singapore Meetup',
+                details: 'Feb 21st - Feb 26th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png",
+                event: 'http://groups.drupal.org/node/504398'
+            }, {
+                lat: 21.0227358,
+                lng: 105.8194541,
+                title: 'DrupalCamp Vietnam',
+                details: 'Feb 27th - Mar 6th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png",
+                event: 'http://drupalcamp.vn'
+            }, {
+                lat: 37.5652894,
+                lng: 126.8494664,
+                title: 'Seoul Meetup',
+                details: 'Mar 7th - Mar 13th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png",
+                event: 'http://groups.drupal.org/node/507923'
+            }, {
+                lat: 35.6735408,
+                lng: 139.5703042,
+                title: 'Tokyo Meetup',
+                details: 'Mar 14th - Mar 18th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 34.6784656,
+                lng: 135.4601303,
+                title: 'Osaka Meetup',
+                details: 'Mar 19th - Mar 22nd',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 31.2246325,
+                lng: 121.1965675,
+                title: 'DrupalCamp China',
+                details: 'Mar 23 - Apr 31st',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png",
+                event: 'http://groups.drupal.org/node/499003'
+            }, {
+                lat: 39.9390731,
+                lng: 116.1172628,
+                title: 'Beijing Meetup',
+                details: 'Apr 1st - Apr 10th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 29.5551377,
+                lng: 106.4084694,
+                title: 'Chongqing Meetup',
+                details: 'Apr 11th - Apr 19th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png",
+                event: "https://groups.drupal.org/node/507958"
+            }, {
+                lat: 13.7352952,
+                lng: 100.4592324,
+                title: 'Bangkok Meetup',
+                details: 'Apr 20th - Apr 26th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 11.9844111,
+                lng: 102.7353529,
+                title: 'Cambodia Drupal 8 Intro',
+                details: 'Apr 27th - May 3rd',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 14.598152,
+                lng: 120.9446315,
+                title: 'DrupalCamp Philippines',
+                details: 'May 4th - May 11th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: 22.3580723,
+                lng: 113.8408126,
+                title: 'Hong Kong Meetup',
+                details: 'May 12th - May 15th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: -33.7945147,
+                lng: 150.361951,
+                title: 'Sydney Meetup',
+                details: 'May 16th - May 22nd',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: -37.8578698,
+                lng: 144.5191318,
+                title: 'Melbourne Meetup',
+                details: 'May 23th - May 29th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }, {
+                lat: -36.8621448,
+                lng: 174.5852754,
+                title: 'New Zealand Meetup',
+                details: 'May 30th - June 5th',
+                img: "http://enzolutions.com/assets/img/drupal-8-logo-small.png"
+            }];
+
+            markers.forEach(function(markerInfo) {
+
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(markerInfo.lat, markerInfo.lng),
+                    map: map,
+                    animation: google.maps.Animation.DROP
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker) {
+                    return function() {
+
+                        if (infowindow) {
+                            infowindow.close();
+                        }
+
+                        if(typeof(markerInfo.event) != "undefined") {
+                            title = '<a href="' + markerInfo.event + '" target="_blank">' + markerInfo.title + '</a>';
+                        } else {
+                            title = markerInfo.title;
+                        }
+                        infowindow = new google.maps.InfoWindow({
+                            content: '<img src="' + markerInfo.img + '" style="float:left;margin-right:2px"><div>' + title + '<div style="font-weight:normal;font-size:x-small;clear: both;padding-top: 5px;">' + markerInfo.details + '</div></div>'
+                        });
+                        infowindow.open(map, marker);
+                    };
+                })(marker, markerInfo));
+
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="map" data-role="page">
+    <div data-role="content">
+        <div id="map_canvas" style="height:360px; width:100%"></div>
+    </div>
+</div>
+
+<!-- Google Analytics Tracker -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-17944133-1', 'enzolutions.com');
+    ga('send', 'pageview');
+</script>
+<!-- End of Google Analytics Tracker -->
+
+<!-- Google Analytics Tracker -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-17944133-1', 'enzolutions.com');
+    ga('send', 'pageview');
+</script>
+<!-- End of Google Analytics Tracker -->
+
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>
