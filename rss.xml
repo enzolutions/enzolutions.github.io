@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 18 Jan 2016 19:59:51 +0000</pubDate>
+                <pubDate>Wed, 20 Jan 2016 03:23:17 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 18 Jan 2016 19:59:51 +0000</pubDate>
+                <pubDate>Wed, 20 Jan 2016 03:23:17 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4703,6 +4703,49 @@ print_r($ticket);
                 <link>http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days</link>
                 <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days</guid>
+            </item>
+                    <item>
+                <title>Getting node comments programmatically in Drupal 8</title>
+                <description><![CDATA[<p>This article belongs to tips and tricks section in Drupal 8 because I will explain to you how to get entity comments from a particular entity node.</p>
+
+<p>Before to start to code, I want to clarify that in Drupal 8 comments could be inside <strong>Content type</strong> definition as a standard field.</p>
+
+<p>I will handle comments here as a separate entity. To get comments I will use <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3AentityQuery/8">EntityQuery</a> using this approach, we will avoid writing explicit SQL queries, and our code will portable.</p>
+
+<pre><code>$cids = \Drupal::entityQuery('comment')
+   -&gt;condition('entity_id', $ticketID)
+   -&gt;condition('entity_type', 'node')
+   -&gt;sort('cid', 'DESC')
+   -&gt;execute();
+
+$comments = [];
+
+foreach($cids as $cid) {
+ $comment = Comment::load($cid);
+
+ $comments[] = [
+     'cid' =&gt; $cid,
+     'uid' =&gt; $comment-&gt;getOwnerId(),
+     'subject' =&gt; $comment-&gt;get('subject')-&gt;value,
+     'body' =&gt; $comment-&gt;get('field_comment_body')-&gt;value,
+     'created' =&gt; $comment-&gt;get('created')-&gt;value
+ ];
+}
+</code></pre>
+
+<p>Let's review the code above in detail; As you can see, is required to specify to what kind of entity we are trying to get comments, that tell us that in Drupal 8 is possible to link comments to any entity.</p>
+
+<p>Additionally, I have specified the Entity ID required to get comments, is possible add more conditions; this is useful taking in count that comments are entities and is possible that comments have customs fields with extra information.</p>
+
+<p>When we create the EntityQuery, we define what kind of entity we want to process, as the result the query execution will return a list primary keys of entities matching the conditions, in this case, the main key is represented by cid.</p>
+
+<p>Using the list of comments ids or cids, we load the comment object. I just traverse the option to create an arbitrary array, only to show how do you have to access to comment entity property, usually is required to use the method get, but there are some exceptions like comment owner ID.</p>
+
+<p>I hope do you found this article useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8</link>
+                <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8</guid>
             </item>
             </channel>
 </rss>
