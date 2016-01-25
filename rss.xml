@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 25 Jan 2016 16:10:45 +0000</pubDate>
+                <pubDate>Mon, 25 Jan 2016 16:27:57 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 25 Jan 2016 16:10:45 +0000</pubDate>
+                <pubDate>Mon, 25 Jan 2016 16:27:57 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4790,7 +4790,7 @@ foreach($cids as $cid) {
 <li>Chongqing, China / Apr 11st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
 <li>Bangkok, Thailand / Apr 20th - Apr 26th &#8594; Drupal Meetup </li>
 <li>Phnom Penh, Cambodia  / Apr 27th - May 3rd &#8594; Drupal 8 Introducción </li>
-<li>Manila, Philippines  / May 4th - May 11th &#8594; DrupalCamp</li>
+<li>Manila, Filipinas  / May 4th - May 11th &#8594; DrupalCamp</li>
 <li>Hong Kong, Hong Kong / May 12th - May 15th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
