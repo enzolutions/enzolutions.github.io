@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 25 Jan 2016 18:08:22 +0000</pubDate>
+                <pubDate>Mon, 01 Feb 2016 13:51:33 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 25 Jan 2016 18:08:22 +0000</pubDate>
+                <pubDate>Mon, 01 Feb 2016 13:51:33 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4670,11 +4670,11 @@ print_r($ticket);
 
 <p>Also, Encouraging local communities to build technical documentation for themselves using their mother language to reduce their digital gap.</p>
 
-<p>With the idea settle, we create this agenda to visit seventeen cities in thirteen countries and three continents, we want to include Africa, but due budgets restrictions wasn't possible.</p>
+<p>With the idea settle, we create this agenda to visit eighteen cities in thirteen countries and three continents, we want to include Africa, but due budgets restrictions wasn't possible.</p>
 
 <iframe src="http://enzolutions.com/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<ul>
+<ol>
 <li>NYC, USA / Feb 10th - Feb 12th &#8594; <a href="https://drupalconsole.com/content/drupal-console-introduction-session">Drupal Console Introduction</a></li>
 <li>Mumbai India / Feb 13th - Feb 20th &#8594; <a href="http://events.drupal.org/asia2016">DrupalCon</a> / Pending BOF proposal</li>
 <li>Singapore, Singapore / Feb 21st - Feb 26th &#8594; <a href="http://groups.drupal.org/node/504398">Drupal Meetup</a> </li>
@@ -4684,7 +4684,8 @@ print_r($ticket);
 <li>Osaka, Japan / Mar 19th - Mar 22th &#8594; Drupal Meetup </li>
 <li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://groups.drupal.org/node/499003">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
-<li>Chongqing, China / Apr 11st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
+<li>Chongqing, China / Apr 11st - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
+<li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailand / Apr 20th - Apr 26th &#8594; Drupal Meetup </li>
 <li>Phnom Penh, Cambodia  / Apr 27th - May 3rd &#8594; Drupal 8 Intro </li>
 <li>Manila, Philippines  / May 4th - May 11th &#8594; DrupalCamp</li>
@@ -4692,7 +4693,7 @@ print_r($ticket);
 <li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
-</ul>
+</ol>
 
 <p>After complete this trip, I expect to help those communities I plan to visit to help to improve their participation in global Drupal Community and for me, well, enhance my vision of the world.</p>
 
@@ -4773,11 +4774,11 @@ foreach($cids as $cid) {
 
 <p>Además, intentare alentar a las comunidades locales para construir documentación técnica por sí mismos usando su lengua materna para reducir la brecha digital.</p>
 
-<p>Con la idea definida, creamos esta agenda para visitar diecisiete ciudades en trece países y tres continentes, queriamos incluir África, pero debido a restricciones de presupuesto no fue posible.</p>
+<p>Con la idea definida, creamos esta agenda para visitar dieciocho ciudades en trece países y tres continentes, queriamos incluir África, pero debido a restricciones de presupuesto no fue posible.</p>
 
 <iframe src="http://enzolutions.com/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<ul>
+<ol>
 <li>New York, Estados Unidos / Feb 10th - Feb 12th &#8594; <a href="https://drupalconsole.com/content/drupal-console-introduction-session">Drupal Console Introducción</a></li>
 <li>Bombay India / Feb 13th - Feb 20th &#8594; <a href="http://events.drupal.org/asia2016">DrupalCon</a> / Pendiente propuesta de BOF</li>
 <li>Singapure, Singapure / Feb 21st - Feb 26th &#8594; <a href="http://groups.drupal.org/node/504398">Drupal Meetup</a> </li>
@@ -4787,15 +4788,16 @@ foreach($cids as $cid) {
 <li>Osaka, Japon / Mar 19th - Mar 22th &#8594; Drupal Meetup </li>
 <li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://groups.drupal.org/node/499003">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
-<li>Chongqing, China / Apr 11st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
-<li>Bangkok, Thailand / Apr 20th - Apr 26th &#8594; Drupal Meetup </li>
-<li>Phnom Penh, Cambodia  / Apr 27th - May 3rd &#8594; Drupal 8 Introducción </li>
+<li>Chongqing, China / Apr 11st - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
+<li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
+<li>Bangkok, Thailand / Apr 20th - Apr 26th &#8594; Drupal Meetup 
+13 Phnom Penh, Cambodia  / Apr 27th - May 3rd &#8594; Drupal 8 Introducción </li>
 <li>Manila, Filipinas  / May 4th - May 11th &#8594; DrupalCamp</li>
 <li>Hong Kong, Hong Kong / May 12th - May 15th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
-</ul>
+</ol>
 
 <p>Después de completar este viaje, espero poder ayudar a aquellas comunidades que planeo visitar a mejorar su participación en la Comunidad Drupal global y para mí, mejorar mi visión del mundo.</p>
 
@@ -4806,6 +4808,121 @@ foreach($cids as $cid) {
                 <link>http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</link>
                 <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</guid>
+            </item>
+                    <item>
+                <title>Form altering will not be be the same in Drupal 8 after using Webprofiler</title>
+                <description><![CDATA[<p>One of the most common tasks as a Drupal developer is alter a form created by Drupal core of by a contrib module to 
+enable us to include our business logic or  just remove something annoying for our clients.</p>
+
+<p>In Drupal 8 we still have to the hook <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21form.api.php/function/hook_form_alter/8">hook_form_alter</a>, I know, I know the whole idea of Drupal 8 is to remove hooks, but we still have some of them around.</p>
+
+<p>But, this article is not about to discuss that hook must exist or not, Is there and we have to use until is replaced by something else.</p>
+
+<p>Doing a form alter require a one significant and vital information the <strong>FORM_ID</strong>. Usually, we can get this information implementing a generic form alter and print all form_ids loaded and choose the desired one, or, check in form source code to verify the id in method <strong>getFormId</strong> as you can see in the following method</p>
+
+<pre><code>  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'search_block_form';
+  }
+
+</code></pre>
+
+<p>That doesn't look like an old fashion way? indeed, it's the old fashion way. Drupal 8 allow us to have excellent third party tools, and I want to talk about <a href="https://www.drupal.org/project/devel">Webprofiler</a>, which in combination with the <a href="http://drupalcosole.com">Drupal Console</a> project, provide us a clever way to determine and generate our form alter, fast and efficient.</p>
+
+<p><a href="https://www.drupal.org/u/lussoluca">Lussoluca</a> created the webprofiler module, and is an effective implementation of <a href="http://symfony.com/doc/current/cookbook/profiler/index.html">Symfony profiler</a>, using this component to write and extension to provide the Drupal things that Symfony profiler ignore. Webprofiler start as an independent project at <a href="https://www.drupal.org/project/webprofiler">https://www.drupal.org/project/webprofiler</a>, but the last December was merged as a submodule of Devel module; honestly I don't understand because there is not any technical dependency, IMHO webprofiler must have an independent project.</p>
+
+<h1>Generate a standard form alter.</h1>
+
+<p>Anyhow, let me show you how to generate a form alter using the <strong>Drupal Console</strong> without <strong>Webprofiler</strong>.</p>
+
+<p>Using the command <strong>generate:form:alter</strong> we could generate an implementation of hook hoo_form_alter in any desired module, let show you who to execute this command avoiding interactive mode</p>
+
+<pre><code>$ drupal generate:form:alter  --module="testing" --inputs="name:name type:textfield label:Name options: description: maxlength:64 size:64 default_value: weight:0" --no-interaction
+</code></pre>
+
+<p>As result, we will get the following code:</p>
+
+<pre><code>use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter() on behalf of testing.module.
+ */
+function testing_form_alter(&amp;$form, FormStateInterface $form_state, $form_id) {
+    // Change form id here
+    if ($form_id == 'form_test_alter_form') {
+        drupal_set_message('form_test_form_alter() executed.');
+
+        $form['name'] = array(
+          '#type' =&gt; 'textfield',
+          '#title' =&gt; t('Name'),
+          '#description' =&gt; t(''),
+          '#maxlength' =&gt; 64,
+          '#size' =&gt; 64,
+          '#weight' =&gt; '0',
+        );
+
+    }
+}
+</code></pre>
+
+<p>Checking out, the code above we can see that is just an example, and you need to change the proper form id, but, at least, we have a starting point and example about how to add new form elements.</p>
+
+<h1>Generate a form alter using webprofiler.</h1>
+
+<h2>Installing and enabling Webprofiler.</h2>
+
+<p>Firstly, you need to get the latest version of devel module, because as I said before, webprofiler is a submodule of devel. Let's do that using <strong>Drupal Console</strong>.</p>
+
+<pre><code>$ drupal module:download devel --latest
+</code></pre>
+
+<p>Secondly, just enable the webprofiler module as you can see in the following snippet.</p>
+
+<pre><code>$ drupal module:install webprofiler
+</code></pre>
+
+<h2>Generating a form alter using Webprofiler</h2>
+
+<p>After enabling the module we just need to navigate to your website visiting the pages with forms we can to alter, when Webprofiler is installed you will get a toolbar at the bottom as you can see in the following image.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal_webprofiler.png"/></p>
+
+<p>Now, If we want to include an extra field in theme configuration, we just need to visit page http://example.comv/admin/appearance/settings/bartik tp store form information in Webprofiler inventory.</p>
+
+<p>Using the command <strong>generate:form:alter</strong> but now in interactive mode, the command will detect that webprofiler module is installed, and we will provide us a list of form id available and give us the option to remove some fields from form, as you can check out in the following image.</p>
+
+<pre><code>drupal generate:form:alter --module=testing
+</code></pre>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/console_generate_webprofiler.png"/></p>
+
+<p>The interactive mode provides a list of form ids available; you can use the arrows on your keyboard to navigate through options available.</p>
+
+<p>The code generated now will be more precise and as you can see using the Webprofiler inventory we could decide to remove some form elements and still include new ones. The code generated will be similar to the following snippet.</p>
+
+<pre><code>use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter() on behalf of testing.module.
+ * @see \Drupal\system\Form\ThemeSettingsForm method buildForm at core/modules/system/src/Form/ThemeSettingsForm.php
+ */
+function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface $form_state) {
+    drupal_set_message('testing_form_system_theme_settings_alter() executed.');
+
+    $form['color']['#access'] = FALSE;
+
+}
+</code></pre>
+
+<p>As you can see the sky is the limit we can create commands to do a lot of magic using Webprofiler inventory.</p>
+
+<p>I hope do you found this article useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-be-the-same-in-drupal-8-after-using-webprofiler</link>
+                <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-be-the-same-in-drupal-8-after-using-webprofiler</guid>
             </item>
             </channel>
 </rss>
