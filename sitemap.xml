@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 01 Feb 2016 13:51:33 +0000</pubDate>
+            <pubDate>Wed, 03 Feb 2016 15:50:50 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 01 Feb 2016 13:51:33 +0000</pubDate>
+            <pubDate>Wed, 03 Feb 2016 15:50:50 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4682,7 +4682,7 @@ print_r($ticket);
 <li>Seoul, South Korea / Mar 7th - Mar 13th &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
 <li>Tokyo, Japan / Mar 14th - Mar 18th &#8594; Drupal Meetup </li>
 <li>Osaka, Japan / Mar 19th - Mar 22th &#8594; Drupal Meetup </li>
-<li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://groups.drupal.org/node/499003">DrupalCamp</a> </li>
+<li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
 <li>Chongqing, China / Apr 11st - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
 <li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
@@ -4786,7 +4786,7 @@ foreach($cids as $cid) {
 <li>Seul, Corea del sur / Mar 7th - Mar 13th &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
 <li>Tokio, Japon / Mar 14th - Mar 18th &#8594; Drupal Meetup </li>
 <li>Osaka, Japon / Mar 19th - Mar 22th &#8594; Drupal Meetup </li>
-<li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://groups.drupal.org/node/499003">DrupalCamp</a> </li>
+<li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
 <li>Chongqing, China / Apr 11st - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
 <li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
@@ -4810,7 +4810,7 @@ foreach($cids as $cid) {
             <guid>http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</guid>
         </item>
                 <item>
-            <title>Form altering will not be be the same in Drupal 8 after using Webprofiler</title>
+            <title>Form altering will not be the same in Drupal 8 after using Webprofiler</title>
             <description><![CDATA[<p>One of the most common tasks as a Drupal developer is alter a form created by Drupal core of by a contrib module to 
 enable us to include our business logic or  just remove something annoying for our clients.</p>
 
@@ -4920,9 +4920,9 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>I hope do you found this article useful.</p>
 ]]></description>
-            <link>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-be-the-same-in-drupal-8-after-using-webprofiler</link>
+            <link>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler</link>
             <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-be-the-same-in-drupal-8-after-using-webprofiler</guid>
+            <guid>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler</guid>
         </item>
             </channel>
 </rss>
