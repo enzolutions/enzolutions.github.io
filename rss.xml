@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 08 Feb 2016 16:49:19 +0000</pubDate>
+                <pubDate>Mon, 08 Feb 2016 16:57:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 08 Feb 2016 16:49:19 +0000</pubDate>
+                <pubDate>Mon, 08 Feb 2016 16:57:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4940,7 +4940,7 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>Finalmente, decidí honrar mis promesas, y organize la gira <a href="http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias/">La vuelta al mundo Drupal en 120 días</a>. El objetivo principal de este viaje es la promoción de Drupal 8, del proyecto <a href="http://drupalconsole.com">Drupal console</a> y estar en contacto con las comunidades para aprender sobre que necesitan para hacer crecer su comunidad y cómo las personas desde el exterior pueden tratar de ayudarles a crecer como comunidad.</p>
 
-<p>Yo ya empecé el viaje visitando las comunidades en New York, EE.UU., India, Singapur, Vietnam, Corea del Sur y Japón. Todavía me restan siete países y 11 ciudades como parte de la gira. Pero, mi aprendizaje acerca de las comunidades comenzó meses antes de que tomara mi primer vuelo, por supuesto, tenía que hablar y estar en constante comunicación con las comunidades locales, esta parte fue difícil ya que en algunos países debido a su forma de ser las comunidades son muy cerradas con respecto a su relación con el resto de las comunidades de Drupal en todo el mundo.</p>
+<p>Yo ya empecé el viaje visitando las comunidades en New York, EE.UU., India, Singapur, Vietnam, Corea del Sur y Japón. Todavía me restan siete países y 11 ciudades como parte de la gira. Pero, mi aprendizaje acerca de las comunidades comenzó meses antes de que tomara mi primer vuelo, por supuesto, tenía que hablar y estar en constante comunicación con las comunidades locales, esta parte fue difícil ya que en algunos países las comunidades son muy cerradas y su relación con el resto de las comunidades  Drupal alrededor del mundo es casí nula.</p>
 
 <p>Lo que pude extraer de esas comunicaciones fueron las siguientes ideas.</p>
 
