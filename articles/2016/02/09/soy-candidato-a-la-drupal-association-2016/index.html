@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>Form altering will not be the same in Drupal 8 after using Webprofiler</title>
+    <title>Soy candidato a la Drupal Association 2016</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -133,138 +133,87 @@
 
   <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler" rel="bookmark" title="Form altering will not be the same in Drupal 8 after using Webprofiler">Form altering will not be the same in Drupal 8 after using Webprofiler</a></h1>
+          <h1><a href="http://enzolutions.com/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016" rel="bookmark" title="Soy candidato a la Drupal Association 2016">Soy candidato a la Drupal Association 2016</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://enzolutions.com/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://enzolutions.com/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://enzolutions.com/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p>One of the most common tasks as a Drupal developer is alter a form created by Drupal core of by a contrib module to 
-enable us to include our business logic or  just remove something annoying for our clients.</p>
+    <p>Por segunda vez me presento al proceso de elecciones para <strong>Director at Large</strong> dentro de la Asociación Drupal, para elegir a un candidato de la comunidad a su junta directiva por un periodo de dos años.</p>
 
-<p>In Drupal 8 we still have to the hook <a href="https://api.drupal.org/api/drupal/core%21lib%21Drupal%21Core%21Form%21form.api.php/function/hook_form_alter/8">hook_form_alter</a>, I know, I know the whole idea of Drupal 8 is to remove hooks, but we still have some of them around.</p>
+<p>A continuación quiero presentarles mi motiviación.</p>
 
-<p>But, this article is not about to discuss that hook must exist or not, Is there and we have to use until is replaced by something else.</p>
+<p><a href="https://assoc.drupal.org/election/2016-director-large-election/candidate/enzo">English version</a></p>
 
-<p>Doing a form alter require a one significant and vital information the <strong>FORM_ID</strong>. Usually, we can get this information implementing a generic form alter and print all form_ids loaded and choose the desired one, or, check in form source code to verify the id in method <strong>getFormId</strong> as you can see in the following method</p>
+<h1>Motivacion.</h1>
 
-<pre><code>  /**
-   * {@inheritdoc}
-   */
-  public function getFormId() {
-    return 'search_block_form';
-  }
+<p>El año pasado propuse mi nombre en las elecciones para este mismo cargo, desafortunadamente no conseguí el apoyo suficiente pero alcance la <a href="https://assoc.drupal.org/blog/holly.ross.drupal/2015-large-election-data-released">3ra posición</a>.</p>
 
-</code></pre>
+<p>A pesar de que yo no conseguí ser elegido; Hice todo lo posible para encontrar una manera de cumplir mis promesas de campaña, acerca de buscar formas de promover Drupal en comunidades de países en via desarrollo; animándoles a resolver sus propios problemas, sin perder el vínculo con la comunidad internacional de Drupal.</p>
 
-<p>That doesn't look like an old fashion way? indeed, it's the old fashion way. Drupal 8 allow us to have excellent third party tools, and I want to talk about <a href="https://www.drupal.org/project/devel">Webprofiler</a>, which in combination with the <a href="http://drupalcosole.com">Drupal Console</a> project, provide us a clever way to determine and generate our form alter, fast and efficient.</p>
+<p>Finalmente, decidí honrar mis promesas, y organize la gira <a href="http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias/">La vuelta al mundo Drupal en 120 días</a>. El objetivo principal de este viaje es la promoción de Drupal 8, del proyecto <a href="http://drupalconsole.com">Drupal console</a> y estar en contacto con las comunidades para aprender sobre que necesitan para hacer crecer su comunidad y cómo las personas desde el exterior pueden tratar de ayudarles a crecer como comunidad.</p>
 
-<p><a href="https://www.drupal.org/u/lussoluca">Lussoluca</a> created the webprofiler module, and is an effective implementation of <a href="http://symfony.com/doc/current/cookbook/profiler/index.html">Symfony profiler</a>, using this component to write and extension to provide the Drupal things that Symfony profiler ignore. Webprofiler start as an independent project at <a href="https://www.drupal.org/project/webprofiler">https://www.drupal.org/project/webprofiler</a>, but the last December was merged as a submodule of Devel module; honestly I don't understand because there is not any technical dependency, IMHO webprofiler must have an independent project.</p>
+<p>Yo ya empecé el viaje visitando las comunidades en New York, EE.UU., India, Singapur, Vietnam, Corea del Sur y Japón. Todavía me restan siete países y 11 ciudades como parte de la gira. Pero, mi aprendizaje acerca de las comunidades comenzó meses antes de que tomara mi primer vuelo, por supuesto, tenía que hablar y estar en constante comunicación con las comunidades locales, esta parte fue difícil ya que en algunos países debido a su forma de ser las comunidades son muy cerradas con respecto a su relación con el resto de las comunidades de Drupal en todo el mundo.</p>
 
-<h1>Generate a standard form alter.</h1>
+<p>Lo que pude extraer de esas comunicaciones fueron las siguientes ideas.</p>
 
-<p>Anyhow, let me show you how to generate a form alter using the <strong>Drupal Console</strong> without <strong>Webprofiler</strong>.</p>
+<ul>
+<li><p>Ellos están mas que felices y complacidos de recibir a los visitantes que quieran aprender de sus comunidades y traer algo para compartir en términos de conocimiento.</p></li>
+<li><p>Lamentablemente ellos se sienten aislados y abandonados de la Asociación de Drupal; básicamente, están viviendo islas, usando un CMS que encontraron casi por accidente.</p></li>
+</ul>
 
-<p>Using the command <strong>generate:form:alter</strong> we could generate an implementation of hook hoo_form_alter in any desired module, let show you who to execute this command avoiding interactive mode</p>
+<p>Entonces, ¿qué ideas o proyectos voy a intentar apoyar dentro de la  Asociación de Drupal?</p>
 
-<pre><code>$ drupal generate:form:alter  --module="testing" --inputs="name:name type:textfield label:Name options: description: maxlength:64 size:64 default_value: weight:0" --no-interaction
-</code></pre>
+<ul>
+<li><p>Librar los multi idiomas en http://drupal.org, debemos hablar tantos idiomas como sea posible. La falta de contenido multilingüe es la primera queja que he encontrado después de hablar con personas de países que no hablan inglés. Se puede decir que esto es costoso, pero las comunidades están dispuestos a proporcionar ayuda a hacerlo posible.</p></li>
+<li><p>Establecer una herramienta para permite a las personas conectarse y estar en sintonía con las comunidades locales, estoy pensando en algo entre, g.d.o y http://drupical.com</p></li>
+<li><p>Incluir un cambio al código de conducta de la comunidad Drupal para evitar que los usuarios traten de forzar a otros usuarios a solo usar Ingles. Actualmente, los usuarios que tratan de decir algo sin usar el Inglés, inmediatamente recibir una notificación no oficial de que sólo se permite el Inglés.</p></li>
+<li><p>Definir becas que permita a conferencistas formar personas en países en via de desarrollo, especialmente si hablan el idioma nativo.</p></li>
+</ul>
 
-<p>As result, we will get the following code:</p>
+<p>Si consigo una posición en la Asociación Drupal, voy a apoyar proyectos en esa dirección. Basado en mi experiencia de 8 años trabajando con Drupal como un desarrollador, Líder de la comunidad y  co-propietario de una empresa Drupal en un país en via de desarrollo; quiero traer a Asociación Drupal una perspectiva diferente sobre nuestros retos e ideas sobre cómo mejorar la presencia de Drupal en América Latina , África y Asia.</p>
 
-<pre><code>use Drupal\Core\Form\FormStateInterface;
+<h1>Experiencia</h1>
 
-/**
- * Implements hook_form_alter() on behalf of testing.module.
- */
-function testing_form_alter(&amp;$form, FormStateInterface $form_state, $form_id) {
-    // Change form id here
-    if ($form_id == 'form_test_alter_form') {
-        drupal_set_message('form_test_form_alter() executed.');
+<p>Me encontré con Drupal cuando trabaja en un proyecto muy difícil, simplemente porque los plazos eran muy  cortos (sorpresa, sorpresa) y no tenía idea de cómo empezar a trabajar en esa cosa llamada Drupal. Pero una vez que entendí el CMS, tuve la oportunidad de abrir el camino y enseñar a otros.</p>
 
-        $form['name'] = array(
-          '#type' =&gt; 'textfield',
-          '#title' =&gt; t('Name'),
-          '#description' =&gt; t(''),
-          '#maxlength' =&gt; 64,
-          '#size' =&gt; 64,
-          '#weight' =&gt; '0',
-        );
+<p>El Proceso fue muy frustrante, pero el Proyecto fue Entregado con un ligero retraso; como resultado termine amando la plataforma de CMS.</p>
 
-    }
-}
-</code></pre>
+<p>Mi primer evento de la comunidad fue en 2009 en la 1ª Drupal Camp Centroamericano en Managua, Nicaragua donde pude contribuir presentando dos conferencias y aprendi mucho sobre la comunidad Drupal y el grado de fiabilidad del producto.</p>
 
-<p>Checking out, the code above we can see that is just an example, and you need to change the proper form id, but, at least, we have a starting point and example about how to add new form elements.</p>
+<p>Después de dos años haciendo Drupal de forma independiente, tomé la decisión de iniciar un negocio con mi amigo <strong>Kenny Abarca</strong>, la nuestra fue la primera empresa Drupal en Costa Rica en el 2010. <a href="http://anexusit.com">Anexus</a> y creo que de Centroamérica. En *Anexus** lidero el aspecto técnico de la empresa, pero, tengo que usar muchos sombreros, siendo CTO mi título oficial. Uno de mis papeles favoritos es sin embargo, el de desarrollador Drupal, donde tengo a motivar, liderar, supervisar y animar a mis compañeros al mismo tiempo que programo al menos 8 horas cada día.</p>
 
-<h1>Generate a form alter using webprofiler.</h1>
+<p>Justo después del Drupal Camp Centroamericano en Nicaragua, empecé a organizar Drupal Meetup en Costa Rica, así como la construcción de la comunidad Drupal desde la base. Como resultado, se celebró la 1ª Drupal Camp en Costa Rica (3ª Drupalcamp Centroamericano) a finales de 2011. Hemos organizado ya 5 DrupalCamp desde la fecha.</p>
 
-<h2>Installing and enabling Webprofiler.</h2>
+<p>Por último, la comunidad Drupal decidió crear una ONG llamada "Drupal Costa Rica" donde tengo el título Presidente. El uso de la ONG se centrara en facilitar las tareas de organización de las actividades de Drupal en Costa Rica.</p>
 
-<p>Firstly, you need to get the latest version of devel module, because as I said before, webprofiler is a submodule of devel. Let's do that using <strong>Drupal Console</strong>.</p>
+<h1>Acerca de mi</h1>
 
-<pre><code>$ drupal module:download devel --latest
-</code></pre>
+<p>Co-fundador de la empresa Drupalera <a href="http://anexusit.com">Anexus</a>. Tengo 39 años, casado y padre de dos hijos: Axel y Zoe. Me entretengo dando largos paseos por los pasillos de los Drupal Grupos y tengo la pasión para armar eventos para la comunidad.</p>
 
-<p>Secondly, just enable the webprofiler module as you can see in the following snippet.</p>
+<p>Soy un colombiano de nacimiento y Costarricense por elección; He pasado los últimos 14 años viviendo en esa estrecha franja de tierra entre la América del Norte y del Sur.</p>
 
-<pre><code>$ drupal module:install webprofiler
-</code></pre>
+<p>Me metí en Drupal 5 a principios de 2008, después de trabajar durante muchos años la construcción de sitios web desde cero usando PHP y después de contribuir en un par de proyectos de PHP con la intención de automatizar la forma en que se desarrollaron sitios web.</p>
 
-<h2>Generating a form alter using Webprofiler</h2>
-
-<p>After enabling the module we just need to navigate to your website visiting the pages with forms we can to alter, when Webprofiler is installed you will get a toolbar at the bottom as you can see in the following image.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal_webprofiler.png"/></p>
-
-<p>Now, If we want to include an extra field in theme configuration, we just need to visit page http://example.comv/admin/appearance/settings/bartik tp store form information in Webprofiler inventory.</p>
-
-<p>Using the command <strong>generate:form:alter</strong> but now in interactive mode, the command will detect that webprofiler module is installed, and we will provide us a list of form id available and give us the option to remove some fields from form, as you can check out in the following image.</p>
-
-<pre><code>drupal generate:form:alter --module=testing
-</code></pre>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/console_generate_webprofiler.png"/></p>
-
-<p>The interactive mode provides a list of form ids available; you can use the arrows on your keyboard to navigate through options available.</p>
-
-<p>The code generated now will be more precise and as you can see using the Webprofiler inventory we could decide to remove some form elements and still include new ones. The code generated will be similar to the following snippet.</p>
-
-<pre><code>use Drupal\Core\Form\FormStateInterface;
-
-/**
- * Implements hook_form_FORM_ID_alter() on behalf of testing.module.
- * @see \Drupal\system\Form\ThemeSettingsForm method buildForm at core/modules/system/src/Form/ThemeSettingsForm.php
- */
-function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface $form_state) {
-    drupal_set_message('testing_form_system_theme_settings_alter() executed.');
-
-    $form['color']['#access'] = FALSE;
-
-}
-</code></pre>
-
-<p>As you can see the sky is the limit we can create commands to do a lot of magic using Webprofiler inventory.</p>
-
-<p>I hope do you found this article useful.</p>
+<p>En resumen, soy un tipo que sabe Drupal desde tres puntos de vista diferentes, desde el punto de desarrollador, líder comunitario y propietario de la empresa de Drupal.</p>
 
     <hr />
     <footer role="contentinfo">
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                                        <a href="http://enzolutions.com/tags/drupal">drupal</a>,                                        <a href="http://enzolutions.com/tags/php">php</a>,                                        <a href="http://enzolutions.com/tags/drupal-8">drupal 8</a>,                                        <a href="http://enzolutions.com/tags/form">form</a>,                                        <a href="http://enzolutions.com/tags/webprofiler">webprofiler</a>                                    </li>
+                                        <a href="http://enzolutions.com/tags/drupal">drupal</a>,                                        <a href="http://enzolutions.com/tags/elections">elections</a>                                    </li>
                                         <li>
                     <i class="fa fa-folder"></i>
                                         <a href="http://enzolutions.com/categories/articles">articles</a>                                    </li>
