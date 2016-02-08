@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 08 Feb 2016 16:57:10 +0000</pubDate>
+            <pubDate>Mon, 08 Feb 2016 20:54:42 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 08 Feb 2016 16:57:10 +0000</pubDate>
+            <pubDate>Mon, 08 Feb 2016 20:54:42 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4942,20 +4942,20 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>Yo ya empecé el viaje visitando las comunidades en New York, EE.UU., India, Singapur, Vietnam, Corea del Sur y Japón. Todavía me restan siete países y 11 ciudades como parte de la gira. Pero, mi aprendizaje acerca de las comunidades comenzó meses antes de que tomara mi primer vuelo, por supuesto, tenía que hablar y estar en constante comunicación con las comunidades locales, esta parte fue difícil ya que en algunos países las comunidades son muy cerradas y su relación con el resto de las comunidades  Drupal alrededor del mundo es casí nula.</p>
 
-<p>Lo que pude extraer de esas comunicaciones fueron las siguientes ideas.</p>
+<p>Lo que pude extraer de esas comunicaciones fueron las siguientes ideas:</p>
 
 <ul>
-<li><p>Ellos están mas que felices y complacidos de recibir a los visitantes que quieran aprender de sus comunidades y traer algo para compartir en términos de conocimiento.</p></li>
-<li><p>Lamentablemente ellos se sienten aislados y abandonados de la Asociación de Drupal; básicamente, están viviendo islas, usando un CMS que encontraron casi por accidente.</p></li>
+<li><p>Ellos están más que felices y complacidos de recibir a los visitantes que quieran aprender de sus comunidades y traer algo para compartir en términos de conocimiento.</p></li>
+<li><p>Lamentablemente ellos se sienten aislados y abandonados de la Asociación de Drupal; básicamente, están viviendo en islas, usando un CMS que se encontraron casi por accidente.</p></li>
 </ul>
 
 <p>Entonces, ¿qué ideas o proyectos voy a intentar apoyar dentro de la  Asociación de Drupal?</p>
 
 <ul>
 <li><p>Librar los multi idiomas en http://drupal.org, debemos hablar tantos idiomas como sea posible. La falta de contenido multilingüe es la primera queja que he encontrado después de hablar con personas de países que no hablan inglés. Se puede decir que esto es costoso, pero las comunidades están dispuestos a proporcionar ayuda a hacerlo posible.</p></li>
-<li><p>Establecer una herramienta para permite a las personas conectarse y estar en sintonía con las comunidades locales, estoy pensando en algo entre, g.d.o y http://drupical.com</p></li>
-<li><p>Incluir un cambio al código de conducta de la comunidad Drupal para evitar que los usuarios traten de forzar a otros usuarios a solo usar Ingles. Actualmente, los usuarios que tratan de decir algo sin usar el Inglés, inmediatamente recibir una notificación no oficial de que sólo se permite el Inglés.</p></li>
-<li><p>Definir becas que permita a conferencistas formar personas en países en via de desarrollo, especialmente si hablan el idioma nativo.</p></li>
+<li><p>Establecer una herramienta que permita a las personas contactarse y estar en sintonía con las comunidades locales, estoy pensando en algo entre, g.d.o y http://drupical.com</p></li>
+<li><p>Incluír un cambio al código de conducta de la comunidad Drupal para evitar que los usuarios traten de forzar a otros usuarios a solo usar Inglés. Actualmente, los usuarios que tratan de decir algo sin usar el Inglés, inmediatamente recibir una notificación no oficial de que sólo se permite el Inglés.</p></li>
+<li><p>Definir becas que permita a conferencistas capacitar personas en países en via de desarrollo, especialmente si hablan el idioma nativo.</p></li>
 </ul>
 
 <p>Si consigo una posición en la Asociación Drupal, voy a apoyar proyectos en esa dirección. Basado en mi experiencia de 8 años trabajando con Drupal como un desarrollador, Líder de la comunidad y  co-propietario de una empresa Drupal en un país en via de desarrollo; quiero traer a Asociación Drupal una perspectiva diferente sobre nuestros retos e ideas sobre cómo mejorar la presencia de Drupal en América Latina , África y Asia.</p>
