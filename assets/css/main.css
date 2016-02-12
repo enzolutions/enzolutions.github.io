@@ -175,7 +175,11 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     margin-bottom: 1.5em;
-    width: 100%
+    /*width: 100%*/
+}
+
+table td {
+    padding-right: 10px;
 }
 
 ::-moz-selection {
