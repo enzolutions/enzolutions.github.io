@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 14 Feb 2016 01:23:23 +0000</pubDate>
+                <pubDate>Sun, 14 Feb 2016 01:59:15 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 14 Feb 2016 01:23:23 +0000</pubDate>
+                <pubDate>Sun, 14 Feb 2016 01:59:15 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -5133,7 +5133,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>The traffic looks crazy and in any NatGeo program about India, everybody was honking, sounds like the rules have an enormous gray area, but people didn't stress a lot, so the system just works for them. After 40 minutes I get my place safe &amp; sound.</p>
 
-<p>To end my day I decided to try a small restaurant to my Airbnb, recommended by my host caretaker, 50% of waiters were barefoot, but when you are in Rome...</p>
+<p>To end my day I decided to try a small restaurant near to my Airbnb, recommended by my host caretaker, 50% of waiters were barefoot, but when you are in Rome...</p>
 
 <p>I order a Coconut soup with coriander, lamb using Dhaba style and lemon rice, total 270 rupees.</p>
 
