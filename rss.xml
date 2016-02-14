@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 14 Feb 2016 19:04:41 +0000</pubDate>
+                <pubDate>Sun, 14 Feb 2016 19:12:19 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 14 Feb 2016 19:04:41 +0000</pubDate>
+                <pubDate>Sun, 14 Feb 2016 19:12:19 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -5185,6 +5185,8 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <p>The ferry takes about 20 minutes to rest the destination, apart of Global Pagoda there are two entertainment parks, nobody will ask you for the ticket inside the ferry, but when you walk towards to pagoda there is a guy how to check your ticket and when you return the same.</p>
 
 <p>The global pagoda was finished at 2009, and it's a Budish temple, even I am not a religion person I could appreciate how beautiful is and look like is important for a lot of  people.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/global-pagoda.jpg"/></p>
 
 <p>You don't have to pay to see the pagoda, but only in the border of the pagoda, due inside there are always some pupils doing meditation with their guru. Outside there are some free guides providing information about why and who the pagodas was built.</p>
 
