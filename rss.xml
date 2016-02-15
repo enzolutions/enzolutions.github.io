@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Welcome to [enzo]lutions</title>
-        <link>http://enzolutions.com</link>
+        <link>http://localhost:4000</link>
         <description>RSS feed for Welcome to [enzo]lutions</description>
-        <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:4000/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
                 <title>Sample Post</title>
                 <description><![CDATA[Below is just about everything you'll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
@@ -73,9 +73,9 @@ Make any link standout more when applying the `.btn` and `.btn-default` classes.
 
 <div><a href="#" class="btn btn-default">This is a button</a></div>
 ]]></description>
-                <link>http://enzolutions.com</link>
+                <link>http://localhost:4000</link>
                 <pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com</guid>
+                <guid>http://localhost:4000</guid>
             </item>
                     <item>
                 <title>My blog is alive again!</title>
@@ -91,9 +91,9 @@ Make any link standout more when applying the `.btn` and `.btn-default` classes.
 
 <p>See you around.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again</link>
+                <link>http://localhost:4000/articles/2014/05/21/my-blog-is-alive-again</link>
                 <pubDate>Wed, 21 May 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/05/21/my-blog-is-alive-again</guid>
+                <guid>http://localhost:4000/articles/2014/05/21/my-blog-is-alive-again</guid>
             </item>
                     <item>
                 <title>How to configure MySQL to import large database</title>
@@ -130,9 +130,9 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 
 <p>You can check my version of my.cnf <a target="_blank" href="http://7sabores.com/sites/default/files/my.cnf_.txt">here</a></p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database</link>
+                <link>http://localhost:4000/articles/2014/05/28/how-to-configure-mysql-to-import-large-database</link>
                 <pubDate>Wed, 28 May 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/05/28/how-to-configure-mysql-to-import-large-database</guid>
+                <guid>http://localhost:4000/articles/2014/05/28/how-to-configure-mysql-to-import-large-database</guid>
             </item>
                     <item>
                 <title>What is Cross-Origin Resource Sharing (CORS)</title>
@@ -142,7 +142,7 @@ ERROR 2006 (HY000) at line 6565: MySQL server has gone away
 
 <p>Lets imagine the following scenery: we have a frontend application using the domain http://a.com and this application wants to use data provided by a  backend site located in domain http://b.com. For security this type of communication is blocked and the end user will be only able to get the information from http://a.com, this scenario is exemplified in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/crossdomain.png"/></p>
+<p><img src="http://localhost:4000/assets/img/crossdomain.png"/></p>
 
 <p>To enable this kind of communication is requiered that your backed server (http//b.com) returns the specific HTTP Headers to enable CORS comunication. Below you can see an example of HTTP Header required.</p>
 
@@ -154,9 +154,9 @@ Access-Control-Allow-Origin:http://localhost:8080
 
 <p>The header <em>Access-Control-Allow-Credentials</em> is only used if your request require some kind of authentication. You can read more information about all HTTP Headers at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Access Controls - CORS</a>.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors</link>
+                <link>http://localhost:4000/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors</link>
                 <pubDate>Sat, 31 May 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors</guid>
+                <guid>http://localhost:4000/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors</guid>
             </item>
                     <item>
                 <title>What is and how it works RequireJS</title>
@@ -306,19 +306,19 @@ require( ["MyApp"], function (MyApp) {
 
 <p>It might seem a waste of time doing it this way as it is in the same file, but the idea is to create a module for file and using the configuration of RequireJS load all the libraries that define modules and then use these modules in our application.</p>
 
-<p>You can download the <a target="_blank" href="http://enzolutions.com/projects/marionettejs_skeleton_app">Marionette App Skeleton</a> repository which implements the concepts discussed here.</p>
+<p>You can download the <a target="_blank" href="http://localhost:4000/projects/marionettejs_skeleton_app">Marionette App Skeleton</a> repository which implements the concepts discussed here.</p>
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 14 Feb 2016 19:12:19 +0000</pubDate>
-                <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
+                <link>http://localhost:4000/posts/2014-06-1-what_how_works_requirejs</link>
+                <pubDate>Mon, 15 Feb 2016 19:11:29 +0000</pubDate>
+                <guid>http://localhost:4000/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
                 <title>Yeoman Generator: Marionette JS + Drupal</title>
                 <description><![CDATA[<p><a href="http://yeoman.io">Yeoman</a> <a href="http://marionettejs.com">MarionetteJS</a> + <a href="drupical.org">Drupal</a> generator</p>
 
-<p>Today I release the version 0.1.0-beta of <a href="http://enzolutions.com/projects/yeoman_generator_marionette_drupal">Yeoman Generator: Marionette + Drupal</a>.</p>
+<p>Today I release the version 0.1.0-beta of <a href="http://localhost:4000/projects/yeoman_generator_marionette_drupal">Yeoman Generator: Marionette + Drupal</a>.</p>
 
 <p>If you want to create your own version of this generator, you can fork or download my version at</p>
 
@@ -333,13 +333,13 @@ require( ["MyApp"], function (MyApp) {
 
 <p>Includes scaffolding commands to create templates, models, collections, views and layouts.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal</link>
+                <link>http://localhost:4000/articles/2014/06/16/yeoman-generator-marionette-js-drupal</link>
                 <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/06/16/yeoman-generator-marionette-js-drupal</guid>
+                <guid>http://localhost:4000/articles/2014/06/16/yeoman-generator-marionette-js-drupal</guid>
             </item>
                     <item>
                 <title>Introduction to Grunt</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/grunt-logo.png"/> Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/grunt-logo.png"/> Today I come to speak of some of those tools that are part of the set of Hot and Sexy for all developers speak nowadays, much to our regret if another tool that apparently there is more to learn: P.</p>
 
 <p>From my own experience I know how difficult it is to have enough time to learn all these Sexy tools, I'll try to explain it in the most practical and easiest way possible.</p>
 
@@ -560,9 +560,9 @@ Done, without errors.
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt</link>
+                <link>http://localhost:4000/articles/2014/06/18/introduction-to-grunt</link>
                 <pubDate>Wed, 18 Jun 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/06/18/introduction-to-grunt</guid>
+                <guid>http://localhost:4000/articles/2014/06/18/introduction-to-grunt</guid>
             </item>
                     <item>
                 <title>Routing and Controlling with MarionetteJS</title>
@@ -584,7 +584,7 @@ Done, without errors.
 <li>And much, much more</li>
 </ul>
 
-<p>In this example I will take the structure of libraries and dependencies explained in the blog entry <a target="_blank" href="http://enzolutions.com/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a> to create a MarionetteJS application.</p>
+<p>In this example I will take the structure of libraries and dependencies explained in the blog entry <a target="_blank" href="http://localhost:4000/articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a> to create a MarionetteJS application.</p>
 
 <h1>1. Router Module.</h1>
 
@@ -721,9 +721,9 @@ MyApp.addInitializer(function(options) {
 
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
-                <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 14 Feb 2016 19:12:19 +0000</pubDate>
-                <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
+                <link>http://localhost:4000/posts/2014-06-2-routing_controlling_marionettejs</link>
+                <pubDate>Mon, 15 Feb 2016 19:11:29 +0000</pubDate>
+                <guid>http://localhost:4000/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
                 <title>How to configure MySQL to import large database</title>
@@ -754,15 +754,15 @@ $
 
 <p>Then you just need restart the MySQL server and try to import the database again.</p>
 
-<p>You can find my version of my.cnf <a target="_blank" href="http://enzolutions.com/assets/attaches/my.cnf.txt">here</a>.</p>
+<p>You can find my version of my.cnf <a target="_blank" href="http://localhost:4000/assets/attaches/my.cnf.txt">here</a>.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database</link>
+                <link>http://localhost:4000/articles/2014/07/03/how-to-configure-mysql-to-import-large-database</link>
                 <pubDate>Thu, 03 Jul 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/07/03/how-to-configure-mysql-to-import-large-database</guid>
+                <guid>http://localhost:4000/articles/2014/07/03/how-to-configure-mysql-to-import-large-database</guid>
             </item>
                     <item>
                 <title>Introduction to Bower</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> Continuing with the serie <em>Hot &amp; Sexy tools</em> available these days for web developers started with the entry of Blog <a target="_blank" href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/bower-logo.png"/> Continuing with the serie <em>Hot &amp; Sexy tools</em> available these days for web developers started with the entry of Blog <a target="_blank" href="http://localhost:4000/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a>, now I come to speak of <a target="_blank" href="http://bower.io/">Bower</a>.</p>
 
 <p>Bower by definition is a package manager for the web, now that simple English means a tool that allows us to define required libraries in our web applications and the bower detect the dependencies of required packages.</p>
 
@@ -880,9 +880,9 @@ bower install       jQuery#2.1.1
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/07/08/introduction-to-bower</link>
+                <link>http://localhost:4000/articles/2014/07/08/introduction-to-bower</link>
                 <pubDate>Tue, 08 Jul 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/07/08/introduction-to-bower</guid>
+                <guid>http://localhost:4000/articles/2014/07/08/introduction-to-bower</guid>
             </item>
                     <item>
                 <title>Mi Tribu</title>
@@ -908,9 +908,9 @@ bower install       jQuery#2.1.1
 
 <p>Pura Vida.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/08/14/mi-tribu</link>
+                <link>http://localhost:4000/articles/2014/08/14/mi-tribu</link>
                 <pubDate>Thu, 14 Aug 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/08/14/mi-tribu</guid>
+                <guid>http://localhost:4000/articles/2014/08/14/mi-tribu</guid>
             </item>
                     <item>
                 <title>How to Generate TOC in Github/BitBucket projects</title>
@@ -947,13 +947,13 @@ bower install       jQuery#2.1.1
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-githubbitbucket-projects</link>
+                <link>http://localhost:4000/articles/2014/08/24/how-to-generate-toc-in-githubbitbucket-projects</link>
                 <pubDate>Sun, 24 Aug 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/08/24/how-to-generate-toc-in-githubbitbucket-projects</guid>
+                <guid>http://localhost:4000/articles/2014/08/24/how-to-generate-toc-in-githubbitbucket-projects</guid>
             </item>
                     <item>
                 <title>Grunt: How to list available tasks</title>
-                <description><![CDATA[<p>In the blog entry <a href="http://enzolutions.com/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a> I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good idea execute tasks that do not know what they do .</p>
+                <description><![CDATA[<p>In the blog entry <a href="http://localhost:4000/articles/2014/06/18/introduction-to-grunt/">Introduction to Grunt</a> I  explained how we could use Grunt to automate tasks, but the only way to detect the available tasks is review the Gruntfile.js file or perform the tasks, but it's not be a good idea execute tasks that do not know what they do .</p>
 
 <p>Fortunately there is a plugin that allows  Grunt toe review tasks available, this plugin is <a href="https://github.com/ben-eb/grunt-available-tasks">grunt-available-tasks</a>. Lets see how we can implement it in our  project.</p>
 
@@ -1008,15 +1008,15 @@ bower install       jQuery#2.1.1
 
 <p>The above command would get an output  similar to the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/grunt-tasks.png"/></p>
+<p><img src="http://localhost:4000/assets/img/grunt-tasks.png"/></p>
 
 <p>The image above was executed within the project <a href="https://github.com/enzolutions/community-bookstore">Community Bookstore</a>. See the full configuration file at <a href="https://github.com/enzolutions/community-bookstore/blob/master/frontend/Gruntfile.js">https://github.com/enzolutions/community-bookstore/blob/master/frontend/Gruntfile.js</a>.</p>
 
 <p>I hope you have been to his liking.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks</link>
+                <link>http://localhost:4000/articles/2014/08/26/grunt-how-to-list-available-tasks</link>
                 <pubDate>Tue, 26 Aug 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/08/26/grunt-how-to-list-available-tasks</guid>
+                <guid>http://localhost:4000/articles/2014/08/26/grunt-how-to-list-available-tasks</guid>
             </item>
                     <item>
                 <title>Understanding Configuration Management in Drupal 8</title>
@@ -1041,7 +1041,7 @@ bower install       jQuery#2.1.1
 
 <p>You don't need install Configuration Management module, because is part of Drupal 8 Core and is already installed when you complete a standard Drupal 8 installation, as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/configuration_management_module_enable.png"/></p>
+<p><img src="http://localhost:4000/assets/img/configuration_management_module_enable.png"/></p>
 
 <p>As you can imagine, you can't disable the Configuration Management module.</p>
 
@@ -1053,7 +1053,7 @@ bower install       jQuery#2.1.1
 
 <p>The administrator of <strong>Devel#1</strong> has to go page: example.com/admin/config/development/configuration/full/export the UI will looks similar to image below.</p>
 
-<p><img src="http://enzolutions.com/assets/img/configuration_management_full_export.png"></p>
+<p><img src="http://localhost:4000/assets/img/configuration_management_full_export.png"></p>
 
 <p>After press the button Export you will get a zip file named <strong>config.tar.gz</strong>, after you uncompress the zip file you will get a config folder with severals files in <a target="_blank" href="http://symfony.com/doc/current/components/yaml/yaml_format.html">YAML</a> format and each one represent a isolate piece of configuration of our site. Below you can a partial list of files created by export.</p>
 
@@ -1104,7 +1104,7 @@ $ sudo chmod -R 755 sites/default/config/staging/
 
 <p>Until here all looks OK, but If you go to the page example.com/admin/config/development/configuration you will get the following error</p>
 
-<p><img src="http://enzolutions.com/assets/img/configuration_management_sync_error.png"/></p>
+<p><img src="http://localhost:4000/assets/img/configuration_management_sync_error.png"/></p>
 
 <p>We will solve this issue in next section.</p>
 
@@ -1148,7 +1148,7 @@ langcode: en
 
 <p>After change the UUID and change the permissions, if you visit again the page example.com/admin/config/development/configuration you will see all changes, deletions, renames, and additions as you can see in the following image:</p>
 
-<p><img src="http://enzolutions.com/assets/img/configuration_management_sync.png"/></p>
+<p><img src="http://localhost:4000/assets/img/configuration_management_sync.png"/></p>
 
 <p>You can review the differences and remove some files from staging folder if you are not happy with the result and finally execute the Import All process.</p>
 
@@ -1161,9 +1161,9 @@ langcode: en
 
 <p>I hope you have found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2014/08/27/understanding-configuration-management-in-drupal-8</link>
                 <pubDate>Wed, 27 Aug 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2014/08/27/understanding-configuration-management-in-drupal-8</guid>
             </item>
                     <item>
                 <title>How to create an interactive command in Node.js</title>
@@ -1349,13 +1349,13 @@ inquirer.prompt(preguntas, function(respuestas) {
 
 <p>Depending on user responses the result will be different, but similar to the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/nodejs_interactive.png"/></p>
+<p><img src="http://localhost:4000/assets/img/nodejs_interactive.png"/></p>
 
 <p>I hope you have found this blog useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js</link>
+                <link>http://localhost:4000/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js</link>
                 <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js</guid>
+                <guid>http://localhost:4000/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js</guid>
             </item>
                     <item>
                 <title>How to enable CORS requests against Drupal 8</title>
@@ -1363,7 +1363,7 @@ inquirer.prompt(preguntas, function(respuestas) {
 
 <p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
 
-<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+<p>The problem I found with <a href="http://localhost:4000/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
 
 <p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
 
@@ -1410,13 +1410,13 @@ Header always set Access-Control-Allow-Headers: Authorization
 
 <p>I expect you have found this entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</link>
+                <link>http://localhost:4000/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</link>
                 <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</guid>
             </item>
                     <item>
                 <title>How to pass parameters to RequireJS modules</title>
-                <description><![CDATA[<p>RequireJS is a great library for managing JavaScript dependencies and create JavaScript modules to encapsulate concepts in your application. If you are totally new with RequiteJS maybe you want to read the post entry <a target='_blank' href="http://enzolutions.com//articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>.</p>
+                <description><![CDATA[<p>RequireJS is a great library for managing JavaScript dependencies and create JavaScript modules to encapsulate concepts in your application. If you are totally new with RequiteJS maybe you want to read the post entry <a target='_blank' href="http://localhost:4000//articles/2014/06/01/what-is-and-how-it-works-requirejs/">What is and how it works RequireJS</a>.</p>
 
 <h1>The Problem</h1>
 
@@ -1522,13 +1522,13 @@ function (Marionette, Communicator) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules</link>
+                <link>http://localhost:4000/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules</link>
                 <pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules</guid>
+                <guid>http://localhost:4000/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules</guid>
             </item>
                     <item>
                 <title>Manage PHP versions with Phpbrew.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://localhost:4000/assets/img/phpbrew.png"/> If you are a PHP developer I'm sure you have been in a situation where you have to maintain several projects and is possible some of them require different version of PHP.</p>
 
 <p>To resolve this situation described above nowadays the common recommendation is install a virtual machine like <a href="https://www.vagrantup.com/" target="_blank">Vagrant</a> or <a href="https://www.docker.com/" target="_blank">Docker</a> and off course works but if you are not a big fan of <em>Virtual Machines</em> like me and specially to only change the PHP version I have good news you can resolve your problems using the project <a href="http://phpbrew.github.io/phpbrew/" target="_blank">Phpbrew</a>.</p>
 
@@ -1702,13 +1702,13 @@ Loaded Configuration File =&gt; ~/.phpbrew/php/php-5.5.10/etc/php.ini
 
 <p>Remove the grep portion to get the whole information.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew</link>
+                <link>http://localhost:4000/articles/2014/10/17/manage-php-versions-with-phpbrew</link>
                 <pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew</guid>
+                <guid>http://localhost:4000/articles/2014/10/17/manage-php-versions-with-phpbrew</guid>
             </item>
                     <item>
                 <title>Apache issues after upgrade to Mac OS X Yosemite.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/mac_osx_yosemite.png"/> Last night I had the <em>brilliant</em> idea of upgrade to latest version of Mac OS X <a href="http://www.apple.com/osx/" target="_blank">Yosemite</a> and the upgrade process itself was slow as usual but without any apparent error.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;" src="http://localhost:4000/assets/img/mac_osx_yosemite.png"/> Last night I had the <em>brilliant</em> idea of upgrade to latest version of Mac OS X <a href="http://www.apple.com/osx/" target="_blank">Yosemite</a> and the upgrade process itself was slow as usual but without any apparent error.</p>
 
 <p>The problems popup when I decide continue the development of <a href="https://github.com/enzolutions/generator-marionette-drupal" target="_blank">Yeoman Marionette Drupal generator</a> against Drupal 8.</p>
 
@@ -1771,17 +1771,17 @@ Include /private/etc/apache2/extra/httpd-vhosts.conf
 &lt;/VirtualHost&gt;
 </code></pre>
 
-<p>After this changes is probable your PHP version require some tweaks, in this case I recommend read the blog entry "<a href="http://enzolutions.com/articles/2014/10/17/manage-php-versions-with-phpbrew">Manage PHP versions with Phpbrew</a>".</p>
+<p>After this changes is probable your PHP version require some tweaks, in this case I recommend read the blog entry "<a href="http://localhost:4000/articles/2014/10/17/manage-php-versions-with-phpbrew">Manage PHP versions with Phpbrew</a>".</p>
 
 <p>I hope you find this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite</link>
+                <link>http://localhost:4000/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite</link>
                 <pubDate>Sun, 19 Oct 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite</guid>
+                <guid>http://localhost:4000/articles/2014/10/19/apache-issues-after-upgrade-to-mac-os-x-yosemite</guid>
             </item>
                     <item>
                 <title>How to validate Bower files.</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/bower-logo.png"/> If we want to enable people to use our libraries via <a href="bower.io" target="_blank">Bower</a> we need to follow some simple steps.</p>
 
 <ul>
 <li>Add a bower.json files to our project.</li>
@@ -1855,9 +1855,9 @@ bowerJson.read('./bower.json', function (err, json) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files</link>
+                <link>http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files</link>
                 <pubDate>Fri, 24 Oct 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/10/24/how-to-validate-bower-files</guid>
+                <guid>http://localhost:4000/articles/2014/10/24/how-to-validate-bower-files</guid>
             </item>
                     <item>
                 <title>How to work with Drupal 8 forms with Ajax.</title>
@@ -1951,9 +1951,9 @@ if(empty($form_state_complete_version)){
 
 <p>There is an issue for this problem at <a href="https://www.drupal.org/node/1458824" target="_blank">Ajax doesn't work with Tableselect with checkboxes</a>.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax</link>
+                <link>http://localhost:4000/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax</link>
                 <pubDate>Tue, 25 Nov 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax</guid>
+                <guid>http://localhost:4000/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax</guid>
             </item>
                     <item>
                 <title>Resetting the administrator password with sql-query in Drupal 8</title>
@@ -2008,9 +2008,9 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8</link>
                 <pubDate>Sun, 07 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2014/12/07/resetting-the-administrator-password-with-sql-query-in-drupal-8</guid>
             </item>
                     <item>
                 <title>How to create a Field Formatter in Drupal 8</title>
@@ -2026,7 +2026,7 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 
 <p>Now if you choose an image field the default format is Image as you can see in the following snapshot.</p>
 
-<p><img src="http://enzolutions.com/assets/img/image_field_formatter.png"/></p>
+<p><img src="http://localhost:4000/assets/img/image_field_formatter.png"/></p>
 
 <p>Even if you don't set the option to link to original image you will get the image in HTML format as you see in the following sample of JSON response.</p>
 
@@ -2046,9 +2046,9 @@ password: your-new-pass-here    hash: $S$EV4QAYSIc9XNZD9GMNDwMpMJXPJzz1J2dkSH6KI
 ]
 </code></pre>
 
-<p>The previous output was generated by a view selecting articles with images, if you want import this view in your system just download the file <a href="http://enzolutions.com/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
+<p>The previous output was generated by a view selecting articles with images, if you want import this view in your system just download the file <a href="http://localhost:4000/assets/attaches/view_image_list.yml" target="_blank">views_list.yml</a> and import using the Configuration Management of Drupal accessing the URL <strong>http://example.com/admin/config/development/configuration/single/import</strong> in your Drupal install as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/configuration_management_view_import.png"/></p>
+<p><img src="http://localhost:4000/assets/img/configuration_management_view_import.png"/></p>
 
 <p>If you want read more about Configuration Management in Drupal 8 you can read the post entry <a href="{site.url}}/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a></p>
 
@@ -2233,7 +2233,7 @@ use \InvalidArgumentException;
 
 <p>After enable our custom module we just need edit our view and edit the field to use new Raw Formatter as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/image_field_raw_formatter.png"/></p>
+<p><img src="http://localhost:4000/assets/img/image_field_raw_formatter.png"/></p>
 
 <p>After save the view and run again the output will be totally different and perfect to use in RESTful services to avoid HTML parsing to extract the image path. check the output example below.</p>
 
@@ -2257,9 +2257,9 @@ use \InvalidArgumentException;
 
 <p>I expect you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8</link>
                 <pubDate>Tue, 09 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2014/12/09/how-to-create-a-field-formatter-in-drupal-8</guid>
             </item>
                     <item>
                 <title>How to create a Rest Resource in Drupal 8</title>
@@ -2453,13 +2453,13 @@ use Psr\Log\LoggerInterface;
 
 <p>This module enable a UI to set the Authentication and format for each RESTful method implemented as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/restui_bundle_entities_settings.png"/></p>
+<p><img src="http://localhost:4000/assets/img/restui_bundle_entities_settings.png"/></p>
 
 <p>Using this setting the access to Resource will be granted or denied.</p>
 
 <p>Using the Chrome Application <a href="https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm">Postman - REST Client</a> you can execute an authenticated request to URL <strong>http://example.com/bundles/node</strong> as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/postman_rest_request.png"/></p>
+<p><img src="http://localhost:4000/assets/img/postman_rest_request.png"/></p>
 
 <p>If all is working as expected you will get a similar result to next json output.</p>
 
@@ -2471,13 +2471,13 @@ use Psr\Log\LoggerInterface;
 
 <p>I hope you find this blog entry usefull.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8</link>
                 <pubDate>Tue, 16 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8</guid>
             </item>
                     <item>
                 <title>A Drupal Guy in a Backbone Conference</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs_logo.png"/> Past Dic 15th and 16th I attend the 3rd Backbone Conference in Cambridge, Massachusetts, USA.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/backbonejs_logo.png"/> Past Dic 15th and 16th I attend the 3rd Backbone Conference in Cambridge, Massachusetts, USA.</p>
 
 <p>I'm a Drupal Backend Developer, so my experience in Front End is limited to small pets projects I have been working just for fun like <a href="http://github.com/enzolutions/generator-marionette-drupal" target="_blank">http://github.com/enzolutions/generator-marionette-drupal</a>.</p>
 
@@ -2510,9 +2510,9 @@ use Psr\Log\LoggerInterface;
 
 <p>So what is the next for me, well I will try to continue trying to learn more about Front End libraries and frameworks but now I will see with the respect they deserve.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference</link>
+                <link>http://localhost:4000/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference</link>
                 <pubDate>Wed, 17 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference</guid>
+                <guid>http://localhost:4000/articles/2014/12/17/a-drupal-guy-in-a-backbone-conference</guid>
             </item>
                     <item>
                 <title>How to use Drupal 8 state in Cron to resume a process.</title>
@@ -2600,17 +2600,17 @@ if ($last_key) {
 
 <p>I hope you find this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process</link>
+                <link>http://localhost:4000/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process</link>
                 <pubDate>Fri, 26 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process</guid>
+                <guid>http://localhost:4000/articles/2014/12/26/how-to-use-drupal-8-state-in-cron-to-resume-a-process</guid>
             </item>
                     <item>
                 <title>How to create an Authentication Provider in Drupal 8</title>
-                <description><![CDATA[<p>Some weeks ago I show you <a href="http://enzolutions.com/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8" target="_blank">How to create a Rest Resource in Drupal 8</a> and as I explain in that post we use the Authentication Provider <strong>Basic Auth</strong> as you can see in the following image.</p>
+                <description><![CDATA[<p>Some weeks ago I show you <a href="http://localhost:4000/articles/2014/12/16/how-to-create-a-rest-resource-in-drupal-8" target="_blank">How to create a Rest Resource in Drupal 8</a> and as I explain in that post we use the Authentication Provider <strong>Basic Auth</strong> as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/restui_bundle_entities_settings.png"/></p>
+<p><img src="http://localhost:4000/assets/img/restui_bundle_entities_settings.png"/></p>
 
-<p>Right now is the unique Authentication Provider available to use in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> scenery. If you want to read more about CORS you can read the blog entry <a href="http://enzolutions.com2014/05/31/what-is-cross-origin-resource-sharing-cors" target="_blank">What is Cross-Origin Resource Sharing (CORS)</a>.</p>
+<p>Right now is the unique Authentication Provider available to use in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> scenery. If you want to read more about CORS you can read the blog entry <a href="http://localhost:40002014/05/31/what-is-cross-origin-resource-sharing-cors" target="_blank">What is Cross-Origin Resource Sharing (CORS)</a>.</p>
 
 <p>But what about if <strong>Basic Auth</strong> doesn't fit with your needs, well I will show you how to create a custom Authentication Provider.</p>
 
@@ -2651,7 +2651,7 @@ public function buildForm(array $form, FormStateInterface $form_state) {
 
 <p>The layout to enter allowed IP consumer will looks similar to this image</p>
 
-<p><img src="http://enzolutions.com/assets/img/allowed_ip_resources.png"/></p>
+<p><img src="http://localhost:4000/assets/img/allowed_ip_resources.png"/></p>
 
 <p>The code to save that values are generated by <strong>Drupal Console</strong>, in the same way the Routing is created. Be sure you change the values to your convenience after generate the form.</p>
 
@@ -2785,7 +2785,7 @@ public function authenticate(Request $request) {
 
 <p>Using the <a href="https://www.drupal.org/project/restui/git-instructions" target="_blank">Rest UI</a>(I recommend to use the git version until Drupal 8 get a first release) module we enable the REST Resource and enable our Custom Authentication Provider, as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/custom_authentication_provider.png"/></p>
+<p><img src="http://localhost:4000/assets/img/custom_authentication_provider.png"/></p>
 
 <h2>Access Denied</h2>
 
@@ -2799,7 +2799,7 @@ public function authenticate(Request $request) {
 
 <p>When we enable any REST Resource in Drupal 8 a new set of  permissions is created, in our case we have to assign the permission <strong>Access GET on Bundles by entities resource</strong> to Anonymous user as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/rest_anonymous_permission.png"/></p>
+<p><img src="http://localhost:4000/assets/img/rest_anonymous_permission.png"/></p>
 
 <h2>Access Denied AGAIN</h2>
 
@@ -2844,9 +2844,9 @@ public function authenticate(Request $request) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8</link>
                 <pubDate>Sun, 28 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2014/12/28/how-to-create-an-authentication-provider-in-drupal-8</guid>
             </item>
                     <item>
                 <title>Backdrop CMS First impressions</title>
@@ -2858,33 +2858,33 @@ public function authenticate(Request $request) {
 
 <p>Looks the same as Drupal 8, check the following image and let me know if you're not agree</p>
 
-<p><img src="http://enzolutions.com/assets/img/installing_backdrop_cms.png"/></p>
+<p><img src="http://localhost:4000/assets/img/installing_backdrop_cms.png"/></p>
 
 <h1>File Structure</h1>
 
 <p>The files structure of Backdrop is so similar to Drupal 8 check in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/backdrop_file_structure.png"/></p>
+<p><img src="http://localhost:4000/assets/img/backdrop_file_structure.png"/></p>
 
 <h1>Modules UI</h1>
 
 <p>The modules menu is named now Functionality and as you can see in the following image, the Backdrop CMS core implement a feature implemented by module <a href="https://www.drupal.org/project/module_filter" target="_blank">module_filter</a> in Drupal 7.</p>
 
-<p><img src="http://enzolutions.com/assets/img/backdrop_admin_ui.png"/></p>
+<p><img src="http://localhost:4000/assets/img/backdrop_admin_ui.png"/></p>
 
 <h1>Layouts</h1>
 
 <p>In <strong>example.com/admin/structure/layouts</strong> you can find a new concept <strong>Layouts</strong>, Layouts is an implementation similar to <a href="https://www.drupal.org/project/panels" target="_blank">Panels</a> Layouts. By default there are two layouts Admin and Default</p>
 
-<p><img src="http://enzolutions.com/assets/img/backdrop_layout_ui.png"/></p>
+<p><img src="http://localhost:4000/assets/img/backdrop_layout_ui.png"/></p>
 
 <p>You can create your own Layouts and apply this layouts using a match by URL and/or you can add conditions, as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/backdrop_new_layout.png"/></p>
+<p><img src="http://localhost:4000/assets/img/backdrop_new_layout.png"/></p>
 
 <p>Backdrop doesn't have a menu to get the list of block generated via code, this list of block is only available when edit a Layout and add a block as you can see in the following imagen.</p>
 
-<p><img src="http://enzolutions.com/assets/img/backdrop_layout_add_block.png"/></p>
+<p><img src="http://localhost:4000/assets/img/backdrop_layout_add_block.png"/></p>
 
 <h1>Module Migration</h1>
 
@@ -2898,7 +2898,7 @@ public function authenticate(Request $request) {
 
 <p>he structure of Modules in Backdrop is the same as Drupal 7, but we need to apply couple changes to avoid Backdrop report the module was invalid as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/backdrop_module_valid_invalid.png"/></p>
+<p><img src="http://localhost:4000/assets/img/backdrop_module_valid_invalid.png"/></p>
 
 <p>The only required change in file token.info is replace core to <strong>backdrop</strong>. Check how token.info must looks the file to be process by Backdrop</p>
 
@@ -2982,13 +2982,13 @@ print 'Node ID: ' . $nid . "\n";
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions</link>
+                <link>http://localhost:4000/articles/2014/12/29/backdrop-cms-first-impressions</link>
                 <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2014/12/29/backdrop-cms-first-impressions</guid>
+                <guid>http://localhost:4000/articles/2014/12/29/backdrop-cms-first-impressions</guid>
             </item>
                     <item>
                 <title>How to overwrite Backbone Model save function</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/backbonejs-logo-small.png"/> <a href="http://backbonejs.org" target="_blank">Backbone JS</a> enables you to create a JS application to connect with your existing API over a RESTful JSON interface.</p>
 
 <p>Backbone define some <a href="http://es.wikipedia.org/wiki/Representational_State_Transfer" target="_blank">REST</a> states to operate over models for instance:</p>
 
@@ -3051,9 +3051,9 @@ node.save(userDetails, {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function</link>
+                <link>http://localhost:4000/articles/2015/01/20/how-to-overwrite-backbone-model-save-function</link>
                 <pubDate>Tue, 20 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/01/20/how-to-overwrite-backbone-model-save-function</guid>
+                <guid>http://localhost:4000/articles/2015/01/20/how-to-overwrite-backbone-model-save-function</guid>
             </item>
                     <item>
                 <title>How to create a Multi Step Form in Drupal 8</title>
@@ -3198,13 +3198,13 @@ public function submitForm(array &amp;$form, FormStateInterface $form_state) {
 
 <p>I hope you found this blog entry useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8</link>
                 <pubDate>Wed, 21 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2015/01/21/how-to-create-a-multi-step-form-in-drupal-8</guid>
             </item>
                     <item>
                 <title>What is Drupal Console for me</title>
-                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://enzolutions.com/assets/img/drupal_console_logo.png"/> Maybe you hear about the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> or maybe not because is an independent project related with <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a>.</p>
+                <description><![CDATA[<p><img style="float:left; margin-right: 20px;;" src="http://localhost:4000/assets/img/drupal_console_logo.png"/> Maybe you hear about the project <a href="http://drupalconsole.com/" target="_blank">Drupal Console</a> or maybe not because is an independent project related with <a href="https://www.drupal.org/drupal-8.0">Drupal 8</a>.</p>
 
 <p>If you are a older Drupal user/developer you could find some similarities with <a href="https://github.com/drush-ops/drush" target="_blank">Drush</a> Project, and to be honest there are some similarities.</p>
 
@@ -3275,9 +3275,9 @@ router
 
 <p>Also we expect in the future contribute to Symfony Console Component some code based in our needs, again why create <a href="https://www.acquia.com/blog/building-bridges-linking-islands">island of code</a>, instead of that push back code to the core and help other Open Source projects.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me</link>
+                <link>http://localhost:4000/articles/2015/01/25/what-is-drupal-console-for-me</link>
                 <pubDate>Sun, 25 Jan 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/01/25/what-is-drupal-console-for-me</guid>
+                <guid>http://localhost:4000/articles/2015/01/25/what-is-drupal-console-for-me</guid>
             </item>
                     <item>
                 <title>Running for a position on Drupal Association At Large Director</title>
@@ -3328,9 +3328,9 @@ router
 
 <p>So as you can imagine I'm asking you to vote for me. But also I invite you to check all candidates and determine who match better with your mindset and your feeling. Also don't forget to invite your friends to vote.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director</link>
+                <link>http://localhost:4000/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director</link>
                 <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director</guid>
+                <guid>http://localhost:4000/articles/2015/02/03/running-for-a-position-on-drupal-association-at-large-director</guid>
             </item>
                     <item>
                 <title>Soy candidato por una posición en la Drupal Association como Large director</title>
@@ -3385,9 +3385,9 @@ router
 
 <p>Como se puede imaginar le estoy pidiendo que voten por mí. Pero también los invito a comprobar todos los candidatos y determinar cual coincide mejor con su forma de pensar y sentir. También no se olvide de invitar a sus amigos a votar.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director</link>
+                <link>http://localhost:4000/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director</link>
                 <pubDate>Tue, 03 Feb 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director</guid>
+                <guid>http://localhost:4000/articles/2015/02/03/soy-candidato-por-una-posicion-en-la-drupal-association-como-large-director</guid>
             </item>
                     <item>
                 <title>How to enable CORS in Drupal 8 in non Apache webservers</title>
@@ -3397,7 +3397,7 @@ router
 <p>However if you are interested in CORS applications you must to wait until Drupal 8.1 to get native support to CORS in Drupal
 more information at <a href="https://www.drupal.org/node/1869548#comment-9365043">issue</a>.</p>
 
-<p>Long time ago I wrote the article <a href="http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">How to enable CORS requests against Drupal 8</a>
+<p>Long time ago I wrote the article <a href="http://localhost:4000/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8/">How to enable CORS requests against Drupal 8</a>
 but that approach only works in environments using Apache Web Server, but in servers using a non Apache web server like
  <a href="http://nginx.org/">Ngix</a> that solution is useless. Today I face that problem in <a href="https://pantheon.io">Pantheon</a>.</p>
 
@@ -3428,16 +3428,16 @@ but that approach only works in environments using Apache Web Server, but in ser
   $response-&gt;headers-&gt;set('Access-Control-Allow-Headers', 'Authorization');
 </code></pre>
 
-<p>You can apply this <a href="http://enzolutions.com/assets/attaches/d8-cors-index.patch.txt">patch</a> against Drupal 8 beta 10.</p>
+<p>You can apply this <a href="http://localhost:4000/assets/attaches/d8-cors-index.patch.txt">patch</a> against Drupal 8 beta 10.</p>
 
 <p>I know there are initiatives to enable this feature using contributed modules, but meanwhile we get a definite solution, 
 this is temporary solution flexible enough using Drupal 8 style to start using Drupal as backend in a Decoupled solution.</p>
 
 <p>I hope you found this post useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers</link>
+                <link>http://localhost:4000/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers</link>
                 <pubDate>Tue, 26 May 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers</guid>
+                <guid>http://localhost:4000/articles/2015/05/26/how-to-enable-cors-in-drupal-8-in-non-apache-webservers</guid>
             </item>
                     <item>
                 <title>How to add customs fields to SOLR index using Entity API &amp; Search API</title>
@@ -3523,15 +3523,15 @@ function MYMODULE_search_search_api_property_event_end_day_getter_callback($item
 <strong>http://example.com/admin/config/search/search_api/index/YOUR_INDEX/fields</strong> as you can see in the following 
 image.</p>
 
-<p><img style="float:left; margin-right: 20px;" src="http://enzolutions.com/assets/img/entity_fields_solr_index_search_api.png"/></p>
+<p><img style="float:left; margin-right: 20px;" src="http://localhost:4000/assets/img/entity_fields_solr_index_search_api.png"/></p>
 
 <p>When the process of re-index run again the new fields will be stored in SOLR and will be able to be selected in a View.</p>
 
 <p>I hope you found this post useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api</link>
+                <link>http://localhost:4000/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api</link>
                 <pubDate>Tue, 02 Jun 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api</guid>
+                <guid>http://localhost:4000/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api</guid>
             </item>
                     <item>
                 <title>How to check php compatibility</title>
@@ -3645,13 +3645,13 @@ FOUND 1 ERROR AFFECTING 1 LINE
 
 <p>I hope you found this post useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility</link>
+                <link>http://localhost:4000/articles/2015/06/07/how-to-check-php-compatibility</link>
                 <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/06/07/how-to-check-php-compatibility</guid>
+                <guid>http://localhost:4000/articles/2015/06/07/how-to-check-php-compatibility</guid>
             </item>
                     <item>
                 <title>How to customize a Search API filters in Drupal 7</title>
-                <description><![CDATA[<p>Last week I show you <a href="http://enzolutions.com/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/">How to add customs fields to SOLR index using Entity API &amp; Search API</a>, 
+                <description><![CDATA[<p>Last week I show you <a href="http://localhost:4000/articles/2015/06/02/how-to-add-customs-fields-to-solr-index-using-entity-api-amp-search-api/">How to add customs fields to SOLR index using Entity API &amp; Search API</a>, 
 continues with that line of concept I will to show you how to manipulate a Search API query to include a custom logic in 
 your queries.</p>
 
@@ -3717,9 +3717,9 @@ include those group of filters inside a <strong>SearchApiQueryInterface</strong>
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7</link>
+                <link>http://localhost:4000/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7</link>
                 <pubDate>Wed, 10 Jun 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7</guid>
+                <guid>http://localhost:4000/articles/2015/06/10/how-to-customize-a-search-api-filters-in-drupal-7</guid>
             </item>
                     <item>
                 <title>How to remove file documents from SOLR index after been replaced in nodes in Drupal 7</title>
@@ -3818,9 +3818,9 @@ this delete is applied immediately, SOLR re-index is not required.</p>
 
 <p>I expect you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7</link>
+                <link>http://localhost:4000/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7</link>
                 <pubDate>Wed, 17 Jun 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7</guid>
+                <guid>http://localhost:4000/articles/2015/06/17/how-to-remove-file-documents-from-solr-index-after-been-replaced-in-nodes-in-drupal-7</guid>
             </item>
                     <item>
                 <title>How to merge YAML files</title>
@@ -3917,9 +3917,9 @@ yaml:diff
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files</link>
+                <link>http://localhost:4000/articles/2015/07/08/how-to-merge-yaml-files</link>
                 <pubDate>Wed, 08 Jul 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/07/08/how-to-merge-yaml-files</guid>
+                <guid>http://localhost:4000/articles/2015/07/08/how-to-merge-yaml-files</guid>
             </item>
                     <item>
                 <title>How to download remote files with Silex/Symfony and Drupal 8</title>
@@ -4025,9 +4025,9 @@ already included in Drupal 8 core.</p>
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silexsymfony-and-drupal-8</link>
+                <link>http://localhost:4000/articles/2015/07/09/how-to-download-remote-files-with-silexsymfony-and-drupal-8</link>
                 <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/07/09/how-to-download-remote-files-with-silexsymfony-and-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2015/07/09/how-to-download-remote-files-with-silexsymfony-and-drupal-8</guid>
             </item>
                     <item>
                 <title>Why languages are so important in technology?</title>
@@ -4107,9 +4107,9 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>Muchas gracias for reading this article.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology</link>
+                <link>http://localhost:4000/articles/2015/09/12/why-languages-are-so-important-in-technology</link>
                 <pubDate>Sat, 12 Sep 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/09/12/why-languages-are-so-important-in-technology</guid>
+                <guid>http://localhost:4000/articles/2015/09/12/why-languages-are-so-important-in-technology</guid>
             </item>
                     <item>
                 <title>How to include PHP code in Drupal 8 Views</title>
@@ -4130,7 +4130,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 <pre><code>$ drupal generate:module
 </code></pre>
 
-<p><img src="http://enzolutions.com/assets/img/console_generate_module.png"/></p>
+<p><img src="http://localhost:4000/assets/img/console_generate_module.png"/></p>
 
 <p>The second option executes the command but passing all options inline as you can see below.</p>
 
@@ -4162,13 +4162,13 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>Now if you edit the Frontpage view at <strong>http://example.com/admin/structure/views/view/frontpage</strong> you can use the custom field generated after change the mode from show <em>content</em> to show <em>fields</em> as you can see in the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/views_custom_plugin.png"/></p>
+<p><img src="http://localhost:4000/assets/img/views_custom_plugin.png"/></p>
 
 <p>Pro tip: If you don't see your generated field, try executing <strong>$ drupal cache:rebuild all</strong> again :P</p>
 
 <p>After applying the minimum configuration to the field, you will get a view preview similar to this image:</p>
 
-<p><img src="http://enzolutions.com/assets/img/view_frontpage_preview.png"/></p>
+<p><img src="http://localhost:4000/assets/img/view_frontpage_preview.png"/></p>
 
 <p>The view plugin field generated, by default, return a random string just to show that it's working. Now you have to do your magic in your custom module.</p>
 
@@ -4200,7 +4200,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>As a result now our field will look different, check the following image.</p>
 
-<p><img src="http://enzolutions.com/assets/img/view_frontpage_preview2.png"/></p>
+<p><img src="http://localhost:4000/assets/img/view_frontpage_preview2.png"/></p>
 
 <p>As you can see this another silly implementation of a custom PHP, but now you can include in this class any service required to do your magic and transform each row in a view using other row fields as input.</p>
 
@@ -4218,9 +4218,9 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>I hope you found this blog post useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views</link>
+                <link>http://localhost:4000/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views</link>
                 <pubDate>Sun, 11 Oct 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views</guid>
+                <guid>http://localhost:4000/articles/2015/10/11/how-to-include-php-code-in-drupal-8-views</guid>
             </item>
                     <item>
                 <title>Understanding migrations in Drupal 8</title>
@@ -4273,7 +4273,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>As you can appreciate in the following image some migrations work in more that one Drupal legacy version</p>
 
-<p><img src="http://enzolutions.com/assets/img/console_migrate_debug.png"/></p>
+<p><img src="http://localhost:4000/assets/img/console_migrate_debug.png"/></p>
 
 <h1>Execute a migration</h1>
 
@@ -4284,7 +4284,7 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>Below you can see how looks the migration process.</p>
 
-<p><img src="http://enzolutions.com/assets/img/console_migrate_execute.png"/></p>
+<p><img src="http://localhost:4000/assets/img/console_migrate_execute.png"/></p>
 
 <p>The image above shows how the command report what migrations fail and what migration works. As you can see each migration is independent and the migration process is not interrupted if some of them fail.</p>
 
@@ -4304,9 +4304,9 @@ $ ./bin/console yaml:merge console.hi.yml console.en.yml console.hi.yml
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2015/11/02/understanding-migrations-in-drupal-8</link>
                 <pubDate>Mon, 02 Nov 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/11/02/understanding-migrations-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2015/11/02/understanding-migrations-in-drupal-8</guid>
             </item>
                     <item>
                 <title>How to manipulate an Entity:Block programmatically in Drupal 8</title>
@@ -4471,9 +4471,9 @@ $block-&gt;save();
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entityblock-programmatically-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2015/11/21/how-to-manipulate-an-entityblock-programmatically-in-drupal-8</link>
                 <pubDate>Sat, 21 Nov 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/11/21/how-to-manipulate-an-entityblock-programmatically-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2015/11/21/how-to-manipulate-an-entityblock-programmatically-in-drupal-8</guid>
             </item>
                     <item>
                 <title>How to execute an external PHP application inside Symfony/Drupal in a Sandbox</title>
@@ -4502,9 +4502,9 @@ $output = $phpProcess-&gt;getOutput();
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfonydrupal-in-a-sandbox</link>
+                <link>http://localhost:4000/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfonydrupal-in-a-sandbox</link>
                 <pubDate>Fri, 27 Nov 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfonydrupal-in-a-sandbox</guid>
+                <guid>http://localhost:4000/articles/2015/11/27/how-to-execute-an-external-php-application-inside-symfonydrupal-in-a-sandbox</guid>
             </item>
                     <item>
                 <title>How to get a list of content types in Drupal 8</title>
@@ -4535,9 +4535,9 @@ print_r($contentTypesList);
 
 <p>I hope you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/12/03/how-to-get-a-list-of-content-types-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2015/12/03/how-to-get-a-list-of-content-types-in-drupal-8</link>
                 <pubDate>Thu, 03 Dec 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/12/03/how-to-get-a-list-of-content-types-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2015/12/03/how-to-get-a-list-of-content-types-in-drupal-8</guid>
             </item>
                     <item>
                 <title>How to get content type fields in Drupal 8</title>
@@ -4640,9 +4640,9 @@ print_r($ticket);
 
 <p>I hope did you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2015/12/22/how-to-get-content-type-fields-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2015/12/22/how-to-get-content-type-fields-in-drupal-8</link>
                 <pubDate>Tue, 22 Dec 2015 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2015/12/22/how-to-get-content-type-fields-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2015/12/22/how-to-get-content-type-fields-in-drupal-8</guid>
             </item>
                     <item>
                 <title>Around the Drupal World in 120 Days</title>
@@ -4672,7 +4672,7 @@ print_r($ticket);
 
 <p>With the idea settle, we create this agenda to visit eighteen cities in thirteen countries and three continents, we want to include Africa, but due budgets restrictions wasn't possible.</p>
 
-<iframe src="http://enzolutions.com/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="http://localhost:4000/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <ol>
 <li>NYC, USA / Feb 10th - Feb 12th &#8594; <a href="https://drupalconsole.com/content/drupal-console-introduction-session">Drupal Console Introduction</a></li>
@@ -4701,9 +4701,9 @@ print_r($ticket);
 
 <p>If you are around those cities, and you want to talk about Drupal Communities, Drupal 8 and Drupal Console, please don't hesitate to email me to enzo@anexusit.com</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days</link>
+                <link>http://localhost:4000/articles/2016/01/19/around-the-drupal-world-in-120-days</link>
                 <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days</guid>
+                <guid>http://localhost:4000/articles/2016/01/19/around-the-drupal-world-in-120-days</guid>
             </item>
                     <item>
                 <title>Getting node comments programmatically in Drupal 8</title>
@@ -4744,9 +4744,9 @@ foreach($cids as $cid) {
 
 <p>I hope do you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8</link>
+                <link>http://localhost:4000/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8</link>
                 <pubDate>Wed, 20 Jan 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8</guid>
+                <guid>http://localhost:4000/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8</guid>
             </item>
                     <item>
                 <title>La vuelta al mundo Drupal en 120 dias</title>
@@ -4776,7 +4776,7 @@ foreach($cids as $cid) {
 
 <p>Con la idea definida, creamos esta agenda para visitar dieciocho ciudades en trece países y tres continentes, queriamos incluir África, pero debido a restricciones de presupuesto no fue posible.</p>
 
-<iframe src="http://enzolutions.com/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="http://localhost:4000/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <ol>
 <li>New York, Estados Unidos / Feb 10th - Feb 12th &#8594; <a href="https://drupalconsole.com/content/drupal-console-introduction-session">Drupal Console Introducción</a></li>
@@ -4805,9 +4805,9 @@ foreach($cids as $cid) {
 
 <p>Si usted está alrededor de esas ciudades, y quiere hablar de Comunidades Drupal, Drupal 8 y Drupal Console, por favor no dude en enviarme un correo electrónico a enzo@anexusit.com</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</link>
+                <link>http://localhost:4000/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</link>
                 <pubDate>Mon, 25 Jan 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</guid>
+                <guid>http://localhost:4000/articles/2016/01/25/la-vuelta-al-mundo-drupal-en-120-dias</guid>
             </item>
                     <item>
                 <title>Form altering will not be the same in Drupal 8 after using Webprofiler</title>
@@ -4887,7 +4887,7 @@ function testing_form_alter(&amp;$form, FormStateInterface $form_state, $form_id
 
 <p>After enabling the module we just need to navigate to your website visiting the pages with forms we can to alter, when Webprofiler is installed you will get a toolbar at the bottom as you can see in the following image.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal_webprofiler.png"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/drupal_webprofiler.png"/></p>
 
 <p>Now, If we want to include an extra field in theme configuration, we just need to visit page http://example.comv/admin/appearance/settings/bartik tp store form information in Webprofiler inventory.</p>
 
@@ -4896,7 +4896,7 @@ function testing_form_alter(&amp;$form, FormStateInterface $form_state, $form_id
 <pre><code>drupal generate:form:alter --module=testing
 </code></pre>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/console_generate_webprofiler.png"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/console_generate_webprofiler.png"/></p>
 
 <p>The interactive mode provides a list of form ids available; you can use the arrows on your keyboard to navigate through options available.</p>
 
@@ -4920,9 +4920,9 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>I hope do you found this article useful.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler</link>
+                <link>http://localhost:4000/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler</link>
                 <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler</guid>
+                <guid>http://localhost:4000/articles/2016/02/01/form-altering-will-not-be-the-same-in-drupal-8-after-using-webprofiler</guid>
             </item>
                     <item>
                 <title>Soy candidato a la Drupal Association 2016</title>
@@ -4984,9 +4984,9 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>En resumen, soy un tipo que sabe Drupal desde tres puntos de vista diferentes, desde el punto de desarrollador, líder comunitario y propietario de la empresa de Drupal.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016</link>
+                <link>http://localhost:4000/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016</link>
                 <pubDate>Tue, 09 Feb 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016</guid>
+                <guid>http://localhost:4000/articles/2016/02/09/soy-candidato-a-la-drupal-association-2016</guid>
             </item>
                     <item>
                 <title>New York - Drupal Tour 2016</title>
@@ -5014,7 +5014,7 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>In Brooklyn, I meet up again with Vanessa and Edwin. They were so kind to share with me their spare room. BTW. Edwin was one of my first clients when I decided to start <a href="http://anexusit.com">Anexus</a> with Kenny my business partner a workshop 100% oriented to Drupal, and he remains as a friend.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/edwin-vanessa-small.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/edwin-vanessa-small.jpg"/></p>
 
 <h2>Phase2 and Digital Pulp</h2>
 
@@ -5022,19 +5022,19 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 
 <p>I did a quick visit to <a href="http://phase2technology.com">Phase2</a> one of the most well known Drupal Companies in USA and <strong>Anexus</strong> partner. I just pass over to say hello and of course, bring some Costa Rican coffee.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/molly.png"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/molly.png"/></p>
 
 <p>My lunch was at <a href="https://foursquare.com/v/lys-chinese-restaurant/540ce065498e413c5fa7929d">Ly's</a> Chinese Szechuan Restaurant, and I have a "Beef stew soup noodle" was so good.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/nyc-soup.png"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/nyc-soup.png"/></p>
 
 <p>After that I visited <a href="digitalpulp.com">Digital Pulp</a> to present about <a href="http://drupalconsole.com">Drupal Console</a> a Drupal project where I am co-maintainer, I was invited by <a href="https://github.com/FatherShawn">Shawn Duncan</a> one of our contributors.</p>
 
 <p>The session was good, and I got some good feedback from backend and frontend developers.</p>
 
-<p><img style="float:left; margin-right: 20px; width: 47%; margin-bottom: 20px;" src="http://enzolutions.com/assets/img/digitalpulp-1.jpg"/></p>
+<p><img style="float:left; margin-right: 20px; width: 47%; margin-bottom: 20px;" src="http://localhost:4000/assets/img/digitalpulp-1.jpg"/></p>
 
-<p><img style="float:left; margin-right: 20px; width: 47%; margin-bottom: 20px;" src="http://enzolutions.com/assets/img/digitalpulp-2.jpg"/></p>
+<p><img style="float:left; margin-right: 20px; width: 47%; margin-bottom: 20px;" src="http://localhost:4000/assets/img/digitalpulp-2.jpg"/></p>
 
 <p>If you want to see the slides of that presentation go to <a href="http://bit.ly/enzotour16-nyc">http://bit.ly/enzotour16-nyc</a>.</p>
 
@@ -5091,15 +5091,15 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Sounds a lot but I have more in front of me to explore.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/02/12/new-york-drupal-tour-2016</link>
+                <link>http://localhost:4000/articles/2016/02/12/new-york-drupal-tour-2016</link>
                 <pubDate>Fri, 12 Feb 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/02/12/new-york-drupal-tour-2016</guid>
+                <guid>http://localhost:4000/articles/2016/02/12/new-york-drupal-tour-2016</guid>
             </item>
                     <item>
                 <title>Traveling to India - Drupal Tour 2016</title>
                 <description><![CDATA[<p>Today I am going to tell you about my experience of traveling to India.</p>
 
-<p>As part of my trip, I did an stop of two days in New York with the aim to reduce a little bit how hard it travel to America to India and share time with some friends and other drupalers as you can read at my previous <a href="src="http://enzolutions.com/articles/2016/02/12/new-york-drupal-tour-2016>post</a>.</p>
+<p>As part of my trip, I did an stop of two days in New York with the aim to reduce a little bit how hard it travel to America to India and share time with some friends and other drupalers as you can read at my previous <a href="src="http://localhost:4000/articles/2016/02/12/new-york-drupal-tour-2016>post</a>.</p>
 
 <p>My trip started in Newark airport located in New Jersey, USA. It's a big airport. My first mistake was passed security so soon, inside Terminal B there are not a food court, and the options available were upscale, and the worst was there wasn't free internet there. So my recommendation is to verify if there is a food court available outside secure zone and maybe free wifi.</p>
 
@@ -5115,7 +5115,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Passing customs, I have to face the first source of scam around the world, Taxis. I was informed that there are companies inside who provide prepaid services. In my terminal, I found two one with the label prepaid taxi and other without that label.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/prepaid-taxi.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/prepaid-taxi.jpg"/></p>
 
 <p>The company with the label prepaid, inform to me that the price to Powai was 310 rupees almost 5 USD dollars, and they don't receive any foreign currency.</p>
 
@@ -5123,13 +5123,13 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>After paying they give you a receive and then you have to find the taxi inside a parking lot area for taxis near to the exit door. I order a non-AC taxi as you can see in the following picture</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/taxis-area.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/taxis-area.jpg"/></p>
 
 <p>When I found the cab, the first problem the driver doesn't understand a word of English, I show him my receipt, and that say Powai and he said OK moving his head with their traditional way to say yes and no at the same time.</p>
 
 <p>Leaving the airport looks like all taxi drivers have to stop and go out the car maybe they have to pay a fee when my taxi driver returns he asked me for a phone number to call to ask the address, and then they talk in Hindi and everybody was happy.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mumbai-tuk-tuk.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/mumbai-tuk-tuk.jpg"/></p>
 
 <p>The traffic looks crazy and in any NatGeo program about India, everybody was honking, sounds like the rules have an enormous gray area, but people didn't stress a lot, so the system just works for them. After 40 minutes I get my place safe &amp; sound.</p>
 
@@ -5137,14 +5137,14 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I order a Coconut soup with coriander, lamb using Dhaba style and lemon rice, total 270 rupees.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/coconut-soup.png"/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lamb-lemon-rice.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/coconut-soup.png"/>
+<img style="margin-right: 20px;" src="http://localhost:4000/assets/img/lamb-lemon-rice.jpg"/></p>
 
 <p>In general a good experience.</p>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/02/14/traveling-to-india-drupal-tour-2016</link>
+                <link>http://localhost:4000/articles/2016/02/14/traveling-to-india-drupal-tour-2016</link>
                 <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/02/14/traveling-to-india-drupal-tour-2016</guid>
+                <guid>http://localhost:4000/articles/2016/02/14/traveling-to-india-drupal-tour-2016</guid>
             </item>
                     <item>
                 <title>India Day 1 - Drupal Tour 2016</title>
@@ -5162,21 +5162,21 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Mumbai wasn't too hot, so the walk was pleasant in the middle of a dry forest, there were some "houses", and you can find some ladies selling fruits, seed, and water every 2 kilometers approx.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ladies-selling.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/ladies-selling.jpg"/></p>
 
 <p>In the second half of the road, there were a lot of monkeys, doing some aggressive sounds but nothing else, like everything in life the last mile was the harder position of the walk especially due the hill. Close the caves the well-behaved monkeys change their attitude and in the main entrance one animal almost take my bag with my belongs inside.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/monkey.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/monkey.jpg"/></p>
 
 <p>About the caves, they a series of chambers sculpted in a solid rock mountain, Kanheri was a Budish monastery start before Jesus Christ era until 11 century.</p>
 
 <p>To see the majority of caves do you have to hike using sculpt steps, and some of them are a little risky, so I recommend hiking shoes. There are some caves bigger that others and with more or fewer Buddhas inside, some of them are dark and creepy.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bhuda-caves.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/bhuda-caves.jpg"/></p>
 
 <p>To return I choose the bus option, I was so tired, walking outside the park for some blocks I found a tiny restaurant where I ordered Chicken tandoori masala, the dish was so spicy even that I ordered no spicy.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chicken-tandoori-malasa.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/chicken-tandoori-malasa.jpg"/></p>
 
 <h2>Global Vipassana Pagoda</h2>
 
@@ -5186,7 +5186,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>The global pagoda was finished at 2009, and it's a Budish temple, even I am not a religion person I could appreciate how beautiful is and look like is important for a lot of  people.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/global-pagoda.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/global-pagoda.jpg"/></p>
 
 <p>You don't have to pay to see the pagoda, but only in the border of the pagoda, due inside there are always some pupils doing meditation with their guru. Outside there are some free guides providing information about why and who the pagodas was built.</p>
 
@@ -5200,7 +5200,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>To end my day I have a nice dinner with J.A.M and Ani Gupta, to talk anything and everything, conversation Pre DrupalCon and Post DrupalCon are an important aspect of be part on a <a href="">DrupalCon</a></p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chilling.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/chilling.jpg"/></p>
 
 <h3>Walking</h3>
 
@@ -5227,9 +5227,63 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/02/15/india-day-1-drupal-tour-2016</link>
+                <link>http://localhost:4000/articles/2016/02/15/india-day-1-drupal-tour-2016</link>
                 <pubDate>Mon, 15 Feb 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/02/15/india-day-1-drupal-tour-2016</guid>
+                <guid>http://localhost:4000/articles/2016/02/15/india-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>India Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>After passing my first day in India, I felt comfortable about how to handle this country as a tourist, so the sky is the limit, I said to myself. I was so wrong "The tuk-tuks are the limit".</p>
+
+<p>I start my day decided to visit the south of Mumbai; I expected more traffic that the day before because was Sunday. But as soon I tried to request my Uber I notice there aren't car available in UberX or UberBlack models, so weird right, the situation gets worse when some cars appear available, but the rate was increased until 8.X.</p>
+
+<p>Trying to understand the situation, I did the supposition maybe people start their days in the office around 9 or 10 am, so I skip the Uber to avoid the rush hour, and I decide to walk towards airtel office to try to get connected to The Internet from my cellphone.</p>
+
+<p>I bring in theory the requirement to get a sim card from <a href="http://www.airtel.in/">Airtel</a>: passport, a passport copy, a photo and copy of visa. But, the manager of the shop said I need a valid visa for at least 90 days to get sim cards, WTF right. For that reason, I had to call to India 911 in my case I contact <a href="https://axelerant.com/team-member/parth-gohil/">Parth Gohil</a>, and he rescue me request a sim card for him, lucky me he had two photographs in his wallet, BTW, who has two pictures in his wallet nowadays just in case :P.</p>
+
+<p>Having a sim card, but not connected yet because the activation process takes 24 hours, Parth explain to me that maybe the user rise in prices was related with the Tuk-tuks, or Rickshaws, as they are named in India, were in Strike, as soon he mention I realize the street looks different. So, I decided to Stay couple hours in Parth hotel's room until the Rickshaws apocalypse past.</p>
+
+<p>At lunch time, <a href="https://www.drupal.org/u/highermath">Cary Gordon</a> a former Drupal Association board member and <a href="https://in.linkedin.com/in/ashwinikumar7">Ashwini Kumar</a> a developer from Srijian join us and we went to a Punjabi restaurant, food, and talk was so good that we forget to take a picture of us in the restaurant. Shame on us.</p>
+
+<p>After lunch Rickshaws, ther appocalypse still happen, but Uber prices reach a moderate 1.6 price factor. So Cory and I went to visit Bandra Fort and Carter Road at Bandra West.</p>
+
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/mumbai-bridge.jpg"/>
+<img style="margin-right: 20px;" src="http://localhost:4000/assets/img/enzo-bridge.jpg"/></p>
+
+<p>I have to say that my conversation with Cory was exquisite because the told me about his experience as a board member of Drupal Association member.</p>
+
+<p>To end the day, I had a dinner with <a href="http://dasjo.at/">Josef Dabernig</a>.</p>
+
+<p>it's good to have time to talk with members of Drupal community, For me, DrupalCon Asia started today.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mumbai (Today)</td>
+  <td>13.378</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>46.786</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>60.134</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://localhost:4000/articles/2016/02/16/india-day-2-drupal-tour-2016</link>
+                <pubDate>Tue, 16 Feb 2016 00:00:00 +0000</pubDate>
+                <guid>http://localhost:4000/articles/2016/02/16/india-day-2-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>

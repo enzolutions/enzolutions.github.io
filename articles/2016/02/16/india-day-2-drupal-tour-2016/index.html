@@ -4,7 +4,7 @@
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
   <head>
-    <title>Getting node comments programmatically in Drupal 8</title>
+    <title>India Day 2 - Drupal Tour 2016</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Spress" />
 <meta name="description" content="Enzo's blog" />
@@ -133,66 +133,77 @@
 
   <article class="post">
   <div class="headline-wrap">
-          <h1><a href="http://localhost:4000/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8" rel="bookmark" title="Getting node comments programmatically in Drupal 8">Getting node comments programmatically in Drupal 8</a></h1>
+          <h1><a href="http://localhost:4000/articles/2016/02/16/india-day-2-drupal-tour-2016" rel="bookmark" title="India Day 2 - Drupal Tour 2016">India Day 2 - Drupal Tour 2016</a></h1>
       </div><!--/ .headline-wrap -->
   <div class="article-wrap">
     <div class="social-share">
   <ul class="inline-list">
     <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/articles/2016/02/16/india-day-2-drupal-tour-2016" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Share</span></a>
     </li>
     <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/articles/2016/02/16/india-day-2-drupal-tour-2016" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a>
     </li>
     <li class="googleplus">
-      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2016/01/20/getting-node-comments-programmatically-in-drupal-8" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/articles/2016/02/16/india-day-2-drupal-tour-2016" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a>
     </li>
   </ul>
 </div>
 
-    <p>This article belongs to tips and tricks section in Drupal 8 because I will explain to you how to get entity comments from a particular entity node.</p>
+    <p>After passing my first day in India, I felt comfortable about how to handle this country as a tourist, so the sky is the limit, I said to myself. I was so wrong "The tuk-tuks are the limit".</p>
 
-<p>Before to start to code, I want to clarify that in Drupal 8 comments could be inside <strong>Content type</strong> definition as a standard field.</p>
+<p>I start my day decided to visit the south of Mumbai; I expected more traffic that the day before because was Sunday. But as soon I tried to request my Uber I notice there aren't car available in UberX or UberBlack models, so weird right, the situation gets worse when some cars appear available, but the rate was increased until 8.X.</p>
 
-<p>I will handle comments here as a separate entity. To get comments I will use <a href="https://api.drupal.org/api/drupal/core!lib!Drupal.php/function/Drupal%3A%3AentityQuery/8">EntityQuery</a> using this approach, we will avoid writing explicit SQL queries, and our code will portable.</p>
+<p>Trying to understand the situation, I did the supposition maybe people start their days in the office around 9 or 10 am, so I skip the Uber to avoid the rush hour, and I decide to walk towards airtel office to try to get connected to The Internet from my cellphone.</p>
 
-<pre><code>$cids = \Drupal::entityQuery('comment')
-   -&gt;condition('entity_id', $ticketID)
-   -&gt;condition('entity_type', 'node')
-   -&gt;sort('cid', 'DESC')
-   -&gt;execute();
+<p>I bring in theory the requirement to get a sim card from <a href="http://www.airtel.in/">Airtel</a>: passport, a passport copy, a photo and copy of visa. But, the manager of the shop said I need a valid visa for at least 90 days to get sim cards, WTF right. For that reason, I had to call to India 911 in my case I contact <a href="https://axelerant.com/team-member/parth-gohil/">Parth Gohil</a>, and he rescue me request a sim card for him, lucky me he had two photographs in his wallet, BTW, who has two pictures in his wallet nowadays just in case :P.</p>
 
-$comments = [];
+<p>Having a sim card, but not connected yet because the activation process takes 24 hours, Parth explain to me that maybe the user rise in prices was related with the Tuk-tuks, or Rickshaws, as they are named in India, were in Strike, as soon he mention I realize the street looks different. So, I decided to Stay couple hours in Parth hotel's room until the Rickshaws apocalypse past.</p>
 
-foreach($cids as $cid) {
- $comment = Comment::load($cid);
+<p>At lunch time, <a href="https://www.drupal.org/u/highermath">Cary Gordon</a> a former Drupal Association board member and <a href="https://in.linkedin.com/in/ashwinikumar7">Ashwini Kumar</a> a developer from Srijian join us and we went to a Punjabi restaurant, food, and talk was so good that we forget to take a picture of us in the restaurant. Shame on us.</p>
 
- $comments[] = [
-     'cid' =&gt; $cid,
-     'uid' =&gt; $comment-&gt;getOwnerId(),
-     'subject' =&gt; $comment-&gt;get('subject')-&gt;value,
-     'body' =&gt; $comment-&gt;get('field_comment_body')-&gt;value,
-     'created' =&gt; $comment-&gt;get('created')-&gt;value
- ];
-}
-</code></pre>
+<p>After lunch Rickshaws, ther appocalypse still happen, but Uber prices reach a moderate 1.6 price factor. So Cory and I went to visit Bandra Fort and Carter Road at Bandra West.</p>
 
-<p>Let's review the code above in detail; As you can see, is required to specify to what kind of entity we are trying to get comments, that tell us that in Drupal 8 is possible to link comments to any entity.</p>
+<p><img style="margin-right: 20px;" src="http://localhost:4000/assets/img/mumbai-bridge.jpg"/>
+<img style="margin-right: 20px;" src="http://localhost:4000/assets/img/enzo-bridge.jpg"/></p>
 
-<p>Additionally, I have specified the Entity ID required to get comments, is possible add more conditions; this is useful taking in count that comments are entities and is possible that comments have customs fields with extra information.</p>
+<p>I have to say that my conversation with Cory was exquisite because the told me about his experience as a board member of Drupal Association member.</p>
 
-<p>When we create the EntityQuery, we define what kind of entity we want to process, as the result the query execution will return a list primary keys of entities matching the conditions, in this case, the main key is represented by cid.</p>
+<p>To end the day, I had a dinner with <a href="http://dasjo.at/">Josef Dabernig</a>.</p>
 
-<p>Using the list of comments ids or cids, we load the comment object. I just traverse the option to create an arbitrary array, only to show how do you have to access to comment entity property, usually is required to use the method get, but there are some exceptions like comment owner ID.</p>
+<p>it's good to have time to talk with members of Drupal community, For me, DrupalCon Asia started today.</p>
 
-<p>I hope do you found this article useful.</p>
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mumbai (Today)</td>
+  <td>13.378</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>46.786</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>60.134</td>
+</tr>
+</tbody>
+</table>
 
     <hr />
     <footer role="contentinfo">
               <ul class="list-unstyled">
                             <li>
                     <i class="fa fa-tags"></i>
-                                        <a href="http://localhost:4000/tags/drupal">drupal</a>,                                        <a href="http://localhost:4000/tags/php">php</a>,                                        <a href="http://localhost:4000/tags/drupal-8">drupal 8</a>                                    </li>
+                                        <a href="http://localhost:4000/tags/travel">travel</a>,                                        <a href="http://localhost:4000/tags/enzotour16">enzotour16</a>                                    </li>
                                         <li>
                     <i class="fa fa-folder"></i>
                                         <a href="http://localhost:4000/categories/articles">articles</a>                                    </li>
