@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 15 Feb 2016 19:14:50 +0000</pubDate>
+                <pubDate>Mon, 15 Feb 2016 19:21:13 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 15 Feb 2016 19:14:50 +0000</pubDate>
+                <pubDate>Mon, 15 Feb 2016 19:21:13 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -5254,7 +5254,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>To end the day, I had a dinner with <a href="http://dasjo.at/">Josef Dabernig</a>.</p>
 
-<p>it's good to have time to talk with members of Drupal community, For me, DrupalCon Asia started today.</p>
+<p>it's good to have time to talk with members of the Drupal community. In my concern the DrupalCon Asia started today.</p>
 
 <h3>Walking</h3>
 
