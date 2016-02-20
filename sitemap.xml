@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sat, 20 Feb 2016 00:44:44 +0000</pubDate>
+            <pubDate>Sat, 20 Feb 2016 01:00:14 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sat, 20 Feb 2016 00:44:44 +0000</pubDate>
+            <pubDate>Sat, 20 Feb 2016 01:00:14 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -5487,6 +5487,31 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <p>To fish my day, I have a good chat and dinner with some folks from UK that lives in Thailand, I will meet with then again in Bangkok in two months.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-uk-thai.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mumbai (Today)</td>
+  <td>11.124</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>87.164</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>98.288</td>
+</tr>
+</tbody>
+</table>
 ]]></description>
             <link>http://enzolutions.com/articles/2016/02/20/drupalcon-asia-day-2-tour-2016</link>
             <pubDate>Sat, 20 Feb 2016 00:00:00 +0000</pubDate>
