@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 24 Feb 2016 01:02:10 +0000</pubDate>
+                <pubDate>Wed, 24 Feb 2016 12:31:09 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 24 Feb 2016 01:02:10 +0000</pubDate>
+                <pubDate>Wed, 24 Feb 2016 12:31:09 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -5763,10 +5763,98 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <p>I have to say I really enjoy the session and the conversation we had at the end with some snacks, and looks like we have a few new Drupal 8 and Drupal Console fans.</p>
 
 <p>To end my day I attend the two hours meeting "Meet your candidate" for Drupal Association elections for Director at large.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mumbai (Today)</td>
+  <td>13.229</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>146.916</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>160.145</td>
+</tr>
+</tbody>
+</table>
 ]]></description>
                 <link>http://enzolutions.com/articles/2016/02/24/singapore-day-3-drupal-tour-2016</link>
                 <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/02/24/singapore-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Singapore Day 4 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday we ( me and <a href="http://yersika.com">yersika</a>) decided to explore the area to look for a Dim Sum place, and finally, we find one, the restaurant was clean, and food taste, but the waiters was a little rude.</p>
+
+<p>Anyway, what is important is the food and check our breakfast.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/geyland-dim-sum.jpg"/></p>
+
+<p>We continue with our Singapore exploration, we move towards the train station and on our route, we found some people performing a <a href="https://en.wikipedia.org/wiki/Dragon_dance">Dragon Dance</a> on the street, I have to say it was a lovely performance.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/dragon-dance.jpg"/></p>
+
+<p>In the end, I understand the dance was because I new business open, a web design study of young people, so looks like youngers follow the Chinese traditions.</p>
+
+<p>We return to Chinatown how to see how looks fully packed with people; we bought some practitioners chopsticks and regular chopsticks to bring back home as souvenirs.</p>
+
+<p>In a border of Chinatown, we found a gorgeous Buddha template, with a lot of offence, this temple contains a Buddha's tooth as relique.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/buddha-temple.jpg"/></p>
+
+<p>Last night 吃饭/Rat invite us to his home to lunch, and I was so happy for accepting the invitation because he offers us real Chinese food cooked by himself, how good was the food judge for this pictures.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/rat-lunch-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/rat-lunch-2.jpg"/></p>
+
+<p>Back into the downtown we decided to try the Skypark and his Observation deck, even that before was raining and the day was gray. Bad idea, maybe, because was really windy and drizzle time to time, wasn't cold but don't allow you take pictures pleasantly.</p>
+
+<p>[picture skypark]</p>
+
+<p>Give up wasn't and option, due the company only return the ticket value under typhoon condition, so we have to wait between drizzles attacks to be able to take some pictures and videos.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/skypark.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mumbai (Today)</td>
+  <td>11.631</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>160.145</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>171.776</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/02/25/singapore-day-4-drupal-tour-2016</link>
+                <pubDate>Thu, 25 Feb 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/02/25/singapore-day-4-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
