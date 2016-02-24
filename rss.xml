@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 24 Feb 2016 00:27:18 +0000</pubDate>
+                <pubDate>Wed, 24 Feb 2016 01:02:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 24 Feb 2016 00:27:18 +0000</pubDate>
+                <pubDate>Wed, 24 Feb 2016 01:02:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -5739,6 +5739,34 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/02/23/singapore-day-2-drupal-tour-2016</link>
                 <pubDate>Tue, 23 Feb 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/02/23/singapore-day-2-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Singapore Day 3 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Today we started our day with a breakfast with "Rat" a Chinese drupaler who lives in Singapore a long time ago. Rat is a Physic person by education by Drupal user since 2007.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/meet-with-rat.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sigapore-prawns-breakfast.jpg"/></p>
+
+<p>After that, we continue our tour to Sentosa area, to visit the S.E.A aquarium where we spend hours because we are an aquarium person, I have to recognize it's an excellent aquarium and in my personal experience with aquarium only supered by Atlanta Aquarium.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sentosa-aquarium.jpg"/></p>
+
+<p>After that, we took a big lunch + dinner in Sentosa in VivoCity the mall, from where you take the monorail to Sentosa.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sentosa-lunch.jpg"/></p>
+
+<p>At the end of day, we move towards the <a href="http://www.pixelonion.com/">Pixel Onion</a> headquarters, due they host a Drupal Meetup in Singapore today and allow me to talk about Drupal 8 and <a href="http://drupalconsole.com">Drupal Console</a> project. They said this was one of the biggest session they held until now.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/singapore-drupal-meetup.jpg"/></p>
+
+<p>I have to say I really enjoy the session and the conversation we had at the end with some snacks, and looks like we have a few new Drupal 8 and Drupal Console fans.</p>
+
+<p>To end my day I attend the two hours meeting "Meet your candidate" for Drupal Association elections for Director at large.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/02/24/singapore-day-3-drupal-tour-2016</link>
+                <pubDate>Wed, 24 Feb 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/02/24/singapore-day-3-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
