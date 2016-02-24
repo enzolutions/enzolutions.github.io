@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Wed, 24 Feb 2016 13:22:25 +0000</pubDate>
+            <pubDate>Wed, 24 Feb 2016 21:43:18 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Wed, 24 Feb 2016 13:22:25 +0000</pubDate>
+            <pubDate>Wed, 24 Feb 2016 21:43:18 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -5762,7 +5762,9 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I have to say I really enjoy the session and the conversation we had at the end with some snacks, and looks like we have a few new Drupal 8 and Drupal Console fans.</p>
 
-<p>To end my day I attend the two hours meeting "Meet your candidate" for Drupal Association elections for Director at large.</p>
+<p>To end my day I attend the two hours meeting "Meet your candidate" for Drupal Association elections for Director at large; You can see the video here:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b2eiS1Lkk94?list=PLpeDXSh4nHjSrDvpuSWiaTX1O15y9TgPc" frameborder="0" allowfullscreen></iframe>
 
 <h3>Walking</h3>
 
