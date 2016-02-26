@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 26 Feb 2016 15:01:59 +0000</pubDate>
+            <pubDate>Fri, 26 Feb 2016 15:21:40 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 26 Feb 2016 15:01:59 +0000</pubDate>
+            <pubDate>Fri, 26 Feb 2016 15:21:40 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -5933,7 +5933,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>The entry in Vietnam was quite easy; we don't have to fill out an immigration form, they just check your passport and in luggage control they don't require to pass through x-ray machines.</p>
 
-<p>The DrupalCamp Vietnam organizers, arrange a taxi driver to wait for us at the airport, Hanoi is quite better that I was expecting, being honest, I don't see any communist spirit and nothing looks worst than capitalist countries in Latin America.</p>
+<p>The <a href="http://drupalcamp.vn">DrupalCamp Vietnam</a> organizers, arrange a taxi driver to wait for us at the airport, Hanoi is quite better that I was expecting, being honest, I don't see any communist spirit and nothing looks worst than capitalist countries in Latin America.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzo-yersika.jpg"/></p>
 
