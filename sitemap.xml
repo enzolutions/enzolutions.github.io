@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 25 Feb 2016 14:01:22 +0000</pubDate>
+            <pubDate>Fri, 26 Feb 2016 15:01:59 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 25 Feb 2016 14:01:22 +0000</pubDate>
+            <pubDate>Fri, 26 Feb 2016 15:01:59 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -5655,7 +5655,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Mumbai (Today)</td>
+  <td>Singapore (Today)</td>
   <td>13.255</td>
 </tr>
 <tr>
@@ -5722,7 +5722,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Mumbai (Today)</td>
+  <td>Singapore (Today)</td>
   <td>22.249</td>
 </tr>
 <tr>
@@ -5777,7 +5777,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Mumbai (Today)</td>
+  <td>Singapore (Today)</td>
   <td>13.229</td>
 </tr>
 <tr>
@@ -5840,7 +5840,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Mumbai (Today)</td>
+  <td>Singapore (Today)</td>
   <td>11.631</td>
 </tr>
 <tr>
@@ -5893,7 +5893,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Mumbai (Today)</td>
+  <td>Singapore (Today)</td>
   <td>10.466</td>
 </tr>
 <tr>
@@ -5910,6 +5910,90 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/02/26/singapore-day-5-drupal-tour-2016</link>
             <pubDate>Fri, 26 Feb 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/02/26/singapore-day-5-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Traveling to Vietnam - Drupal Tour 2016</title>
+            <description><![CDATA[<p>It's time to say goodbye to Singapore, and prepare our next trip, In our morning we start to define the route for <a href="http://yersika.com">Yersika</a> to Australia and after several options, we find a reasonable price flight traveling between SEL &#8594; MEL &#8594; BNE &#8594; HNL.</p>
+
+<p>Guess what we have a dim sum again, no new ones so no #foodporn  today :P.</p>
+
+<p>To go to the airport, we use the <a href="https://www.smrt.com.sg/">SMRT</a>. I have to repeat I love the transport system of Singapore, at the airport station we return four tourist cards, and they return 40 SGD. So basically, we only expend <strong>80 SGD</strong> =  <strong>57.13 USD</strong> for two persons during six days and bargain from my point of view.</p>
+
+<p>To try to be prepared for Vietnam I choose to change my latest Singaporean Dollars, and I got 1.5 million ( 3 notes) Vietnamese dongs, wow was the first time in my life that amount of money in my wallet.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/a-lot-money.jpg"/></p>
+
+<p>Now I can evaluate the airport better; they offer a movie theater for free and free wi-fi, so all you need for an extended stop in Singapore. At passport control, they ask you for a little piece of paper that they gave your when you enter in Singapore. The security control is not general; each gate has his own luggage check-in procedure. So, by far the best airport  I have ever seen in my life.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/singapore-airport.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/singapore-bye.jpg"/></p>
+
+<p>We choose Vietnam Airlines to flight to Vietnam; the flight was comfortable, and the duration from Singapore is almost 3 hours, and they provide good food.</p>
+
+<p>The entry in Vietnam was quite easy; we don't have to fill out an immigration form, they just check your passport and in luggage control they don't require to pass through x-ray machines.</p>
+
+<p>The DrupalCamp Vietnam organizers, arrange a taxi driver to wait for us at the airport, Hanoi is quite better that I was expecting, being honest, I don't see any communist spirit and nothing looks worst than capitalist countries in Latin America.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzo-yersika.jpg"/></p>
+
+<p>We finish our day eating Viet food in the street, was cheap and delicious.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-street-food.jpg"/></p>
+
+<h3>Airplane</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Singapore &#8594; Hanoi - Vietnam</td>
+  <td>2.200</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>20.035</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>22.325</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Singapore/Vietnam (Today)</td>
+  <td>7623</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>182.242</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>189. 865</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/02/27/traveling-to-vietnam-drupal-tour-2016</link>
+            <pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/02/27/traveling-to-vietnam-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
