@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 26 Feb 2016 15:29:09 +0000</pubDate>
+            <pubDate>Sat, 27 Feb 2016 14:25:56 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 26 Feb 2016 15:29:09 +0000</pubDate>
+            <pubDate>Sat, 27 Feb 2016 14:25:56 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -5994,6 +5994,64 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/02/27/traveling-to-vietnam-drupal-tour-2016</link>
             <pubDate>Sat, 27 Feb 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/02/27/traveling-to-vietnam-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Hanoi Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Today I started my day visiting the team of FFW Vietnam, and we have the opportunity to talk about, They Drupal camp, community and how important for local Drupal business it has an active Drupal Community, was a good conversation.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ffw-vietnam-1.jpg"/></p>
+
+<p>Our first cultural spot was [The Literature Temple] which was the first University in Vietnam around 1025 A.C.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/the-literature-temple.jpg"/></p>
+
+<p>Secondly, we stop in  <a href="https://en.wikipedia.org/wiki/Vietnam_Military_History_Museum">Vietnam Military History Museum</a>, This museum is divided into four sections:</p>
+
+<ul>
+<li>Early battles in times of Kingdoms</li>
+<li>French invasion and their victory.</li>
+<li>War against the USA</li>
+<li>Vietnam army role in their society after Vietnam unification.</li>
+</ul>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-militar-museum.jpg"/></p>
+
+<p>The have several military material, mostly Tanks and aircraft manufactured by URSS, USA and France and use in their wars.</p>
+
+<p>Was really interested see the history of their wards from other point of view, because in South America we are expose only to the other side of the conflict.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/military-museum-b52.jpg"/></p>
+
+<p>Later, We try to get into different places but due the hour there were about to close, so we just walk around the old quarter district, to finish with a lovely foot massage in our hotel.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Vietnam (Today)</td>
+  <td>10.467</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>189. 865</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>200.332</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/02/28/hanoi-day-1-drupal-tour-2016</link>
+            <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/02/28/hanoi-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
