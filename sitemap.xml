@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sat, 27 Feb 2016 14:25:56 +0000</pubDate>
+            <pubDate>Sun, 28 Feb 2016 00:25:22 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sat, 27 Feb 2016 14:25:56 +0000</pubDate>
+            <pubDate>Sun, 28 Feb 2016 00:25:22 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -6018,11 +6018,17 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>The have several military material, mostly Tanks and aircraft manufactured by URSS, USA and France and use in their wars.</p>
 
-<p>Was really interested see the history of their wards from other point of view, because in South America we are expose only to the other side of the conflict.</p>
+<p>Was interesting be able to see their history, because, at Latin America we are exposed only to the other side of the conflict, Seeing of their wars from another point of view was very educative.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/military-museum-b52.jpg"/></p>
 
 <p>Later, We try to get into different places but due the hour there were about to close, so we just walk around the old quarter district, to finish with a lovely foot massage in our hotel.</p>
+
+<p>For dinner, we hang out with <a href="https://twitter.com/webtomme">Tom Tram</a>, the Manager of FFW and organizer of the 1st DrupalCamp Vietnam, a and a friend of him.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-dinner-tom-bbq.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-bbq.jpg"/></p>
 
 <h3>Walking</h3>
 
@@ -6036,7 +6042,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <tbody>
 <tr>
   <td>Vietnam (Today)</td>
-  <td>10.467</td>
+  <td>11.467</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -6044,7 +6050,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>200.332</td>
+  <td>201.332</td>
 </tr>
 </tbody>
 </table>
