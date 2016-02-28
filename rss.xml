@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 28 Feb 2016 00:25:22 +0000</pubDate>
+                <pubDate>Sun, 28 Feb 2016 15:45:46 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 28 Feb 2016 00:25:22 +0000</pubDate>
+                <pubDate>Sun, 28 Feb 2016 15:45:46 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6058,6 +6058,73 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/02/28/hanoi-day-1-drupal-tour-2016</link>
                 <pubDate>Sun, 28 Feb 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/02/28/hanoi-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Hanoi Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday we started our day picking up some laundry we left behind the day before; Fortunately, our clothes returned completed and the best clean, the rate is 1 KG = 1 USD.</p>
+
+<p>Our first tourist spot was the <a href="https://en.wikipedia.org/wiki/Vietnam_Museum_of_Ethnology">Museum of Ethnology</a> where we could learn a little bit about ethnics that conform Vietnam.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-ethnology.jpg"/></p>
+
+<p>In a separate building, they have a mini museum about South Asia and a little bit about India and Africa. Behind the museum, there are typical houses used by Vietnamese's people in the countryside.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-ethnology-houses.jpg"/></p>
+
+<p>Also, the museum has a <a href="https://en.wikipedia.org/wiki/Water_puppetry">Water Puppet Theater</a> something that I never saw before in my life and in typical from Vietnam.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/water-puppet.jpg"/></p>
+
+<p>Our next spots were located in <a href="https://en.wikipedia.org/wiki/West_Lake_(Hanoi)">Weste Lake</a> area.</p>
+
+<p>By accident, we getting in <a href="https://en.wikipedia.org/wiki/Qu%C3%A1n_Th%C3%A1nh_Temple">Quán Thánh Temple</a> but was a good accident, because, inside we found a huge statue of budda.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/quan-thanh-buddha.jpg"/></p>
+
+<p>We continue walking to <a href="https://en.wikipedia.org/wiki/Tr%E1%BA%A5n_Qu%E1%BB%91c_Pagoda">Trấn Quốc Pagoda</a>, the best part is this attraction is free. But, to be honest, all attractions in Vietnam are cheap.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tran-quoc-pagoda.jpg"/></p>
+
+<p>After taking lunch, we continue walking towards <a href="https://en.wikipedia.org/wiki/Long_Bi%C3%AAn_Bridge">Long Biên Bridge</a> an old bridge built by French during their occupation of Vietnam. I have to recognize I didn't know how long this bridge was; we had to walk two kilometers over <a href="https://en.wikipedia.org/wiki/Red_River_(Asia)">Red River</a>.</p>
+
+<p>This bridge was a real the cliche of Vietnam, because the bridge is used by Vietnam Rail company and on each side of the railways there are lanes exclusive for motorcycles, and you can see bikes carrying the most unusual thinks.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bridge-bikes.jpg"/></p>
+
+<p>I could swear that in Vietnam are more motorcycles than cellphones :P.</p>
+
+<p>Becuase we love the <strong>Water Puppet</strong> performance we saw early in the morning we decided to attend a famous <strong>Water Puppet Theater</strong> close to our hotel, was an excellent show.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/water-puppet-theater.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Vietnam (Today)</td>
+  <td>16.368</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>201.332</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>217.700</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/02/29/hanoi-day-2-drupal-tour-2016</link>
+                <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/02/29/hanoi-day-2-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
