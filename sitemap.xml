@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 28 Feb 2016 15:45:46 +0000</pubDate>
+            <pubDate>Wed, 02 Mar 2016 16:23:14 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 28 Feb 2016 15:45:46 +0000</pubDate>
+            <pubDate>Wed, 02 Mar 2016 16:23:14 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -6125,6 +6125,61 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/02/29/hanoi-day-2-drupal-tour-2016</link>
             <pubDate>Mon, 29 Feb 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/02/29/hanoi-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Ha-long Bay 3 days - Vietnam - Drupal tour 2016</title>
+            <description><![CDATA[<p>I expect the last three days on a tour in <a href="https://en.wikipedia.org/wiki/H%E1%BA%A1_Long_Bay">Ha-long Bay</a> area, which is a <strong>UNESCO World Heritage Site</strong> with about almost two thousand islets.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ha-long-bay.jpg"/></p>
+
+<p>The tour was two nights and three days, one night we slept anchor close to a harbour and the second night was in <a href="https://en.wikipedia.org/wiki/Monkey_Island">Monkey Island </a>, In our tour were includes two activities visiting  <strong>Dau Go Cave</strong> cave and doing kayak around those islands.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ha-long-cave.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ha-long-sunrise.jpg"/></p>
+
+<p>I have to say the boat was comfortable; the trip was quite peaceful because te ocean looks more like a lagoon, I use The Internet on my first night using my phone, was almost a miracle that I have signal at that place.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/monkey-island.jpg"/></p>
+
+<p>The second night, I use hotel lobby WI-FI, which was more stable and perfect to review some pending tasks and finish the updates required for my session in <a href="http://drupalcamp.vn">DrupalCamp Vietnam</a>.</p>
+
+<p>Vietnam is still in winter and the ocean is still cold, only for brave people :P.</p>
+
+<p>In my return, I notice that <a href="https://twitter.com/drupal">@drupal</a> account in twitter report my tour to the global community, that was more than awesome.</p>
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/enzolutions">@enzolutions</a> starts a 120 day trip to India, Asia, Australasia to foster <a href="https://twitter.com/hashtag/Drupal?src=hash">#Drupal</a> community <a href="https://t.co/r5iui82wRK">https://t.co/r5iui82wRK</a> <a href="https://t.co/mMMqJbjcuG">pic.twitter.com/mMMqJbjcuG</a></p>&mdash; Drupal (@drupal) <a href="https://twitter.com/drupal/status/704839947698704384">March 2, 2016</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Vietnam/ Ha-long Bay</td>
+  <td>8.063</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>217.700</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>225.763</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/02/ha-long-bay-3-days-vietnam-drupal-tour-2016</link>
+            <pubDate>Wed, 02 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/02/ha-long-bay-3-days-vietnam-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
