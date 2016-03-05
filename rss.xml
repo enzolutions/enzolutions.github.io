@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Thu, 03 Mar 2016 14:49:28 +0000</pubDate>
+                <pubDate>Sat, 05 Mar 2016 09:50:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Thu, 03 Mar 2016 14:49:28 +0000</pubDate>
+                <pubDate>Sat, 05 Mar 2016 09:50:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6227,6 +6227,77 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/03/hanoi-day-3-drupal-tour-2016</link>
                 <pubDate>Thu, 03 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/03/hanoi-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>1st DrupalCamp Vietnam</title>
+                <description><![CDATA[<p>Yesterday I had the opportunity of participate in the first Drupal Camp Vietnam in Hanoi.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalcampvn.jpg"/></p>
+
+<p>The event had a turnout about 170 attenders, with around 20% of women participation, caveats those numbers are my appreciation, not official stats.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupacampvn-program.jpg"/></p>
+
+<p>In addition to my assistance, I had the option to present a session about <a href="http://drupalconsole.com">Drupal Console</a> project, I did this presentation in English with translation to Vietnamese by <a href="http://twitter.com/webtomme">Tom Tran</a>.</p>
+
+<p>A Drupal guy for Philipines, <a href="https://www.drupal.org/u/geraldvillorente">Gerald Villorente</a> also did a session in English with translation toVietnamese by local Docker community member, due, his session was about Docker.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/gerald-docker.jpg"/></p>
+
+<p>The rest of the sessions were in Vietnamese, and with the help of organizers they give me a hand to understand what they were saying in their slides, also after a small talk with members of the Drupal community I learn some interested fact I want to share with you.</p>
+
+<p>There is a local organization named <a href="http://vfossa.vn">FOSSA</a> with the primary objective to promote the usage of free and open source software in  Vietnam, because, contrary to what I thought, even Vietnam is a communist country, the government usage of FOSS is only about 20%.</p>
+
+<p>The Vietnamese CMS ranking</p>
+
+<p><strong>General</strong></p>
+
+<ol>
+<li>Wordpress.</li>
+<li><a href="https://nukeviet.vn/">Nukeviet</a> </li>
+<li>Drupal and joomla </li>
+</ol>
+
+<p><strong>Government</strong></p>
+
+<ol>
+<li>Sharepoint </li>
+<li>Liferay </li>
+<li>Nukeviet</li>
+</ol>
+
+<p>One session I want to remark is a case study about <a href="http://bayo.vn">Bayo</a>, which is a startup-oriented to create travel community for Vietnamese people who travel around southeast Asia built in Drupal, with more that 30k user started in June 2015.</p>
+
+<p>At night, I had some beers with <strong>Gerald</strong> and told me how he transform his life from a gardener in a resort in the Philippines to a Drupal Developer. All via a mentor and self-training. his is a living proof of with determination you can do an 180 degrees change in your life, all you need is passion and termination.</p>
+
+<p>In conclusion, this camp was a good first DrupalCamp for their community, of course, there a lot of space to increase the Drupal penetration in Vietnam, but the realization of this kind of events is a huge jump towards that objective.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Hanoi (today)</td>
+  <td>9.056</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>240.807</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>249.863</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/05/1st-drupalcamp-vietnam</link>
+                <pubDate>Sat, 05 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/05/1st-drupalcamp-vietnam</guid>
             </item>
             </channel>
 </rss>
