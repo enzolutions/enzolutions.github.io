@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 07 Mar 2016 02:41:40 +0000</pubDate>
+                <pubDate>Mon, 07 Mar 2016 02:47:19 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 07 Mar 2016 02:41:40 +0000</pubDate>
+                <pubDate>Mon, 07 Mar 2016 02:47:19 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6348,7 +6348,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <title>Traveling to South Korea - Drupal Tour 2016</title>
                 <description><![CDATA[<p>Yesterday was that awkward moment when you have to leave your hotel, but your flight is not ready to go, so you have to be prepared for random situations.</p>
 
-<p>In our case, we choose to wake up late and just in time to take the hotel breakfast and return to the room, in order to continue doing some planning for our two next destinations.</p>
+<p>In our case, we choose to wake up late and just in time to take the hotel breakfast and return to our room to continue doingsome planning for our two next destinations.</p>
 
 <p>After checkout and leaving our luggage under hotel custody, we go out to do some typical tourist shopping. We bought some magnets, Vietnamese hats, bags and caps, and a football uniform of Vietnam for our son Axel.</p>
 
@@ -6366,7 +6366,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>The airport process was as simple as our arrival, not too many controls, the flight was comfortable and almost empty, we departure at midnight and after three hours of flight, we arrive at ICN airport in Seoul.</p>
 
-<p>In the airport to Treach our hotel, I asked at the information desk and the provide the information about what bus or train we could take. Finally, we bought an express rail ticket to reach seoul, but we get lost in the subway system, mainly because we bought train card, put money and doesn't work, so the trip was longer than expected trying to resolve the issue.</p>
+<p>In the airport I asked at the information desk and the provide the information about what bus or train we could take. Finally, we bought an express rail ticket to reach seoul, but we get lost in the subway system, mainly because we bought train card, put money and doesn't work, so the trip was longer than expected trying to resolve the issue.</p>
 
 <p>At the hotel due we arrive too early for checking, about at 11 am. Fortunately, they allow us to access the room.</p>
 
