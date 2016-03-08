@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 07 Mar 2016 13:32:42 +0000</pubDate>
+            <pubDate>Tue, 08 Mar 2016 18:24:20 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 07 Mar 2016 13:32:42 +0000</pubDate>
+            <pubDate>Tue, 08 Mar 2016 18:24:20 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -6480,6 +6480,71 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/03/08/seoul-day-1-drupal-tour-2016</link>
             <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/08/seoul-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Seoul Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday I started my day doing a lot of social networks, because, the elections for next Drupal Director at Large in <a href="https://assoc.drupal.org">Drupal Association</a> is open  <a href="https://assoc.drupal.org/vote2016">https://assoc.drupal.org/vote2016</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/php-elephant-suffer.jpg"/></p>
+
+<p>Therefore, I try to contact as many people as possible I have been in touch with Drupal related matters on all my social networks and IM systems around the world. Fortunately, they are a lot, and I like the idea of requesting the vote one by one and also requesting in community forums by country I use to share my contributions.</p>
+
+<p>Of course, I didn't finish today, likely I have more day in elections process to continue with this process.</p>
+
+<p>Back into Seoul exploring, with my wife, we decided to do some hiking, and we have a long walk today from our hotel walk towards the famous <a href="https://en.wikipedia.org/wiki/N_Seoul_Tower">N Tower</a> located in a <strong>Namsan mountain</strong>. There is a <strong>Namsan Park</strong> in the mountain with roads to do hiking or jogging with facilities for sight impaired people.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/n_tower.jpg"/>
+<br/></br>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/n_tower_locks.jpg"/></p>
+
+<p>In addition to the distance, the route was challenging due Seoul was yesterday between 3 to 5 Celcius degrees.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/n_park_roads.jpg"/></p>
+
+<p>To return,  we took the <a href="https://en.wikipedia.org/wiki/Namsan_cable_car">Namsan cable car</a>, because, we were exhausted; I know I know I am not in a got shape :P.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/n_cable_car.jpg"/></p>
+
+<p>Back in ground, we visit the <a href="https://en.wikipedia.org/wiki/Namdaemun_Market">Namdaemun Market</a> a traditional market in Seoul where you can find wherever you need.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/namdaemun_market.jpg"/></p>
+
+<p>Our next spot was the <a href="https://en.wikipedia.org/wiki/Cheonggyecheon">Cheonggyecheon steam</a>  which a river that crosses a big part of the city, with sidewalks that allow you to take long walks across the river, the river it's immaculate with Ducks and fishes; the water was crystal clear.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cheonggyecheon_river.jpg"/></p>
+
+<p>We ended our walk when we reach the <a href="https://en.wikipedia.org/wiki/Dongdaemun_Design_Plaza">Dongdaemun Design Plaza</a>,  Our objective today wasn't try to get in, due, was too late, but we took some picture outside, it's a place with a good taste of design.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/dpp.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>21.837</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>280.138</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>301.975</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/08/seoul-day-2-drupal-tour-2016</link>
+            <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/08/seoul-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
