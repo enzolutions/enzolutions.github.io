@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 08 Mar 2016 18:24:20 +0000</pubDate>
+                <pubDate>Thu, 10 Mar 2016 02:01:09 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 08 Mar 2016 18:24:20 +0000</pubDate>
+                <pubDate>Thu, 10 Mar 2016 02:01:09 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6545,6 +6545,63 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/08/seoul-day-2-drupal-tour-2016</link>
                 <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/08/seoul-day-2-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Seoul Day 3 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday, Seoul was cooler than the day before, So, we decided to start our day late and look for a brunch in <a href="https://en.wikipedia.org/wiki/Bukchon_Hanok_Village">Bukchon Hanok Village</a> and ancient neighbourhood in Seoul.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bukchon-breakfast.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bukchon.jpg"/></p>
+
+<p>After wall inside this ancient place, we decided to continue with our tour in palaces visiting <a href="https://en.wikipedia.org/wiki/Changdeokgung">Changdeokgung Palace</a> and <a href="https://en.wikipedia.org/wiki/Unhyeongung">Unhyeongung Royal Residence</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/changdeokgung.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/unhyeongung.jpg"/></p>
+
+<p>At the end of the noon, we walk across <a href="https://en.wikipedia.org/wiki/Insa-dong">Insa-dong street</a> and drunk coffee.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/insa-dong.jpg"/></p>
+
+<p>At night, we move to another area of Seoul to participate in a meetup of <a href="https://groups.drupal.org/korean-users">Korean Drupal user group</a> to talk about <strong>Drupal Console</strong> project.</p>
+
+<p>They surprise me because <a href="https://www.drupal.org/user/261577">Yeongtaek Hong</a> share a new translation of <a href="http://drupalconsole.com">Drupal Console</a> project to the Korean Language, and Kim another member of the community print two banner one about the meetup and one about my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/).</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalconsole-korean.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/seoul-meetup.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzotour-banner.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>13.537</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>301.975</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>315.512</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/10/seoul-day-3-drupal-tour-2016</link>
+                <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/10/seoul-day-3-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
