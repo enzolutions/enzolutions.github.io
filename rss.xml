@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Fri, 11 Mar 2016 02:32:28 +0000</pubDate>
+                <pubDate>Fri, 11 Mar 2016 13:20:52 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Fri, 11 Mar 2016 02:32:28 +0000</pubDate>
+                <pubDate>Fri, 11 Mar 2016 13:20:52 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6649,6 +6649,77 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</link>
                 <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Seoul Day 5 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>My stage in South Korea is about to finish, the day before was full of loneliness, due <a href="http://yersika.com">Yersika</a> continue with his trip and departure to Japan and a two days stop before she continues to Australia.</p>
+
+<p>With no plans in my agenda, I keep doing some campaign with my friends for my Drupal Association candidature.</p>
+
+<p>I took a brunch in <a href="https://en.wikipedia.org/wiki/Gwangjang_Market">Gwangjang Market</a> on my way to <a href="https://en.wikipedia.org/wiki/Dongdaemun_Design_Plaza">Dongdaemun Design Plaza</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korea-market-brunch.jpg"/></p>
+
+<p>The <strong>Dongdaemun Design Plaza</strong> looks like a spaceship outside and inside is the more beautiful building I saw in my life. Inside there are two levels of shops with original designs about everything, like bags, bikes, cloth, suitcases, etc.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/desing-shops.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/desing-shops-2.jpg"/></p>
+
+<p>The more interesting shop I saw was a business that prints a person or persons in a 3D model, but the result is almost inside perfect in detail.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/3d-model-machine.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/3d-model-cameras.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/3d-models.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ddp-stairs.jpg"/></p>
+
+<p>I am not a shopping person, but I was tempted to buy some stuff more than one time, I have to content myself saying, OK you don't' need that or ok buddy you still have to visit like 12 more airports, you don't have to carry that.</p>
+
+<p>In my return, by accident, I get inside <a href="https://www.youtube.com/watch?v=so_B6mwGsYQ">Euljiro Underground Pedestrian Arcade</a> under the downtown area line 2. It's located from Dongdaemun Historic &amp; Culture Park to City Hall with an extension of 3.3 km, and I walked about 2.5 km.</p>
+
+<p>The pedestrian arcade is so convenience to walk in winter and summer, inside you could find almost everything, from food, clothes, printing companies or digital lockers, so was a lucky accident.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/maps-shops.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/digital-lockers.jpg"/></p>
+
+<p>In the curious information of Korea, today I saw Korean public toilets and on the street I notice a golden mark in bronze, later I figure out they that to mark where are cables for phone, power lines of fiber optical to know where are located to do any inspection in the proper place.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cable-indicator.png"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korea-public-toilets.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>15.053</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>329.257</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>344.310</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/11/seoul-day-5-drupal-tour-2016</link>
+                <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-5-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
