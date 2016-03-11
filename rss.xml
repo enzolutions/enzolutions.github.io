@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Thu, 10 Mar 2016 02:15:20 +0000</pubDate>
+                <pubDate>Fri, 11 Mar 2016 02:32:28 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Thu, 10 Mar 2016 02:15:20 +0000</pubDate>
+                <pubDate>Fri, 11 Mar 2016 02:32:28 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6602,6 +6602,53 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/10/seoul-day-3-drupal-tour-2016</link>
                 <pubDate>Thu, 10 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/10/seoul-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Seoul Day 4 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday was a relaxed, calm and cool day in Seoul, after doing some work in the morning we departure toward a lunch with people from <a href="https://www.pentasecurity.com/en/">Penta Security</a>, they attend the day before the Drupal Meetup and them invite me to take a meal.</p>
+
+<p>After the meetup, they explain me a little but about <a href="http://mydiamo.com">MyDiamo</a>, so I was interested in that product, and they explain to me that MyDiamo is an application that runs on top of <a href="https://www.mysql.com">MySQL</a> or <a href="https://mariadb.org">MariaDB</a>.</p>
+
+<p>I am interested in <strong>MyDiamo</strong> because they provide encryption in the database in column level, that helps to protect information among database users and protect yourself, because,  if you got hacked, the sensitive information would not be accessible. Implementations of this have a lot of value in a vast spectrum of business; I will try it in deep and investigate to use with Drupal 8 soon and maybe create a session to talk about this soon.</p>
+
+<p>In the afternoon, guided by <a href="https://twitter.com/HappyJiyoung">Jiyoung Yun</a> we visit the <a href="https://en.wikipedia.org/wiki/Gangnam_District">Gangnam District</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/gangnam-style.jpg"/></p>
+
+<p>She explains us a little bit about South Korean culture. Meanwhile, we walk and drink some typical Korean tea.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korean-tea.jpg"/></p>
+
+<p>Our tour in Gangnam ended up at <a href="https://en.wikipedia.org/wiki/Seonjeongneung">Seonjeongneung</a> which is the burial grounds of two Joseon Dynasty Kings and one Joseon Queen.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>13.745</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>315.512</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>329.257</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</link>
+                <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
