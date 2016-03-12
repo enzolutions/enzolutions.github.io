@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 11 Mar 2016 13:20:52 +0000</pubDate>
+            <pubDate>Sat, 12 Mar 2016 12:08:38 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 11 Mar 2016 13:20:52 +0000</pubDate>
+            <pubDate>Sat, 12 Mar 2016 12:08:38 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -6720,6 +6720,57 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/03/11/seoul-day-5-drupal-tour-2016</link>
             <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-5-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Seoul last day - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday was officially my last day in Seoul; I  use part of the day to practice a <strong>Drupal 8</strong> introductory session I will lead next Tuesday at <a href="http://www.ciandt.com/card/tokyo-japan">CI&amp;T Tokyo</a> offices, before my Drupal Console session.</p>
+
+<p>After a brunch, I move toward the <a href="https://en.wikipedia.org/wiki/War_Memorial_of_Korea">War Memorial</a> museum.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korea-last-brunch.jpg"/></p>
+
+<p>This museum was interesting, and big 25% is dedicated to the history of Korean folks since 2000 B.C and their battles.</p>
+
+<p>The rest of the museum, focus his attention on the <a href="https://en.wikipedia.org/wiki/Korean_War">Korean War</a> and their current conflict.</p>
+
+<p>I have to say, was weird as Colombian to see for first time in my life, a mention of Colombia in an International War.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/war_memorial.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/war_memorial_colombia.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/war_memoraial_colombia_figures.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/war_memorial_colombia_2.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>8.879</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>344.310</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>353.189</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/12/seoul-last-day-drupal-tour-2016</link>
+            <pubDate>Sat, 12 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/12/seoul-last-day-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
