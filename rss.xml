@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 12 Mar 2016 14:44:26 +0000</pubDate>
+                <pubDate>Sat, 12 Mar 2016 14:59:28 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 12 Mar 2016 14:44:26 +0000</pubDate>
+                <pubDate>Sat, 12 Mar 2016 14:59:28 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4690,7 +4690,7 @@ print_r($ticket);
 <li>Bangkok, Thailand / Apr 20th - Apr 25th &#8594; Drupal Meetup</li>
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Taipei, Taiwan / Apr 30th - May 6th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Manila, Philippines  / May 7th - May 13th &#8594; DrupalCamp</li>
+<li>Manila, Philippines  / May 7th - May 13th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
 <li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
@@ -4795,7 +4795,7 @@ foreach($cids as $cid) {
 <li>Bangkok, Thailandia / Apr 20 - Apr 26 &#8594; Drupal Meetup </li>
 <li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Taipei, Taiwan / Apr 30 - May 6 &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Manila, Filipinas  / May 7 - May 13 &#8594; DrupalCamp</li>
+<li>Manila, Filipinas  / May 7 - May 13 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
 <li>Sydney, Australia / May 16 - May 22  &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Melbourne, Australia / May 23 - May 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>New Zealand / May 30 - Jun 5 &#8594; Drupal Meetup <strong>TBD</strong></li>
