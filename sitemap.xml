@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sat, 12 Mar 2016 12:08:38 +0000</pubDate>
+            <pubDate>Sat, 12 Mar 2016 14:44:26 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sat, 12 Mar 2016 12:08:38 +0000</pubDate>
+            <pubDate>Sat, 12 Mar 2016 14:44:26 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4680,11 +4680,12 @@ print_r($ticket);
 <li>Singapore, Singapore / Feb 21st - Feb 26th &#8594; <a href="http://groups.drupal.org/node/504398">Drupal Meetup</a> </li>
 <li>Hanoi, Vietnam / Feb 27th - Mar 6th &#8594; <a href="http://drupalcamp.vn">DrupalCamp</a></li>
 <li>Seoul, South Korea / Mar 7th - Mar 13th &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
-<li>Tokyo, Japan / Mar 14th - Mar 18th &#8594; <a href="https://www.facebook.com/events/1680328558921229/">Drupal Cafe</a> </li>
-<li>Osaka, Japan / Mar 19th - Mar 22th &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
+<li>Tokyo, Japan / Mar 14th <a href="https://www.facebook.com/events/1680328558921229/">Drupal Cafe</a></li>
+<li>Tokyo, Japan / Mar 15 <a href="https://drupalconsole.com/events/drupal-8-and-drupal-console-introduction-at-ci-t-tokyo">Drupal Cafe</a></li>
+<li>Osaka, Japan / Mar 18th - Mar 22th &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
 <li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
-<li>Chongqing, China / Apr 11st - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
+<li>Chongqing, China / Apr 11th - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
 <li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailand / Apr 20th - Apr 25th &#8594; Drupal Meetup</li>
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
@@ -4779,24 +4780,25 @@ foreach($cids as $cid) {
 <iframe src="http://enzolutions.com/embed/enzo-tour-2016/index.html" height="360px" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <ol>
-<li>New York, Estados Unidos / Feb 10th - Feb 12th &#8594; <a href="https://drupalconsole.com/content/drupal-console-introduction-session">Drupal Console Introducción</a></li>
-<li>Bombay India / Feb 13th - Feb 20th &#8594; <a href="https://events.drupal.org/node/8600">DrupalCon BOF</a></li>
-<li>Singapure, Singapure / Feb 21st - Feb 26th &#8594; <a href="http://groups.drupal.org/node/504398">Drupal Meetup</a> </li>
-<li>Hanoi, Vietnam / Feb 27th - Mar 6th &#8594; <a href="http://drupalcamp.vn">DrupalCamp</a></li>
-<li>Seul, Corea del sur / Mar 7th - Mar 13th &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
-<li>Tokio, Japon / Mar 14th - Mar 18th &#8594; <a href="https://www.facebook.com/events/1680328558921229/">Drupal Cafe</a>  </li>
-<li>Osaka, Japon / Mar 19th - Mar 22th &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
-<li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
-<li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
-<li>Chongqing, China / Apr 11st - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
-<li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
-<li>Bangkok, Thailand / Apr 20th - Apr 26th &#8594; Drupal Meetup </li>
-<li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Taipei, Taiwan / Apr 30th - May 6th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Manila, Philippines  / May 7th - May 13th &#8594; DrupalCamp</li>
-<li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>New York, Estados Unidos / Feb 10 - Feb 12 &#8594; <a href="https://drupalconsole.com/content/drupal-console-introduction-session">Drupal Console Introducción</a></li>
+<li>Bombay India / Feb 13 - Feb 20 &#8594; <a href="https://events.drupal.org/node/8600">DrupalCon BOF</a></li>
+<li>Singapure, Singapure / Feb 21 - Feb 26 &#8594; <a href="http://groups.drupal.org/node/504398">Drupal Meetup</a> </li>
+<li>Hanoi, Vietnam / Feb 27 - Mar 6 &#8594; <a href="http://drupalcamp.vn">DrupalCamp</a></li>
+<li>Seul, Corea del sur / Mar 7 - Mar 13 &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
+<li>Tokyo, Japan / Mar 14 <a href="https://www.facebook.com/events/1680328558921229/">Drupal Cafe</a></li>
+<li>Tokyo, Japan / Mar 15 <a href="https://drupalconsole.com/events/drupal-8-and-drupal-console-introduction-at-ci-t-tokyo">Drupal Cafe</a></li>
+<li>Osaka, Japan / Mar 18 - Mar 22 &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
+<li>Shanghai, China / Mar 23 - Mar 31 &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
+<li>Beijing, China / Apr 1 - Apr 10 &#8594; Drupal Meetup</li>
+<li>Chongqing, China / Apr 11 - Apr 16 &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
+<li>Chengdu, China / Apr 17 - Apr 19 &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
+<li>Bangkok, Thailandia / Apr 20 - Apr 26 &#8594; Drupal Meetup </li>
+<li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Taipei, Taiwan / Apr 30 - May 6 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Manila, Filipinas  / May 7 - May 13 &#8594; DrupalCamp</li>
+<li>Sydney, Australia / May 16 - May 22  &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Melbourne, Australia / May 23 - May 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>New Zealand / May 30 - Jun 5 &#8594; Drupal Meetup <strong>TBD</strong></li>
 </ol>
 
 <p>Después de completar este viaje, espero poder ayudar a aquellas comunidades que planeo visitar a mejorar su participación en la Comunidad Drupal global y para mí, mejorar mi visión del mundo.</p>
