@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 12 Mar 2016 14:59:28 +0000</pubDate>
+                <pubDate>Sun, 13 Mar 2016 09:56:08 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 12 Mar 2016 14:59:28 +0000</pubDate>
+                <pubDate>Sun, 13 Mar 2016 09:56:08 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6773,6 +6773,78 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/12/seoul-last-day-drupal-tour-2016</link>
                 <pubDate>Sat, 12 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/12/seoul-last-day-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Traveling to Japan - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday was a day of changing a country in the trip; I  couldn't sleep well, only about 2.5 hours.</p>
+
+<p>My flight to Japan departure from Incheon Internation Airport at 8:40 am. When I was packing, I notice the low-cost company I choose to flight to Japan have a 15 KG restriction and almost USD $90 for a second checked luggage.  So, I unwrap my backpacker bag and set everything to leave behind my laptop backpack and some pijamas, if were necessary, due I still have like 6 km over the weight limit.</p>
+
+<p>Fortunately, the airline doesn't say anything about my luggage, and I can continue with all my stuff.</p>
+
+<p>The Narita airport is huge but well organized, after passing control I can get a sim card with Internet connection, and the information desk tries to explain to me that there are several train operators and different kind of trains. Finally, I choose the cheapest one. The Narita airport is quite remote from Tokio.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tokio-metro.jpg"/>]</p>
+
+<p>In my hotel I try to prepare my schedule for this week, this week will be agitated with two sessions in Tokio, a trip an overnight trip to Osaka and a meeting in Osaka.</p>
+
+<p>Looking the top places to visit in my short period in Tokyo, I found a website that helps me to organize my tour <a href="http://www.visitacity.com">http://www.visitacity.com</a>. I have to say I am on a hook with this web application, how I can live without this before :P/</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/visitacity.png"/>]</p>
+
+<h3>Airplane</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul, South Korea &#8594; Tokyo, Japan</td>
+  <td>1.154</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>25.070</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>26.224</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>5.161</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>353.189</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>358.350</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/2016/03/13/traveling-to-japan-drupal-tour-2016</link>
+                <pubDate>Sun, 13 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/2016/03/13/traveling-to-japan-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
