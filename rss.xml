@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 13 Mar 2016 19:43:07 +0000</pubDate>
+                <pubDate>Mon, 14 Mar 2016 16:16:28 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 13 Mar 2016 19:43:07 +0000</pubDate>
+                <pubDate>Mon, 14 Mar 2016 16:16:28 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6845,6 +6845,63 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/2016/03/13/traveling-to-japan-drupal-tour-2016</link>
                 <pubDate>Sun, 13 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/2016/03/13/traveling-to-japan-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Tokyo Day 1 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday was officially my first day in Tokyo in terms I could try to visit some places. According to the plan I did with my the help of <a href="http://www.visitacity.com/">Visit a City</a> I went to <a href="https://en.wikipedia.org/wiki/Sens%C5%8D-ji">Sensoji Temple</a> and <a href="https://en.wikipedia.org/wiki/Asakusa_Shrine">Asakusa Shrine</a> both ancient buildings with a lot of culture and history Behind.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tokio-temple-day-1.jpg"/></p>
+
+<p>After that I tried to visit the <a href="https://en.wikipedia.org/wiki/Tokyo_National_Museum">Tokyo National Museum</a>, but, was closed and almost all museum in Japan on Mondays. So, I continue walking in <a href="https://en.wikipedia.org/wiki/Ueno_Park">Uedo Park</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cherries-flowers.jpg"/></p>
+
+<p>The day was cool and raining all days and sometimes windy, so winter resists to go out in Tokyo.</p>
+
+<p>I did a change of my planes and walked towards <a href="https://en.wikipedia.org/wiki/Akihabara">Akihabara</a> a famous place for Anime and Manga shops.</p>
+
+<p>Before to go to do shopping I took a lunch, and I got the best Ramen I tried in my life.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ramen-tokio.jpg"/></p>
+
+<p>With my stomach full I bought some animes for my son and daughter.</p>
+
+<p>As second change in my schedule, I decided to go to <a href="https://en.wikipedia.org/wiki/Tokyo_Metropolitan_Government_Building">Tokyo Government Office</a> which have two observation desk with free access. What I  have to say is it was good, but the weather the view wasn't  good, I will try to return tomorrow.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tokyo-london.jpg"/></p>
+
+<p>To finish my day, I attend the Drupal Cage #43 in Tokio to talk about Drupal Console project as you can imagine; The assistance was better that I was expending about 20+.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-cafe-43.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>21.773</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>358.350</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>380.123</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/2016/03/14/tokyo-day-1-drupal-tour-2016</link>
+                <pubDate>Mon, 14 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/2016/03/14/tokyo-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
