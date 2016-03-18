@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 16 Mar 2016 23:09:13 +0000</pubDate>
+                <pubDate>Fri, 18 Mar 2016 02:30:58 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 16 Mar 2016 23:09:13 +0000</pubDate>
+                <pubDate>Fri, 18 Mar 2016 02:30:58 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7012,6 +7012,57 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/17/tokyo-day-3-drupal-tour-2016</link>
                 <pubDate>Thu, 17 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/17/tokyo-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Tokyo Last day - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday was my day 36 of my 120ish day trip; I have to say I am tired physically speaking, you know I am not 38 years old anymore :P. So, I decided to stay in my hotel until checkout time 11 a.m to do some office work to rest. I know is weird to say I will work for rest but it's true.</p>
+
+<p>My hotel was "close" is Chiyoda area in Tokyo, so, I decided to walk to the <a href="https://en.wikipedia.org/wiki/Tokyo_Imperial_Palace#East_Garden"> Imperial Palace East Garden</a> a vast green are in the center of Tokyo.</p>
+
+<p>The park wasn't special at the end of winter, but I can image in two weeks in Sprint will be gorgeous</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/imperial-garden.jpg"/></p>
+
+<p>I continue my walk towards the Imperial Palace, again with a magnificent garden, but at the end I realize this is not an attraction the Emperor lives there, so you can't get in, some people were mad about that I didn't know why.</p>
+
+<p>I ended my up day visiting again Akibara you bought some animes for friends in Latin America and a memory card replacement for my camera.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/anime-alexander.jpg"/></p>
+
+<p>With not enough time to do something else in tourist aspect, I return to the hotel to spend some hours in the lobby watching a movie and planning my visit to Indonesia, looks like I will visit Jakarta and Bali.</p>
+
+<p>At night, I took a bus to Osaka, was a special bus with three seats per row all independent and you can almost lay down, also do you have curtains to have some privacy. The trips take 8 hours, and I slept all the trip, I don't know the rest of passengers because I am sure I snore, sorry about that folks.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/osaka-bus.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>16.129</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>410.985</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>427.114</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/18/tokyo-last-day-drupal-tour-2016</link>
+                <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/18/tokyo-last-day-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
