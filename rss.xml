@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Fri, 18 Mar 2016 08:20:19 +0000</pubDate>
+                <pubDate>Sat, 19 Mar 2016 12:19:59 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Fri, 18 Mar 2016 08:20:19 +0000</pubDate>
+                <pubDate>Sat, 19 Mar 2016 12:19:59 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -6885,7 +6885,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Seoul (today)</td>
+  <td>Tokyo (today)</td>
   <td>21.773</td>
 </tr>
 <tr>
@@ -6946,7 +6946,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Seoul (today)</td>
+  <td>Tokyo (today)</td>
   <td>12.255</td>
 </tr>
 <tr>
@@ -6995,7 +6995,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Seoul (today)</td>
+  <td>Tokyo (today)</td>
   <td>18.607</td>
 </tr>
 <tr>
@@ -7035,6 +7035,56 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/osaka-bus.jpg"/></p>
 
+<h3>Airplane</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul, South Korea &#8594; Tokyo, Japan</td>
+  <td>1.154</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>25.070</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>26.224</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tokyo, Japan &#8594; Osaka, Japan</td>
+  <td>503</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>503</td>
+</tr>
+</tbody>
+</table>
+
 <h3>Walking</h3>
 
 <table>
@@ -7046,7 +7096,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Seoul (today)</td>
+  <td>Tokyo (today)</td>
   <td>16.129</td>
 </tr>
 <tr>
@@ -7063,6 +7113,51 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/18/tokyo-last-day-drupal-tour-2016</link>
                 <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/18/tokyo-last-day-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Osaka Day 1 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday I arrived in Osaka by bus without any inconvenience; I will stay in an a room provides by <a href="https://annai.co.jp/">Annai Inc</a> community leaders in Japan.</p>
+
+<p>Instead of going out to do some sightseeing, I prefer to stay to do some laundry, share lunch with Annai Inc team and get prepare for the Drupal Cafe No 44 organized by <strong>Annai Inc</strong>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/annai-lunch.jpg"/></p>
+
+<p>At night, I have a session about <a href="http://console.com">Drupal Console</a>, <a href="https://www.facebook.com/satoshi.kino">Satoshi Kino</a> helps me with translation to Japanese, that was a nice touch; there were almost 20 attendees, all eager for understanding the Drupal Console details. Later <strong>Annai</strong> sponsor some drinks and food for everybody in the activity.</p>
+
+<p>Especial thanks to Kyoko and Satoshi for being awesome organizers in Tokyo and Osaka.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/osaka_meetup.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/annai_enzo.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Osaka (today)</td>
+  <td>7.847</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>427.114</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>434.961</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/19/osaka-day-1-drupal-tour-2016</link>
+                <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/19/osaka-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
