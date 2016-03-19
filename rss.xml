@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 19 Mar 2016 12:19:59 +0000</pubDate>
+                <pubDate>Sat, 19 Mar 2016 20:47:37 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 19 Mar 2016 12:19:59 +0000</pubDate>
+                <pubDate>Sat, 19 Mar 2016 20:47:37 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7128,7 +7128,9 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/osaka_meetup.jpg"/>
 <br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/annai_enzo.jpg"/></p>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/annai_enzo.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-cafe-osaka.jpg"/></p>
 
 <h3>Walking</h3>
 
@@ -7158,6 +7160,59 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/19/osaka-day-1-drupal-tour-2016</link>
                 <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/19/osaka-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Kyoto - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday I wanted to return to the sightseeing activity, for that reason I tried for maximizing my coverture of <a href="https://en.wikipedia.org/wiki/Kansai_region">Kansai Region</a>, visiting <a href="https://en.wikipedia.org/wiki/Kyoto_Prefecture">Kyoto</a> the ancient Imperial capital of Japan.</p>
+
+<p>The trip to <strong>Kyoto</strong> takes about 90 minutes, for that reason I decided only visit the first four spot I could visit.</p>
+
+<p>I started my visit at <a href="https://en.wikipedia.org/wiki/Kinkaku-ji">Kinkaku-ji</a> or <em>Temple of the Golden Pavilion</em></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kinkaku-ji.jpg"/></p>
+
+<p>Outside the temple, I saw a map where were pointed to two nearby locations to visit by walk, that lead me to <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a> a Zen temple well preserved with lovely trails.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ryoan-ji-pagoda.jpg"/></p>
+
+<p>The third place was the best in my opinion, <a href="https://en.wikipedia.org/wiki/Ninna-ji">Ninna-ji</a> temple a <strong>UNESCO World Heritage Site</strong>, The entry allow you walk through ancient halls and alleys.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ninna-ji.jpg"/></p>
+
+<p>After all that walk I was exhausted, so, I decided to find a random place to take a lunch, but after a long walk, I found the [Hōkongō-in] Temple, located just in from of a train station, so I decided to visit the temple and return to Osaka.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hokongo-in.jpg"/></p>
+
+<p>If you are interested in, see more pictures and videos about Kyoto you can check this <a href="https://www.flickr.com/photos/37690888@N03/albums/72157665931401602">album</a>.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Osaka (today)</td>
+  <td>23.233</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>434.961</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>458.194</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</link>
+                <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
