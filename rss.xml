@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 19 Mar 2016 20:47:37 +0000</pubDate>
+                <pubDate>Sun, 20 Mar 2016 10:28:01 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 19 Mar 2016 20:47:37 +0000</pubDate>
+                <pubDate>Sun, 20 Mar 2016 10:28:01 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7196,7 +7196,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Osaka (today)</td>
+  <td>Kyoto (today)</td>
   <td>23.233</td>
 </tr>
 <tr>
@@ -7213,6 +7213,61 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</link>
                 <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Nara - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Today, I continue with my exploration of <a href="https://en.wikipedia.org/wiki/Kansai_region">Kansai Region</a>, visiting the city of Nara.</p>
+
+<p>I started and finished my tour of Nara in the famous <a href="https://en.wikipedia.org/wiki/Nara_Park">Nara park</a>, it's easy to spend two days in this gorgeous park,  with several trial and lakes to enjoy the view, so, if you are a hiking person like me, this is your spot.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/nara-park-1.jpg"/></p>
+
+<p>Inside of this park, you can found severals shrines, pagodas and temples.</p>
+
+<p>As an interesting information about Nara park, I have to say that is entirely original; The park doesn't have pidgins to entertains local and tourist feeding them, instead of, they have wild deer, more than 1200, and you can buy cookies to feed them.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/nara-deers.jpg"/></p>
+
+<p>About attractions, I only have the physical strength to visit few of them <a href="https://en.wikipedia.org/wiki/K%C5%8Dfuku-ji">Kōfuku-ji</a>,  <a href="https://en.wikipedia.org/wiki/Kasuga-taisha">Kasuga-taisha</a> and <a href="https://en.wikipedia.org/wiki/T%C5%8Ddai-ji">Tōdai-ji</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/nara-kofuku-ji.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kasuga-taisha.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tadai-ji.jpg"/></p>
+
+<p>Between Kasuga-Taisha and Tōdai-ji, I took the decision of climb the <a href="https://en.wikipedia.org/wiki/Mount_Wakakusa">Mt.  Wakakusa-yama</a>,  To be honest, I underestimate the 342 meters height of this mountain, I found it very steeply.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mount_wakakusa.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Nara (today)</td>
+  <td>21.753</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>458.194</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>480.957</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/20/nara-drupal-tour-2016</link>
+                <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/20/nara-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
