@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 22 Mar 2016 00:35:14 +0000</pubDate>
+                <pubDate>Tue, 22 Mar 2016 00:42:50 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 22 Mar 2016 00:35:14 +0000</pubDate>
+                <pubDate>Tue, 22 Mar 2016 00:42:50 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7300,16 +7300,16 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Kyoto (today)</td>
+  <td>Osaka (today)</td>
   <td>17.722</td>
 </tr>
 <tr>
   <td>Previously</td>
-  <td>458.194</td>
+  <td>480.957</td>
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>475.916</td>
+  <td>498.679</td>
 </tr>
 </tbody>
 </table>
