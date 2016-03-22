@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 20 Mar 2016 10:28:01 +0000</pubDate>
+            <pubDate>Tue, 22 Mar 2016 00:35:14 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 20 Mar 2016 10:28:01 +0000</pubDate>
+            <pubDate>Tue, 22 Mar 2016 00:35:14 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -7179,7 +7179,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ninna-ji.jpg"/></p>
 
-<p>After all that walk I was exhausted, so, I decided to find a random place to take a lunch, but after a long walk, I found the [Hōkongō-in] Temple, located just in from of a train station, so I decided to visit the temple and return to Osaka.</p>
+<p>After all that walk I was exhausted, so, I decided to find a random place to take a lunch, but after a long walk, I found the <strong>Hōkongō-in</strong> Temple, located just in from of a train station, so I decided to visit the temple and return to Osaka.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hokongo-in.jpg"/></p>
 
@@ -7268,6 +7268,55 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/03/20/nara-drupal-tour-2016</link>
             <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/20/nara-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Osaka Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday was my last full day in Osaka, and I decided to at least see the most prominent spot regarding sightseeing in Osaka, which is the <a href="https://en.wikipedia.org/wiki/Osaka_Castle">Osaka Castle</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/osaka-castle.jpg"/></p>
+
+<p>Also, I bought a lot of manga for my friends, and I was worried the condition of these books for almost three more months of traveling.</p>
+
+<p>So I decided to send a parcel to my friend <a href="http://jmolivas.com">Jesus Manuel Olivas</a>, in that way he can subtract his books and give the other book for my business partner Kenny Abarca during next DrupalCon in New Orleans. The Japanese post office said the package will be in two months in the USA, I have to choose the cheapest and slow method, due the parcel was almost about five kilograms, yeah that is a lot of manga</p>
+
+<p>In the afternoon, I drink some traditional Japanese tea, with the founder of <a href="http://annai.co.jp">Annai</a> my hosts during my trip in Japan, we have the opportunity to exchange experiences in our communities and a little bit about Drupal business models and how the community play a significant role in our business model.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/japanese-traditional-tea.jpg"/></p>
+
+<p>At the evening, we meet with <a href="https://www.drupal.org/user/692278">Luc Bézier</a> a French Drupal guy who lives in the Philippines and his girlfriend.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/luc-and-mary.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/dinner-japan-luc.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Kyoto (today)</td>
+  <td>17.722</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>458.194</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>475.916</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/22/osaka-day-2-drupal-tour-2016</link>
+            <pubDate>Tue, 22 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/22/osaka-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
