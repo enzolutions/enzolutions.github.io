@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 22 Mar 2016 16:20:30 +0000</pubDate>
+                <pubDate>Wed, 23 Mar 2016 11:22:30 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 22 Mar 2016 16:20:30 +0000</pubDate>
+                <pubDate>Wed, 23 Mar 2016 11:22:30 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7415,9 +7415,54 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 ]]></description>
-                <link>http://enzolutions.com/2016/03/23/traveling-to-china-drupal-tour</link>
+                <link>http://enzolutions.com/articles/2016/03/23/traveling-to-china-drupal-tour</link>
                 <pubDate>Wed, 23 Mar 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/2016/03/23/traveling-to-china-drupal-tour</guid>
+                <guid>http://enzolutions.com/articles/2016/03/23/traveling-to-china-drupal-tour</guid>
+            </item>
+                    <item>
+                <title>Shanghai Day 1 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Today was my first day in China; I spend my morning into activities, the first one and crucial, figure out how to get connected to the services I regularly use in Costa Rica. Thankfully to some friends I could get connected using my computer and my phone.</p>
+
+<p>The second activity was explained <a href="http://drupalconsole.com">Drupal Console</a> to the <a href="http://www.bootdev.com">Bootdev</a> folks.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/console_jackie_chang.jpg"/></p>
+
+<p>I tried to get a sim card with Internet, but is only possible by a Chinese citizen with ID, so I could today I have to figure out soon because I am using a printed version of the metro map, how old style is that :P.</p>
+
+<p>In the afternoon, I decided to go our alone to try to understand the city and the metro, so, I visited the <a href="https://en.wikipedia.org/wiki/Shanghai_Museum">Shanghai Museum</a>. That museum has a good representation of Chinese culture; I could visit the coin section because they were about to close the museum so that I will return tomorrow.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shanghai_museum.jpg"/></p>
+
+<p>At home, I have to plan my next day, because without the internet is more probably to get lost.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Osaka (today)</td>
+  <td>14.552</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>503.921</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>518.473</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/24/shanghai-day-1-drupal-tour-2016</link>
+                <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/24/shanghai-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
