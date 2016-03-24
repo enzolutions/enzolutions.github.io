@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 23 Mar 2016 11:22:30 +0000</pubDate>
+                <pubDate>Thu, 24 Mar 2016 13:32:32 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 23 Mar 2016 11:22:30 +0000</pubDate>
+                <pubDate>Thu, 24 Mar 2016 13:32:32 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7435,6 +7435,12 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>At home, I have to plan my next day, because without the internet is more probably to get lost.</p>
 
+<p>To end the day, I have a dinner with <a href="https://chankongching.wordpress.com/">Jackie Chang</a> from <strong>Bootdev</strong>, who explain to me some aspects about Chinese society, meanwhile we enjoy a <strong>Hot Pot</strong> dinner.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-chang.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-hot-pot.jpg"/></p>
+
 <h3>Walking</h3>
 
 <table>
@@ -7447,7 +7453,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <tbody>
 <tr>
   <td>Osaka (today)</td>
-  <td>14.552</td>
+  <td>16.818</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -7455,7 +7461,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>518.473</td>
+  <td>520.739</td>
 </tr>
 </tbody>
 </table>
@@ -7463,6 +7469,51 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/24/shanghai-day-1-drupal-tour-2016</link>
                 <pubDate>Thu, 24 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/24/shanghai-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Shanghai Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday probably was the must boring day in term of tourist. The most important thing I did was to go to the Indonesian Embassy in Shanghai to request my visa, to visit the Drupal Communities Jakarta and Bali.</p>
+
+<p>At the beginning they don't to accept my request, due, I am not a China resident or with a work permit, but I mentioned them,  that on their website they said is possible, and I bring bank account statements. Everything was easier when I mentioned I got my visa to Australia, and that I have to Indonesian friends where I will stay. So, they request me to email the visa, and my friends have to email them an invitation letter.</p>
+
+<p>So, I have to return to where I am staying to try to contact my friend, due; I did have Internet connection at that time. Fortunately, I could contact <a href="https://www.linkedin.com/in/suryanto">Suryanto Rachmat</a>, and he gave the invitation letter. Now, I have to wait a week to get my passport, and I hope my last visa in this trip.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/embassy_indonesia.jpg"/></p>
+
+<p>After the Indonesian visa, I will have 3.5 empty pages in my passport, in theory, is enough to back home, we will see.</p>
+
+<p>In the rest of my day, I just learn a little more about China society with <strong>Bootdev</strong> team and take a long nap in the afternoon; I will return to sightseeing activities tomorrow.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shanghai-noddles.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Osaka (today)</td>
+  <td>11.808</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>520.739</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>532.547</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/25/shanghai-day-2-drupal-tour-2016</link>
+                <pubDate>Fri, 25 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/25/shanghai-day-2-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
