@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 27 Mar 2016 03:22:55 +0000</pubDate>
+            <pubDate>Sun, 27 Mar 2016 03:26:32 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 27 Mar 2016 03:22:55 +0000</pubDate>
+            <pubDate>Sun, 27 Mar 2016 03:26:32 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -7563,7 +7563,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <guid>http://enzolutions.com/articles/2016/03/26/shanghai-day-3-drupal-tour-2016</guid>
         </item>
                 <item>
-            <title>DrupalCamp China -Drupal Tour 2016</title>
+            <title>DrupalCamp China - Drupal Tour 2016</title>
             <description><![CDATA[<p>The main reason to be in Shanghai is to participate in DrupalCamp China. The DrupalCamp China was organized in conjunction with BarCamp; the organizers split the event into two rooms, one for Chinese speakers and one for English speakers.</p>
 
 <p>The keynote was presented by <a href="https://www.linkedin.com/in/jacobredding">Jacob Reeding</a> and talk about the second wave of Open Source and the engagement with the community as companies and individuals.</p>
