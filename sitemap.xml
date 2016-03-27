@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 27 Mar 2016 03:26:32 +0000</pubDate>
+            <pubDate>Sun, 27 Mar 2016 13:21:58 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 27 Mar 2016 03:26:32 +0000</pubDate>
+            <pubDate>Sun, 27 Mar 2016 13:21:58 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -7608,6 +7608,51 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/03/27/drupalcamp-china-drupal-tour-2016</link>
             <pubDate>Sun, 27 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/27/drupalcamp-china-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Shanghai Day 4 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>After some drinks with friends after DrupalCamp China, I get up late and also in conjunction with the fact that there is no spring yet in China makes hard to get off from bed.</p>
+
+<p>My day wasn't busy yesterday I just take brunch in Shanghai downtown and walk to the <a href="https://en.wikipedia.org/wiki/Yu_Garden">Yuyuan Garden</a> area.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shanghai-sunday-brunch.jpg"/></p>
+
+<p>The Yuyuan area is a place with a lot of shops related to jewelry and traditional Chinese products. Almost by accident I found the <strong>Yuyuan</strong> garden and get it, the garden has lots of canals, pavilions and tea houses, decorated with ancient rocks, the garden is huge so easily you can spend like 2 or more walking around the park.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/yuyuan-park-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/yuyuan-park-2.jpg"/></p>
+
+<p>Back home, I just did some laundry, watch couples movies and thinking and planning a little bit about my trip to Indonesia.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Osaka (today)</td>
+  <td>10.012</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>553.869</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>563.881</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/28/shanghai-day-4-drupal-tour-2016</link>
+            <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/28/shanghai-day-4-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
