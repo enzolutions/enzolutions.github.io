@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 27 Mar 2016 13:21:58 +0000</pubDate>
+            <pubDate>Mon, 28 Mar 2016 14:16:34 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 27 Mar 2016 13:21:58 +0000</pubDate>
+            <pubDate>Mon, 28 Mar 2016 14:16:34 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -7452,7 +7452,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Osaka (today)</td>
+  <td>Shanghai (today)</td>
   <td>16.818</td>
 </tr>
 <tr>
@@ -7497,7 +7497,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Osaka (today)</td>
+  <td>Shanghai (today)</td>
   <td>11.808</td>
 </tr>
 <tr>
@@ -7544,7 +7544,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Osaka (today)</td>
+  <td>Shanghai (today)</td>
   <td>16.391</td>
 </tr>
 <tr>
@@ -7591,7 +7591,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Osaka (today)</td>
+  <td>Shanghai (today)</td>
   <td>4.931</td>
 </tr>
 <tr>
@@ -7636,7 +7636,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Osaka (today)</td>
+  <td>Shanghai (today)</td>
   <td>10.012</td>
 </tr>
 <tr>
@@ -7653,6 +7653,82 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/03/28/shanghai-day-4-drupal-tour-2016</link>
             <pubDate>Mon, 28 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/28/shanghai-day-4-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Zhujiajiao - Drupal Tour 2016</title>
+            <description><![CDATA[<p>The organizers of DrupalCamp Chine arrange an informal trip to <a href="https://en.wikipedia.org/wiki/Zhujiajiao">Zhujiajiao</a> for international speakers.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/zhujiajia1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/zhujiajia2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/zhujiajia3.jpg"/></p>
+
+<p>The village of <strong>Zhujiajiao</strong> is an older city, found about 1700 years ago that preserve their architecture and bridges, with my shop to satisfy your Chinese fever of souvenir.</p>
+
+<p>The most unusual activity we did was fish massage which consists in you putting your feets in a thank and little starving fishing try to eat your skin and of course, we took a trip in a boat.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/fish-massge-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/fish-massge-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/boat-trip.jpg"/></p>
+
+<p>We got a lunch next to the river and dinner in Shanghai was a lovely day where we have the opportunity to meet each other on a personal level, outside Drupal world.</p>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Shaghai, China &#8594; Zhujiajiao, China</td>
+  <td>46</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>503</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>549</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Zhujiajiao (today)</td>
+  <td>12.588</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>563.881</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>576.469</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/29/zhujiajiao-drupal-tour-2016</link>
+            <pubDate>Tue, 29 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/29/zhujiajiao-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
