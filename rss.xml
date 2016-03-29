@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 28 Mar 2016 14:16:34 +0000</pubDate>
+                <pubDate>Tue, 29 Mar 2016 09:34:55 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 28 Mar 2016 14:16:34 +0000</pubDate>
+                <pubDate>Tue, 29 Mar 2016 09:34:55 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4684,7 +4684,7 @@ print_r($ticket);
 <li>Tokyo, Japan / Mar 15 <a href="https://drupalconsole.com/events/drupal-8-and-drupal-console-introduction-at-ci-t-tokyo">Drupal Cafe</a></li>
 <li>Osaka, Japan / Mar 18th - Mar 22th &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
 <li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
-<li>Beijing, China / Apr 1st - Apr 10th &#8594; Drupal Meetup</li>
+<li>Beijing, China / Apr 1st - Apr 10th &#8594; <a href="http://www.thinkindrupal.com/node/5974">Drupal Meetup</a></li>
 <li>Chongqing, China / Apr 11th - Apr 16th &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
 <li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailand / Apr 20th - Apr 25th &#8594; Drupal Meetup</li>
@@ -4789,7 +4789,7 @@ foreach($cids as $cid) {
 <li>Tokyo, Japan / Mar 15 <a href="https://drupalconsole.com/events/drupal-8-and-drupal-console-introduction-at-ci-t-tokyo">Drupal Cafe</a></li>
 <li>Osaka, Japan / Mar 18 - Mar 22 &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
 <li>Shanghai, China / Mar 23 - Mar 31 &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
-<li>Beijing, China / Apr 1 - Apr 10 &#8594; Drupal Meetup</li>
+<li>Beijing, China / Apr 1 - Apr 10 &#8594; <a href="http://www.thinkindrupal.com/node/5974">Drupal Meetup</a></li>
 <li>Chongqing, China / Apr 11 - Apr 16 &#8594; <a href="https://groups.drupal.org/node/507958">Drupal Meetup</a></li>
 <li>Chengdu, China / Apr 17 - Apr 19 &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailandia / Apr 20 - Apr 26 &#8594; Drupal Meetup </li>
