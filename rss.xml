@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 29 Mar 2016 09:34:55 +0000</pubDate>
+                <pubDate>Wed, 30 Mar 2016 03:37:16 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 29 Mar 2016 09:34:55 +0000</pubDate>
+                <pubDate>Wed, 30 Mar 2016 03:37:16 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -7729,6 +7729,59 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/03/29/zhujiajiao-drupal-tour-2016</link>
                 <pubDate>Tue, 29 Mar 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/03/29/zhujiajiao-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Shanghai Day 5 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Back to Shanghai, I did a group with <a href="https://www.drupal.org/u/mparker17">Matthew Parker</a> from Canada and <a href="https://www.linkedin.com/in/jacobredding">Jacob Redding </a> from the USA to do some sightseeing in the city.</p>
+
+<p>Our first stop was in <a href="http://www.smartshanghai.com/venue/1701/fabric_market_shanghai">South Bund Fabric Market</a> where Jacob order to manufacture some shirts, the price for a shirt was about USD 15 a full suit about USD 200; the prices were indeed good.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jacob-taylor.jpg"/></p>
+
+<p>After having a lunch in the financial district, we visited the <a href="https://en.wikipedia.org/wiki/Oriental_Pearl_Tower">Oriental Pearl Tower</a>, it's not the taller structure in Shanghai, but it's the second taller tourist tower in the world.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oriental-perl_tower.jpg"/></p>
+
+<p>The tower at the top was named "Space Capsule" the view wasn't good due the glass was dirty, I can imagine how difficult is clean that, but common that is your business, that floor was located at 350 meters. In the floor bellow was located at 263 meters the view was quite better here, but the visibility of the city wasn't  good due the level of pollution which was 160 <a href="https://en.wikipedia.org/wiki/Air_quality_index">AQI</a> according to <a href="http://aqicn.org/city/shanghai">World Air Quality Index team</a> which is unhealthy.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shanghai-pollution.jpg"/></p>
+
+<p>The best part of the tower is a transparent observatory, where you can walk on a glass floor and deal with your levels of <a href="https://en.wikipedia.org/wiki/Acrophobia">Acrophobia</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/glass-floor-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/glass-floor-2.jpg"/></p>
+
+<p>At the bottom of the tower, you could visit a Shanghai History Museum.</p>
+
+<p>At night, I went to <a href="https://it-consultis.com/">IT Consultis</a> office to meet with some developers and his Chief Operating Officer. Their office is located close to French concession neighborhood so went to in bar to have some drink about how is working in China society.</p>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Shanghai (today)</td>
+  <td>13.834</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>576.469</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>590.303</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/03/30/shanghai-day-5-drupal-tour-2016</link>
+                <pubDate>Wed, 30 Mar 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/03/30/shanghai-day-5-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
