@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 31 Mar 2016 16:20:55 +0000</pubDate>
+            <pubDate>Sat, 02 Apr 2016 01:11:52 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 31 Mar 2016 16:20:55 +0000</pubDate>
+            <pubDate>Sat, 02 Apr 2016 01:11:52 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -7756,6 +7756,8 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>At night, I went to <a href="https://it-consultis.com/">IT Consultis</a> office to meet with some developers and his Chief Operating Officer. Their office is located close to French concession neighborhood so went to in bar to have some drink about how is working in China society.</p>
 
+<h3>Walking</h3>
+
 <table>
 <thead>
 <tr>
@@ -7803,6 +7805,8 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/becky-father-food.jpg"/></p>
 
+<h3>Walking</h3>
+
 <table>
 <thead>
 <tr>
@@ -7846,6 +7850,8 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-shanghai.jpg"/></p>
 
+<h3>Walking</h3>
+
 <table>
 <thead>
 <tr>
@@ -7872,6 +7878,101 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/01/shanghai-day-7-drupal-tour-2016</link>
             <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/01/shanghai-day-7-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Traveling to Beijing - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Leaving a city is almost a weird feeling in this trip, because, I have to leave behind a lot of fantastic people and in Shanghai I met a lot of good fellas.</p>
+
+<p>On my way to the subway station, something itches in my brain; I didn't realise what it is until the last moment. What is that well I was about to going to the wrong airport. Shanghai has two airports the <a href="https://en.wikipedia.org/wiki/Shanghai_Pudong_International_Airport">PVG</a> I used this airport when I arrive and the <a href="https://en.wikipedia.org/wiki/Shanghai_Hongqiao_International_Airport">SHA</a> in the totally opposite directions. Fortunately, I double check, and I could fix my direction; otherwise, I will miss my flight for sure.</p>
+
+<p>At Beijing airport, a member of <a href="thinkindrupal.com">Think Drupal</a> the only Drupal workshop in Beijing pick up me at the airport and help me to reach my hotel.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bejining-pickup.jpg"/></p>
+
+<p>At night, I meet with the rest of the team of <strong>Think Drupal</strong>, was a reunion, because, I meet <a href="https://www.drupal.org/u/g089h515r806">Howard Ge</a> 3 years ago in <a href="https://portland2013.drupal.org">DrupalCon Portland</a>.</p>
+
+<p>As is expected we ended up in a Chinese restaurant to enjoy Chinese food Beijing style, but not any restaurant they invite me to <a href="https://en.wikipedia.org/wiki/Quanjude">Quanjude Peking Duck</a> which a restaurant with a restaurant with a lot of history.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/quanjude.jpg"/></p>
+
+<h3>Airplane</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Shanghai, China &#8594; Beijing, China</td>
+  <td>1.069</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>27.776</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>28.845</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>549</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>549</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Shanghai/Beijing (today)</td>
+  <td>11.382</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>610.696</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>622.078</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/02/traveling-to-beijing-drupal-tour-2016</link>
+            <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/02/traveling-to-beijing-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
