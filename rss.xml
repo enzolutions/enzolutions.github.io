@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 03 Apr 2016 21:59:17 +0000</pubDate>
+                <pubDate>Sun, 03 Apr 2016 22:02:53 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 03 Apr 2016 21:59:17 +0000</pubDate>
+                <pubDate>Sun, 03 Apr 2016 22:02:53 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -8023,7 +8023,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <title>Beijing Day 2 - Drupal Tour 2016</title>
                 <description><![CDATA[<p>It's pretty normal in our lives to take somethings granted, in my case as a person living in Costa Rica, quality of air is one of them. I didn't remember the last time I see the sky back home to check the color, but here in Beijing is the first thing I do then I reach the street.</p>
 
-<p>Fortunately for me, yesterday was another [APEC Blue Sky] in Beijing.</p>
+<p>Fortunately for me, yesterday was another <a href="http://www.ibtimes.com/apec-blue-skies-fail-cheer-beijing-residents-government-rushes-clean-air-ahead-summit-1721371">APEC Blue Sky</a> in Beijing.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/apec_bue.jpg"/></p>
 
