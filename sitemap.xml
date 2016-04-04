@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 04 Apr 2016 00:02:33 +0000</pubDate>
+            <pubDate>Mon, 04 Apr 2016 12:07:18 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 04 Apr 2016 00:02:33 +0000</pubDate>
+            <pubDate>Mon, 04 Apr 2016 12:07:18 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -8069,6 +8069,61 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/04/beijing-day-2-drupal-tour-2016</link>
             <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/04/beijing-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Beijing Day 3 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>All my experience in Beijing have been during a long weekend that ends yesterday, but until now I have to say Beijing is extraordinarily crowded. At some moments I feel the overpopulation problem, not really in the subway, because there are a lot of wagons and very frequent, but outside is different, thousands and thousands for folks.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bejing-crowded.jpg"/></p>
+
+<p>Yesterday the blue sky was gone, but nothing worsts that Shanghai. But, due yesterday is holiday my option were limited.</p>
+
+<p>So I decided to check if  <a href="https://en.wikipedia.org/wiki/Tiananmen">Tian'anmen</a> was open and it was, and I decided to visit the Tower. Something weird for me was that the security was quite more strict compared with the <strong>Forbidden City</strong>, looks like the Tian'anmen represent the current government, and the Forbidden City is just a tourist trap.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tianamen-tower.jpg"/></p>
+
+<p>After finish, I just took a walk outside the palace around the canal that surround the palace.</p>
+
+<p>To return to <a href="https://en.wikipedia.org/wiki/Tiananmen_Square">Tian'anmen square</a>, I have to take a long and crowded queue again to past the security control. All important places around the plaza were closed due the holiday, but still were a lot of people like me taking photos of the places.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tianamen_square.jpg"/></p>
+
+<p>Behind the Mao mausoleum, I found the <a href="https://en.wikipedia.org/wiki/Zhengyangmen">Zhengyangmen</a> an ancient gate of Beijing and was open, so I did just to finish my tour.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/zhengyangmen-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/zhengyangmen-2.jpg"/></p>
+
+<p>I will return to the rest of places, but yesterday I found a shortcut with less people apparently we will see tomorrow.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beijing (today)</td>
+  <td>14824</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>652.265</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>667.089</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/05/beijing-day-3-drupal-tour-2016</link>
+            <pubDate>Tue, 05 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/05/beijing-day-3-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
