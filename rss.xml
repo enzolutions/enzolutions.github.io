@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 05 Apr 2016 18:38:53 +0000</pubDate>
+                <pubDate>Wed, 06 Apr 2016 20:06:29 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 05 Apr 2016 18:38:53 +0000</pubDate>
+                <pubDate>Wed, 06 Apr 2016 20:06:29 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -8173,6 +8173,49 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/04/06/beijing-day-4-drupal-tour-2016</link>
                 <pubDate>Wed, 06 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/06/beijing-day-4-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Beijing Day 5 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>With the return of the activity in Beijing after their last festival, the quality of air is getting worst and worst, but I am here, and I have to try to go out to see the city and places around. So, my last stop was at the <a href="https://en.wikipedia.org/wiki/Summer_Palace">Summer Palace</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/summer-palace-1.jpg"/></p>
+
+<p>The summer palace is located about one hour from Beijing downtown, are an enormous place with a lot of trails, pavilion, temples, canals and houses. The only problem is that everything is situated on a hill, therefore,  a lot of stairs.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/summer-palace-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/summer-palace-3.jpg"/></p>
+
+<p>In the other side of the hill there a lake, I skip the tour in the lake due the view wasn't good due the quality of air, maybe in summer is better.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beijing (today)</td>
+  <td>16272</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>667.089</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>683.361</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/07/beijing-day-5-drupal-tour-2016</link>
+                <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/07/beijing-day-5-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
