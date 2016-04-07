@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 07 Apr 2016 21:57:16 +0000</pubDate>
+            <pubDate>Thu, 07 Apr 2016 22:00:21 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 07 Apr 2016 21:57:16 +0000</pubDate>
+            <pubDate>Thu, 07 Apr 2016 22:00:21 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -8223,7 +8223,9 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Usually, do you see the joke about tourist places and the differences Expectative vs. Reality, well, I have to say my really in The Great Wall, overpass the expectation. Maybe because was Thursday or because was early about 9 AM but outside the seven persons in my tour we only five like other five individuals, actually because I travel by myself was hard to find someone who could take me a picture, in general, an awesome experience.</p>
 
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/thegreatwall.jpg"/></p>
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/thegreatwall.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/thegreatwall-2.jpg"/></p>
 
 <p>As a curious aspect to get the top of the Great Wall they have to services on is a <a href="https://en.wikipedia.org/wiki/Cable_car">Cable car</a> and an a <a href="https://en.wikipedia.org/wiki/Chairlift">Chairlift</a>.</p>
 
