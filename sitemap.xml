@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Wed, 06 Apr 2016 20:06:29 +0000</pubDate>
+            <pubDate>Thu, 07 Apr 2016 21:57:16 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Wed, 06 Apr 2016 20:06:29 +0000</pubDate>
+            <pubDate>Thu, 07 Apr 2016 21:57:16 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -8216,6 +8216,86 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/07/beijing-day-5-drupal-tour-2016</link>
             <pubDate>Thu, 07 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/07/beijing-day-5-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>The Great Wall - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Running away from the bad quality of air I decided to visit the most landmark in Beijing the mythical <a href="https://en.wikipedia.org/wiki/Great_Wall_of_China">Great Wall</a> and more concrete in the <a href="https://en.wikipedia.org/wiki/Mutianyu">Mutianyu</a> section.</p>
+
+<p>Usually, do you see the joke about tourist places and the differences Expectative vs. Reality, well, I have to say my really in The Great Wall, overpass the expectation. Maybe because was Thursday or because was early about 9 AM but outside the seven persons in my tour we only five like other five individuals, actually because I travel by myself was hard to find someone who could take me a picture, in general, an awesome experience.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/thegreatwall.jpg"/></p>
+
+<p>As a curious aspect to get the top of the Great Wall they have to services on is a <a href="https://en.wikipedia.org/wiki/Cable_car">Cable car</a> and an a <a href="https://en.wikipedia.org/wiki/Chairlift">Chairlift</a>.</p>
+
+<p>I have to confess I never use a <strong>Chairlift</strong> before. But, I don't think is normal to stand, and wait that the chair hit you and in one second do you have to accommodate yourself the seat. When you get the destination does you have to hurry up, because the system doesn't stop, do you have to run and get off, or you will stay in the loop, maybe is the Chinese version.</p>
+
+<p>When you finish, do you have an extra option to go down, which a toboggan, so I took it, and I have to say is so funny and maybe is a little insecure.</p>
+
+<p>As part of the tour they lead us into a Jade shop trap and I got caught. Continuing with the tour they drive us into the <a href="https://en.wikipedia.org/wiki/Ming_tombs">Ming Tombs</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ming_tombs.jpg"/></p>
+
+<p>In an unexpected stop in the tour, they lead us into a Teahouse trap for tourist, to taste some Chinese teas and learn about tea culture, I didn't buy anything here due it was expensive and I don't think so Australian government will allow me to enter that in Australia.</p>
+
+<p>Back in Beijing I was happy to see the winds return to the city, and the sky was blue again, and the quality of air was in a city normal levels. compare the picture in the morning vs.  the picture at the afternoon.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/badair.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/godair.jpg"/></p>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>79</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>549</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>628</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>The great wall (today)</td>
+  <td>21.172</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>683.361</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>704.533</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/08/the-great-wall-drupal-tour-2016</link>
+            <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/08/the-great-wall-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
