@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Fri, 08 Apr 2016 13:52:07 +0000</pubDate>
+                <pubDate>Fri, 08 Apr 2016 23:28:46 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Fri, 08 Apr 2016 13:52:07 +0000</pubDate>
+                <pubDate>Fri, 08 Apr 2016 23:28:46 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -8298,6 +8298,61 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/04/08/the-great-wall-drupal-tour-2016</link>
                 <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/08/the-great-wall-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Beijing Day 6 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Taking a break from sightseen activities, yesterday I visited the offices of <a href="www.thinkindrupal.com">Think Drupal</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/thinkdrupal.jpg"/></p>
+
+<p>I have the chance to discuss some technical details about development in Drupal 8 with one of their developers, and also, they explain to me some of the more relevant projects.</p>
+
+<p>They build the largest traffic Drupal website in Asia http://e.baidu.com/ with 1 million unique visitors per day. This site the Chinese version of Google <a href="https://en.wikipedia.org/wiki/AdWords">AdWords</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/baidu-adwords.png"/></p>
+
+<p>In Drupal 8 segment, they show an intranet they built <a href="http://english.sipo.gov.cn/">Chinese office of patents</a> and a new website they are building for <strong>Human resources development center OF satcm</strong>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/patent-office-sipo.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/china-human-resorces-development-center.jpg"/></p>
+
+<p>Continuing with software aspect, we visited a compound named <a href="https://en.wikipedia.org/wiki/Zhongguancun">Zhongguancun Software Park</a> which is like Silicon Valley in Beijing for biggest Internet companies in China in combination with some IT global companies like Oracle, IBM, etc.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/china-ufo.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/china-oracle.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/china-complex-lake.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beijing (today)</td>
+  <td>13.803</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>704.397</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>718.200</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/09/beijing-day-6-drupal-tour-2016</link>
+                <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/09/beijing-day-6-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
