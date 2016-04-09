@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 08 Apr 2016 23:28:46 +0000</pubDate>
+            <pubDate>Sat, 09 Apr 2016 22:31:54 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 08 Apr 2016 23:28:46 +0000</pubDate>
+            <pubDate>Sat, 09 Apr 2016 22:31:54 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -8353,6 +8353,53 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/09/beijing-day-6-drupal-tour-2016</link>
             <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/09/beijing-day-6-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Beijing Day 7 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>After expending some time updating my slides about <a href="http://drupalcosole.com">Drupal Console</a>, I went out to try to see as much as possible of Beijing on my last day here.</p>
+
+<p>Firstly, I visited the <a href="https://en.wikipedia.org/wiki/Yonghe_Temple">Yonghe "Lama" Temple</a> the biggest Buddhist Tibetan temple in Beijing. In this complex, you could find several temple where people can pray with giants and small statues representing Buda and Buddhist.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lama_temple.jpg"/></p>
+
+<p>My second stop include two places in one <a href="https://en.wikipedia.org/wiki/Beijing_Temple_of_Confucius">Temple of Confucius</a> and [Guozijian or Imperial Academy] where are ancient buildings where the emperors and high officials were thaught for more that seven centuries and were you can learn a little bit about Confucius's life.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/confusio.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/imperial_academy.jpg"/></p>
+
+<p>Finally, I visit the <a href="https://en.wikipedia.org/wiki/Temple_of_Heaven">Temple of Heaven</a> which is now a park where are located some places where the emperor pray to have a good weather and for harvest time among other rituals as animal sacrifices.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple_of_heaven.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beijing (today)</td>
+  <td>21.362</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>718.200</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>739.562</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/10/beijing-day-7-drupal-tour-2016</link>
+            <pubDate>Sun, 10 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/10/beijing-day-7-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
