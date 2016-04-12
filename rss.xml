@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 11 Apr 2016 14:38:17 +0000</pubDate>
+                <pubDate>Tue, 12 Apr 2016 16:30:54 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 11 Apr 2016 14:38:17 +0000</pubDate>
+                <pubDate>Tue, 12 Apr 2016 16:30:54 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -8550,6 +8550,64 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/04/12/chongqing-day-1-drupal-tour-2016</link>
                 <pubDate>Tue, 12 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/12/chongqing-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Chongqing Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>I expend half day working with the rest of people involve in core development of <a href="http://drupalconsole.com">Drupal Console</a> project. We have to define what we will include in our next release 1.0.0-alpha and take some architecture desition about how to enable external cooperation and determine how to modularize our code to publish some components to be used in other projects.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/three-gores.jpg"/></p>
+
+<p>After lunch, I went to the <a href="https://en.wikipedia.org/wiki/Three_Gorges_Museum">Three Gores</a> museum; that museum dedicates part of his space to explain the impact of this project, which is the biggest hydro electrical project until now in the world. But also display other sections</p>
+
+<ul>
+<li>Glorious Three Gorges;</li>
+<li>Ancient Ba-Yu – early history of Chongqing;</li>
+<li>Chongqing: the City Road – 20th-century history;</li>
+<li>The Anti-Japanese War (1937–1945).</li>
+</ul>
+
+<p>Close to the museum they have the <a href="https://en.wikipedia.org/wiki/Great_Hall_of_the_People_(Chongqing)">Great Hall of the People</a> used by Chinese Communist Party in their conversation, is beautiful outside, but inside is just a big theater.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chongqing-hall-people-outside.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chongqing-hall-people-inside.jpg"/></p>
+
+<p>Back home, I expend some time in planning and could book my flights to  Philipines and Indonesia, and continue with emails to define meetups in Sydney, Australia, and Hilo, Hawaii.</p>
+
+<p>To finish my night, I just went out with <strong>Jungle</strong> to eat the Chinese speciality of night; tonight was fish.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chongqing-dinner-fish-0.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chongqing-dinner-fish-1.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beijing (today)</td>
+  <td>13.870</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>774.600</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>788.470</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/13/chongqing-day-2-drupal-tour-2016</link>
+                <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/13/chongqing-day-2-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
