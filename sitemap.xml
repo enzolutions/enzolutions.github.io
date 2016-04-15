@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 15 Apr 2016 00:09:54 +0000</pubDate>
+            <pubDate>Fri, 15 Apr 2016 14:46:41 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 15 Apr 2016 00:09:54 +0000</pubDate>
+            <pubDate>Fri, 15 Apr 2016 14:46:41 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -8708,6 +8708,57 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/15/chongqing-day-4-drupal-tour-2016</link>
             <pubDate>Fri, 15 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/15/chongqing-day-4-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Pre DrupalCamp Chongqing - Drupal Tour 2016</title>
+            <description><![CDATA[<p>As part of my preparation for DrupalCamp Chongqing  I have to stop a little bit my sightseeing to finish my tweaks in my, Drupal Console slides to add the latest features and finish my keynote slides.</p>
+
+<p>Also, I work a little bit in <a href="http://anexusit.com">Anexus</a> doing a research of an issue related with Drupal <a href="https://drupalcommerce.org">Commerce</a> and Search API and expose filters. I have to reckon that I never use Search API and his integration with <strong>Drupal Commerce</strong>, but I am glad that I could understand how works and fix the problem.</p>
+
+<p>Also, I participate in the weekly podcast about <a href="http://drupalconsole.com">Drupal Console</a> project named <strong>The China plugin</strong>, where we talked about next event, latest changes and what is coming on the project next weeks.</p>
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/WCrinQRv8aM" frameborder="0" allowfullscreen></iframe>
+
+<p>As part of my preparation for DrupalCamp, I change my hotel to another which is located two blocks from the venue, to avoid get lost in translation.</p>
+
+<p>In the afternoon, I continue my next trip planning and with a help of my <a href="http://yersika.com">wife</a> I bought my flight ticket from Indonesia to Melbourne, Australia, you know all good goes to and ending.</p>
+
+<p>At evening, the organizer set up a dinner for all speaker and as usual was delicious and spicy.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/precamp-dinner-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/precamp-dinner-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/precamp-dinner-3.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beijing (today)</td>
+  <td>5,301</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>820.051</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>825.352</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/2016/04/16/pre-drupalcamp-chongqing-drupal-tour-2016</link>
+            <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/2016/04/16/pre-drupalcamp-chongqing-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
