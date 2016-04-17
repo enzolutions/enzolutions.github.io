@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Fri, 15 Apr 2016 14:46:41 +0000</pubDate>
+                <pubDate>Sun, 17 Apr 2016 22:49:30 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Fri, 15 Apr 2016 14:46:41 +0000</pubDate>
+                <pubDate>Sun, 17 Apr 2016 22:49:30 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4691,7 +4691,7 @@ print_r($ticket);
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Taipei, Taiwan / Apr 30th - May 6th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Manila, Philippines  / May 7th - May 13th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Sydney, Australia / May 16th - May 22nd  &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Sydney, Australia / May 16th - May 22nd  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
 <li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
 </ol>
@@ -4796,7 +4796,7 @@ foreach($cids as $cid) {
 <li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Taipei, Taiwan / Apr 30 - May 6 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Manila, Filipinas  / May 7 - May 13 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Sydney, Australia / May 16 - May 22  &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Sydney, Australia / May 16 - May 22  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a> </li>
 <li>Melbourne, Australia / May 23 - May 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>New Zealand / May 30 - Jun 5 &#8594; Drupal Meetup <strong>TBD</strong></li>
 </ol>
@@ -8478,7 +8478,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Beijing (today)</td>
+  <td>Beijing/Chongqing (today)</td>
   <td>16.363</td>
 </tr>
 <tr>
@@ -8533,7 +8533,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Beijing (today)</td>
+  <td>Chongqing (today)</td>
   <td>18.675</td>
 </tr>
 <tr>
@@ -8591,7 +8591,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Beijing (today)</td>
+  <td>Chongqing (today)</td>
   <td>13.870</td>
 </tr>
 <tr>
@@ -8642,7 +8642,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Beijing (today)</td>
+  <td>Chongqing (today)</td>
   <td>15.880</td>
 </tr>
 <tr>
@@ -8691,7 +8691,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Beijing (today)</td>
+  <td>Chongqing (today)</td>
   <td>15,701</td>
 </tr>
 <tr>
@@ -8742,7 +8742,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Beijing (today)</td>
+  <td>Chongqing (today)</td>
   <td>5,301</td>
 </tr>
 <tr>
@@ -8756,9 +8756,74 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 ]]></description>
-                <link>http://enzolutions.com/2016/04/16/pre-drupalcamp-chongqing-drupal-tour-2016</link>
+                <link>http://enzolutions.com/articles/2016/04/16/pre-drupalcamp-chongqing-drupal-tour-2016</link>
                 <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/2016/04/16/pre-drupalcamp-chongqing-drupal-tour-2016</guid>
+                <guid>http://enzolutions.com/articles/2016/04/16/pre-drupalcamp-chongqing-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>DrupalCamp Chongqing - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Yesterday was a big day for Drupal Community in Chongqing, China, due they celebrate their first <a href="2016.drupalchongqing.org">DrupalCamp</a>.</p>
+
+<p>The Drupal community in China in general in just growing and growing and Chongqing community organize this DrupalCamp in 50 days. Their speakers came from Beijing, Shanghai and other major Chinese cities.</p>
+
+<p>One impressive fact is the support of <a href="http://english.cqmu.edu.cn/">Chongqing medical university</a> and more specifically their <strong>Clinical Medicine</strong> program, this program is using Drupal to improve the information system and doing research to connect with Open Hardware, which is quite interesting.</p>
+
+<p>Regarding numbers, the event had about 120+ attendees; this is not an official statistic, is just my appreciation.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalcamp_chongqing.jpg"/></p>
+
+<p>I had the honor of being the Keynote in this event, in my session I talk about why "<strong>Investing in the community is a good business</strong>", you can review the slides <a href="http://bit.ly/enzotour16-chongqing">here</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalcamp-chongqing-keynote.jpg"/></p>
+
+<p>Also, I have the opportunity of talk about <a href="http://drupalconsole.com">Drupal Console</a> project; I lead this session with <a href="http://ranqiangjun.com">Jungle</a> who by the way is the responsible for the Chinese translation of Drupal Console and the leader and co - organizer of this Drupalcamp.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalcamp-chongqing-console.jpg"/></p>
+
+<p>Based on some comments I could say this Drupal Camp set a precedent in Drupal Chinese community. Next events over China will try to imitate their level of organization and try to be more official which means in Chinese culture perhaps more political, but maybe that is what is necessary to increase the participation of China in Drupal international community.</p>
+
+<p>Well done Chongqing.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Chongqing (today)</td>
+  <td>15,209</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>825.352</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>840.561</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/17/drupalcamp-chongqing-drupal-tour-2016</link>
+                <pubDate>Sun, 17 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/17/drupalcamp-chongqing-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Chengdu Drupal Meetup - Drupal Tour 2016</title>
+                <description><![CDATA[### Walking
+|  | Distance (steps) |
+|---|---|
+| Chongqing/Chengdy (today) |  12,887 |
+| Previously  | 840.561 |
+| **Total**  | 853448|]]></description>
+                <link>http://enzolutions.com</link>
+                <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com</guid>
             </item>
             </channel>
 </rss>
