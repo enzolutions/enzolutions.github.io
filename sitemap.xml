@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 17 Apr 2016 23:26:57 +0000</pubDate>
+            <pubDate>Mon, 18 Apr 2016 15:13:36 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 17 Apr 2016 23:26:57 +0000</pubDate>
+            <pubDate>Mon, 18 Apr 2016 15:13:36 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4681,19 +4681,20 @@ print_r($ticket);
 <li>Hanoi, Vietnam / Feb 27th - Mar 6th &#8594; <a href="http://drupalcamp.vn">DrupalCamp</a></li>
 <li>Seoul, South Korea / Mar 7th - Mar 13th &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
 <li>Tokyo, Japan / Mar 14th <a href="https://www.facebook.com/events/1680328558921229/">Drupal Cafe</a></li>
-<li>Tokyo, Japan / Mar 15 <a href="https://drupalconsole.com/events/drupal-8-and-drupal-console-introduction-at-ci-t-tokyo">Drupal Cafe</a></li>
 <li>Osaka, Japan / Mar 18th - Mar 22th &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
 <li>Shanghai, China / Mar 23th - Mar 31st &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1st - Apr 10th &#8594; <a href="http://www.thinkindrupal.com/node/5974">Drupal Meetup</a></li>
 <li>Chongqing, China / Apr 11th - Apr 16th &#8594; <a href="http://2016.drupalchongqing.org/">DrupalCamp</a></li>
 <li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailand / Apr 20th - Apr 25th &#8594; <a href="http://www.meetup.com/Drupal-Meetup-Bangkok/events/230041865">Drupal Meetup</a></li>
-<li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Taipei, Taiwan / Apr 30th - May 6th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Manila, Philippines  / May 7th - May 13th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Sydney, Australia / May 16th - May 22nd  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
-<li>Melbourne, Australia / May 23th - May 29th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>New Zealand / May 30th - Jun 5th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
+<li>Taipei, Taiwan / Apr 30th - May 3th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Manila, Philippines  / May 4th - May 11th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
+<li>Jakarta, Indonesia / May 11th - May 21st &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Bali, Indonesia / May 21th - May 28th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Melbourne, Australia / May 21th - May 28th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Sydney, Australia / May 20th - June 3rd  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
+<li>Hawaii, USA / June 4th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
 </ol>
 
 <p>After complete this trip, I expect to help those communities I plan to visit to help to improve their participation in global Drupal Community and for me, well, enhance my vision of the world.</p>
@@ -8825,7 +8826,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Maybe in the sad news, I have to report I lost my phone. I lost between last subway station and my walk to train station, nobody stole just felt down from my bad I notice because my extra battery charge impact the floor and I hear the sound but due my phone protector I couldn't hear.</p>
 
-<p>Right after arriving in Chengdu, I move towards to the <a href="http://www.cdut.edu.cn/english">Chengdu University of Technology</a>. During this meetup, I have the opportunity to lead an introduction to Drupal 8 and a Introduction to Drupal Console. Thanks to <strong>Bruce</strong> becuase he translate to Chinese my words for almost 3 hours and also organize the meetup with <strong>Skip</strong>.</p>
+<p>Right after arriving in Chengdu, I move towards to the <a href="http://www.cdut.edu.cn/english">Chengdu University of Technology</a>. During this meetup, I have the opportunity to lead an introduction to Drupal 8 and a Introduction to Drupal Console. Thanks to <a href="http://blog.libruce.cn">Bruce</a> becuase he translate to Chinese my words for almost 3 hours and also organize the meetup with <strong>Skip</strong>.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-meetup.jpg"/>
 <br/><br/>
@@ -8938,6 +8939,73 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/18/chengdu-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Mon, 18 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/18/chengdu-drupal-meetup-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Chengdu Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>I didn't have too much time in Chengdu only two nights, but I decided to visit Chengdu for two reasons a Drupal Meetup and to see the famous <a href="https://en.wikipedia.org/wiki/Chengdu_Research_Base_of_Giant_Panda_Breeding">Chengdu Research Base of Giant Panda Breeding</a>.</p>
+
+<p>A lot of people hear at least hear that there a place in China with a lot of Pandas, well this place in Chengdu. Fortunately, I have a local guide from Drupal Community; <a href="http://leilei.libruce.cn">Peter</a> who companion me to the <strong>Giant Panda Breeding</strong> and other places in Chengdu.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-peter.jpg"/></p>
+
+<p>The Panda base in a vast area that hosts a project to protect panda population and execute programs to try to increase the population. For tourists like me, they have some pandas living in a "controlled environment." Outside the regular pandas, they also have a reservoir for "Red Pandas" if you are not familiar with that animal, just think is <a href="firefox.com">Firefox</a> browser logo, the animal is a Red Panda, not a fox.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-panda-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-panda-2.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-panda-3.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-panda-4.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-red-panda.jpg"/></p>
+
+<p>After lunch, we move on towards <a href="https://www.travelchinaguide.com/attraction/sichuan/chengdu/wide-narrow-alley.htm">Kuanzhai Xiangzi</a> which are old streets where you can find a lot of restaurants, snacks places, and Chinese handcrafts.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kuanzhai-xiangzi-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kuanzhai-xiangzi-2.jpg"/></p>
+
+<p>Maybe the most interesting thing I found in this place was a kind of mini theater that presented <a href="https://en.wikipedia.org/wiki/Sichuanese_opera">Sichuan Opera</a>, this style combines music, comedy, magic and kung fu, I totally recommend this activity.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sichuan-opera-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sichuan-opera-2.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sichuan-opera-3.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sichuan-opera-4.jpg"/></p>
+
+<p>To finish our day we have a Hot Pot fish for dinner.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Chongqing/Chengdu (today)</td>
+  <td>13.242</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>853.448</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>866.690</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/19/chengdu-day-1-drupal-tour-2016</link>
+            <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/19/chengdu-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
