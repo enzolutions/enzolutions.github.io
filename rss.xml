@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 18 Apr 2016 15:13:36 +0000</pubDate>
+                <pubDate>Mon, 18 Apr 2016 15:20:39 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 18 Apr 2016 15:13:36 +0000</pubDate>
+                <pubDate>Mon, 18 Apr 2016 15:20:39 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4690,11 +4690,11 @@ print_r($ticket);
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
 <li>Taipei, Taiwan / Apr 30th - May 3th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Manila, Philippines  / May 4th - May 11th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Jakarta, Indonesia / May 11th - May 21st &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Bali, Indonesia / May 21th - May 28th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Jakarta, Indonesia / May 11th - May 14st &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Bali, Indonesia / May 15th - May 21th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Melbourne, Australia / May 21th - May 28th &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Sydney, Australia / May 20th - June 3rd  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
-<li>Hawaii, USA / June 4th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Sydney, Australia / May 29th - June 3rd  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
+<li>Honolulu,Hawaii USA / June 4th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
 </ol>
 
 <p>After complete this trip, I expect to help those communities I plan to visit to help to improve their participation in global Drupal Community and for me, well, enhance my vision of the world.</p>
@@ -4787,19 +4787,20 @@ foreach($cids as $cid) {
 <li>Hanoi, Vietnam / Feb 27 - Mar 6 &#8594; <a href="http://drupalcamp.vn">DrupalCamp</a></li>
 <li>Seul, Corea del sur / Mar 7 - Mar 13 &#8594; <a href="http://groups.drupal.org/node/507923">Drupal Meetup</a> </li>
 <li>Tokyo, Japan / Mar 14 <a href="https://www.facebook.com/events/1680328558921229/">Drupal Cafe</a></li>
-<li>Tokyo, Japan / Mar 15 <a href="https://drupalconsole.com/events/drupal-8-and-drupal-console-introduction-at-ci-t-tokyo">Drupal Cafe</a></li>
 <li>Osaka, Japan / Mar 18 - Mar 22 &#8594; <a href="https://www.facebook.com/events/541411579373436/">Drupal Cafe</a> </li>
 <li>Shanghai, China / Mar 23 - Mar 31 &#8594; <a href="http://drupalcampchina.org/drupal%E4%B8%AD%E5%9B%BD%E8%90%A5-2016/sessions/drupalconsole">DrupalCamp</a> </li>
 <li>Beijing, China / Apr 1 - Apr 10 &#8594; <a href="http://www.thinkindrupal.com/node/5974">Drupal Meetup</a></li>
 <li>Chongqing, China / Apr 11 - Apr 16 &#8594; <a href="http://2016.drupalchongqing.org/">DrupalCamp</a></li>
 <li>Chengdu, China / Apr 17 - Apr 19 &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailandia / Apr 20 - Apr 26 &#8594; <a href="http://www.meetup.com/Drupal-Meetup-Bangkok/events/230041865">Drupal Meetup</a> </li>
-<li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Taipei, Taiwan / Apr 30 - May 6 &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Manila, Filipinas  / May 7 - May 13 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Sydney, Australia / May 16 - May 22  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a> </li>
-<li>Melbourne, Australia / May 23 - May 29 &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>New Zealand / May 30 - Jun 5 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
+<li>Taipei, Taiwan / Apr 30 - May 3 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Manila, Filipinas  / May 4 - May 11 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
+<li>Jakarta, Indonesia / May 11 - May 15 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Bali, Indonesia / May 15 - May 21 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Melbourne, Australia / May 21 - May 28 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Sydney, Australia / May 29 - Jun 3  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a> </li>
+<li>Honolulu,Hawaii USA / June 4th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
 </ol>
 
 <p>Después de completar este viaje, espero poder ayudar a aquellas comunidades que planeo visitar a mejorar su participación en la Comunidad Drupal global y para mí, mejorar mi visión del mundo.</p>
@@ -8989,7 +8990,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Chongqing/Chengdu (today)</td>
+  <td>Chengdu (today)</td>
   <td>13.242</td>
 </tr>
 <tr>
