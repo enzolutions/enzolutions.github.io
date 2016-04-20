@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 18 Apr 2016 15:20:39 +0000</pubDate>
+            <pubDate>Wed, 20 Apr 2016 14:07:57 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 18 Apr 2016 15:20:39 +0000</pubDate>
+            <pubDate>Wed, 20 Apr 2016 14:07:57 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4688,7 +4688,7 @@ print_r($ticket);
 <li>Chengdu, China / Apr 17st - Apr 19th &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailand / Apr 20th - Apr 25th &#8594; <a href="http://www.meetup.com/Drupal-Meetup-Bangkok/events/230041865">Drupal Meetup</a></li>
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
-<li>Taipei, Taiwan / Apr 30th - May 3th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Taipei, Taiwan / Apr 30th - May 3th &#8594; <a href="https://drupaltaiwan.org/forum/20160419/11612">Drupal Meetup</a></li>
 <li>Manila, Philippines  / May 4th - May 11th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
 <li>Jakarta, Indonesia / May 11th - May 14st &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Bali, Indonesia / May 15th - May 21th &#8594; Drupal Meetup <strong>TBD</strong></li>
@@ -4794,7 +4794,7 @@ foreach($cids as $cid) {
 <li>Chengdu, China / Apr 17 - Apr 19 &#8594; <a href="https://groups.drupal.org/node/508536">Drupal Meetup</a></li>
 <li>Bangkok, Thailandia / Apr 20 - Apr 26 &#8594; <a href="http://www.meetup.com/Drupal-Meetup-Bangkok/events/230041865">Drupal Meetup</a> </li>
 <li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
-<li>Taipei, Taiwan / Apr 30 - May 3 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Taipei, Taiwan / Apr 30 - May 3 &#8594; <a href="https://drupaltaiwan.org/forum/20160419/11612">Drupal Meetup</a></li>
 <li>Manila, Filipinas  / May 4 - May 11 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
 <li>Jakarta, Indonesia / May 11 - May 15 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Bali, Indonesia / May 15 - May 21 &#8594; Drupal Meetup <strong>TBD</strong></li>
@@ -9007,6 +9007,128 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/19/chengdu-day-1-drupal-tour-2016</link>
             <pubDate>Tue, 19 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/19/chengdu-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Chengdu Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>On my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/) this was the shorter stop, only two days. So I get up early and try to visit couple places in the morning just to have a glance of Chengdu.</p>
+
+<p>Firstly, I decided to visit the <strong>Manjusri Monastery</strong> or Wenshu Monastery/文殊院, which is a buddies temple, with a lot of monks inside and looks like there are residences for them behind the temples.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manjusri-monastery-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manjusri-monastery-2.jpg"/></p>
+
+<p>I was a little worry about the traffic, so I have other places in my list, but I  prefer to walk around to check, and I see, and I found the <strong>Aidao Nunnery</strong> or Ancient Yuanjue Nunnery. This temple was reconstructed this century and have a good shape and nice decorations.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/aidao-nunnery-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/aidao-nunnery-2.jpg"/></p>
+
+<p>At the afternoon, I said goodbye to China and departure to Bangkok, Thailand. I know you could say, but you will go to Hong Kong and Taiwan, well those are other Chinas like Singapore.</p>
+
+<h3>Airplane</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Chengdu, China &#8594; Bangkok, Thailand</td>
+  <td>1.918</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>30.293</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>32.211</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Train</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>366</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>366</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>628</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>628</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Chongqing/Chengdu (today)</td>
+  <td>12.121</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>853.448</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>865.569</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/20/chengdu-day-2-drupal-tour-2016</link>
+            <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/20/chengdu-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
