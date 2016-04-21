@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 20 Apr 2016 14:07:57 +0000</pubDate>
+                <pubDate>Thu, 21 Apr 2016 01:20:18 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 20 Apr 2016 14:07:57 +0000</pubDate>
+                <pubDate>Thu, 21 Apr 2016 01:20:18 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -9129,6 +9129,83 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/04/20/chengdu-day-2-drupal-tour-2016</link>
                 <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/20/chengdu-day-2-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Bangkok Day 1 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>For about two months the temperature of place I have been visiting fluctuate between 1 Celsius degrees to 21 Celsius degrees; Yesterday I arrive in Bangkok, Thailand, and the weather punch me so hard, having a 32 Celsius degrees is not easy to less walk and more taxi in this part of my trip.</p>
+
+<p>For my sightseeing, I follow a guide prepared by <a href="https://www.linkedin.com/in/mledu">Michael Ledu</a> a friend from NYC and married with a Thailand girl.</p>
+
+<p>So, following his advice, I went out first into <a href="http://www.jimthompsonhouse.com">Jim Thompson House</a> wich is an excellent tour of a somewhat traditional Thai house that is rare in Bangkok.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jim-thompson-house-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jim-thompson-house-2.jpg"/></p>
+
+<p>After that visit, I tried to walk but as I said before the heat was overwhelming, so I took a taxi to <a href="http://www.nitasrattanakosin.com">Rattanakosin Exhibition Hall</a>. This museum is well organized and they have three guides tours, but it's literally a guided tour, room after room they have a person that explain to you what is the exhibition about, and they have devices to listed audios in English for the videos the present.</p>
+
+<p>The list of tours are:</p>
+
+<ul>
+<li><strong>Grandeur Rattanakosin</strong></li>
+<li><strong>The colorful Thai of living</strong></li>
+<li><strong>The heart and soul of the nation</strong></li>
+</ul>
+
+<p>Indeed was a great introduction to Thai culture and their history.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/rattanakosin-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/rattanakosin-2.jpg"/></p>
+
+<p>Next, the museum I found the <a href="https://en.wikipedia.org/wiki/Wat_Ratchanatdaram">Metal Palace Temple</a> a complex of halls and temples, the place is under restoration, but indeed in quite a beautiful</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_ratchanatdaram-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_ratchanatdaram-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_ratchanatdaram-3.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_ratchanatdaram-4.jpg"/></p>
+
+<p>Walking around I found <a href="https://en.wikipedia.org/wiki/Wat_Saket">The Golden Mount</a> which is a is a Buddhist temple in a mountain, that place provide a beautiful view of the city, and I like the option of playing giant gongs.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_saket-1.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_saket-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_saket-3.jpg"/>
+<br/><br/> 
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_saket-4.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>15.002</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>865.569</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>880.571</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/21/bangkok-day-1-drupal-tour-2016</link>
+                <pubDate>Thu, 21 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/21/bangkok-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
