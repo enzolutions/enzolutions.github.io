@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 22 Apr 2016 02:54:55 +0000</pubDate>
+            <pubDate>Fri, 22 Apr 2016 14:49:12 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 22 Apr 2016 02:54:55 +0000</pubDate>
+            <pubDate>Fri, 22 Apr 2016 14:49:12 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4690,8 +4690,9 @@ print_r($ticket);
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
 <li>Taipei, Taiwan / Apr 30th - May 3th &#8594; <a href="https://drupaltaiwan.org/forum/20160419/11612">Drupal Meetup</a></li>
 <li>Manila, Philippines  / May 4th - May 11th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Jakarta, Indonesia / May 11th - May 14st &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Bali, Indonesia / May 15th - May 21th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Jakarta, Indonesia / May 11th - May 14th &#8594; <a href="https://www.facebook.com/events/890804504375940/">Drupal Meetup</a></li>
+<li>Yogyakarta, Indonesia / May 15th - May 18th &#8594; <a href="https://www.facebook.com/events/1762670827297587/">Drupal Meetup</a></li>
+<li>Bali, Indonesia / May 18th - May 21st &#8594; <a href="https://www.facebook.com/events/244028239283984/">Drupal Meetup</a></li>
 <li>Melbourne, Australia / May 21th - May 28th &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Sydney, Australia / May 29th - June 3rd  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
 <li>Honolulu,Hawaii USA / June 4th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
@@ -4796,8 +4797,9 @@ foreach($cids as $cid) {
 <li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
 <li>Taipei, Taiwan / Apr 30 - May 3 &#8594; <a href="https://drupaltaiwan.org/forum/20160419/11612">Drupal Meetup</a></li>
 <li>Manila, Filipinas  / May 4 - May 11 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
-<li>Jakarta, Indonesia / May 11 - May 15 &#8594; Drupal Meetup <strong>TBD</strong></li>
-<li>Bali, Indonesia / May 15 - May 21 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Jakarta, Indonesia / May 11 - May 14 &#8594; <a href="https://www.facebook.com/events/890804504375940/">Drupal Meetup</a></li>
+<li>Yogyakarta, Indonesia / May 15 - May 18 &#8594; <a href="https://www.facebook.com/events/1762670827297587/">Drupal Meetup</a></li>
+<li>Bali, Indonesia / May 18 - May 21 &#8594; <a href="https://www.facebook.com/events/244028239283984/">Drupal Meetup</a></li>
 <li>Melbourne, Australia / May 21 - May 28 &#8594; Drupal Meetup <strong>TBD</strong></li>
 <li>Sydney, Australia / May 29 - Jun 3  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a> </li>
 <li>Honolulu,Hawaii USA / June 4th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
@@ -9251,6 +9253,65 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/22/bangkok-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Fri, 22 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/22/bangkok-drupal-meetup-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Bangkok Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Maybe you don't know by my <a href="">tour</a> something require extra attention regarding planning, just to confirm everything will match with the plans of local communities. For that reason Yesterday, I expend all my morning dealing with Medical insurances, booking of hotels and coordinate with local organizers details about the sessions.</p>
+
+<p>In the afternoon, I had lunch with <a href="http://www.fluxus.io/">Fluxus</a> team.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/fluxux-lunch.jpg"/></p>
+
+<p>Later on, I went out to the world famous <a href="https://en.wikipedia.org/wiki/Wat_Pho">Wat Pho</a> Buddhist temple, O.K maybe you don't know the place for that name, but perhaps you are familiar with the giant Reclining Buddha.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/giant-buddha-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/giant-buddha-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat-pho-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat-pho-2.jpg"/></p>
+
+<p>But that Buddha is not the only interesting Buddha to see; the place is a compound of temples, Buddha, and halls full of Buddhas in all material, color, and sizes you can imagine, thousands and thousands of Buddhas, I totally recommend this spot in Bangkok.</p>
+
+<p>My next stop lead me to another Buddhist temple <a href="https://de.wikipedia.org/wiki/Wat_Rakhang">Wat Rakhang</a>, to be honest, I was planning a different temple, but the taxi driver recommends me this because was better that the first one I choose. Regarding sightseeing aspect, the temple was just fine; But maybe the interesting fact is that that place is a Buddhist University with a lot of people studying the Buddha philosophy.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat-rakhang-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat-rakhang-2.jpg"/></p>
+
+<p>Also, the place has a pier in the <a href="https://en.wikipedia.org/wiki/Chao_Phraya_River">Chao_Phraya</a> river, with a lot of tours for tourist like me, but I didn't take the option.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat-rakhang-pier-2.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>12.295</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>889.174</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>901.469</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/23/bangkok-day-2-drupal-tour-2016</link>
+            <pubDate>Sat, 23 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/23/bangkok-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
