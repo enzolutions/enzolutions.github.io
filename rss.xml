@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Fri, 22 Apr 2016 14:49:12 +0000</pubDate>
+                <pubDate>Sat, 23 Apr 2016 12:30:58 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Fri, 22 Apr 2016 14:49:12 +0000</pubDate>
+                <pubDate>Sat, 23 Apr 2016 12:30:58 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -9256,7 +9256,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             </item>
                     <item>
                 <title>Bangkok Day 2 - Drupal Tour 2016</title>
-                <description><![CDATA[<p>Maybe you don't know by my <a href="">tour</a> something require extra attention regarding planning, just to confirm everything will match with the plans of local communities. For that reason Yesterday, I expend all my morning dealing with Medical insurances, booking of hotels and coordinate with local organizers details about the sessions.</p>
+                <description><![CDATA[<p>Maybe you don't know by my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/) something require extra attention regarding planning, just to confirm everything will match with the plans of local communities. For that reason Yesterday, I expend all my morning dealing with Medical insurances, booking of hotels and coordinate with local organizers details about the sessions.</p>
 
 <p>In the afternoon, I had lunch with <a href="http://www.fluxus.io/">Fluxus</a> team.</p>
 
@@ -9312,6 +9312,144 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/04/23/bangkok-day-2-drupal-tour-2016</link>
                 <pubDate>Sat, 23 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/23/bangkok-day-2-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Ayutthaya, Thailand - Drupal Tour 2016</title>
+                <description><![CDATA[<p>In an effort to try to live a little more about the Thai experience. I decided to visit the city of <a href="https://en.wikipedia.org/wiki/Phra_Nakhon_Si_Ayutthaya_(city)">Ayutthaya</a> located 80 kilometres from <strong>Bangkok</strong>.</p>
+
+<p>To reach this place I decided to use the train because looks easy to do and it was, I took a second class ticket in the morning in a wagon with fans and returning and first class wagon with air condition.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bangkok-rail-station.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-rail-station.jpg"/></p>
+
+<p>In <strong>Ayutthaya</strong> I hire a <a href="https://en.wikipedia.org/wiki/Auto_rickshaw">tuk-tuk</a> for me, who promise to lead to all tourist sightseeing places in a marathon of 4 hours. I took because the driver was very kind and he spoke English, on the other hand, I found the price reasonable.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-tuk-tuk.jpg"/></p>
+
+<p>He leads me out to places like <a href="https://en.wikipedia.org/wiki/Wat_Chaiwatthanaram">Wat Chaiwatthanaram</a>, <a href="https://en.wikipedia.org/wiki/Wat_Chaiwatthanaram">Wat Phra Si Sanphet</a>, <a href="https://en.wikipedia.org/wiki/Wat_Ratchaburana,_Ayutthaya">Wat Ratchaburana</a> among other I could find in google, so just let me share some pictures.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-3.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-4.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-5.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-6.jpg"/></p>
+
+<p>As you can imagine, I finish my tour with a delicious Thai food for lunch.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ayutthaya-lunch.jpg"/></p>
+
+<p>I totally recommend this place to visit, everyday I found this place more interesting and I want to come back.</p>
+
+<h3>Airplane</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>32.211</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>32.211</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Train</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>162</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>366</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>628</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>628</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Ayutthaya (today)</td>
+  <td>11.645</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>901.469</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>913.114</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/24/ayutthaya-thailand-drupal-tour-2016</link>
+                <pubDate>Sun, 24 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/24/ayutthaya-thailand-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
