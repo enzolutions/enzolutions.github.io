@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 24 Apr 2016 13:40:10 +0000</pubDate>
+            <pubDate>Mon, 25 Apr 2016 14:23:18 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 24 Apr 2016 13:40:10 +0000</pubDate>
+            <pubDate>Mon, 25 Apr 2016 14:23:18 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -9503,6 +9503,122 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/25/bangkok-day-3-drupal-tour-2016</link>
             <pubDate>Mon, 25 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/25/bangkok-day-3-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Traveling to Hong Kong - Drupal Tour 2016</title>
+            <description><![CDATA[<p>In my last half day in Bangkok, I decided to stay at home and do some planning of sightseeing in Hong Kong, by the way, I am glad that I can use the web app <a href="http://www.visitacity.com">Visit a City</a> to create a schedule for my three days in Hong Kong.</p>
+
+<p>Also, I did some planning with my wife to try to visit three days and two night <a href="https://en.wikipedia.org/wiki/Tasmania">Tasmania</a>, and I realize two facts, A. Tasmania is bigger than Costa Rica, B. That will be the most south place I have been visited in my life.</p>
+
+<p>In the flight, I have the opportunity to finish the book "The Fifth Woman](https://en.wikipedia.org/wiki/The_Fifth_Woman) written by <a href="https://en.wikipedia.org/wiki/Henning_Mankell">Henning Mankell</a>. I bought this book in a library in <a href="https://en.wikipedia.org/wiki/Lewes_District">Lewes, UK</a> as part of a personal challenge to read literature in English among other books, and I left behind in Hong Kong.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/the-firth-woman.jpg"/></p>
+
+<p>I abandon the book with a note to the person who find the book request to read and lead behind too or just give the book to someone else.</p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok, Thailand &#8594; Hong Kong</td>
+  <td>1.730</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>32.211</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>33.941</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Train</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>628</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>628</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>7729</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>924.351</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>932.080</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/26/traveling-to-hong-kong-drupal-tour-2016</link>
+            <pubDate>Tue, 26 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/26/traveling-to-hong-kong-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
