@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 28 Apr 2016 01:12:17 +0000</pubDate>
+            <pubDate>Fri, 29 Apr 2016 03:23:31 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 28 Apr 2016 01:12:17 +0000</pubDate>
+            <pubDate>Fri, 29 Apr 2016 03:23:31 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -9731,6 +9731,59 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/28/hong-kong-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/28/hong-kong-drupal-meetup-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Hong Kong Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
+
+<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
+
+<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
+
+<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
+
+<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>14.760</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>965.986</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>980.746</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
+            <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
