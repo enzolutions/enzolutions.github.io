@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 29 Apr 2016 03:23:31 +0000</pubDate>
+            <pubDate>Sat, 30 Apr 2016 00:21:43 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 29 Apr 2016 03:23:31 +0000</pubDate>
+            <pubDate>Sat, 30 Apr 2016 00:21:43 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -9784,6 +9784,124 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
             <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Taipei, Taiwan Drupal Meetup - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday, I finished my short visit to Hong Kong; Next time I have to reserve more days in this city.</p>
+
+<p><a href="https://www.linkedin.com/in/amouro">Chris Wu</a>, from <strong>Fliegen Creative</strong> help me to organize a Drupal Meetup to talk about <strong>Drupal 8</strong> and <strong>Drupal Console</strong>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/taipei-drupal-meetup.jpeg"/></p>
+
+<p>The audience was small but very receptive, in few days, I will visit a couple of Drupal offices to continue the conversation.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/taipei-metro.jpg"/></p>
+
+<p>Also, I reach 2/3 of my Drupal Tour, only 40 days to finish my tour and go home.</p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Hong Kong &#8594; Taipei, Taiwan</td>
+  <td>815</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>33.941</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>34.756</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Train</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>628</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>628</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>12.440</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>980.746</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>993.186</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</link>
+            <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
