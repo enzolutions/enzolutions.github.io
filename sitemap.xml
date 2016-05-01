@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sat, 30 Apr 2016 00:21:43 +0000</pubDate>
+            <pubDate>Sun, 01 May 2016 00:13:12 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sat, 30 Apr 2016 00:21:43 +0000</pubDate>
+            <pubDate>Sun, 01 May 2016 00:13:12 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -9902,6 +9902,71 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Taipei Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Starting in a new city never is easy, Taipei is not perfect, but works well, even that I got lost for a moment after took a bus I could fix my issue relatively quick.</p>
+
+<p>This weekend is a long weekend due the labor day on Monday; I was alert about I will find all really crowded but not really.</p>
+
+<p>I could split the sightseeing I did yesterday in three categories.</p>
+
+<p>In the religious category, I visited three temples yesterday.</p>
+
+<ul>
+<li><strong>Jiantan Temple</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Mengjia_Longshan_Temple">Longshan Temple</a></li>
+<li><strong>Qingshan Temple</strong></li>
+</ul>
+
+<p>Among of those temples, the most interesting was the <strong>Longshan Temple</strong> and wasn't about the temple, was about people, Becuase inside were about half thousand people, chanting song and praying to their goods, was a nice experience.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jiantan-temple.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/longshan-temple.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/qingshan-temple.jpg"/></p>
+
+<p>About cultural section I visited, the <a href="https://en.wikipedia.org/wiki/National_Palace_Museum">National Palace Museum</a>; To be honest, I didn't really enjoy this place, maybe too much art, pottery, and calligraphy and I don't have the culture or knowledge to understand that.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/national-palace-museum.jpg"/></p>
+
+<p>Regards national symbols, I went out to <a href="https://en.wikipedia.org/wiki/Chiang_Kai-shek_Memorial_Hall">Chiang Kai-shek Memorial Hall</a>, this memorial honor the father of their country; I know it's delicate subject saying Taiwan is a country, but looks like a country and smell like a country.  In general a big plaza and a nice monument and they a changing guard show.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cks-monument.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cks-guard.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cks-plaza.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>18,318</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>993.186</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.011.504</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/30/taipei-day-1-drupal-tour-2016</link>
+            <pubDate>Sat, 30 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/30/taipei-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
