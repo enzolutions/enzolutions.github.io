@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 01 May 2016 15:27:13 +0000</pubDate>
+            <pubDate>Mon, 02 May 2016 12:27:46 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 01 May 2016 15:27:13 +0000</pubDate>
+            <pubDate>Mon, 02 May 2016 12:27:46 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -10032,6 +10032,61 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/02/taipei-day-2-drupal-tour-2016</link>
             <pubDate>Mon, 02 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/02/taipei-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Taipei Day 3 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>As I mentioned before, Monday are hard for tourist, because usually many stuff to do are close, but it's especially hard if the Monday is a holiday and yesterday was a holiday due a Labor day celebration.</p>
+
+<p>In order to try to see something different and open in a holiday, I went out to <a href="https://en.wikipedia.org/wiki/Tamsui_District">Tamsui </a> witch is a town in north of Taipei where there is a port in the conjuntion of river  Damsui with the ocean in the Taiwan Strait.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tamsui-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tamsui-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tamsui-3.jpg"/></p>
+
+<p>Parallel to the river there is a promenade with a bicycle route of about 10 km, I only walk about four kilometers to the end of the boardwalk where is locate the <strong>Tamsui Lover's Bridge</strong> in the Wharf.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tamsui-love-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tamsui-love-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tamsui-love-3.jpg"/></p>
+
+<p>In the afternoon, I meet with <a href="https://www.linkedin.com/in/kering-corrales-89815683">Kering Corrales</a> a Costa Rican how to arrive on the same day as me, by coincidence and I noticed via <a href="http://swarmapp.com">Swarn</a>. We met in <strong>Taipei 101</strong> building, and he explains me his life project of a new beginning in Taipei including of course learning Chinese and studies Computer Science.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/taipei-101.jpg"/></p>
+
+<p>I skip the visit to the observatory deck, because the queue was hell long, I will return in two days just before departure.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Taipei (today)</td>
+  <td>14,668</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.030.456</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.045.124</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/2016/05/03/taipei-day-3-drupal-tour-2016</link>
+            <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/2016/05/03/taipei-day-3-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
