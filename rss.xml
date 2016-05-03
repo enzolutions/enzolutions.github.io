@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 02 May 2016 12:27:46 +0000</pubDate>
+                <pubDate>Tue, 03 May 2016 13:17:39 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 02 May 2016 12:27:46 +0000</pubDate>
+                <pubDate>Tue, 03 May 2016 13:17:39 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -10084,9 +10084,58 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 ]]></description>
-                <link>http://enzolutions.com/2016/05/03/taipei-day-3-drupal-tour-2016</link>
+                <link>http://enzolutions.com/articles/2016/05/03/taipei-day-3-drupal-tour-2016</link>
                 <pubDate>Tue, 03 May 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/2016/05/03/taipei-day-3-drupal-tour-2016</guid>
+                <guid>http://enzolutions.com/articles/2016/05/03/taipei-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Taipei Day 4 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>One of the most important things in my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days) is about community, about what I could share and about what I could learn from the people I met during it.</p>
+
+<p>Yesterday, all my activities were oriented to the community. My first stop was in <a href="https://bigdata.com.tw">Big Data Taiwan</a>, there I have the opportunity to share with them about Drupal 8 and of course demonstrate the <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bigdata-taiwan-team.jpg"/></p>
+
+<p>But, I had happily surprise about their other business outside web development with Drupal. I was especially surprise about their product <a href="https://goo9.io/">Goo9</a> this is a wearable device for diapers to help people to monitor the diaper status for babies and seniors, using an app, very impressive.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/goo9.png"/></p>
+
+<p>In the afternoon, my second stop was with <strong>Fliegen</strong> headquarters; After having a Drupal meetup last Friday, the tested the DrupalConsole and decide to contribute to Drupal Console.</p>
+
+<p>Their first contribution will be an installer for Windows users that include Apache, Mysql, Php, Composer and Drupal Console. The installer is done, they just need to create an overview page to describe the installer and will be in English and Chinese traditional, so soon there will and alternative for Windows users that want to test Drupal Console.</p>
+
+<p>Their second contribution will be a translation to Chinese traditional of Drupal Console project.</p>
+
+<p>I appreciate those contributions and makes my trip worthable.</p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Taipei (today)</td>
+  <td>9240</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.045.124</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.054.364</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/05/04/taipei-day-4-drupal-tour-2016</link>
+                <pubDate>Wed, 04 May 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/05/04/taipei-day-4-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
