@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 06 May 2016 15:30:53 +0000</pubDate>
+            <pubDate>Sat, 07 May 2016 13:36:53 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 06 May 2016 15:30:53 +0000</pubDate>
+            <pubDate>Sat, 07 May 2016 13:36:53 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -10346,7 +10346,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <ol>
 <li>We have an <a href="http://www.ibtimes.com/apec-blue-skies-fail-cheer-beijing-residents-government-rushes-clean-air-ahead-summit-1721371">APAC Blue Sky</a>.</li>
-<li>We have people from 9 countries (Japan, Indonesia, Norway, USA, Singapore, Canada, Vietnam, Colombia, and  the Philippines)</li>
+<li>We have people from 10 countries (Japan, Indonesia, India, Norway, USA, Singapore, Canada, Vietnam, Colombia, and  the Philippines)</li>
 </ol>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/pre-drupalcamp-manila.jpg"/></p>
@@ -10379,6 +10379,57 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/07/manila-day-2-drupal-tour-2016</link>
             <pubDate>Sat, 07 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/07/manila-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Drupal Camp Manila Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>I was impressed with how international the Drupal Camp Manila was, with speakers from 10 countries and sponsors from three countries, by far is one the most international events of Drupal I had attended.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-group.jpg"/></p>
+
+<p>The assistance was about 140, again don't trust in my appreciation. I was honor by leading the Drupal Camp Keynote; in my talk, I present about "Why investing in community is good business".</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-keynote.jpg"/></p>
+
+<p>Also, I did a session about Drupal Console, but this time was more advanced than usual, because some attendees from Singapore, Vietnam and Japon already watch the basic introduction during my <a href="enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/">enzotour16</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalconsole-manila.jpg"/></p>
+
+<p>I attended some interesting sessions like Twig in Drupal 8, BeHat, Scrum among others.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-twig.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-behat.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-scrum.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Manila (today)</td>
+  <td>5.060</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.107.515</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.112.575</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/08/drupal-camp-manila-day-1-drupal-tour-2016</link>
+            <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/08/drupal-camp-manila-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
