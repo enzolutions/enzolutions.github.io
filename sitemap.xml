@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sat, 07 May 2016 13:36:53 +0000</pubDate>
+            <pubDate>Sun, 08 May 2016 14:02:43 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sat, 07 May 2016 13:36:53 +0000</pubDate>
+            <pubDate>Sun, 08 May 2016 14:02:43 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -9789,7 +9789,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <title>Taipei, Taiwan Drupal Meetup - Drupal Tour 2016</title>
             <description><![CDATA[<p>Yesterday, I finished my short visit to Hong Kong; Next time I have to reserve more days in this city.</p>
 
-<p><a href="https://www.linkedin.com/in/amouro">Chris Wu</a>, from <strong>Fliegen Creative</strong> help me to organize a Drupal Meetup to talk about <strong>Drupal 8</strong> and <strong>Drupal Console</strong>.</p>
+<p><a href="https://www.linkedin.com/in/amouro">Chris Wu</a>, from <a href="https://fliegen.com.tw/">Fliegen</a> help me to organize a Drupal Meetup to talk about <strong>Drupal 8</strong> and <strong>Drupal Console</strong>.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/taipei-drupal-meetup.jpeg"/></p>
 
@@ -10100,7 +10100,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/goo9.png"/></p>
 
-<p>In the afternoon, my second stop was with <strong>Fliegen</strong> headquarters; After having a Drupal meetup last Friday, the tested the DrupalConsole and decide to contribute to Drupal Console.</p>
+<p>In the afternoon, my second stop was with <a href="https://fliegen.com.tw">Fliegen</a> headquarters; After having a Drupal meetup last Friday, the tested the DrupalConsole and decide to contribute to Drupal Console.</p>
 
 <p>Their first contribution will be an installer for Windows users that include Apache, Mysql, Php, Composer and Drupal Console. The installer is done, they just need to create an overview page to describe the installer and will be in English and Chinese traditional, so soon there will and alternative for Windows users that want to test Drupal Console.</p>
 
@@ -10382,7 +10382,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
         </item>
                 <item>
             <title>Drupal Camp Manila Day 1 - Drupal Tour 2016</title>
-            <description><![CDATA[<p>I was impressed with how international the Drupal Camp Manila was, with speakers from 10 countries and sponsors from three countries, by far is one the most international events of Drupal I had attended.</p>
+            <description><![CDATA[<p>I was impressed with how international the Drupal Camp Manila was, with speakers from ten countries and sponsors from four countries, by far is one the most international events of Drupal I had attended.</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-group.jpg"/></p>
 
@@ -10430,6 +10430,82 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/08/drupal-camp-manila-day-1-drupal-tour-2016</link>
             <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/08/drupal-camp-manila-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Drupal Camp Manila Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>The second day of DrupalCamp Manila, on this day were some introductory sessions about Github, how to contribute to issues in Drupal and of course Drupal development.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-sprint.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-sprint-sven.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-sprint-joe.jpg"/></p>
+
+<p>After lunch two of the organizers <strong>Paul de Paula</strong> and <strong>Gem Devanedera</strong> invite me to their home.</p>
+
+<p>His place is located at <a href="https://en.wikipedia.org/wiki/Tanay,_Rizal">Tanay, Rizal</a> two and a half hours from Manila in the mountains and close to <a href="https://en.wikipedia.org/wiki/Laguna_de_Bay">Laguna de Bay</a>; the biggest lake in the Philippines I will explore that tomorrow.</p>
+
+<p>With then I could feel a more local Pilipino experience, like <strong>Halo Halo</strong>. Pork and Fish</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/halo-halo.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanay-fish.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanay-pork.jpg"/></p>
+
+<h3>Bus</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Manila &#8594; Tanay</td>
+  <td>45</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>628</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>673</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Manila (today)</td>
+  <td>4.115</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.112.575</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1116690</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/09/drupal-camp-manila-day-2-drupal-tour-2016</link>
+            <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/09/drupal-camp-manila-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
