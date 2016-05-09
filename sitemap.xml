@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 08 May 2016 14:02:43 +0000</pubDate>
+            <pubDate>Mon, 09 May 2016 13:17:28 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 08 May 2016 14:02:43 +0000</pubDate>
+            <pubDate>Mon, 09 May 2016 13:17:28 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -10386,7 +10386,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-group.jpg"/></p>
 
-<p>The assistance was about 140, again don't trust in my appreciation. I was honor by leading the Drupal Camp Keynote; in my talk, I present about "Why investing in community is good business".</p>
+<p>The assistance was about 200, again don't trust in my appreciation. I was honor by leading the Drupal Camp Keynote; in my talk, I present about "Why investing in community is good business".</p>
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-keynote.jpg"/></p>
 
@@ -10453,7 +10453,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanay-pork.jpg"/></p>
 
-<h3>Bus</h3>
+<h3>Bus/Car</h3>
 
 <table>
 <thead>
@@ -10465,7 +10465,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <tbody>
 <tr>
   <td>Manila &#8594; Tanay</td>
-  <td>45</td>
+  <td>62</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -10473,7 +10473,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>673</td>
+  <td>690</td>
 </tr>
 </tbody>
 </table>
@@ -10498,7 +10498,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>1116690</td>
+  <td>1.116.690</td>
 </tr>
 </tbody>
 </table>
@@ -10506,6 +10506,98 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/09/drupal-camp-manila-day-2-drupal-tour-2016</link>
             <pubDate>Mon, 09 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/09/drupal-camp-manila-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Tanay Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Elections Day in the Philippines, to elected President, Vice-president, Senators, Mayors, and councilors. I found interested some fact of Pilipinos elections</p>
+
+<p>The vote is electronic, people fill out a multiple choice form and then introduce in a machine that read, and voters review a receipt showing what the machine read,  and if they confirm the receipt and form are stored in the device.</p>
+
+<p>Voters register their point finger fingerprint and get an ink mark in their nail to avoid anyone vote again.</p>
+
+<p>The military forces can vote.</p>
+
+<p>Propaganda outside the schools where people vote is not allowed. Here some pictures of the experience of elections after companion <strong>Paul de Paula</strong> to vote.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sapaloc-elections-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sapaloc-elections-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sapaloc-elections-3.jpg"/></p>
+
+<p>After a brunch I had a long and excellent tour in Tanay area with <strong>Gem Gevanedera</strong> We visited.</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Pililla_Wind_Farm">Pililla Wind Farm</a></li>
+<li>Tanay Japanese Garden</li>
+<li><strong>Lumban Laguna</strong></li>
+</ul>
+
+<p>I could had a beautiful views of the countryside area and lovely landscape views of <a href="https://en.wikipedia.org/wiki/Laguna_de_Bay">Laguna de Bay</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lumban-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lumban-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/laguna-de-bay-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/laguna-de-bay-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/laguna-de-bay-3.jpg"/></p>
+
+<h3>Bus/Car</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tanay Tour</td>
+  <td>130</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>690</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>820</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Manila (today)</td>
+  <td>5.740</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.116.690</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.122.430</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/10/tanay-day-1-drupal-tour-2016</link>
+            <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/10/tanay-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
