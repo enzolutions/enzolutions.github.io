@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 09 May 2016 13:17:28 +0000</pubDate>
+            <pubDate>Tue, 10 May 2016 12:35:50 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 09 May 2016 13:17:28 +0000</pubDate>
+            <pubDate>Tue, 10 May 2016 12:35:50 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -10581,7 +10581,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Manila (today)</td>
+  <td>Tanay (today)</td>
   <td>5.740</td>
 </tr>
 <tr>
@@ -10598,6 +10598,86 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/10/tanay-day-1-drupal-tour-2016</link>
             <pubDate>Tue, 10 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/10/tanay-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Tanay Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Last day in Sampaloc, Tanay.  I discover that Sampaloc means "Tamarindo" in Spanish.</p>
+
+<p>Early in the morning <strong>Paul de Paula</strong> and I went out to <a href="https://www.tripadvisor.com.ph/Attraction_Review-g2336235-d3445865-Reviews-Daranak_Falls-Tanay_Rizal_Province_Calabarzon_Region_Luzon.html">Daranak Falls</a> a resort administrated for local government.</p>
+
+<p>Paul told me that this place is usually crowded, but due was Tuesday there were only a few people and old locals.</p>
+
+<p>We were lucky the get in the falls first, and the place was only for us short a period; Meanwhile, the others settle down to expend all day near.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/daranak-falls-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/daranak-falls-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/daranak-falls-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/daranak-falls-4.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/daranak-falls-5.jpg"/></p>
+
+<p>After having lunch with <strong>Paul and Gem</strong> my hosts in Sampaloc, I departure back to Manila in a Van.</p>
+
+<p>In Manila I had to go to a shopping mall to find a suitcase due the one I had to suffer damage in my trip from Taiwan to the Philippines; To be honest that bag support more than expected 90 days and 16 airports. The Suitcase is dead long live the Suitcase.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-suitcase.jpg"/></p>
+
+<h3>Bus/Car</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tanay Tour</td>
+  <td>70</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>820</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>890</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tania, Manila (today)</td>
+  <td>7.808</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.122.430</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.130.238</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/11/tanay-day-2-drupal-tour-2016</link>
+            <pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/11/tanay-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
