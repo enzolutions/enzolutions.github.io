@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 11 May 2016 22:49:28 +0000</pubDate>
+                <pubDate>Thu, 12 May 2016 16:12:00 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 11 May 2016 22:49:28 +0000</pubDate>
+                <pubDate>Thu, 12 May 2016 16:12:00 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -10810,6 +10810,63 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/05/12/jakarta-day-1-drupal-tour-2016</link>
                 <pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/05/12/jakarta-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Jakarta, Indonesia Drupal Meetup - Drupal Tour 2016</title>
+                <description><![CDATA[<p>I am in last quarter of my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/) in a month I will be landing in my home.</p>
+
+<p>Thanks to <a href="https://www.linkedin.com/in/ardnet">Pratomo Ardianto</a> and <a href="http://sepulsa.com">Sepula</a> I have the opportunity to talk with Drupal community in Jakarta about <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
+
+<p>The attendees had a lot of questions and were very interested in use Drupal 8, but still have some doubt about Drupal 8 modules availability; I hope my answers motivate them to adopt the Drupal 8 usage more soon than later.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-drupal-meetup.jpg"/></p>
+
+<p>Before to attend the meetup I did some sightseeing in Jakarta at</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/National_Museum_of_Indonesia">National Museum</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Istiqlal_Mosque,_Jakarta">Istiqlal Mosque</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Jakarta_Cathedral">Jakarta Cathedral</a></li>
+</ul>
+
+<p>Couples interested things are the Mosque the 3rd biggest mosque in the worlds and inside the Cathedral was a wedding in action at the moment I visited.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-national-museum.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-istiqlal-mosque.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-cathedral-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-cathedral-2.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Jakarta (today)</td>
+  <td>11.658</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.149.066</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.160.724</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/05/13/jakarta-indonesia-drupal-meetup-drupal-tour-2016</link>
+                <pubDate>Fri, 13 May 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/05/13/jakarta-indonesia-drupal-meetup-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
