@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 12 May 2016 16:12:00 +0000</pubDate>
+            <pubDate>Fri, 13 May 2016 13:50:07 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 12 May 2016 16:12:00 +0000</pubDate>
+            <pubDate>Fri, 13 May 2016 13:50:07 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -10867,6 +10867,67 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/13/jakarta-indonesia-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Fri, 13 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/13/jakarta-indonesia-drupal-meetup-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Jakarta Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Regarding Sightseeing, my day wasn't too much exciting, but not all days are the same.</p>
+
+<p>To complete at least something related to the cultural department, I visited the <a href="https://en.wikipedia.org/wiki/Jakarta_History_Museum">Jakarta History Museum</a> located in the old Jakarta where I could learn a little bit more of Indonesian history.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-history-museum-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-history-museum-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-history-museum-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-history-museum-4.jpg"/></p>
+
+<p>After visited the museum I just walk a lot in the area, just to explore the real Jakarta, which is few words Hot and Busy.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-city-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-city-2.jpg"/></p>
+
+<p>Happily, I found a random restaurant with a delicious Indonesian food and handsome enough to publish as #foodporn.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-city-lunch.jpg"/></p>
+
+<p>I finish my day with some <a href="http://anexusit.com">Office</a> work and an afternoon nap and a good meal for dinner.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-city-dinner.jpg"/></p>
+
+<p>Maybe the curious thing of they was the menu of the restaurant I had a dinner; the UX is old school and brilliant at the same time.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-menu-ux.jpg"/></p>
+
+<h3>Walking</h3>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Jakarta (today)</td>
+  <td>11.658</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.160.724</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.160.724</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/14/jakarta-day-2-drupal-tour-2016</link>
+            <pubDate>Sat, 14 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/14/jakarta-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
