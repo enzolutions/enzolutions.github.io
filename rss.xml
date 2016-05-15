@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 14 May 2016 11:41:09 +0000</pubDate>
+                <pubDate>Sun, 15 May 2016 12:42:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 14 May 2016 11:41:09 +0000</pubDate>
+                <pubDate>Sun, 15 May 2016 12:42:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -5051,9 +5051,7 @@ function testing_form_system_theme_settings_alter(&amp;$form, FormStateInterface
 <p>I have to say the Newark airport is nice but not friendly with travelers, because there is not free wifi available.
 At least I can use 30 min free connection from <a href="http://www.boingo.com">Boingo</a>.</p>
 
-<h2>Travel statistics</h2>
-
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -5074,7 +5072,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5148,7 +5146,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>In general a good experience.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -5233,7 +5231,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chilling.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5287,7 +5285,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>it's good to have time to talk with members of the Drupal community. In my concern the DrupalCon Asia started today.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5338,7 +5336,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>In few hours my wife <a href="http://yersika.com">Yersila</a> is about the take a flight to the USA and after few days we will reunite in Singapore, have a good fly honey.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5403,7 +5401,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>By 10 pm I was exhausted and ready to do some work, my jet lag is getting better I could sleep 6 hours. Today the DrupalCon start and I will participate in <a href="https://events.drupal.org/asia2016/government-summit">Government Summit</a>.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5458,7 +5456,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Today the DrupalCon continue with open sessions, and I will lead the B.O.F <a href="https://events.drupal.org/asia2016/bofs/drupalconsole-hindi%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80-doing-drupal-8-code-without-speaking-english%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80-%E0%A4%AC%E0%A5%8B%E0%A4%B2%E0%A5%87-%E0%A4%95%E0%A5%87">DrupalConsole in Hindi/हिन्दी: Doing Drupal 8 code without speaking English/अंग्रेजी बोले बिना Drupal 8 मे कोड कर</a> I will report my experience tomorrow.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5519,7 +5517,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-uk-thai.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5568,7 +5566,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>If you are interested in, see my pictures and videos feel free to check my flicker <a href="https://www.flickr.com/photos/37690888@N03/albums/72157664534751452">India album</a></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5625,7 +5623,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I have to say this state city is fantastic, everything works like a charm, I am looking forward seeing more awesomeness tomorrow.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -5650,7 +5648,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5717,7 +5715,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Tomorrow I will meet with a local drupaler in the morning and at night I will participate in a <a href="https://groups.drupal.org/node/504398">Drupal Meetup Singapore</a> and of course, try to visit a tourist place.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5772,7 +5770,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/b2eiS1Lkk94?list=PLpeDXSh4nHjSrDvpuSWiaTX1O15y9TgPc" frameborder="0" allowfullscreen></iframe>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5835,7 +5833,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/skypark.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5888,7 +5886,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/singapore-ice-cream.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -5947,7 +5945,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-street-food.jpg"/></p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -5972,7 +5970,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6036,7 +6034,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanoi-bbq.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6103,7 +6101,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/water-puppet-theater.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6158,7 +6156,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6378,7 +6376,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>if you are interested in, see image and videos about this part of our trip, you can check out the at <a href="https://www.flickr.com/photos/37690888@N03/sets/72157665188490435">Hanoi album</a> and <a href="https://www.flickr.com/photos/37690888@N03/sets/72157664777169280">Ha Long Bay album</a>.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -6403,7 +6401,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6458,7 +6456,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzo-korean-girl.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6523,7 +6521,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/dpp.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6580,7 +6578,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzotour-banner.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6627,7 +6625,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Our tour in Gangnam ended up at <a href="https://en.wikipedia.org/wiki/Seonjeongneung">Seonjeongneung</a> which is the burial grounds of two Joseon Dynasty Kings and one Joseon Queen.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6698,7 +6696,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korea-public-toilets.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6749,7 +6747,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/war_memorial_colombia_2.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6796,7 +6794,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/visitacity.png"/>]</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -6821,7 +6819,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6878,7 +6876,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-cafe-43.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6939,7 +6937,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ciandt-japan-wine.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -6988,7 +6986,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/digital_circus.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7039,7 +7037,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/osaka-bus.jpg"/></p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -7064,7 +7062,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -7089,7 +7087,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7136,7 +7134,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-cafe-osaka.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7189,7 +7187,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>If you are interested in, see more pictures and videos about Kyoto you can check this <a href="https://www.flickr.com/photos/37690888@N03/albums/72157665931401602">album</a>.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7244,7 +7242,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mount_wakakusa.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7293,7 +7291,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/dinner-japan-luc.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7344,7 +7342,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Until now, Shanghai looks like a big city of USA very modern and with good infrastructure. If you are wondering about air quality, everything looks ok, and I don't see anybody using masks.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -7369,7 +7367,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -7394,7 +7392,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7445,7 +7443,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-hot-pot.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7490,7 +7488,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shanghai-noddles.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7537,7 +7535,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>At the end of the day, I meet with <a href="https://www.adammalone.net/about">Adam Malone</a>, <a href="https://www.linkedin.com/in/feliperubim">Felipe Rubim</a> and DrupalCamp China organizers to take some drinks.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7584,7 +7582,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalcampchina-console-session.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7629,7 +7627,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Back home, I just did some laundry, watch couples movies and thinking and planning a little bit about my trip to Indonesia.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7680,7 +7678,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>We got a lunch next to the river and dinner in Shanghai was a lovely day where we have the opportunity to meet each other on a personal level, outside Drupal world.</p>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -7705,7 +7703,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7760,7 +7758,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>At night, I went to <a href="https://it-consultis.com/">IT Consultis</a> office to meet with some developers and his Chief Operating Officer. Their office is located close to French concession neighborhood so went to in bar to have some drink about how is working in China society.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7809,7 +7807,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/becky-father-food.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7854,7 +7852,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-shanghai.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7899,7 +7897,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/quanjude.jpg"/></p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -7924,7 +7922,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -7949,7 +7947,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -7994,7 +7992,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/beijing-meetup-dinner.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8045,7 +8043,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/forbidden-city-3.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8100,7 +8098,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I will return to the rest of places, but yesterday I found a shortcut with less people apparently we will see tomorrow.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8149,7 +8147,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wang-jian-beers.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8192,7 +8190,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>In the other side of the hill there a lake, I skip the tour in the lake due the view wasn't good due the quality of air, maybe in summer is better.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8249,7 +8247,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/godair.jpg"/></p>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -8274,7 +8272,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8329,7 +8327,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/china-complex-lake.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8376,7 +8374,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple_of_heaven.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8423,7 +8421,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>After dinner, we have a walk around the are just to get familiar and reduce the changes I get lost the next days, I really appreciate that, Chongqing guys are excellent hosts.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -8448,7 +8446,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -8473,7 +8471,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8528,7 +8526,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>We finish our night walking and talking, and we end up in a bookstore where he gave a Chinese book for children.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8586,7 +8584,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chongqing-dinner-fish-1.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8637,7 +8635,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>At night, I have a dinner with <strong>Jungle</strong> and he gave a t-shirt for Drupal Camp and another to spare in my next trip.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8686,7 +8684,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I don't think, so my mobile camera was enough to capture the beauty of this place, so far, my favorite place in Chongqing city.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8737,7 +8735,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/precamp-dinner-3.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8790,7 +8788,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>Well done Chongqing.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8839,7 +8837,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/chengdu-new-phone.jpg"/></p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -8864,7 +8862,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -8889,7 +8887,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -8914,7 +8912,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -8981,7 +8979,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>To finish our day we have a Hot Pot fish for dinner.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9028,7 +9026,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>At the afternoon, I said goodbye to China and departure to Bangkok, Thailand. I know you could say, but you will go to Hong Kong and Taiwan, well those are other Chinas like Singapore.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -9053,7 +9051,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -9078,7 +9076,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -9103,7 +9101,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9180,7 +9178,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/> 
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat_saket-4.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9225,7 +9223,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ananta-samakhom-throne-hall.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9284,7 +9282,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wat-rakhang-pier-2.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9347,7 +9345,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I totally recommend this place to visit, everyday I found this place more interesting and I want to come back.</p>
 
-<h3>Airplane</h3>
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -9372,7 +9370,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -9397,7 +9395,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -9422,7 +9420,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9475,7 +9473,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lumpini-park-lizards-2.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9541,7 +9539,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -9566,7 +9564,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -9591,7 +9589,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9656,7 +9654,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>As always, was a great night with my friend Jackie.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9703,7 +9701,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <br/><br/>
 <img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wong-tai-sin-temple.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9756,7 +9754,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9824,7 +9822,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -9849,7 +9847,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -9874,7 +9872,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -9939,7 +9937,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/cks-plaza.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10004,7 +10002,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shilin-night-market-3.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10059,7 +10057,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I skip the visit to the observatory deck, because the queue was hell long, I will return in two days just before departure.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10108,7 +10106,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p>I appreciate those contributions and makes my trip worthable.</p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10180,7 +10178,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -10205,7 +10203,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -10230,7 +10228,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10287,7 +10285,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/filipino-people.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10351,7 +10349,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/pre-drupalcamp-manila.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10402,7 +10400,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-scrum.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10453,7 +10451,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanay-pork.jpg"/></p>
 
-<h3>Bus/Car</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -10478,7 +10476,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10545,7 +10543,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/laguna-de-bay-3.jpg"/></p>
 
-<h3>Bus/Car</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -10570,7 +10568,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10625,7 +10623,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manila-suitcase.jpg"/></p>
 
-<h3>Bus/Car</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -10650,7 +10648,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10732,7 +10730,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Train</h3>
+<h2>Train</h2>
 
 <table>
 <thead>
@@ -10757,7 +10755,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Bus/Car</h3>
+<h2>Bus/Car</h2>
 
 <table>
 <thead>
@@ -10782,7 +10780,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10839,7 +10837,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-cathedral-2.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10900,7 +10898,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jakarta-menu-ux.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10943,7 +10941,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tiger.jpg"/></p>
 
-<h3>Walking</h3>
+<h2>Walking</h2>
 
 <table>
 <thead>
@@ -10971,6 +10969,138 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/05/15/jakarta-day-3-drupal-tour-2016</link>
                 <pubDate>Sun, 15 May 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/05/15/jakarta-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Yogyakarta Day 1 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Early in the morning I departure from Jakarta fro Yogyakarta, located in the same <a href="https://en.wikipedia.org/wiki/Java">Java Island</a> in Indonesia.</p>
+
+<p>Due I will be only a few days in the city and tomorrow is Monday I try to visit the remote and important sport out the city,  So I hire a car/drive to pick me up at the airport and start my personal tour.</p>
+
+<p>Firstly, I visited the <a href="https://en.wikipedia.org/wiki/Prambanan">Prambanan</a> compound; this complex is dated from 9th century. It's the biggest agglomeration of Hinduist temples in the world; this place is part of UNESCO World Heritage Site.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/prambanan-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/prambanan-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/prambanan-3.jpg"/></p>
+
+<p>The area is well preserved, and you can climb in the temples, I love this experience.</p>
+
+<p>Secondly, I stop in <a href="https://en.wikipedia.org/wiki/Borobudur">Borobudur</a> another 9th-century construction, but in this case is the biggest Buddhist temple in the world. The organization of this temples is extraordinarily complex and beautiful. Indeed a UNESCO World Heritage Site.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/borobudur-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/borobudur-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/borobudur-3.jpg"/></p>
+
+<p>In the end, I try to visit the Merapi Volcano Observatory⁠⁠⁠, but I couldn't because I arrive too late to try to walk the 4+ km trek and do something like that alone in the middle of Indonesia Jungle, looks like is not a smart idea even for me.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/merapi-volcano.jpg"/></p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Jakarta, Indonesia &#8594; Yogyakarta, Indonesia</td>
+  <td>431</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>38.710</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>39.141</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Yogyakarta Tour</td>
+  <td>156</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>890</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.046</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Jakarta (today)</td>
+  <td>18.659</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.192.983</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.211.642</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/05/16/yogyakarta-day-1-drupal-tour-2016</link>
+                <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/05/16/yogyakarta-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
