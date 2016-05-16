@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 15 May 2016 12:42:10 +0000</pubDate>
+            <pubDate>Mon, 16 May 2016 15:45:23 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 15 May 2016 12:42:10 +0000</pubDate>
+            <pubDate>Mon, 16 May 2016 15:45:23 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -11084,7 +11084,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Jakarta (today)</td>
+  <td>Yogyakarta (today)</td>
   <td>18.659</td>
 </tr>
 <tr>
@@ -11101,6 +11101,57 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/16/yogyakarta-day-1-drupal-tour-2016</link>
             <pubDate>Mon, 16 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/16/yogyakarta-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Yogyakarta Drupal Meetup - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Second Drupal meetup in Indonesia, this time in Yogyakarta a small city according to Indonesian standards, but almost bigger than Costa Rica :P.</p>
+
+<p>This meetup was organized by <a href="http://skyshi.com">Skyshi</a> a local Drupal workshop; The audience was really excited about seeing <a href="http://drupalconsole.com">Drupal Console</a> project running using the Indonesian language, at least partially.</p>
+
+<p>In the meetup were some non-Drupal developers, from Joomla, Javascript, and Wordpress community.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/yogyakarta-meetup-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/yogyakarta-meetup-2.jpg"/></p>
+
+<p>During the day, I expend almost all my morning looking a shoe shop to find a replacement for my sneakers and testing the perfect ones, the ones I bring with me were of poor shape, due all the walking I do every day.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/new-sneakers.jpg"/></p>
+
+<p>In sightseeing area, I visited the <a href="https://en.wikipedia.org/wiki/Kraton_Ngayogyakarta_Hadiningrat">Kraton Ngayogyakarta Hadiningrat</a> part of the Sultan Palace. The Sultan is the Governor and the owner of the land in the region.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sultan-palace-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sultan-palace-2.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Yogyakarta (today)</td>
+  <td>18.869</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.211.642</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.230.311</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/17/yogyakarta-drupal-meetup-drupal-tour-2016</link>
+            <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/17/yogyakarta-drupal-meetup-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
