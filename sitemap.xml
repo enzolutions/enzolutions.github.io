@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 16 May 2016 15:45:23 +0000</pubDate>
+            <pubDate>Tue, 17 May 2016 13:27:48 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 16 May 2016 15:45:23 +0000</pubDate>
+            <pubDate>Tue, 17 May 2016 13:27:48 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -11152,6 +11152,55 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/17/yogyakarta-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Tue, 17 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/17/yogyakarta-drupal-meetup-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Yogyakarta Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Second day in Yogya as local call their city and day 97th in my <a href="">tour</a> and finally I've got a cold, I just hope the pill I took help me to recover and avoid to have the flu in the last part of my trip.</p>
+
+<p>But, with a cold or the flu, I have a mission to accomplish, explore the city. Fortunately, the folks from <a href="http://skyshi.com">Skyshi</a> guide me to couple place in Yogya.</p>
+
+<p>Firstly, we had a brunch in a lovely Javanese restaurant, where we could enjoy some delicious dishes from local cuisine and talk about our countries to learn each other about our current situations.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/raminten-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/raminten-2.jpg"/></p>
+
+<p>Secondly, we visited the <a href="https://en.wikipedia.org/wiki/Ullen_Sentalu_Museum">Ullen Sentalu Museum</a> in theory is a museum about Javanese culture, but the reality is that it's a museum about the Sultan family, Yogyakarta by law have a governor, but is not elected the governor is the current Sultan.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ullen-sentalu-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ullen-sentalu-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ullen-sentalu-3.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Yogyakarta (today)</td>
+  <td>5.053</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.230.311</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.235.364</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/18/yogyakarta-day-2-drupal-tour-2016</link>
+            <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/18/yogyakarta-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
