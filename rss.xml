@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 17 May 2016 13:27:48 +0000</pubDate>
+                <pubDate>Tue, 17 May 2016 13:37:31 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 17 May 2016 13:27:48 +0000</pubDate>
+                <pubDate>Tue, 17 May 2016 13:37:31 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -11155,7 +11155,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             </item>
                     <item>
                 <title>Yogyakarta Day 2 - Drupal Tour 2016</title>
-                <description><![CDATA[<p>Second day in Yogya as local call their city and day 97th in my <a href="">tour</a> and finally I've got a cold, I just hope the pill I took help me to recover and avoid to have the flu in the last part of my trip.</p>
+                <description><![CDATA[<p>Second day in Yogya as local call their city and day 97th in my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days) and finally I've got a cold, I just hope the pill I took help me to recover and avoid to have the flu in the last part of my trip.</p>
 
 <p>But, with a cold or the flu, I have a mission to accomplish, explore the city. Fortunately, the folks from <a href="http://skyshi.com">Skyshi</a> guide me to couple place in Yogya.</p>
 
