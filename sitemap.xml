@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Tue, 17 May 2016 13:37:31 +0000</pubDate>
+            <pubDate>Wed, 18 May 2016 14:30:34 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Tue, 17 May 2016 13:37:31 +0000</pubDate>
+            <pubDate>Wed, 18 May 2016 14:30:34 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -11201,6 +11201,130 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/18/yogyakarta-day-2-drupal-tour-2016</link>
             <pubDate>Wed, 18 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/18/yogyakarta-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Bali Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>My last stop in Indonesia was Bali, yeah the famous Bali, the place that everybody was to visit, well I am here.</p>
+
+<p>Bali has almost the same population of Costa Rica in a 10% of his space; But, believe me, or not there more than beaches in Bali and I am here to participate in a Drupal meetup with local web developers.</p>
+
+<p>Suryanto the organizer said was a success with 12 attendees, so I was happy to hear that.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/raminten-1.jpg"/></p>
+
+<p>OK, ok I will share some beach pictures from <a href="https://en.wikipedia.org/wiki/Pantai_Kuta">Pantai Kuta</a> my place is about four blocks from the beach I will return tomorrow to swing a little bit.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/pantai-kuta-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/pantai-kuta-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/pantai-kuta-3.jpg"/></p>
+
+<p>Is still have a cold, but I hope tomorrow I will have more</p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Yogyakarta, Indonesia &#8594; Bali, Indonesia</td>
+  <td>542</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>39.141</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>39.683</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.046</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.046</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Yogyakarta (today)</td>
+  <td>5.931</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.235.3641</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.241.295</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/19/bali-day-1-drupal-tour-2016</link>
+            <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/19/bali-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
