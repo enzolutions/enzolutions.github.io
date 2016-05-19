@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Wed, 18 May 2016 14:30:34 +0000</pubDate>
+            <pubDate>Thu, 19 May 2016 09:35:03 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Wed, 18 May 2016 14:30:34 +0000</pubDate>
+            <pubDate>Thu, 19 May 2016 09:35:03 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -11325,6 +11325,96 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/19/bali-day-1-drupal-tour-2016</link>
             <pubDate>Thu, 19 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/19/bali-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Bali Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Still with some symptoms of a cold, I decided to see something of the beautiful Bali; I hired a car with a driver included to see some tourist spots around the island. By the way, Bali is much bigger than you could imagine.</p>
+
+<p>First, I visited a theater where is represented and traditional play named <a href="https://en.wikipedia.org/wiki/Barong_(mythology)">Barong &amp; Keris</a> a mythological representation of the battle of good and evil forces.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/barong-keris-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/barong-keris-2.jpg"/></p>
+
+<p>The second stop was in <a href="https://en.wikipedia.org/wiki/Batuan,_Bali">Puseh Temple</a>, Bali if full of temples, so is easy to find one, most of them are Hindu because contrary of the rest of Indonesia Bali is mostly Hinduist.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/puseh-temple-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/puseh-temple-2.jpg"/></p>
+
+<p>About mid day, the driver leads me on into a Coffee to try the most expensive coffee in the world. <a href="https://en.wikipedia.org/wiki/Kopi_Luwak">Luwak coffee</a> I stop drink coffee about 14 years ago, but I tried,  to be honest, I didn't note anything wrong or good in that coffee.</p>
+
+<p>Also, the coffee shop offers a "free" degustation of a variety of teas and coffees. Each drink had remarkable properties to protect you again any major diseases, so because I try all of them, I am protected at least for about five years.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/luwak-coffee-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/luwak-coffee-2.jpg"/></p>
+
+<p>My last stop was in the great <a href="https://en.wikipedia.org/wiki/Tanah_Lot">Tanah Lot</a>, there is not too much to say about this place, just see the pictures.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanah-lot-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanah-lot-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanah-lot-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tanah-lot-4.jpg"/></p>
+
+<p>Bali is nice, but traveling alone here is not funny, I miss my Yersika, especially in this breathtaking places that I know she will love to take pictures.</p>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>84</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.046</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.130</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Yogyakarta (today)</td>
+  <td>5.305</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.241.295</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.246.600</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/20/bali-day-2-drupal-tour-2016</link>
+            <pubDate>Fri, 20 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/20/bali-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
