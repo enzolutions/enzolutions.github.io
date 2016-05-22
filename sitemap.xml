@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sat, 21 May 2016 22:17:50 +0000</pubDate>
+            <pubDate>Sun, 22 May 2016 18:47:31 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sat, 21 May 2016 22:17:50 +0000</pubDate>
+            <pubDate>Sun, 22 May 2016 18:47:31 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -11308,7 +11308,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Yogyakarta (today)</td>
+  <td>Bali (today)</td>
   <td>5.931</td>
 </tr>
 <tr>
@@ -11398,7 +11398,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Yogyakarta (today)</td>
+  <td>Bali (today)</td>
   <td>5.305</td>
 </tr>
 <tr>
@@ -11484,7 +11484,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Yogyakarta (today)</td>
+  <td>Bali (today)</td>
   <td>11.556</td>
 </tr>
 <tr>
@@ -11598,8 +11598,8 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </thead>
 <tbody>
 <tr>
-  <td>Yogyakarta (today)</td>
-  <td>5187</td>
+  <td>Bali &amp; Melbourne (today)</td>
+  <td>5.187</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -11615,6 +11615,51 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/22/traveling-to-australia-drupal-tour-2016</link>
             <pubDate>Sun, 22 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/22/traveling-to-australia-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Melbourne Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>My first day in Australia was quite relaxed and comfy, <a href="http://yersika.com">Yersika</a> leads me in Melbourne and shows me some of her favorite spots in the city.</p>
+
+<p>So far the city looked clean, green and organized, well that is not really surprising because Melbourne year after year is ranked as one of the best cities to live in the world, but I could corroborate by myself.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-day-1-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-day-1-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-day-1-3.jpg"/></p>
+
+<p>At the end of the day, I meet up with my former classmate <a href="https://www.linkedin.com/in/naurotico">Nestor Valverde</a> who is living recently in Melbourne, was an excellent meetup to talk about our lives after 15 years don't see each other and 10k+ kilometers away from our <a href="http://www.unimagdalena.edu.co">alma matter</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-naur.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne (today)</td>
+  <td>17.958</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.263.343</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.281.301</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/23/melbourne-day-1-drupal-tour-2016</link>
+            <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/23/melbourne-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
