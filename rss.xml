@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 22 May 2016 18:47:31 +0000</pubDate>
+                <pubDate>Mon, 23 May 2016 21:44:16 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 22 May 2016 18:47:31 +0000</pubDate>
+                <pubDate>Mon, 23 May 2016 21:44:16 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -11660,6 +11660,88 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/05/23/melbourne-day-1-drupal-tour-2016</link>
                 <pubDate>Mon, 23 May 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/05/23/melbourne-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Tasmania Day 1 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Early in the morning I departure with <a href="http://yersika.com">Yersika</a> towards to Hobart, Tasmania until now the southern place in our life.</p>
+
+<p>We flight to Hobart due the second option was a ferry of 12 hours, I didn't doubt the experience of doing this via ferry must be magical, we don't have that amount of time.</p>
+
+<p>After landed in Hobart, we rented a car, my first time driving a car with the wheel on the right side; was a little daunting at the begging but with more and more kilometers it gets a little bit less scary.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-driving.jpg"/></p>
+
+<p>Our day trip destination was totally random, after search for outdoor activities in Tasmania, we found interested visiting the <a href="https://en.wikipedia.org/wiki/Tahune_AirWalk">Tahune AirWalk</a>;</p>
+
+<p>Tahune AirWalk is a pedestrian bridge located in a national park; When we arrive was drizzling, but its normal due it's a Rainforest area, using the bridge we could walk in the middle of the heights trees and appreciate the forest beauty and his landscapes.</p>
+
+<p>Also, we can do a long walk in other trails for more adventures visitors.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-tahune-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-tahune-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-tahune-3.jpg"/></p>
+
+<p>Outside our primary objective, we stop by in couple towns to ate something and try to get the feeling of the area and in our return we could walk in Hobart downtown to get a little familiar to return tomorrow.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-hobart-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-hobart-2.jpg"/></p>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>213</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.197</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.410</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne (today)</td>
+  <td>12.723</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.263.343</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.294.024</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/2016/05/24/tasmania-day-1-drupal-tour-2016</link>
+                <pubDate>Tue, 24 May 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/2016/05/24/tasmania-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
