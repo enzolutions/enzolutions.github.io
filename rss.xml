@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 25 May 2016 10:17:10 +0000</pubDate>
+                <pubDate>Wed, 25 May 2016 23:03:59 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 25 May 2016 10:17:10 +0000</pubDate>
+                <pubDate>Wed, 25 May 2016 23:03:59 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -11689,6 +11689,31 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-hobart-2.jpg"/></p>
 
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne, Australia &#8594; Hobart, Australia</td>
+  <td>599</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>44.129</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>44.728</td>
+</tr>
+</tbody>
+</table>
+
 <h2>Bus/Car</h2>
 
 <table>
@@ -11853,6 +11878,31 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/south-arm-peninsula-4.jpg"/></p>
 
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Hobart, Australia &#8594; Melbourne , Australia</td>
+  <td>599</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>44.728</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>45.327</td>
+</tr>
+</tbody>
+</table>
+
 <h2>Bus/Car</h2>
 
 <table>
@@ -11890,7 +11940,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <tbody>
 <tr>
   <td>Tasmania (today)</td>
-  <td>9.647</td>
+  <td>10.304</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -11898,7 +11948,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>1.311.382</td>
+  <td>1.312.039</td>
 </tr>
 </tbody>
 </table>
