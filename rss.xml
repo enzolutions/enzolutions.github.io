@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 24 May 2016 12:13:41 +0000</pubDate>
+                <pubDate>Wed, 25 May 2016 10:17:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 24 May 2016 12:13:41 +0000</pubDate>
+                <pubDate>Wed, 25 May 2016 10:17:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -11820,6 +11820,92 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/05/25/tasmania-day-2-drupal-tour-2016</link>
                 <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/05/25/tasmania-day-2-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Tasmania Day 3 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Our day in Tasmania start a little eventful because we had the intention of visiting the <a href="https://en.wikipedia.org/wiki/Mount_Wellington_(Tasmania)">Mount Wellington</a>, the problems started when our car GPS leads us to a hiking entrance to the mountain.</p>
+
+<p>But looks like wasn't only our mistake when we turn our car to return a senior gentleman was waiting for us with some papers, he asked us if we were looking the entry to the mountain, we answer yes and he said is a common mistake if you GPS is not updated people get here, after that he offer us a piece of paper is Chinese, Japanese and English with instructions to reach the mountain.</p>
+
+<p>With our hope in humanity entirely charged after met that gentleman, we follow the instructions and departure to the mountain. But the final road 12 kilometers before the top of the mountain was close due the necessity to remove some trees from the roads after inclement weather the days before; so the lunch and Nature sent us a message it's not the day to visit the mountain.</p>
+
+<p>After some research we determined there the second mount not far where we could have a view of Hobart Bay, so we drove towards <a href="https://en.wikipedia.org/wiki/Mount_Nelson,_Tasmania">Mount Nelson</a>, the mount in the past was a signal station for British Navy and provide and an excellent panorama of the bay.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mount-nelson-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mount-nelson-2.jpg"/></p>
+
+<p>Later on, we drove and walk a little bit Hobart downtown before to reach the <a href="https://en.wikipedia.org/wiki/Royal_Tasmanian_Botanical_Gardens">Royal Tasmanian Botanical Gardens</a> a vast park where we could appreciate lovely nature environment and have a perfect place to took a picture of the iconic bridge of Hobart Bay.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-royal-botanical-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-royal-botanical-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tasmania-royal-botanical-3.jpg"/></p>
+
+<p>With a lot of time before of our flight to return to Melbourne, we drove to the <a href="http://www.tasmania.australiaforeveryone.com.au/south-arm.htm">South Arm Peninsula</a> a beautiful place fulfill of beaches to swim and surfing, most of them empty maybe because is a weekday but was an excellent opportunity to enjoy the view and the ocean breeze.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/south-arm-peninsula-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/south-arm-peninsula-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/south-arm-peninsula-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/south-arm-peninsula-4.jpg"/></p>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>181</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.652</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.833</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tasmania (today)</td>
+  <td>9.647</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.301.735</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.311.382</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/05/26/tasmania-day-3-drupal-tour-2016</link>
+                <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/05/26/tasmania-day-3-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
