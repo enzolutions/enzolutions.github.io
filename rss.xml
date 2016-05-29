@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sat, 28 May 2016 23:28:27 +0000</pubDate>
+                <pubDate>Sun, 29 May 2016 22:59:16 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sat, 28 May 2016 23:28:27 +0000</pubDate>
+                <pubDate>Sun, 29 May 2016 22:59:16 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -12116,6 +12116,57 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/05/29/melbourne-day-3-drupal-tour-2016</link>
                 <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/05/29/melbourne-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Melbourne Day 4 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>This city is well known for their beaches, but due we are in the middle of autumn there is not a time to swim, just to see the place.</p>
+
+<p>We visit the St Kilda beach and his pier; the view is beautiful. I discover a kind of a reservoir for Penguins at the end of the pier, every night after 9 pm they arrive to sleep in the rocks.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/st-kilda-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/st-kilda-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/st-kilda-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/st-kilda-4.jpg"/></p>
+
+<p>In the afternoon, my friend <a href="http://sayago.info">Andres Sayago</a> prepare a Colombian dish named "Mute Santandearo". The friendship with Andres is a little weird; because we meet online about 15 years ago, and we continue talking about tech stuff over these years but never meet in person until last week, So I could say we were the digital version or <a href="https://en.wikipedia.org/wiki/Pen_pal">Pen Pals</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-mute-meetup-1.jpeg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-mute-meetup-2.jpeg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/melbourne-mute-meetup-3.jpeg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tasmania (today)</td>
+  <td>10.033</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.342.531</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.352.564</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/05/30/melbourne-day-4-drupal-tour-2016</link>
+                <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/05/30/melbourne-day-4-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
