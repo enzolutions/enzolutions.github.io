@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Sun, 29 May 2016 22:59:16 +0000</pubDate>
+            <pubDate>Mon, 30 May 2016 21:07:36 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Sun, 29 May 2016 22:59:16 +0000</pubDate>
+            <pubDate>Mon, 30 May 2016 21:07:36 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -4695,8 +4695,10 @@ print_r($ticket);
 <li>Bali, Indonesia / May 18th - May 21st &#8594; <a href="https://www.facebook.com/events/244028239283984/">Drupal Meetup</a></li>
 <li>Melbourne, Australia / May 22th - May 30th &#8594; <a href="http://www.meetup.com/drupalmelbourne/events/231089192">Drupal Meetup</a></li>
 <li>Sydney, Australia / May 31st - June 6th  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
-<li>Honolulu,Hawaii USA / June 7th - Jun 10th &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Mexicali, Mexico / Jun 9st - June 12th  &#8594; <a href="TBD">DrupalConsole Sprint</a></li>
 </ol>
+
+<p>I will take two mini holidays in Tasmania and Hawaii</p>
 
 <p>After complete this trip, I expect to help those communities I plan to visit to help to improve their participation in global Drupal Community and for me, well, enhance my vision of the world.</p>
 
@@ -4802,7 +4804,7 @@ foreach($cids as $cid) {
 <li>Bali, Indonesia / May 18 - May 21 &#8594; <a href="https://www.facebook.com/events/244028239283984/">Drupal Meetup</a></li>
 <li>Melbourne, Australia / May 22 - May 30 &#8594; <a href="http://www.meetup.com/drupalmelbourne/events/231089192">Drupal Meetup</a></li>
 <li>Sydney, Australia / May 31 - Jun 6  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a> </li>
-<li>Honolulu,Hawaii USA / Jun 7 - Jun 10 &#8594; Drupal Meetup <strong>TBD</strong></li>
+<li>Mexicali, Mexico / Jun 9 - June 12  &#8594; <a href="TBD">DrupalConsole Sprint</a></li>
 </ol>
 
 <p>Después de completar este viaje, espero poder ayudar a aquellas comunidades que planeo visitar a mejorar su participación en la Comunidad Drupal global y para mí, mejorar mi visión del mundo.</p>
@@ -12167,6 +12169,51 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/05/30/melbourne-day-4-drupal-tour-2016</link>
             <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/05/30/melbourne-day-4-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Melbourne Day 5 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Melbourn it's also culture and history, for that reason I visited with <a href="http://www.yersika.com">Yersika</a> the <a href="https://en.wikipedia.org/wiki/National_Gallery_of_Victoria">National Gallery of  Victory</a>, to be honest, I can't really appreciate art, but they have a couple of interesting pieces.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/national-gallery-vic-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/national-gallery-vic-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/national-gallery-vic-3.jpg"/></p>
+
+<p>Our second stop was in the <a href="https://en.wikipedia.org/wiki/Shrine_of_Remembrance">Shrine_of_Remembrance</a> in honor Australian forces.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shrine-remembrance-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/shrine-remembrance-2.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Tasmania (today)</td>
+  <td>12.545</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.352.564</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.365.109</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/05/31/melbourne-day-5-drupal-tour-2016</link>
+            <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/05/31/melbourne-day-5-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
