@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Tue, 31 May 2016 03:28:42 +0000</pubDate>
+            <pubDate>Tue, 31 May 2016 20:36:49 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Tue, 31 May 2016 03:28:42 +0000</pubDate>
+            <pubDate>Tue, 31 May 2016 20:36:49 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -12219,7 +12219,29 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
         </item>
                 <item>
             <title>Sydney Drupal Meetup - Drupal Tour 2016</title>
-            <description><![CDATA[<h2>Airplane</h2>
+            <description><![CDATA[<p>My last stop in Australia is in Sydney, commonly confuse as the capital of Australi, (I will not say which in the correct capital, Google it).</p>
+
+<p>I flew from Melbourne just on time to participate in the Sydney Drupal Meetup; I am glad the local group opens a space to talk about <a href="http://drupalconsole.com">Drupal Console</a> with them.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sydney-drupal-meetup-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sydney-drupal-meetup-3.jpg"/></p>
+
+<p>The reception was great, and I receive a lot of questions and new ideas to be included in Drupal Console.</p>
+
+<p>The meetup organizer gave a fancy Australian wine, I didn't see that coming, thank you so much, guys.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sydney-drupal-meetup-2.jpg"/></p>
+
+<p>Couple things I found interesting about Sydney.</p>
+
+<p>The subway has wagons of two stories.</p>
+
+<p>&lt;img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sydney-subway-two-stories.jpg/></p>
+
+<p>It's possible to request an Uber car to pickup inside the aiport.</p>
+
+<h2>Airplane</h2>
 
 <table>
 <thead>
@@ -12306,7 +12328,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <tbody>
 <tr>
   <td>Melbourne, Sydney (today)</td>
-  <td>12.545</td>
+  <td>10.352</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -12314,7 +12336,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tr>
 <tr>
   <td><strong>Total</strong></td>
-  <td>1.365.109</td>
+  <td>1.375.461</td>
 </tr>
 </tbody>
 </table>
