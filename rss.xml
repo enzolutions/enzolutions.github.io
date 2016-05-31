@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 30 May 2016 21:07:36 +0000</pubDate>
+                <pubDate>Tue, 31 May 2016 03:28:42 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 30 May 2016 21:07:36 +0000</pubDate>
+                <pubDate>Tue, 31 May 2016 03:28:42 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -4689,16 +4689,16 @@ print_r($ticket);
 <li>Bangkok, Thailand / Apr 20th - Apr 25th &#8594; <a href="http://www.meetup.com/Drupal-Meetup-Bangkok/events/230041865">Drupal Meetup</a></li>
 <li>Hong Kong, Hong Kong / Apr 25th - Apr 29th &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
 <li>Taipei, Taiwan / Apr 30th - May 3th &#8594; <a href="https://drupaltaiwan.org/forum/20160419/11612">Drupal Meetup</a></li>
-<li>Manila, Philippines  / May 4th - May 11th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
+<li>Manila, Philippines  / May 4th - May 10th &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
 <li>Jakarta, Indonesia / May 11th - May 14th &#8594; <a href="https://www.facebook.com/events/890804504375940/">Drupal Meetup</a></li>
-<li>Yogyakarta, Indonesia / May 15th - May 18th &#8594; <a href="https://www.facebook.com/events/1762670827297587/">Drupal Meetup</a></li>
+<li>Yogyakarta, Indonesia / May 15th - May 17th &#8594; <a href="https://www.facebook.com/events/1762670827297587/">Drupal Meetup</a></li>
 <li>Bali, Indonesia / May 18th - May 21st &#8594; <a href="https://www.facebook.com/events/244028239283984/">Drupal Meetup</a></li>
-<li>Melbourne, Australia / May 22th - May 30th &#8594; <a href="http://www.meetup.com/drupalmelbourne/events/231089192">Drupal Meetup</a></li>
+<li>Melbourne, Australia / May 22nd - May 30th &#8594; <a href="http://www.meetup.com/drupalmelbourne/events/231089192">Drupal Meetup</a></li>
 <li>Sydney, Australia / May 31st - June 6th  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a></li>
-<li>Mexicali, Mexico / Jun 9st - June 12th  &#8594; <a href="TBD">DrupalConsole Sprint</a></li>
+<li>Mexicali, Mexico / Jun 9th - June 12th  &#8594; <a href="https://drupalconsole.com/events/drupalconsole-sprint-mexicali-mexico">DrupalConsole Sprint</a></li>
 </ol>
 
-<p>I will take two mini holidays in Tasmania and Hawaii</p>
+<p>I will take two mini holidays in Tasmania and Hawaii, to complete a trip of 124 days.</p>
 
 <p>After complete this trip, I expect to help those communities I plan to visit to help to improve their participation in global Drupal Community and for me, well, enhance my vision of the world.</p>
 
@@ -4798,14 +4798,16 @@ foreach($cids as $cid) {
 <li>Bangkok, Thailandia / Apr 20 - Apr 26 &#8594; <a href="http://www.meetup.com/Drupal-Meetup-Bangkok/events/230041865">Drupal Meetup</a> </li>
 <li>Hong Kong, Hong Kong / Apr 25 - Apr 29 &#8594; <a href="http://www.meetup.com/drupalhk/events/229309147">Drupal Meetup</a></li>
 <li>Taipei, Taiwan / Apr 30 - May 3 &#8594; <a href="https://drupaltaiwan.org/forum/20160419/11612">Drupal Meetup</a></li>
-<li>Manila, Filipinas  / May 4 - May 11 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
+<li>Manila, Filipinas  / May 4 - May 10 &#8594; <a href="http://2016.drupalcampmanila.com/">DrupalCamp Manila 20016</a></li>
 <li>Jakarta, Indonesia / May 11 - May 14 &#8594; <a href="https://www.facebook.com/events/890804504375940/">Drupal Meetup</a></li>
-<li>Yogyakarta, Indonesia / May 15 - May 18 &#8594; <a href="https://www.facebook.com/events/1762670827297587/">Drupal Meetup</a></li>
+<li>Yogyakarta, Indonesia / May 15 - May 17 &#8594; <a href="https://www.facebook.com/events/1762670827297587/">Drupal Meetup</a></li>
 <li>Bali, Indonesia / May 18 - May 21 &#8594; <a href="https://www.facebook.com/events/244028239283984/">Drupal Meetup</a></li>
 <li>Melbourne, Australia / May 22 - May 30 &#8594; <a href="http://www.meetup.com/drupalmelbourne/events/231089192">Drupal Meetup</a></li>
 <li>Sydney, Australia / May 31 - Jun 6  &#8594; <a href="http://www.meetup.com/drupalsydney/events/230340301">Drupal Meetup</a> </li>
-<li>Mexicali, Mexico / Jun 9 - June 12  &#8594; <a href="TBD">DrupalConsole Sprint</a></li>
+<li>Mexicali, Mexico / Jun 9 - June 12  &#8594; <a href="https://drupalconsole.com/events/drupalconsole-sprint-mexicali-mexico">DrupalConsole Sprint</a></li>
 </ol>
+
+<p>Voy a tomar dos mini vacaciones en Tasmania y en Hawai, para completar un viaje de 124 días.</p>
 
 <p>Después de completar este viaje, espero poder ayudar a aquellas comunidades que planeo visitar a mejorar su participación en la Comunidad Drupal global y para mí, mejorar mi visión del mundo.</p>
 
@@ -12214,6 +12216,112 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/05/31/melbourne-day-5-drupal-tour-2016</link>
                 <pubDate>Tue, 31 May 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/05/31/melbourne-day-5-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Sydney Drupal Meetup - Drupal Tour 2016</title>
+                <description><![CDATA[<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne, Australia &#8594; Sydney , Australia</td>
+  <td>714</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>45.327</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>46.041</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.833</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.833</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne, Sydney (today)</td>
+  <td>12.545</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.365.109</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.365.109</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/01/sydney-drupal-meetup-drupal-tour-2016</link>
+                <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/01/sydney-drupal-meetup-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
