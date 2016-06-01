@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 31 May 2016 21:47:46 +0000</pubDate>
+                <pubDate>Wed, 01 Jun 2016 20:26:47 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 31 May 2016 21:47:46 +0000</pubDate>
+                <pubDate>Wed, 01 Jun 2016 20:26:47 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -12344,6 +12344,71 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/06/01/sydney-drupal-meetup-drupal-tour-2016</link>
                 <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/06/01/sydney-drupal-meetup-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Sydney Day 1- Drupal Tour 2016</title>
+                <description><![CDATA[<p>My first Day as a tourist in Sydney had a lot of activities at not all of them related with tourist.</p>
+
+<p>My first one was in the offices of <a href="http://technocrat.com.au">Technocrat</a> HQ, where <a href="https://twitter.com/VladimirAus"> Vladimir Roudakov</a> invite me to do a video interview to talk about <a href="enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/">tour</a>, and of course, about <a href="http://drupalconsole.com">Drupal Console</a> be in contact to see the final cut soon.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vlad-interview.jpg"/></p>
+
+<p>For lunch, I met with <a href="https://www.linkedin.com/in/adamdmalone">Adam Malone</a> who as usual is doing business travel, but he manages to have a meal with us just before to departure to Melbourne.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lunch-adam.jpg"/></p>
+
+<p>In the afternoon we walk in the <a href="https://en.wikipedia.org/wiki/Royal_Botanic_Garden,_Sydney">Royal Botanic Gardens</a> and of course, we ended up in the <a href="http://www.lonelyplanet.com/australia/sydney/sights/parks-gardens/mrs-macquaries-point">Mrs. Macquarie's Point</a> to have the mandatory picture with the Opera House in the background.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/opera-hour-day.jpg"/></p>
+
+<p>A lot of people said that the <a href="www.sl.nsw.gov.au/">State Library of NSW</a> is a more beautiful building that their counterpart in Melbourne; but IMHO, the <a href="https://en.wikipedia.org/wiki/State_Library_of_Victoria">Melboure Victoria Library</a> is more gorgeous.</p>
+
+<p>In the library, we have the opportunity of seeing a <a href="http://www.worldpressphoto.org/collection/photo/2016">World Press Photo 16</a> winners exposition.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/world-press-16.jpg"/></p>
+
+<p>After having a recovery nap in our hotel, we explore the city at night, because this week the [Vivid Sydney Festival](https://en.wikipedia.org/wiki/Vivid_Sydney] is happening, which is music, light and art festival around the city. The festival is breathtaking, and we could have the opportunity if took a lot of pictures.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vivid-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vivid-4.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vivid-5.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vivid-6.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vivid-7.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/vivid-8.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne, Sydney (today)</td>
+  <td>19213</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.375.461</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.394.674</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/02/sydney-day-1-drupal-tour-2016</link>
+                <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/02/sydney-day-1-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
