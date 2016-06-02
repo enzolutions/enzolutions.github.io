@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Wed, 01 Jun 2016 20:26:47 +0000</pubDate>
+                <pubDate>Thu, 02 Jun 2016 12:24:33 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Wed, 01 Jun 2016 20:26:47 +0000</pubDate>
+                <pubDate>Thu, 02 Jun 2016 12:24:33 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -12393,7 +12393,7 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 <tbody>
 <tr>
   <td>Melbourne, Sydney (today)</td>
-  <td>19213</td>
+  <td>19.213</td>
 </tr>
 <tr>
   <td>Previously</td>
@@ -12409,6 +12409,61 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/06/02/sydney-day-1-drupal-tour-2016</link>
                 <pubDate>Thu, 02 Jun 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/06/02/sydney-day-1-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Sydney Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Without, no doubt the <a href="https://en.wikipedia.org/wiki/Sydney_Opera_House">Opera House</a> of Sydney is the most iconic place in Australia, and we have been surrounded it the first days in the city, so we decided to visit.</p>
+
+<p>I have to recognize the Opera House looks beautiful when you are close to the building, and to be honest, my Sci-Fi Gen said the structure looks like Atlantis Spaceships. We took a tour to learn about the structure and to see the opera a valet theater, NO pictures allowed sorry, only for my eyes.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/opera-house-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/opera-house-2.jpg"/></p>
+
+<p>The second stop was <a href="https://en.wikipedia.org/wiki/Hornby_Lighthouse">Hornby Lighthouse</a> to get this place we took public transportation which means in Sydney a ferry. After four stop we were there and in the process we have breathtaking views of the city.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sydney-ferry.jpg"/></p>
+
+<p>The lighthouse is located on a peninsula in west Sydney with couple beaches (one of them a nude beach) and gorgeous views.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hornby-lighthouse-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hornby-lighthouse-2.jpg"/></p>
+
+<p>To return, we took a bus and when we transfer to the subway system we realize they apply the rule "After eight rides, the rest of the rides are free until the weekend." In our case that means about 26 AUD or 19 USD, I already said: "I love public transport in Sydney"?</p>
+
+<p>To finish our day we met with <em>Enrique</em> another Colombian digital friend who lives in Sydney.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kike-dinner.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Melbourne, Sydney (today)</td>
+  <td>15.473</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.394.674</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.410.147</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/03/sydney-day-2-drupal-tour-2016</link>
+                <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/03/sydney-day-2-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
