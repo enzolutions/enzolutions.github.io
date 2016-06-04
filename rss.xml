@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Fri, 03 Jun 2016 13:35:21 +0000</pubDate>
+                <pubDate>Sat, 04 Jun 2016 11:27:51 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Fri, 03 Jun 2016 13:35:21 +0000</pubDate>
+                <pubDate>Sat, 04 Jun 2016 11:27:51 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -12523,6 +12523,84 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/06/04/sydney-day-3-drupal-tour-2016</link>
                 <pubDate>Sat, 04 Jun 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/06/04/sydney-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Blue Mountains tour - Drupal Tour 2016</title>
+                <description><![CDATA[<p>In our last days in Australia, we decided to explore something out of the city, and we hire a tour to the Blue Mountains.</p>
+
+<p>To be fair the days was more gray than blue because autumn in Sydney and surrounded areas means rainy and windy days.</p>
+
+<p>Our first stop almost pay the ticket we visited the <a href="https://en.wikipedia.org/wiki/Featherdale_Wildlife_Park">Featherdale_Wildlife_Park</a> a mini zoo with a lot of Australian animals. Indeed, the main attraction is the Koalas; By the way, the Koalas are so cute, another animal that took my attention was the <a href="https://en.wikipedia.org/wiki/Wombat">Wombat</a> which is also adorable, and I never hear about this animal before.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/koala-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/koala-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/wombat.jpg"/></p>
+
+<p>Later on, we ended up in <a href="https://en.wikipedia.org/wiki/Katoomba_Scenic_World">Katoomba Scenic World</a> a place where in Theory we could see the majestic [Blue Mountains], but the place was so foggy that we can't see anything.</p>
+
+<p>At least we could try the Skyway to cross the cannon and the steep Railway.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/blue-mountain-waterfall.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/blue-mountain-cannon.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/blue-mountain-rail.jpg"/></p>
+
+<h2>Bus/Car</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>241</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.833</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.074</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>7.974</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.422.390</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.430.364</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/05/blue-mountains-tour-drupal-tour-2016</link>
+                <pubDate>Sun, 05 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/05/blue-mountains-tour-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
