@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Sun, 05 Jun 2016 10:23:49 +0000</pubDate>
+                <pubDate>Mon, 06 Jun 2016 05:20:52 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Sun, 05 Jun 2016 10:23:49 +0000</pubDate>
+                <pubDate>Mon, 06 Jun 2016 05:20:52 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -12657,6 +12657,49 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/06/06/sydney-stormageddon-drupal-tour-2016</link>
                 <pubDate>Mon, 06 Jun 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/06/06/sydney-stormageddon-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Australia Last Day - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Keep calm and Bondi Beach. After the storm, the calm doesn't return completely but indeed ins quite better, the day is still gray but not rainfall and no windy.</p>
+
+<p>In our last day in Australia, we decided to do a short visit to the legendary <a href="https://en.wikipedia.org/wiki/Bondi_Beach">Bondi Beach</a> the view is spectacular and despite the temperature and the high waves, some courageous swimmers and surfer try their luck in the ocean.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-4.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>8.478</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.442.967</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.451.445</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</link>
+                <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</guid>
             </item>
             </channel>
 </rss>
