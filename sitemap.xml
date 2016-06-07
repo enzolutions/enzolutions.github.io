@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 06 Jun 2016 05:20:52 +0000</pubDate>
+            <pubDate>Tue, 07 Jun 2016 06:33:47 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 06 Jun 2016 05:20:52 +0000</pubDate>
+            <pubDate>Tue, 07 Jun 2016 06:33:47 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -12700,6 +12700,140 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</link>
             <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Oahu Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday started the last week of my <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/">tour</a>, my return to America(when I say America it's always the continent) start with a jump from Oceania to the Pacific island more accurate in Oahu, Hawaii, USA as usual with my traveler companion <a href="http://yersika.com">Yersika</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-on-the-road.jpg"/></p>
+
+<p>I decided to visit first because you know it's Hawaii one of the most beautiful places in the world (in theory) and second because I want to try to a transition in my jet lag;</p>
+
+<p>Sounds weird for some people because Hawaii has 20 hours difference with Australia and Costa Rica 16, but the flight to Hawaii it's almost 9.5 hours instead be on the flight about 20 hours + airport scales; I could say that I sleep comfortable, but I sleep, so that helps me with the transition.</p>
+
+<p>The good thing of this jump it's that I live June 6 of 2016 twice, one in Australia and one in Hawaii after my time travel hahaha.</p>
+
+<p>About Oahu, I could summary my feeling in one word AMAZING; this place is so beautiful and peaceful, I love the beaches and landscapes, the ocean is so clear and clean, I didn't remember the last time I enjoy swimming in the sea like yesterday. Let me share with you some images.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-0.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-1-splash.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-4.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-5.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/oahu-6.jpg"/></p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney, Australia &#8594; Honolulu , USA</td>
+  <td>8.175</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>46.041</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>54.216</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>68</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.074</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.142</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>13.188</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.451.445</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.464.633</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</link>
+            <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
