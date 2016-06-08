@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Tue, 07 Jun 2016 06:33:47 +0000</pubDate>
+            <pubDate>Wed, 08 Jun 2016 08:39:12 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Tue, 07 Jun 2016 06:33:47 +0000</pubDate>
+            <pubDate>Wed, 08 Jun 2016 08:39:12 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -12834,6 +12834,95 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</link>
             <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Oahu Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>As you maybe don't know, not everything is about traveling. Yesterday I expended most of my morning to define with <a href="http://jmolivas.com">Jesus Olivas</a> the next steps to be a little more close to the version 1.0.0. Stable for <a href="http://drupalconsole.com">Drupal Console</a> project our most important issue "Composer compatibility."</p>
+
+<p>Back to the sightseeing, we went first to <a href="https://en.wikipedia.org/wiki/USS_Arizona_Memorial">Pearl Harbour Historic Sites</a>. Was impossible to visit the memorial for people who died during Japanese attack due the wind and due the ticket ran out early in the morning all days.</p>
+
+<p>Fortunately, the area has other military museums, and I visited fist the [
+<a href="https://en.wikipedia.org/wiki/USS_Bowfin_(SS-287)">USS Bowfin Submarine</a>, my first submarine and even that the vessel was old was quite interesting.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/uss-bowfin-sub-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/uss-bowfin-sub-2.jpg"/></p>
+
+<p>The second museum was the <a href="https://en.wikipedia.org/wiki/USS_Missouri_(BB-63)">USS Missouri</a> this battleship is important because on this ship the Japanese Empire sign their surrender and end the World War II.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/battleship-missouri-memorial-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/battleship-missouri-memorial-2.jpg"/></p>
+
+<p>But, we were in Hawaii; So, we just choose a random place on the map, and I drove to explore the island, we visited the <a href="http://www.gohawaii.com/treks/oahu/haleiwa-beach-park.html">Haleiwa Beach Park</a>. As you can imagine an awesome place, I love the fact in all this park on the beach you could find public showers, bathrooms, and free parking.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/haleiwa-beach-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/haleiwa-beach-2.jpg"/></p>
+
+<p>To finish our day, we decided to find a place to see the sunset and on the map, we see there a beach named "Sunset Beach" so the decision wasn't  hard.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sunset-at-sunset-beach.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sunset-beach-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/sunset-beach-2.jpg"/></p>
+
+<p>At the end of the day, I complete a spin around the island.</p>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>103</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.142</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.245</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>6.339</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.464.633</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.470.972</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/06/08/oahu-day-2-drupal-tour-2016</link>
+            <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/06/08/oahu-day-2-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
