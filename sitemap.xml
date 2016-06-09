@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Wed, 08 Jun 2016 08:39:12 +0000</pubDate>
+            <pubDate>Thu, 09 Jun 2016 05:40:13 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Wed, 08 Jun 2016 08:39:12 +0000</pubDate>
+            <pubDate>Thu, 09 Jun 2016 05:40:13 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -12923,6 +12923,78 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/06/08/oahu-day-2-drupal-tour-2016</link>
             <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/06/08/oahu-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Oahu Day 3 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Last day in the beautiful Oahu, we had some time before our flight to return to America, so we decided to do some hiking in the Hawaiian mountains. Our destination <a href="https://en.wikipedia.org/wiki/Manoa_Falls">Manoa Falls</a> a small walk to see a long fall, but a little crowded.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manoa-falls-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manoa-falls-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/manoa-falls-3.jpg"/></p>
+
+<p>Later we were a little hesitate about our next destination; So, we finally went out to the <a href="https://en.wikipedia.org/wiki/Hanauma_Bay">Hanauma_Bay</a>. We already visited this place the first day, but we loved so we spend about 4 hours in the sand and doing some snorkeling.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanauma-bay-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanauma-bay-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hanauma-bay-3.jpg"/></p>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>70</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.245</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.315</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>10.313</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.470.972</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.481.285</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/06/10/oahu-day-3-drupal-tour-2016</link>
+            <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/06/10/oahu-day-3-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
