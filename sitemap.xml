@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 09 Jun 2016 05:40:13 +0000</pubDate>
+            <pubDate>Fri, 10 Jun 2016 05:01:09 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 09 Jun 2016 05:40:13 +0000</pubDate>
+            <pubDate>Fri, 10 Jun 2016 05:01:09 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -12992,9 +12992,137 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
 </tbody>
 </table>
 ]]></description>
-            <link>http://enzolutions.com/articles/2016/06/10/oahu-day-3-drupal-tour-2016</link>
+            <link>http://enzolutions.com/articles/2016/06/09/oahu-day-3-drupal-tour-2016</link>
+            <pubDate>Thu, 09 Jun 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/06/09/oahu-day-3-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Crossing border USA/MEX - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday finally I returned to America (the continent), We landed in San Diego after a short stop in Los Angeles.</p>
+
+<p>In San Diego, my friend <a href="http://jmolivas.com">Jesus Olivas</a> pick us up to depart to Mexicali, Mexico.</p>
+
+<p>After about two hours driving in the middle of the desert, we reach the USA/Mexico border, and we literally enter in Mexico "Mojados.", But just for few minutes. Becuase the border control from the USA to Mexico almost doesn't exist; Jesus just drives, and no revision, no passport control, just drive and you are in Mexico.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/border-usa-mex.jpg"/></p>
+
+<p>To be honest, that is how borders between countries must to be, but I knew we will have problems in Mexico City when we try to leave Mexico to Costa Rica. For that reason, we return to the border and ask the police officer how we can register our entry, and they point out towards the office where we pay a permission to enter by land.</p>
+
+<p>The only remain problem is with the USA because they don't have a border control to exit the USA to Mexico; So I didn't log out my session from their system, I guess the next time I enter in the USA they will clear my session or fix in some way.</p>
+
+<p>As you can image Mexico is all about TACOS!! and we ate delicious tacos prepared at Jesus' home and outside local burgers in a local business with his family.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tacos-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/tacos-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/burger-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/burger-2.jpg"/></p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Honolulu , USA  &#8594; Los Angeles , USA &#8594; San Diego , USA</td>
+  <td>4.305</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>54.216</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>58.521</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>215</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.315</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.530</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>4.113</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.481.285</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.485.398</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/06/10/crossing-border-usamex-drupal-tour-2016</link>
             <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2016/06/10/oahu-day-3-drupal-tour-2016</guid>
+            <guid>http://enzolutions.com/articles/2016/06/10/crossing-border-usamex-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
