@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Fri, 10 Jun 2016 05:01:09 +0000</pubDate>
+            <pubDate>Sat, 11 Jun 2016 05:19:17 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
                 <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Fri, 10 Jun 2016 05:01:09 +0000</pubDate>
+            <pubDate>Sat, 11 Jun 2016 05:19:17 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -13123,6 +13123,49 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
             <link>http://enzolutions.com/articles/2016/06/10/crossing-border-usamex-drupal-tour-2016</link>
             <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/06/10/crossing-border-usamex-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Mexicali Day 1 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Slowly I have to return to normality; I spend most of my day working with <a href="http://jmolivas.com">Jesus Olivas</a> in Drupal Console project.</p>
+
+<p>In general we work defining next steps to try to achieve the version 1.0.0 stable for Drupal Console, and also I start my diligences to try to attend <a href="events.drupal.org/dublin2016">DrupalCon Dublin</a>, like pay my ticket, request a visa letter and apply for  a grant to attend this event.</p>
+
+<p>At the end of the day, we went with Jesus's family to a North Mexican Grill, and we walk a little bit in Jesus alma mater.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mexicali-bbq-0.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mexicali-bbq-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/mexicali-bbq-2.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>1.509</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.485.398</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.486.907</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/06/11/mexicali-day-1-drupal-tour-2016</link>
+            <pubDate>Sat, 11 Jun 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/06/11/mexicali-day-1-drupal-tour-2016</guid>
         </item>
             </channel>
 </rss>
