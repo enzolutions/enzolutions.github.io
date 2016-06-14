@@ -311,7 +311,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 14 Jun 2016 15:24:43 +0000</pubDate>
+                <pubDate>Tue, 14 Jun 2016 15:58:57 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
                     <item>
@@ -722,7 +722,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 14 Jun 2016 15:24:43 +0000</pubDate>
+                <pubDate>Tue, 14 Jun 2016 15:58:57 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -13370,6 +13370,53 @@ At least I can use 30 min free connection from <a href="http://www.boingo.com">B
                 <link>http://enzolutions.com/articles/2016/06/13/mexicali-day-3-drupal-tour-2016</link>
                 <pubDate>Mon, 13 Jun 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/06/13/mexicali-day-3-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Exporting HTML5 presentation slides to PDF</title>
+                <description><![CDATA[<p>Nowadays there are a lot of tools to create online presentations, because are more dynamic and with more effect, in summary, because are fancy and hipster.</p>
+
+<p>The problem I face and I am sure a lot of people are in the same situation, is how to create an offline version of those online slides.</p>
+
+<p>Following instructions from my friend <a href="http://jmolivas.com">Jesus Manuel</a> I ran a process to export to PDF using another sexy tool as you can imagine and I am going to document here.</p>
+
+<p>Firstly, you need to install <a href="https://github.com/astefanutti/decktape">Decktape</a> which is a is a high-quality PDF exporter for HTML5 presentation frameworks built on top of a forked version <a href="http://phantomjs.org/">PhantomJS</a>.</p>
+
+<pre><code>$ git clone --depth 1 https://github.com/astefanutti/decktape.git
+</code></pre>
+
+<p>Secondly, you need to install the PhantomJS fork available for your platform.</p>
+
+<pre><code>$ cd decktape
+$ curl -L http://astefanutti.github.io/decktape/downloads/phantomjs-osx-cocoa-x86-64 -o bin/phantomjs
+$ chmod +x bin/phantomjs
+</code></pre>
+
+<p>Current list of versions available</p>
+
+<pre><code># Windows (MSVC 2013), 64-bit, for Windows Vista or later, bundles VC++ Runtime 2013
+ $ curl -L http://astefanutti.github.io/decktape/downloads/phantomjs-msvc2013-win64.exe -o bin\phantomjs.exe
+ # Mac OS X (Cocoa), 64-bit, for OS X 10.6 or later
+ $ curl -L http://astefanutti.github.io/decktape/downloads/phantomjs-osx-cocoa-x86-64 -o bin/phantomjs
+ # Linux (CentOS 6), 64-bit
+ $ curl -L http://astefanutti.github.io/decktape/downloads/phantomjs-linux-centos6-x86-64 -o bin/phantomjs
+ # Linux (CentOS 7), 64-bit
+ $ curl -L http://astefanutti.github.io/decktape/downloads/phantomjs-linux-centos7-x86-64 -o bin/phantomjs
+ # Linux (Debian 8), 64-bit
+ $ curl -L http://astefanutti.github.io/decktape/downloads/phantomjs-linux-debian8-x86-64 -o bin/phantomjs
+</code></pre>
+
+<p>Finally, you can export your slides as PDF, check the example below.</p>
+
+<pre><code>$ bin/phantomjs decktape.js http://drupal8slides2.dev/index.html ~/Desktop/srijan-mastering-d8.pdf --screenshots-size=800x600
+</code></pre>
+
+<p>In my case, my slides were built with <a href="http://lab.hakim.se/reveal-js/#/">Reveal.js</a>, but you can use any HTML presentation framework.</p>
+
+<p>I hope did you found this articel useful.</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/14/exporting-html5-presentation-slides-to-pdf</link>
+                <pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/14/exporting-html5-presentation-slides-to-pdf</guid>
             </item>
             </channel>
 </rss>
