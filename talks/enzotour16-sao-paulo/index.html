@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+        @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+        body { font-family: 'Droid Serif'; }
+        h1, h2, h3 {
+            font-family: 'Yanone Kaffeesatz';
+            font-weight: normal;
+        }
+        .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <style type="text/css" media="screen">
+        html, body { font-family: 'Minion Pro', 'Palatino Linotype', 'Palatino', 'Georgia', serif; font-size: 24px; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Yanone Kaffeesatz', sans-serif; font-weight: 400; }
+        h1 {
+            font-size: 4.5em;
+            text-shadow: 0 -1px 0 #ff1810;
+            color: #fff;
+            background-color: #FF4943;
+            padding: 20px;
+            -moz-border-radius:    15px;
+            -webkit-border-radius: 15px;
+            border-radius:         15px;
+        }
+        h2 { font-size: 2.5em; }
+
+        a { color: #F92672; text-decoration: none; }
+        a:hover { color: #FF4943; text-decoration: none; }
+
+        pre code {
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            background-color: #333; color: #fff; padding: 1em 2em;
+        }
+        pre code .number, pre code.css .value, pre code.css .value .number { color: #0086F7; font-weight: bold; }
+        pre code .keyword, pre code .keymethods, pre code .tag .title { color: #FB660A; font-weight: bold; }
+        pre code.css .id, pre code .symbol { color: #FB660A; font-weight: normal; }
+        pre code .string, pre code .tag .value { color: #0091E2; }
+        pre code .function, pre code.css .class, pre code .preprocessor { color: #87A558; }
+        pre code .title { color: #DBEC62; font-weight: normal; }
+        pre code .params { color: #87A558; }
+        pre code .literal { }
+
+        p > code, li > code { padding: 1px 4px; border: 1px solid #CCC; background-color: #EEE; }
+
+        #slideshow .slide .content code { font-family: 'Inconsololata', monospace; }
+        code { position: relative; }
+        code a.run { position: absolute; top: 10px; right: 10px; }
+        code .function {color: #900;}
+
+        .position { font-size: 0.8em; }
+
+        .bekk { font-family: Georgia, serif; background-color: #000; }
+        .bekk p { color: #a09583; }
+        .bekk h1 { text-shadow: none; background-color: inherit; font-family: Georgia, serif; color: #a09583; }
+        .bekk h2 { font-family: Georgia, serif; color: #fff; }
+        .bekk a { color: #ff6967; }
+
+        .slide {}
+        .slide > .red { background-color: #FF4943; color: #F0F2EB; }
+
+        .red    { color: #FF4943; }
+        .gray   { color: #787878; }
+        .green  { color: #87A558; }
+        .blue   { color: #41C8F0; }
+        .yellow { color: #DBEC62; }
+
+        .nice p { font-size: 2.5em; font-family: 'Yanone Kaffeesatz', sans-serif; font-weight: 400; color: #787878; }
+        .nice.large p { font-size: 6em;}
+
+        .agenda ul { list-style-type: none; }
+        .agenda li { font-size: 2.5em; padding: 0.4em 0; font-family: 'Yanone Kaffeesatz', sans-serif; font-weight: 400; color: #787878;}
+
+        .remark-slide-content .watermark {
+            top: 5%;
+            right: 6%;
+            position: absolute;
+        }
+
+        .remark-slide-content .watermark img {
+            width: 150px;
+            height: 75px;
+        }
+
+        .remark-slide-content .right {
+            float: right;
+            clear: right;
+            display: inline;
+        }
+
+        .remark-slide-content .left {
+            float: left;
+            clear: left;
+            display: inline;
+        }
+
+        .remark-slide-content .left a {
+            clear: left;
+            display: inherit;
+            text-align: center;
+        }
+
+        .remark-slide-content .rigtht a {
+            clear: right;
+            display: inherit;
+            text-align: center;
+        }
+
+        .remark-slide-content .right a, .remark-slide-content .right em {
+            clear: right;
+            display: inherit;
+            text-align: center;
+        }
+
+        .remark-slide-content .right .thumb img {
+            width: 240px;
+            height: 240px;
+            border: 4px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .remark-slide-content .left a, .remark-slide-content .left em {
+            clear: left;
+            display: inherit;
+            text-align: center;
+        }
+
+        .remark-slide-content .right .thumb-small img, .remark-slide-content .left .thumb-small img {
+            width: 200px;
+            height: 200px;
+            border: 4px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+        }
+
+        /* templates */
+        .bg-orange {
+            background: #FF4943;
+        }
+
+        .bg-blue {
+            background: rgb(0, 118, 194);
+        }
+
+        #contributors-list li {
+            list-style-type: none;
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            width: 55px;
+            overflow: hidden;
+        }
+
+        #contributors-list li img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border: 0px none;
+        }
+
+
+    </style>
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function() {
+            gitHubContributors();
+
+        });
+        function gitHubContributors() {
+
+            var
+                    howMany = 60,
+                    baseUrl = 'https://api.github.com/repos/hechoendrupal/DrupalConsole/contributors?per_page=' + howMany + '&callback=?',
+                    $contributorsOutput = $("#contributors-list"),
+                    $pager = $(".pager");
+
+            function _listContributors(data) {
+                $contributorsOutput.html("");
+                var html = '';
+                $(data).each(function(i, user) {
+                    html += '<li><a href="' + user.url.replace('api.', '').replace('users/', '') + '"><img src="' + user.avatar_url + '" alt="' + user.login + '" class="contributor-avatar"></a></li>';
+                });
+                $contributorsOutput.html(html);
+            }
+
+            function _getContributors(apiUrl) {
+                $.ajax({
+                    type: 'GET',
+                    url: apiUrl,
+                    async: true,
+                    crossDomain: true,
+                    contentType: "application/json",
+                    dataType: 'jsonp',
+                    success: function(data) {
+                        if (data.meta.status != "200") {
+                            _throwError(data.meta);
+                        } else {
+                            _listContributors(data.data); // output contribs
+                        }
+                    },
+                    error: function(e) {
+                        console.log(e.message);
+                    }
+                });
+            }
+
+            function _throwError(data) {
+                $contributorsOutput.text("Error");
+                console.log(data);
+            }
+            _getContributors(baseUrl);
+        }
+    </script>
+</head>
+<body>
+<textarea id="source">
+name: section
+class: center, middle, bg-orange, bg-dark
+layout: true
+---
+layout: false
+class: center, middle
+
+# Mastering Drupal 8 Development
+???
+Notes here
+---
+layout: false
+## About me
+
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+.right[.thumb[![Eduardo Garcia](images/enzo-drupal8-square.png)]]
+
+enzo - Eduardo Garcia
+
+[@enzolutions](http://twitter.com/enzolutions)
+
+CTO at [Anexus](http:/anexusit.com)
+
+Location: **Costa Rica**
+
+Slides: [http://bit.ly/sao-paulo-mastering-d8](http://bit.ly/sao-paulo-mastering-d8)
+
+Script: [http://bit.ly/sao-paulo-mastering-d8-script](http://bit.ly/sao-paulo-mastering-d8-script)
+???
+Notes here
+---
+## Who maintain this project?
+
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+.left[.thumb-small[![Jesus Manuel Olivas](images/jmolivas.jpg)] *Jesus Olivas* [@jmolivas](http://twitter.com/jmolivas)]
+.right[.thumb-small[![Eduardo Garcia](images/enzo-drupal8-square.png)] *Eduardo Garcia* [@enzolutions](http://twitter.com/enzolutions)]
+.left[.thumb-small[![David Flores](images/dmouse.jpg)] *David Flores* [@dmouse](http://twitter.com/dmouse)]
+.right[.thumb-small[![Omar Aguirre](images/omero.jpg)] *Omar Aguirre* [@omers](http://twitter.com/omers)]
+???
+Notes here
+---
+## Supporting organizations
+
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+.center[![Anexus](images/anexus-logo.png)]
+.center[![Anexus](images/anexus-logo.png)]
+.center[![Indaba](images/indava-logo.png)]
+.center[![FFW](images/ffw-logo.png)]
+???
+Notes here
+---
+## Spread the word and love
+
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+.center[![Anexus](images/stickers.jpg)]
+
+.center[[@drupalconsole](http://twitter.com/drupalconsole) | #drupalconsole]
+???
+Notes here
+---
+template: section
+# Where do you find the project?
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Landing Page
+[http://drupalconsole.com](http://drupalconsole.com/)
+
+## Documentation
+[https://drupalconsole.com/docs/portuguese](https://drupalconsole.com/docs/portuguese)
+
+## Support
+[http://bit.ly/console-support](http://bit.ly/console-support)
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Drupal Console - 101
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/71qZwXCeaP0" frameborder="0" allowfullscreen></iframe>
+
+[https://www.youtube.com/watch?v=71qZwXCeaP0](https://www.youtube.com/watch?v=71qZwXCeaP0)
+???
+Notes here
+---
+template: section
+# General features
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## Remote commands
+
+## Multi site
+
+## Autocomplete support
+
+## Support for acquia desktop installations
+???
+Notes here
+---
+template: section
+# Tips
+???
+Notes here
+---
+layout: false
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Protip #1
+
+Use multilanguage feature
+
+```yaml
+application:
+environment: 'prod'
+language: en
+editor: vim
+temp: /tmp
+```
+### ~/.console/config.yml
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Protip #1
+
+![Generate Controller in Spanish](images/generate-controller-es.png)
+???
+Notes here
+---
+layout: false
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Protip #2
+
+Use --generate-inline
+
+```bash
+$ drupal generate:entity:config --generate-inline
+```
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Protip #2
+
+![Generate Inline](images/generate-inline.png)
+???
+Notes here
+---
+layout: false
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Protip 3
+
+Use --generate-chain
+
+```bash
+	$ drupal generate:module --generate-chain
+```
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+## Protip #3
+
+![Generate Chain](images/generate-chain.png)
+???
+Notes here
+---
+template: section
+# Languages
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+![Languages](images/languages.png)
+???
+Notes here
+---
+template: section
+# Configuration Management
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## config:debug
+
+## config:override
+
+## config:export:single
+
+## config:diff
+???
+Notes here
+---
+template: section
+# Cron
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## cron:debug
+
+## config:execute
+
+## config:release
+???
+Notes here
+---
+template: section
+# Update
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## generate:update
+
+## generate:post:update
+
+## update:debug
+
+## update:execute
+???
+Notes here
+---
+template: section
+# Create
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## create:comments
+
+## create:nodes
+
+## create:terms
+
+## create:users
+
+## create:vocabularies
+???
+Notes here
+---
+template: section
+# Chain
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## chain:debug
+
+## chain
+???
+Notes here
+---
+template: section
+# Database
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## database:client
+
+## database:dump
+
+## database:restore
+
+## database:table:debug
+
+## database:drop
+???
+Notes here
+---
+template: section
+# Code Generation
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## generate:entity:content:bundled
+
+## generate:event:subscriber
+
+## generate:plugin:views:field
+
+## generate:form
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## generate:form:alter
+
+## generate:routesubscriber
+
+## generate:plugin:ckeditorbutton
+
+## generate:plugin:mail
+???
+Notes here
+---
+template: section
+# Images
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## image:styles:debug
+
+## image:styles:flush
+
+## generate:form
+???
+Notes here
+---
+template: section
+# Site
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## site:install
+
+## site:debug
+
+## site:import:local
+
+## site:statistics
+???
+Notes here
+---
+template: section
+# State
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## state:debug
+
+## state:delete
+
+## state:override
+
+## site:statistics
+???
+Notes here
+---
+template: section
+# Others
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## node:access:rebuild
+
+## plugin:debug
+
+## server
+
+## update:entites
+
+## views:plugins:debug
+???
+Notes here
+---
+template: section
+# Contributors
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+<ul id="contributors-list"></ul>
+[https://drupalconsole.com/contributors](https://drupalconsole.com/contributors)
+???
+Notes here
+---
+template: section
+# Upcoming implementations
+???
+Notes here
+---
+layout: false
+class: center, middle
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## Drupal Commerce
+
+## Meta Tag
+
+## Page Manager
+
+## Rules
+
+## scheduled Updates
+
+## **[Your module here]**
+???
+Notes here
+---
+layout: false
+.watermark[![Drupal Console](images/drupal-console.png)]
+
+## Questions & Feedback
+
+.center[Feel free to stalk us or ask any question at:]
+
+.center[[@enzolutions](http://twitter.com/enzolutions) | [@drupalconsole](http://twitter.com/drupalconsole)]
+
+.center[Slides: [http://bit.ly/sao-paulo-mastering-d8](http://bit.ly/sao-paulo-mastering-d8)]
+
+.center[Script: [http://bit.ly/sao-paulo-mastering-d8-script](http://bit.ly/sao-paulo-mastering-d8-script)]
+
+.center[Support: [http://bit.ly/console-support](http://bit.ly/console-support)]
+
+???
+Notes here
+</textarea>
+<script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+</script>
+<script>
+    var slideshow = remark.create();
+</script>
+
+      <!-- Google Analytics Tracker -->
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17944133-1', 'enzolutions.com');
+        ga('send', 'pageview');
+      </script>
+      <!-- End of Google Analytics Tracker -->
+ </body> 
+</html>

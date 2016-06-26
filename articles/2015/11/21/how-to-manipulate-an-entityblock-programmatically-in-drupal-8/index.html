@@ -296,7 +296,7 @@ print_r($block);
 <p>If you want to enable that generated block programmatically, you can use the following snippet of code.</p>
 
 <pre><code>$blockEntityManager = \Drupal::service('entity.manager')-&gt;getStorage('block');
-$block = $blockEntityManager-&gt;-&gt;create(
+$block = $blockEntityManager-&gt;create(
   array(
       'id'=&gt; $plugin_id,
       'plugin' =&gt; $plugin_id,

@@ -9096,7 +9096,7 @@ print_r($block);
 <p>If you want to enable that generated block programmatically, you can use the following snippet of code.</p>
 
 <pre><code>$blockEntityManager = \Drupal::service('entity.manager')-&gt;getStorage('block');
-$block = $blockEntityManager-&gt;-&gt;create(
+$block = $blockEntityManager-&gt;create(
   array(
       'id'=&gt; $plugin_id,
       'plugin' =&gt; $plugin_id,
@@ -13259,7 +13259,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Wed, 22 Jun 2016 19:56:20 +0000</pubDate>
+            <pubDate>Sun, 26 Jun 2016 14:55:16 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -13415,7 +13415,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Wed, 22 Jun 2016 19:56:20 +0000</pubDate>
+            <pubDate>Sun, 26 Jun 2016 14:55:16 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
             </channel>
