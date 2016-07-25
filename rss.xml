@@ -11254,7 +11254,7 @@ use Psr\Log\LoggerInterface;
 
 <p><img src="http://enzolutions.com/assets/img/configuration_management_view_import.png"/></p>
 
-<p>If you want read more about Configuration Management in Drupal 8 you can read the post entry <a href="{site.url}/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a></p>
+<p>If you want read more about Configuration Management in Drupal 8 you can read the post entry <a href="http://enzolutions.com/articles/2014/08/27/understanding-configuration-management-in-drupal-8/">Understanding Configuration Management in Drupal 8</a></p>
 
 <p>To resolve this problem I will show you how to create your own Field Formatter to meet your needs.</p>
 
@@ -13313,7 +13313,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 25 Jul 2016 04:30:56 +0000</pubDate>
+                <pubDate>Mon, 25 Jul 2016 04:47:08 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -13469,7 +13469,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 25 Jul 2016 04:30:56 +0000</pubDate>
+                <pubDate>Mon, 25 Jul 2016 04:47:08 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
             </channel>
