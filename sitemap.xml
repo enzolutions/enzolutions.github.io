@@ -6,6 +6,60 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                 <item>
+            <title>The art of contributing in Software</title>
+            <description><![CDATA[<p>After participating for the first time in <a href="https://www.drupalgovcon.org/drupal-govcon-2016">Drupal GovCon 2016</a>, I had the opportunity to meet in person with <a href="https://www.drupal.org/u/qingkong">Kanshu Wu</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kenshu-meetup-1.jpg"/></p>
+
+<p><em>Kanshu</em> is a Drupal Frontend, who lives in the USA since 2014, but he still runs his company <a href="http://www.vi-sure.com">Vi Sure</a> with clients based in China.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kenshu-meetup-2.jpg"/></p>
+
+<p>I have been friends with <em>Kanshu</em> for about six months, and the way we connected was when I learned the first lesson of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days">Around the Drupal World in 120+ days</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzotour-banner.jpg"/></p>
+
+<p>Because China was an important part of my tour, I decided to install the IM system <a href="https://es.wikipedia.org/wiki/QQ">QQ</a> to try to get information for my trip and be connected with people.</p>
+
+<p>From time to time, I get friend requests from members of Chinese Drupal community mostly because they want to practice English or ask something about Drupal.</p>
+
+<p>But, one day I got <em>Kanshu's</em> request, he told me he was glad that I wanted to go to China to share with the community, and asked me how he could help me on my trip. Because he lives outside China, I told him "Thank you", but couldn't see a way he could help me, since I had almost everything already set and I couldn't meet with him in China; So we just continued connected and we started chatting once every few days.</p>
+
+<p>A couple of weeks after, <em>Kanshu</em> contacted me again telling me that he had found how he could contribute to my tour.</p>
+
+<p>He said, "I am not a PHP developer, and I don't live in China, but I am a graphic and web designer, so I can create the official banner of your trip to improve the communication, marketing, and exposure of your journey."</p>
+
+<p>I found his proposal very smart because he figured out a way to contribute with his skills, something that I didn't figure out. In the end, he did the banner, which was used in many events I participated and the infographic statistics of my tour when I completed it.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzotour16-stats-small.png"/></p>
+
+<p>During our lunch, we had a conversation about how small are the contributions from China and Asia, I told him that situation not only happens in China and explained to him that the same problems happens in Latin America. We talked about that maybe the reason is due the challenges in our societies, people spend too much time trying to survive; So the chances that people have to contribute and help the rest of the world are reduced.</p>
+
+<p>I agree with the previous analysis, but I resist to think that we have to accept and continue doing the same things. Let's go back to  <em>Kanshu</em>, he helps a lot of people, not only me, because he has written the first Drupal 7 book about theming in Chinese <a href="http://www.drupaltheme.guide">http://www.drupaltheme.guide</a></p>
+
+<p>The way I see it, our communities always have the opportunity to contribute something based in their knowledge and reality, also those contributions doesn't have to have a global impact, some local initiatives are equally important, like his book in Chinese.</p>
+
+<p>One common belief in China and Latin America ( I can't include other countries of Asia because I did confirm with locals) is that due the hard competition to survive, sharing your knowledge with your competitors will enable them to do what you do, and you will lose your advantage. But in my experience that thinking it's completely the opposite.</p>
+
+<p>Without contributions I wouldn't be able to fund <a href="http://anexusit.com">Anexus</a> a Drupal Workshop located in Costa Rica with the goal of selling services in North America and Europe.</p>
+
+<p>In <em>Anexus</em> contributing is the core of our business from day one until now, because contributing was and is still our way to show to the world that we know about Drupal and that we are good, so hire us!</p>
+
+<p>Because of this, after contributing for almost three years in the <a href="http://drupalconsole.com">Drupal Console</a> project; I have started a new company named <a href="http://weknowinc.com">weKnow</a>.  weKnow is my second company funded with of <a href="http://jmolivas.com/">Jesus Manuel Olivas</a> and <a href="https://twitter.com/Kabarca">Kenny Abarca</a> now based in the USA, using the same logic, demonstrating that <em>we know</em> what we are talking about and that we are good on that applying our previous contributions to show that.</p>
+
+<p>Don't take me wrong; I'm not saying I have an evil plan to master the world after any contribution, I wasn't expecting to create any business at the beginning, it's just something that naturally emerges in my case.</p>
+
+<p>I firmly believe that contributing and constantly doing it, will eventually have a positive effect in your professional life.</p>
+
+<p>For me. <em>contributing</em> means investing in our community, which is good for everybody and in the long term it will be particularly useful to you.</p>
+
+<p>The art of contributing is to find small things you can do to create an impact and continue doing it means that you have a long-term vision.</p>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/07/25/the-art-of-contributing-in-software</link>
+            <pubDate>Mon, 25 Jul 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/07/25/the-art-of-contributing-in-software</guid>
+        </item>
+                <item>
             <title>Exporting HTML5 presentation slides to PDF</title>
             <description><![CDATA[<p>Nowadays there are a lot of tools to create online presentations, because are more dynamic and with more effect, in summary, because are fancy and hipster.</p>
 
@@ -589,6 +643,49 @@ $ chmod +x bin/phantomjs
             <guid>http://enzolutions.com/articles/2016/06/08/oahu-day-2-drupal-tour-2016</guid>
         </item>
                 <item>
+            <title>Australia Last Day - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Keep calm and Bondi Beach. After the storm, the calm doesn't return completely but indeed ins quite better, the day is still gray but not rainfall and no windy.</p>
+
+<p>In our last day in Australia, we decided to do a short visit to the legendary <a href="https://en.wikipedia.org/wiki/Bondi_Beach">Bondi Beach</a> the view is spectacular and despite the temperature and the high waves, some courageous swimmers and surfer try their luck in the ocean.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-4.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>8.478</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.442.967</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.451.445</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</link>
+            <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</guid>
+        </item>
+                <item>
             <title>Oahu Day 1 - Drupal Tour 2016</title>
             <description><![CDATA[<p>Yesterday started the last week of my <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/">tour</a>, my return to America(when I say America it's always the continent) start with a jump from Oceania to the Pacific island more accurate in Oahu, Hawaii, USA as usual with my traveler companion <a href="http://yersika.com">Yersika</a>.</p>
 
@@ -721,49 +818,6 @@ $ chmod +x bin/phantomjs
             <link>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</link>
             <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</guid>
-        </item>
-                <item>
-            <title>Australia Last Day - Drupal Tour 2016</title>
-            <description><![CDATA[<p>Keep calm and Bondi Beach. After the storm, the calm doesn't return completely but indeed ins quite better, the day is still gray but not rainfall and no windy.</p>
-
-<p>In our last day in Australia, we decided to do a short visit to the legendary <a href="https://en.wikipedia.org/wiki/Bondi_Beach">Bondi Beach</a> the view is spectacular and despite the temperature and the high waves, some courageous swimmers and surfer try their luck in the ocean.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-1.jpg"/></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-2.jpg"/></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-3.jpg"/></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-4.jpg"/></p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Sydney (today)</td>
-  <td>8.478</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>1.442.967</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>1.451.445</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-            <link>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</link>
-            <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</guid>
         </item>
                 <item>
             <title>Sydney Stormageddon - Drupal Tour 2016</title>
@@ -3519,6 +3573,59 @@ $ chmod +x bin/phantomjs
             <guid>http://enzolutions.com/articles/2016/04/30/taipei-day-1-drupal-tour-2016</guid>
         </item>
                 <item>
+            <title>Hong Kong Day 2 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
+
+<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
+
+<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
+
+<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
+
+<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>14.760</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>965.986</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>980.746</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
+            <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
+        </item>
+                <item>
             <title>Taipei, Taiwan Drupal Meetup - Drupal Tour 2016</title>
             <description><![CDATA[<p>Yesterday, I finished my short visit to Hong Kong; Next time I have to reserve more days in this city.</p>
 
@@ -3635,59 +3742,6 @@ $ chmod +x bin/phantomjs
             <link>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</link>
             <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</guid>
-        </item>
-                <item>
-            <title>Hong Kong Day 2 - Drupal Tour 2016</title>
-            <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
-
-<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
-
-<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
-
-<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
-
-<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Bangkok (today)</td>
-  <td>14.760</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>965.986</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>980.746</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-            <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
-            <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
         </item>
                 <item>
             <title>Hong Kong Drupal Meetup - Drupal Tour 2016</title>
@@ -6695,6 +6749,53 @@ $ chmod +x bin/phantomjs
             <guid>http://enzolutions.com/articles/2016/03/12/seoul-last-day-drupal-tour-2016</guid>
         </item>
                 <item>
+            <title>Seoul Day 4 - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday was a relaxed, calm and cool day in Seoul, after doing some work in the morning we departure toward a lunch with people from <a href="https://www.pentasecurity.com/en/">Penta Security</a>, they attend the day before the Drupal Meetup and them invite me to take a meal.</p>
+
+<p>After the meetup, they explain me a little but about <a href="http://mydiamo.com">MyDiamo</a>, so I was interested in that product, and they explain to me that MyDiamo is an application that runs on top of <a href="https://www.mysql.com">MySQL</a> or <a href="https://mariadb.org">MariaDB</a>.</p>
+
+<p>I am interested in <strong>MyDiamo</strong> because they provide encryption in the database in column level, that helps to protect information among database users and protect yourself, because,  if you got hacked, the sensitive information would not be accessible. Implementations of this have a lot of value in a vast spectrum of business; I will try it in deep and investigate to use with Drupal 8 soon and maybe create a session to talk about this soon.</p>
+
+<p>In the afternoon, guided by <a href="https://twitter.com/HappyJiyoung">Jiyoung Yun</a> we visit the <a href="https://en.wikipedia.org/wiki/Gangnam_District">Gangnam District</a>.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/gangnam-style.jpg"/></p>
+
+<p>She explains us a little bit about South Korean culture. Meanwhile, we walk and drink some typical Korean tea.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korean-tea.jpg"/></p>
+
+<p>Our tour in Gangnam ended up at <a href="https://en.wikipedia.org/wiki/Seonjeongneung">Seonjeongneung</a> which is the burial grounds of two Joseon Dynasty Kings and one Joseon Queen.</p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Seoul (today)</td>
+  <td>13.745</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>315.512</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>329.257</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</link>
+            <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</guid>
+        </item>
+                <item>
             <title>Seoul Day 5 - Drupal Tour 2016</title>
             <description><![CDATA[<p>My stage in South Korea is about to finish, the day before was full of loneliness, due <a href="http://yersika.com">Yersika</a> continue with his trip and departure to Japan and a two days stop before she continues to Australia.</p>
 
@@ -6764,53 +6865,6 @@ $ chmod +x bin/phantomjs
             <link>http://enzolutions.com/articles/2016/03/11/seoul-day-5-drupal-tour-2016</link>
             <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-5-drupal-tour-2016</guid>
-        </item>
-                <item>
-            <title>Seoul Day 4 - Drupal Tour 2016</title>
-            <description><![CDATA[<p>Yesterday was a relaxed, calm and cool day in Seoul, after doing some work in the morning we departure toward a lunch with people from <a href="https://www.pentasecurity.com/en/">Penta Security</a>, they attend the day before the Drupal Meetup and them invite me to take a meal.</p>
-
-<p>After the meetup, they explain me a little but about <a href="http://mydiamo.com">MyDiamo</a>, so I was interested in that product, and they explain to me that MyDiamo is an application that runs on top of <a href="https://www.mysql.com">MySQL</a> or <a href="https://mariadb.org">MariaDB</a>.</p>
-
-<p>I am interested in <strong>MyDiamo</strong> because they provide encryption in the database in column level, that helps to protect information among database users and protect yourself, because,  if you got hacked, the sensitive information would not be accessible. Implementations of this have a lot of value in a vast spectrum of business; I will try it in deep and investigate to use with Drupal 8 soon and maybe create a session to talk about this soon.</p>
-
-<p>In the afternoon, guided by <a href="https://twitter.com/HappyJiyoung">Jiyoung Yun</a> we visit the <a href="https://en.wikipedia.org/wiki/Gangnam_District">Gangnam District</a>.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/gangnam-style.jpg"/></p>
-
-<p>She explains us a little bit about South Korean culture. Meanwhile, we walk and drink some typical Korean tea.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/korean-tea.jpg"/></p>
-
-<p>Our tour in Gangnam ended up at <a href="https://en.wikipedia.org/wiki/Seonjeongneung">Seonjeongneung</a> which is the burial grounds of two Joseon Dynasty Kings and one Joseon Queen.</p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Seoul (today)</td>
-  <td>13.745</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>315.512</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>329.257</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-            <link>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</link>
-            <pubDate>Fri, 11 Mar 2016 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2016/03/11/seoul-day-4-drupal-tour-2016</guid>
         </item>
                 <item>
             <title>Seoul Day 3 - Drupal Tour 2016</title>
@@ -13259,7 +13313,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Thu, 21 Jul 2016 19:45:59 +0000</pubDate>
+            <pubDate>Mon, 25 Jul 2016 03:58:27 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -13415,7 +13469,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Thu, 21 Jul 2016 19:45:59 +0000</pubDate>
+            <pubDate>Mon, 25 Jul 2016 03:58:27 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
             </channel>
