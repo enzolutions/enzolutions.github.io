@@ -7,7 +7,7 @@
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
                 <title>My DrupalCon Dublin experience</title>
-                <description><![CDATA[<p>This week  I had the opportunity of participate in my 6th DrupalCon and my second European DrupalCon.</p>
+                <description><![CDATA[<p>Last week  I had the opportunity of participate in my 6th DrupalCon and my second European DrupalCon.</p>
 
 <p>But, to be honest, this one is the most important DrupalCon for me until now, I know the first one it's always especial, but in this case, represent a lot for me, because the relevance as speaker in this event.</p>
 
@@ -143,9 +143,9 @@
 </tbody>
 </table>
 ]]></description>
-                <link>http://enzolutions.com/articles/2016/09/30/my-drupalcon-dublin-experience</link>
-                <pubDate>Fri, 30 Sep 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/09/30/my-drupalcon-dublin-experience</guid>
+                <link>http://enzolutions.com/articles/2016/10/03/my-drupalcon-dublin-experience</link>
+                <pubDate>Mon, 03 Oct 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/10/03/my-drupalcon-dublin-experience</guid>
             </item>
                     <item>
                 <title>The art of contributing in Software</title>
@@ -13455,7 +13455,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Mon, 03 Oct 2016 11:44:16 +0000</pubDate>
+                <pubDate>Mon, 03 Oct 2016 13:02:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -13611,7 +13611,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Mon, 03 Oct 2016 11:44:16 +0000</pubDate>
+                <pubDate>Mon, 03 Oct 2016 13:02:10 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
             </channel>
