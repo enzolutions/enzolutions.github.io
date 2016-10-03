@@ -6,6 +6,148 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                 <item>
+            <title>My DrupalCon Dublin experience</title>
+            <description><![CDATA[<p>This week  I had the opportunity of participate in my 6th DrupalCon and my second European DrupalCon.</p>
+
+<p>But, to be honest, this one is the most important DrupalCon for me until now, I know the first one it's always especial, but in this case, represent a lot for me, because the relevance as speaker in this event.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupalcon-group-photo.jpg"/></p>
+
+<p>I have been in a roller coaster of emotions since I was notified that my proposal to present as Community Keynote was accepted; Since that moment I have been working a lot to try to provide the best material I could do to try to share with the community my view and perception of global Drupal Community.</p>
+
+<p>During my keynote, I talk about the tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days">Around the Drupal world in 140+ days</a> and I present some proposals I think that could be implemented improve the engagement with the global community because right now I think we are an international community, but we need to be global.</p>
+
+<p>Keynote resources:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/clxizOD0IbY" frameborder="0" allowfullscreen></iframe>
+
+<p><br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/community_keynote.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/community_keynote-qa.jpg"/></p>
+
+<p>Slides: <a href="http://weknowinc.com/dublin/community-keynote.pdf">weknowinc.com/dublin/community-keynote.pdf</a></p>
+
+<p>Tour video: <a href="http://weknowinc.com/video/aroundtheworld">http://weknowinc.com/video/aroundtheworld</a>
+<a href="http://v.youku.com/v_show/id_XMTczNzc3Nzc5Mg==.html">Chinese version</a></p>
+
+<p>But, before the keynote, I participate as co-presenter with <a href="">Jesus Manuel Olivas</a> my business partner at <a href="http://weknowinc.com">weKnow</a>.</p>
+
+<p>Our first session was <a href="https://events.drupal.org/dublin2016/sessions/drupal-console-overview-new-drupal-cli">Drupal Console: An overview of the new Drupal CLI</a>.</p>
+
+<p>The second session was <a href="https://events.drupal.org/dublin2016/sessions/learn-new-things-drupal-8-debugging">Learn the new things in Drupal 8 via debugging</a></p>
+
+<p>The cherry on the cake were the B.OF.s <a href="https://events.drupal.org/dublin2016/bofs/writing-modern-cli-commands-drupal-8">Writing Moder CLI commands for Drupal 8</a> and <a href="https://events.drupal.org/dublin2016/bofs/improving-your-drupal-8-development-workflow-using-composer">Improving your Drupal 9 development workflow with Composer</a> that Jesus and I lead during Drupal Con.</p>
+
+<p>Last, but not least; I had the opportunity to participate in Code Sprints to try to advance in our goal to have the first release 1.0.0 stable for <a href="http://drupalconsole.com">Drupal Console project</a>.</p>
+
+<p>In general, I am very satisfied with the comments and feedbacks from the Drupal community; Now I could say I have a lot of ideas to contribute via code and community hacks to try to improve as a product as well as a community.</p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>San Jose , Costa Rica  &#8594; Dubline , Ireland</td>
+  <td>9564</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>87,040</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>96,604</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Dublin</td>
+  <td>102.470</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.678.485</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.780.955</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.944</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.944</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/09/30/my-drupalcon-dublin-experience</link>
+            <pubDate>Fri, 30 Sep 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/09/30/my-drupalcon-dublin-experience</guid>
+        </item>
+                <item>
             <title>The art of contributing in Software</title>
             <description><![CDATA[<p>After participating for the first time in <a href="https://www.drupalgovcon.org/drupal-govcon-2016">Drupal GovCon 2016</a>, I had the opportunity to meet in person with <a href="https://www.drupal.org/u/qingkong">Kanshu Wu</a>.</p>
 
@@ -2611,7 +2753,7 @@ $ chmod +x bin/phantomjs
             <title>Jakarta, Indonesia Drupal Meetup - Drupal Tour 2016</title>
             <description><![CDATA[<p>I am in last quarter of my [tour](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/) in a month I will be landing in my home.</p>
 
-<p>Thanks to <a href="https://www.linkedin.com/in/ardnet">Pratomo Ardianto</a> and <a href="http://sepulsa.com">Sepula</a> I have the opportunity to talk with Drupal community in Jakarta about <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
+<p>Thanks to <a href="https://www.linkedin.com/in/ardnet">Pratomo Ardianto</a> and <a href="http://sepulsa.com">Sepusla</a> I have the opportunity to talk with Drupal community in Jakarta about <a href="http://drupalconsole.com">Drupal Console</a> project.</p>
 
 <p>The attendees had a lot of questions and were very interested in use Drupal 8, but still have some doubt about Drupal 8 modules availability; I hope my answers motivate them to adopt the Drupal 8 usage more soon than later.</p>
 
@@ -13313,7 +13455,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Mon, 25 Jul 2016 04:47:08 +0000</pubDate>
+            <pubDate>Mon, 03 Oct 2016 11:44:16 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -13469,7 +13611,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Mon, 25 Jul 2016 04:47:08 +0000</pubDate>
+            <pubDate>Mon, 03 Oct 2016 11:44:16 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
             </channel>
