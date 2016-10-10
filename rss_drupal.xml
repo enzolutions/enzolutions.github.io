@@ -6,6 +6,142 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss_drupal.xml" rel="self" type="application/rss+xml" />
                                     <item>
+                    <title>A week in Paris</title>
+                    <description><![CDATA[<p>Last week  I had the opportunity of visit Paris, France for a week as para of my tour [Around the Drupal world in 140+ days](http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day.</p>
+
+<p>Sadly for me, I got a #drupalflu in Drupal Con, Dublin; So I wasn't in the best shape to enjoy the city.</p>
+
+<p>I want to say thank you to <a href="https://www.linkedin.com/in/lissarraguesebastien">Sebastien Lissarrague</a> and his family for allowing me to stay with them in their home.</p>
+
+<p>During my visit, I had the opportunity to participate in the local Drupal Meetup of Paris community.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/IMG_20161006_195509.jpg"/></p>
+
+<p>Also, I visited some companies like <a href="http://www.koriolis.fr">Koriolis</a>, <a href="https://sensiolabs.com">Sensio Labs</a> and <a href="https://platform.sh/">Platform.sh</a>.</p>
+
+<p>At <strong>Koriolis</strong> I have the opportunity to show the owner and developers the <a href="http://drupalconsole.com">Drupal Console</a> project to accelerate the Drupal 8 adoption in their projects.</p>
+
+<p>During my visit to <strong>Sensio Labs</strong> I had a session with part the Symfony Core development team, to show them how we have been using the <a href="http://symfony.com/doc/current/components/console.html">Symfony Console</a> in Drupal Console project.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/photo38073798908553303.jpg"/></p>
+
+<p>During my visit at <strong>Platform.sh</strong> I learn I little bit how they enable to their Drupal 8 user the usage of Drupal Console project. Next week I will write an articule about that.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/IMG_20161004_121835.jpg"/></p>
+
+<p>About the city, I think anything that I could say about Paris will be nothing compare how beautiful it's; I just could recommend you to visit three mandatory places in you visit.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Eiffel_Tower">Eiffel Tower</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Louvre">Louvre Museum</a></p>
+
+<p><a href="https://en.wikipedia.org/wiki/Palace_of_Versailles">/Palace_of_Versailles</a></p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Dublin , Ireland  &#8594; Paris, France &#8594; San Jose, Costa Rica</td>
+  <td>9.957</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>96,604</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>106.561</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Dublin</td>
+  <td>116.133</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.780.955</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.897.088</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.944</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.944</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                    <link>http://enzolutions.com/articles/2016/10/10/a-week-in-paris</link>
+                    <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+                    <guid>http://enzolutions.com/articles/2016/10/10/a-week-in-paris</guid>
+                </item>
+                                                <item>
                     <title>My DrupalCon Dublin experience</title>
                     <description><![CDATA[<p>Last week  I had the opportunity of participate in my 6th DrupalCon and my second European DrupalCon.</p>
 
@@ -54,7 +190,7 @@
 </thead>
 <tbody>
 <tr>
-  <td>San Jose , Costa Rica  &#8594; Dubline , Ireland</td>
+  <td>San Jose , Costa Rica  &#8594; Dublin , Ireland</td>
   <td>9564</td>
 </tr>
 <tr>
