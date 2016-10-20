@@ -6,6 +6,124 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss_drupal.xml" rel="self" type="application/rss+xml" />
                                     <item>
+                    <title>A week in Colombia</title>
+                    <description><![CDATA[<p>Last week  I had the opportunity to back to Colombia as para of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
+
+<p>To be honest, this stop wasn't planned, during my visit to France the border control officer inform to me about a situation with my passport, I was almost done with the space for new stamps. That situation forces me to try to get a new passport as soon as possible; After checking to Colombian embassy in Costa Rica, I confirm that renew my passport in Costa Rica wasn't an option due the return time. For that reason, I have to travel to Colombia to renew my passport there.</p>
+
+<p>With this un expected trip I tried to use in as many activities I could. In Drupal Side, I participated in a Drupal Meetup organized by <a href="http://seed.com.co">Seed</a>, and particularly by <a href="http://www.aldibier.com/">Aldibier Morales</a>. They rent and space and organize the event to enable me to talk about Drupal Console and Drupal Community in general, I enjoy the <strong>Q &amp; A</strong> session, where I could provide some points of view I have about how to handle local communities.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/IMG_20161014_030733.jpg"/></p>
+
+<p>With my new passport on my hands, I start a marathon to visit my mother and father familly located in Bucaramanga, Santader. Was really good because for many years I haven't visit them.</p>
+
+<p>So, as many time in my #enzotour16 I overcome the adversities and transform in something positive as much I could it.</p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>San Jose, Costa Rica &#8594; Bogota, Colombia  &#8594; San Jose, Costa Rica</td>
+  <td>2.576</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>106.561</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>109.137</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Dublin</td>
+  <td>39.597</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.897.088</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.936.685</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>796</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.944</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>3.740</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                    <link>http://enzolutions.com/articles/2016/10/19/a-week-in-colombia</link>
+                    <pubDate>Wed, 19 Oct 2016 00:00:00 +0000</pubDate>
+                    <guid>http://enzolutions.com/articles/2016/10/19/a-week-in-colombia</guid>
+                </item>
+                                                <item>
                     <title>A week in Paris</title>
                     <description><![CDATA[<p>Last week  I had the opportunity of visit Paris, France for a week as para of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
 
