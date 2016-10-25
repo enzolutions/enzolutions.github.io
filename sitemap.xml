@@ -23,7 +23,7 @@
 
 <p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/badcamp-session.jpg"/></p>
 
-<p>Slides: <a href="weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging">http://weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging</a></p>
+<p>Slides: <a href="http://weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging">http://weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging</a></p>
 
 <h2>Airplane</h2>
 
@@ -13833,7 +13833,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-            <pubDate>Tue, 25 Oct 2016 04:20:51 +0000</pubDate>
+            <pubDate>Tue, 25 Oct 2016 21:42:48 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
         </item>
                 <item>
@@ -13989,7 +13989,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
             <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-            <pubDate>Tue, 25 Oct 2016 04:20:51 +0000</pubDate>
+            <pubDate>Tue, 25 Oct 2016 21:42:48 +0000</pubDate>
             <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
         </item>
             </channel>
