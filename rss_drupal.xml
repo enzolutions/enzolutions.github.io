@@ -6,6 +6,130 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss_drupal.xml" rel="self" type="application/rss+xml" />
                                     <item>
+                    <title>My second BADCamp</title>
+                    <description><![CDATA[<p>Last week I had the opportunity of participating in my second <a href="2016.badcamp.net">BADCamp</a> as part of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
+
+<p>My first assistance was in 2012, a lot have changed from that time to now. At that time I was only assistant and was impress for the quality of the event and how vibrant was the community in San Francisco Bay Area.</p>
+
+<p>The event itself doesn't change too much, the same venue, but a little more disperse in my opinion.</p>
+
+<p>What change was my participation with <a href="http://jmolivas.com">Jesus Manuel Olivas</a> one of my business partners at  <a href="http://weknowinc.com">weKnow</a>. We lead a training about Drupal 8 module development</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/badcamp-training.jpg"/></p>
+
+<p>Slides: [http://weknowinc.com/talks/2016/badcamp-training/]</p>
+
+<p>Also we have a session about how to learn about Drupal 8 via debugging</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/badcamp-session.jpg"/></p>
+
+<p>Slides: <a href="weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging">http://weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging</a></p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>San Jose, Costa Rica  &#8594; Panama, Panama &#8594; San Francisco, USA</td>
+  <td>5.880</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>109.137</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>115.017</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bay Area</td>
+  <td>58.408</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.936.685</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.995.093</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>796</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.944</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>3.740</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                    <link>http://enzolutions.com/articles/2016/10/25/my-second-badcamp</link>
+                    <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                    <guid>http://enzolutions.com/articles/2016/10/25/my-second-badcamp</guid>
+                </item>
+                                                <item>
                     <title>A week in Colombia</title>
                     <description><![CDATA[<p>Last week  I had the opportunity to back to Colombia as para of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
 
@@ -55,7 +179,7 @@
 </thead>
 <tbody>
 <tr>
-  <td>Dublin</td>
+  <td>Colombia</td>
   <td>39.597</td>
 </tr>
 <tr>
@@ -191,7 +315,7 @@
 </thead>
 <tbody>
 <tr>
-  <td>Dublin</td>
+  <td>Paris</td>
   <td>116.133</td>
 </tr>
 <tr>
@@ -990,7 +1114,7 @@
                     <pubDate>Sun, 08 May 2016 00:00:00 +0000</pubDate>
                     <guid>http://enzolutions.com/articles/2016/05/08/drupal-camp-manila-day-1-drupal-tour-2016</guid>
                 </item>
-                                                                                                                                                                                                                <item>
+                                                                                                                                                                                            <item>
                     <title>Taipei, Taiwan Drupal Meetup - Drupal Tour 2016</title>
                     <description><![CDATA[<p>Yesterday, I finished my short visit to Hong Kong; Next time I have to reserve more days in this city.</p>
 
@@ -1108,7 +1232,7 @@
                     <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
                     <guid>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</guid>
                 </item>
-                                                <item>
+                                                                    <item>
                     <title>Hong Kong Drupal Meetup - Drupal Tour 2016</title>
                     <description><![CDATA[<p>I had the opportunity to participate in the Hong Kong Drupal meetup. I have to say I liked their format; their schedule starts at 7 pm, But they reserve 1 hour to let people talk each other to enforce the networking and to allow people who to have some issues reaching to the place don't miss the sessions.</p>
 

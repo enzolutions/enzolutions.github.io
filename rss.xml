@@ -6,6 +6,130 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>My second BADCamp</title>
+                <description><![CDATA[<p>Last week I had the opportunity of participating in my second <a href="2016.badcamp.net">BADCamp</a> as part of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
+
+<p>My first assistance was in 2012, a lot have changed from that time to now. At that time I was only assistant and was impress for the quality of the event and how vibrant was the community in San Francisco Bay Area.</p>
+
+<p>The event itself doesn't change too much, the same venue, but a little more disperse in my opinion.</p>
+
+<p>What change was my participation with <a href="http://jmolivas.com">Jesus Manuel Olivas</a> one of my business partners at  <a href="http://weknowinc.com">weKnow</a>. We lead a training about Drupal 8 module development</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/badcamp-training.jpg"/></p>
+
+<p>Slides: [http://weknowinc.com/talks/2016/badcamp-training/]</p>
+
+<p>Also we have a session about how to learn about Drupal 8 via debugging</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/badcamp-session.jpg"/></p>
+
+<p>Slides: <a href="weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging">http://weknowinc.com/talks/2016/badcamp-learn-drupal-8-via-debugging</a></p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>San Jose, Costa Rica  &#8594; Panama, Panama &#8594; San Francisco, USA</td>
+  <td>5.880</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>109.137</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>115.017</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bay Area</td>
+  <td>58.408</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.936.685</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.995.093</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>796</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>2.944</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>3.740</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/10/25/my-second-badcamp</link>
+                <pubDate>Tue, 25 Oct 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/10/25/my-second-badcamp</guid>
+            </item>
+                    <item>
                 <title>A week in Colombia</title>
                 <description><![CDATA[<p>Last week  I had the opportunity to back to Colombia as para of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
 
@@ -55,7 +179,7 @@
 </thead>
 <tbody>
 <tr>
-  <td>Dublin</td>
+  <td>Colombia</td>
   <td>39.597</td>
 </tr>
 <tr>
@@ -191,7 +315,7 @@
 </thead>
 <tbody>
 <tr>
-  <td>Dublin</td>
+  <td>Paris</td>
   <td>116.133</td>
 </tr>
 <tr>
@@ -3969,59 +4093,6 @@ $ chmod +x bin/phantomjs
                 <guid>http://enzolutions.com/articles/2016/04/30/taipei-day-1-drupal-tour-2016</guid>
             </item>
                     <item>
-                <title>Hong Kong Day 2 - Drupal Tour 2016</title>
-                <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
-
-<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
-
-<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
-
-<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
-
-<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Bangkok (today)</td>
-  <td>14.760</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>965.986</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>980.746</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-                <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
-                <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
-            </item>
-                    <item>
                 <title>Taipei, Taiwan Drupal Meetup - Drupal Tour 2016</title>
                 <description><![CDATA[<p>Yesterday, I finished my short visit to Hong Kong; Next time I have to reserve more days in this city.</p>
 
@@ -4138,6 +4209,59 @@ $ chmod +x bin/phantomjs
                 <link>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</link>
                 <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Hong Kong Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
+
+<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
+
+<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
+
+<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
+
+<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>14.760</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>965.986</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>980.746</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
+                <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
             </item>
                     <item>
                 <title>Hong Kong Drupal Meetup - Drupal Tour 2016</title>
@@ -13709,7 +13833,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Thu, 20 Oct 2016 02:08:42 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 04:20:51 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -13865,7 +13989,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Thu, 20 Oct 2016 02:08:42 +0000</pubDate>
+                <pubDate>Tue, 25 Oct 2016 04:20:51 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
             </channel>
