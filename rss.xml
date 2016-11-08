@@ -6,6 +6,142 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>Back to down under</title>
+                <description><![CDATA[<p>Last week and a half I had the opportunity of returning to Australia to participate in my first <a href="2016.badcamp.net">DrupalSouth</a> as part of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 180+ days</a>.</p>
+
+<p>The <a href="https://goldcoast2016.drupal.org.au">DrupalSouth</a>  has held in the Australian City of <a href="https://en.wikipedia.org/wiki/Gold_Coast,_Queensland">Gold Coast</a> a surfers paradise place with a lot of parties around.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-south.jpg"/></p>
+
+<p>During Drupal South pre-event activities, I lead a <strong>Drupal 8 Module Development training</strong> for 15th students from several cities of Australia and one student from <a href="https://en.wikipedia.org/wiki/Samoa">Samoa</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-south-training.png"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-south-training.jpg"/></p>
+
+<p>The first official day I lead the session <strong>Learn Drupal 8 via debugging</strong> with a great assistance.</p>
+
+<p>Slides: <a href="http://weknowinc.com/talks/2016/drupal-south-learn-drupal-8-via-debugging">Learn Drupal 8 via debugging</a></p>
+
+<p>At last day, I had the honor to lead the closing Keynote with the session <strong>The Art of Contributing</strong>, where I have the opportunity to explain my point of view about <em>"Why investing in community its a good business"</em></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-south-keynote-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/drupal-south-keynote-3.jpg"/></p>
+
+<p>Slides: <a href="http://weknowinc.com/talks/2016/gold-coast/community-keynote.pdf">The Arte of Contributing</a></p>
+
+<p>In general was a great experience and I hope the people who attend the Drupal South enjoy as much as I did, I hope I would have the opportunity to attend the next Drupal South in Auckland, New Zealand.</p>
+
+<p>On my way back to home I just stop in Melbourne to visit couple friends, not Drupal related, because not everything is about Drupal :P.</p>
+
+<p>With this trip, my #enzotour16 its officially over, in a month I will write recap entry with statistics and thoughts about my experience.</p>
+
+<h2>Airplane</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>San Francisco, USA &#8594;  Gold Coast, Australia &#8594; Melbourne, Australia &#8594; Los Angeles, USA &#8594; San Jose, Costa Rica</td>
+  <td>31.654</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>115.017</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>146.671</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Australia</td>
+  <td>89.823</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.995.093</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>2.084.916</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Train</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>528</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>528</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Bus/Car</h1>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (Kilometers)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Today</td>
+  <td>0</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>3.740</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>3.740</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/11/04/back-to-down-under</link>
+                <pubDate>Fri, 04 Nov 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/11/04/back-to-down-under</guid>
+            </item>
+                    <item>
                 <title>My second BADCamp</title>
                 <description><![CDATA[<p>Last week I had the opportunity of participating in my second <a href="2016.badcamp.net">BADCamp</a> as part of my tour <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-day">Around the Drupal world in 140+ days</a>.</p>
 
@@ -1163,6 +1299,49 @@ $ chmod +x bin/phantomjs
                 <guid>http://enzolutions.com/articles/2016/06/08/oahu-day-2-drupal-tour-2016</guid>
             </item>
                     <item>
+                <title>Australia Last Day - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Keep calm and Bondi Beach. After the storm, the calm doesn't return completely but indeed ins quite better, the day is still gray but not rainfall and no windy.</p>
+
+<p>In our last day in Australia, we decided to do a short visit to the legendary <a href="https://en.wikipedia.org/wiki/Bondi_Beach">Bondi Beach</a> the view is spectacular and despite the temperature and the high waves, some courageous swimmers and surfer try their luck in the ocean.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-1.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-2.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-3.jpg"/></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-4.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Sydney (today)</td>
+  <td>8.478</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>1.442.967</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>1.451.445</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</link>
+                <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</guid>
+            </item>
+                    <item>
                 <title>Oahu Day 1 - Drupal Tour 2016</title>
                 <description><![CDATA[<p>Yesterday started the last week of my <a href="http://enzolutions.com/articles/2016/01/19/around-the-drupal-world-in-120-days/">tour</a>, my return to America(when I say America it's always the continent) start with a jump from Oceania to the Pacific island more accurate in Oahu, Hawaii, USA as usual with my traveler companion <a href="http://yersika.com">Yersika</a>.</p>
 
@@ -1295,49 +1474,6 @@ $ chmod +x bin/phantomjs
                 <link>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</link>
                 <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/06/07/oahu-day-1-drupal-tour-2016</guid>
-            </item>
-                    <item>
-                <title>Australia Last Day - Drupal Tour 2016</title>
-                <description><![CDATA[<p>Keep calm and Bondi Beach. After the storm, the calm doesn't return completely but indeed ins quite better, the day is still gray but not rainfall and no windy.</p>
-
-<p>In our last day in Australia, we decided to do a short visit to the legendary <a href="https://en.wikipedia.org/wiki/Bondi_Beach">Bondi Beach</a> the view is spectacular and despite the temperature and the high waves, some courageous swimmers and surfer try their luck in the ocean.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-1.jpg"/></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-2.jpg"/></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-3.jpg"/></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/bondi-beach-4.jpg"/></p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Sydney (today)</td>
-  <td>8.478</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>1.442.967</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>1.451.445</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-                <link>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</link>
-                <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/06/07/australia-last-day-drupal-tour-2016</guid>
             </item>
                     <item>
                 <title>Sydney Stormageddon - Drupal Tour 2016</title>
@@ -13833,7 +13969,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 25 Oct 2016 21:42:48 +0000</pubDate>
+                <pubDate>Tue, 08 Nov 2016 17:11:12 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -13989,7 +14125,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 25 Oct 2016 21:42:48 +0000</pubDate>
+                <pubDate>Tue, 08 Nov 2016 17:11:12 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
             </channel>
