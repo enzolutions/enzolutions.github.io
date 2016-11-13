@@ -766,7 +766,7 @@ $ chmod +x bin/phantomjs
                 <title>Mexicali Day 3 - Drupal Tour 2016</title>
                 <description><![CDATA[<p>All good things come to an end, and this trip is not the exception. Yesterday I leave Mexico and back to home which is Heredia, Costa Rica where my family is waiting for me.</p>
 
-<p>I had a mix of feelings happy, sad, fullness and emptiness, but certainly   satisfy of complete a dream I had since a child, travel around the world in a similar way that did <strong>Phileas Fogg</strong> in the book [Around the World in Eighty Days](Around the World in Eighty Days).</p>
+<p>I had a mix of feelings happy, sad, fullness and emptiness, but certainly   satisfy of complete a dream I had since a child, travel around the world in a similar way that did <strong>Phileas Fogg</strong> in the book <a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days</a>.</p>
 
 <p>How was my return? well since I am Mexico with friends they say goodbye with an awesome Mexican breakfast to try 'Menudo' at a restaurant named <em>Museo de Mexicali</em>, they built a western town around with all old pieces, quite picturesque I have to say.</p>
 
@@ -13969,7 +13969,7 @@ MyApp.addInitializer(function(options) {
 <p><img src="http://7sabores.com/sites/default/files/styles/large/public/marionette_routing_sample.png?itok=2lla5O-u"/></p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</link>
-                <pubDate>Tue, 08 Nov 2016 17:11:12 +0000</pubDate>
+                <pubDate>Sun, 13 Nov 2016 22:18:43 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-2-routing_controlling_marionettejs</guid>
             </item>
                     <item>
@@ -14125,7 +14125,7 @@ require( ["MyApp"], function (MyApp) {
 <p>I hope you have been to his liking.</p>
 ]]></description>
                 <link>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</link>
-                <pubDate>Tue, 08 Nov 2016 17:11:12 +0000</pubDate>
+                <pubDate>Sun, 13 Nov 2016 22:18:43 +0000</pubDate>
                 <guid>http://enzolutions.com/posts/2014-06-1-what_how_works_requirejs</guid>
             </item>
             </channel>
