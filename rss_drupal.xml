@@ -6,6 +6,30 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss_drupal.xml" rel="self" type="application/rss+xml" />
                                     <item>
+                    <title>How I Got My First Million…</title>
+                    <description><![CDATA[<p>Sadly, this is not about how I made my first million dollars, but rather a short story about how a project, I poured my heart soul and time into, got to 1 million downloads and helped thousands of people, all over the world, learn and build Drupal applications.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/one_million_downloads.jpg"/></p>
+
+<p>Most of the time, we ask ourselves what our purpose in life is, we feel the need to create something new while trying to chase after the infamous concept of ‘making an impact’ through innovation, often forgetting that we can achieve the same impact faster and better through collaboration and community driven initiatives.</p>
+
+<p>My personal experience with the Drupal Console can be summarized in two words: Collaborator and Location.</p>
+
+<h1>Collaborator</h1>
+
+<p>Often times being a good collaborator is as impactful as being an innovator. I didn’t come up with the Drupal Console, but I saw the potential to make an impact from very early on. So I joined the team to learn and contribute my two cents. Despite the high pressure to come up with a high quality technology solution, you always felt the satisfaction of contributing to something bigger than yourself. This solution was going to help a community, and you could feel it in every line of code, conversation, and fix.</p>
+
+<h1>Location</h1>
+
+<p>With the focus and spotlights aimed at Silicon Valley and all the other major tech hubs, developers located outside feel alienated and look at location as a barrier to make technological breakthroughs. Sure, being located in these technology hubs can facilitate a lot of things, and the concentration of talent is a boost. However, personally the Drupal Console project eliminated that mental barrier. Creating and leading the project from Latin America proved that your location does not determine the quality of the job; we live in the same world, same internet and most importantly, opportunities to innovate and make an impact are open to everybody.</p>
+
+<p>Today I look back and I’m happy with all the time and effort I poured into the Drupal Console. I take solace in the fact that so many people's lives are easier because they chose to use the Drupal Console.</p>
+]]></description>
+                    <link>http://enzolutions.com/articles/2017/07/12/how-i-got-my-first-million</link>
+                    <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+                    <guid>http://enzolutions.com/articles/2017/07/12/how-i-got-my-first-million</guid>
+                </item>
+                                                <item>
                     <title>My 2016 Recap</title>
                     <description><![CDATA[<p>I don't usually evaluate what happen in my life at the end of Year, but this year was different in many good ways</p>
 
@@ -4824,7 +4848,7 @@ if(empty($form_state_complete_version)){
                     <pubDate>Tue, 25 Nov 2014 00:00:00 +0000</pubDate>
                     <guid>http://enzolutions.com/articles/2014/11/25/how-to-work-with-drupal-8-forms-with-ajax</guid>
                 </item>
-                                                                                                                                <item>
+                                                                                                                                                    <item>
                     <title>How to enable CORS requests against Drupal 8</title>
                     <description><![CDATA[<h1>The Problem</h1>
 
@@ -4881,7 +4905,7 @@ Header always set Access-Control-Allow-Headers: Authorization
                     <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
                     <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</guid>
                 </item>
-                                                                    <item>
+                                                <item>
                     <title>Understanding Configuration Management in Drupal 8</title>
                     <description><![CDATA[<p>In few months we will get the new release of Drupal the #8 (I hope) and I think it's time to start to test, learn and write about the new ways we have in Drupal 8 to do our old tricks.</p>
 

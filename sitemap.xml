@@ -6,6 +6,30 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                 <item>
+            <title>How I Got My First Million…</title>
+            <description><![CDATA[<p>Sadly, this is not about how I made my first million dollars, but rather a short story about how a project, I poured my heart soul and time into, got to 1 million downloads and helped thousands of people, all over the world, learn and build Drupal applications.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/one_million_downloads.jpg"/></p>
+
+<p>Most of the time, we ask ourselves what our purpose in life is, we feel the need to create something new while trying to chase after the infamous concept of ‘making an impact’ through innovation, often forgetting that we can achieve the same impact faster and better through collaboration and community driven initiatives.</p>
+
+<p>My personal experience with the Drupal Console can be summarized in two words: Collaborator and Location.</p>
+
+<h1>Collaborator</h1>
+
+<p>Often times being a good collaborator is as impactful as being an innovator. I didn’t come up with the Drupal Console, but I saw the potential to make an impact from very early on. So I joined the team to learn and contribute my two cents. Despite the high pressure to come up with a high quality technology solution, you always felt the satisfaction of contributing to something bigger than yourself. This solution was going to help a community, and you could feel it in every line of code, conversation, and fix.</p>
+
+<h1>Location</h1>
+
+<p>With the focus and spotlights aimed at Silicon Valley and all the other major tech hubs, developers located outside feel alienated and look at location as a barrier to make technological breakthroughs. Sure, being located in these technology hubs can facilitate a lot of things, and the concentration of talent is a boost. However, personally the Drupal Console project eliminated that mental barrier. Creating and leading the project from Latin America proved that your location does not determine the quality of the job; we live in the same world, same internet and most importantly, opportunities to innovate and make an impact are open to everybody.</p>
+
+<p>Today I look back and I’m happy with all the time and effort I poured into the Drupal Console. I take solace in the fact that so many people's lives are easier because they chose to use the Drupal Console.</p>
+]]></description>
+            <link>http://enzolutions.com/articles/2017/07/12/how-i-got-my-first-million</link>
+            <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2017/07/12/how-i-got-my-first-million</guid>
+        </item>
+                <item>
             <title>My 2016 Recap</title>
             <description><![CDATA[<p>I don't usually evaluate what happen in my life at the end of Year, but this year was different in many good ways</p>
 
@@ -6981,59 +7005,6 @@ $ chmod +x bin/phantomjs
             <guid>http://enzolutions.com/articles/2016/03/22/osaka-day-2-drupal-tour-2016</guid>
         </item>
                 <item>
-            <title>Kyoto - Drupal Tour 2016</title>
-            <description><![CDATA[<p>Yesterday I wanted to return to the sightseeing activity, for that reason I tried for maximizing my coverture of <a href="https://en.wikipedia.org/wiki/Kansai_region">Kansai Region</a>, visiting <a href="https://en.wikipedia.org/wiki/Kyoto_Prefecture">Kyoto</a> the ancient Imperial capital of Japan.</p>
-
-<p>The trip to <strong>Kyoto</strong> takes about 90 minutes, for that reason I decided only visit the first four spot I could visit.</p>
-
-<p>I started my visit at <a href="https://en.wikipedia.org/wiki/Kinkaku-ji">Kinkaku-ji</a> or <em>Temple of the Golden Pavilion</em></p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kinkaku-ji.jpg"/></p>
-
-<p>Outside the temple, I saw a map where were pointed to two nearby locations to visit by walk, that lead me to <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a> a Zen temple well preserved with lovely trails.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ryoan-ji-pagoda.jpg"/></p>
-
-<p>The third place was the best in my opinion, <a href="https://en.wikipedia.org/wiki/Ninna-ji">Ninna-ji</a> temple a <strong>UNESCO World Heritage Site</strong>, The entry allow you walk through ancient halls and alleys.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ninna-ji.jpg"/></p>
-
-<p>After all that walk I was exhausted, so, I decided to find a random place to take a lunch, but after a long walk, I found the <strong>Hōkongō-in</strong> Temple, located just in from of a train station, so I decided to visit the temple and return to Osaka.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hokongo-in.jpg"/></p>
-
-<p>If you are interested in, see more pictures and videos about Kyoto you can check this <a href="https://www.flickr.com/photos/37690888@N03/albums/72157665931401602">album</a>.</p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Kyoto (today)</td>
-  <td>23.233</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>434.961</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>458.194</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-            <link>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</link>
-            <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</guid>
-        </item>
-                <item>
             <title>Nara - Drupal Tour 2016</title>
             <description><![CDATA[<p>Today, I continue with my exploration of <a href="https://en.wikipedia.org/wiki/Kansai_region">Kansai Region</a>, visiting the city of Nara.</p>
 
@@ -7087,6 +7058,59 @@ $ chmod +x bin/phantomjs
             <link>http://enzolutions.com/articles/2016/03/20/nara-drupal-tour-2016</link>
             <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2016/03/20/nara-drupal-tour-2016</guid>
+        </item>
+                <item>
+            <title>Kyoto - Drupal Tour 2016</title>
+            <description><![CDATA[<p>Yesterday I wanted to return to the sightseeing activity, for that reason I tried for maximizing my coverture of <a href="https://en.wikipedia.org/wiki/Kansai_region">Kansai Region</a>, visiting <a href="https://en.wikipedia.org/wiki/Kyoto_Prefecture">Kyoto</a> the ancient Imperial capital of Japan.</p>
+
+<p>The trip to <strong>Kyoto</strong> takes about 90 minutes, for that reason I decided only visit the first four spot I could visit.</p>
+
+<p>I started my visit at <a href="https://en.wikipedia.org/wiki/Kinkaku-ji">Kinkaku-ji</a> or <em>Temple of the Golden Pavilion</em></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/kinkaku-ji.jpg"/></p>
+
+<p>Outside the temple, I saw a map where were pointed to two nearby locations to visit by walk, that lead me to <a href="https://en.wikipedia.org/wiki/Ry%C5%8Dan-ji">Ryōan-ji</a> a Zen temple well preserved with lovely trails.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ryoan-ji-pagoda.jpg"/></p>
+
+<p>The third place was the best in my opinion, <a href="https://en.wikipedia.org/wiki/Ninna-ji">Ninna-ji</a> temple a <strong>UNESCO World Heritage Site</strong>, The entry allow you walk through ancient halls and alleys.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/ninna-ji.jpg"/></p>
+
+<p>After all that walk I was exhausted, so, I decided to find a random place to take a lunch, but after a long walk, I found the <strong>Hōkongō-in</strong> Temple, located just in from of a train station, so I decided to visit the temple and return to Osaka.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/hokongo-in.jpg"/></p>
+
+<p>If you are interested in, see more pictures and videos about Kyoto you can check this <a href="https://www.flickr.com/photos/37690888@N03/albums/72157665931401602">album</a>.</p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Kyoto (today)</td>
+  <td>23.233</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>434.961</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>458.194</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+            <link>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</link>
+            <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2016/03/20/kyoto-drupal-tour-2016</guid>
         </item>
                 <item>
             <title>Osaka Day 1 - Drupal Tour 2016</title>
@@ -12842,63 +12866,6 @@ function (Marionette, Communicator) {
             <guid>http://enzolutions.com/articles/2014/09/16/how-to-pass-parameters-to-requirejs-modules</guid>
         </item>
                 <item>
-            <title>How to enable CORS requests against Drupal 8</title>
-            <description><![CDATA[<h1>The Problem</h1>
-
-<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
-
-<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
-
-<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
-
-<pre><code>public function options(EntityInterface $entity) {
-   $response = new ResourceResponse();
-   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
-   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
-   return $response-&gt;send();
-  }
-</code></pre>
-
-<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
-
-<h1>The Solution</h1>
-
-<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
-
-<p>But let me explain the changes introduced in my patch.</p>
-
-<h2>Intercept OPTIONS Request</h2>
-
-<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
-
-<p>Check the code below.</p>
-
-<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
-RewriteRule .* / [R=200,L]
-</code></pre>
-
-<h2>Enable CORS</h2>
-
-<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
-
-<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
-
-<p>Check the implementation below.</p>
-
-<pre><code>Header always set Access-Control-Allow-Origin "*"
-Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
-Header always set Access-Control-Allow-Headers: Authorization
-</code></pre>
-
-<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
-
-<p>I expect you have found this entry useful.</p>
-]]></description>
-            <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</link>
-            <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
-            <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</guid>
-        </item>
-                <item>
             <title>How to create an interactive command in Node.js</title>
             <description><![CDATA[<p>One of the first things we learn in a new programming language is how to  implement a command line is to read the parameters provided by user in execution, today I want to make my first blog related to <a target="_blank" href="http://nodejs.org/">Node.js</a> and I will show you how to make an interactive interface with Node.js.</p>
 
@@ -13089,6 +13056,63 @@ inquirer.prompt(preguntas, function(respuestas) {
             <link>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js</link>
             <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
             <guid>http://enzolutions.com/articles/2014/09/08/how-to-create-an-interactive-command-in-node-js</guid>
+        </item>
+                <item>
+            <title>How to enable CORS requests against Drupal 8</title>
+            <description><![CDATA[<h1>The Problem</h1>
+
+<p>Nowadays I was creating a new version of my library <a target="_blank" href="https://github.com/enzolutions/backbone.drupal">https://github.com/enzolutions/backbone.drupal</a> to enable to use Drupal 8 in mode <strong>Headless Drupal</strong> using front end in a different domain or subdomain.</p>
+
+<p>The problem I found with <a href="http://enzolutions.com/articles/2014/05/31/what-is-cross-origin-resource-sharing-cors/">CORS</a> requests is related with the way jQuery execute the first request Ajax, because before to do an execution of a GET|PUT|DELETE|POST|PATCH request an <a target="_blank" href="http://restpatterns.org/HTTP_Methods/OPTIONS">OPTIONS</a> request is executed to validate request methods accepted for backend server more information at <a href="http://api.jquery.com/jquery.ajax/">http://api.jquery.com/jquery.ajax/</a> in <strong>contentType</strong> section.</p>
+
+<p>The current status of Rest module (part of Drupal Core) doesn't implement the OPTIONS method, so my first approach was implement that method in class <strong>Drupal\rest\Plugin\rest\resource\EntityResource</strong> using the following code</p>
+
+<pre><code>public function options(EntityInterface $entity) {
+   $response = new ResourceResponse();
+   $response-&gt;setStatusCode(ResourceResponse::HTTP_OK);
+   $response-&gt;headers-&gt;set('Allow', 'GET,POST,PATCH,DELETE,OPTIONS');
+   return $response-&gt;send();
+  }
+</code></pre>
+
+<p>After add that extra function in class <strong>EntityResource</strong> the method was available and double checked with module <a target="_blank" href="https://www.drupal.org/project/restui">RestUI</a>, but this solution wasn't enough because I can't enable OPTIONS method without authentication and jQuery trigger the OPTIONS method without CRC Token or Basic Auth method even if you provide in the original call.</p>
+
+<h1>The Solution</h1>
+
+<p>In order to resolve the problem I use .htaccess and Apache <a target="_blank" href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> to enable CORS and intercept the OPTIONS request to avoid Drupal reject the request because doesn't have the proper credentials, I did a patch for Drupal 8 and you can download the patch <a target="_blank" href="https://www.drupal.org/files/issues/core-cors-headers-1869548-26.patch">here</a>.</p>
+
+<p>But let me explain the changes introduced in my patch.</p>
+
+<h2>Intercept OPTIONS Request</h2>
+
+<p>I add a Mod Rewrite Condition and Rule to avoid all OPTIONS request be processed by Drupal and rejected, instead of a <a target="_blank" href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success">HTTP 200 OK</a> code is returned in order to enable jQuery request continue with the normal workflow.</p>
+
+<p>Check the code below.</p>
+
+<pre><code>RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule .* / [R=200,L]
+</code></pre>
+
+<h2>Enable CORS</h2>
+
+<p>If you search how to enable CORS using .htaccess you will find tons of similar information and this information usually works, but in our case we have a special situation the intercept process we implemented above.</p>
+
+<p>Because the interception the normal statements to enable CORS doesn't work and apache will reject our request, to resolve this problem I found the condition <a target="_blank" href="http://httpd.apache.org/docs/2.0/mod/mod_headers.html">always</a> for Header directive.</p>
+
+<p>Check the implementation below.</p>
+
+<pre><code>Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "POST, GET, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Headers: Authorization
+</code></pre>
+
+<p>I strongly recommend to change <strong>*</strong> for your frontend domain i.e frontend-example.com.</p>
+
+<p>I expect you have found this entry useful.</p>
+]]></description>
+            <link>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</link>
+            <pubDate>Mon, 08 Sep 2014 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2014/09/08/how-to-enable-cors-requests-against-drupal-8</guid>
         </item>
                 <item>
             <title>Understanding Configuration Management in Drupal 8</title>
