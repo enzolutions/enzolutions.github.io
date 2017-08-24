@@ -6,6 +6,56 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                 <item>
+            <title>The Drupal Console Journey</title>
+            <description><![CDATA[<p>Before the existence of the Drupal Console as a project, it all began with an idea to make Drupal 8 better. Every great invention/innovation begins with an idea, and the Drupal transition from 7 to 8 came with massive changes to the fundamental operating procedures of yesterday. Symfony components were making a splash into Drupal Core.
+<a href="http://jmolivas.com">Jesus</a> and [David], the initiators of Drupal Console project, came up with the idea of including the symfony console into the Drupal core. The same way that other symfony components were being included into the Drupal core.</p>
+
+<h1>Powering Though Frustration</h1>
+
+<p>As helpful as the Drupal Console project is nowadays, it wasn’t very widely accepted into the drupal community initially. In fact, it turned out to be a huge challenge to get anyone to listen to the idea. For Jesus and David, the primary objective to include the Symfony Console in Drupal was to have the option to have code generators, in the same way, the Symfony community does. Who wouldn’t want that? A way to automate the annoying redundancies that plague developers everywhere. So they decided to propose the idea to the Drupal core maintainers via the issue queue. That idea was however quickly dismissed.</p>
+
+<p>After few attempts to request the inclusion and trying to collaborate into different drupal projects, it dawned on Jesus and David that inclusion and collaboration was not going to happen. They needed to regroup and find a better approach.</p>
+
+<p>While at lunch at Drupalcamp Costa Rica, Jesus and David were casually discussing the frustrations they had encountered trying to bring innovation to Drupal and related projects, and <strong>Larry Garfield</strong> chimed in “someone needs to create a separate project that includes Symfony Console and code generation”. That sentence gave birth to the Drupal Console project as you know it today.</p>
+
+<h1>Building A Community</h1>
+
+<p>Jesus stacked up his calendar with almost every Drupal event in the U.S. The goal was to talk about the project in sessions at all Drupal community gatherings he could physically attend, or at minimum, present the idea at BOFs where sessions were not possible. The code sprints helped him interact with developers and users forming a critical source of feedback.</p>
+
+<p>Along the way, he convinced me to join the project as a maintainer. I also embarked on his outreach campaign to help spread the word. Only, my campaign was global because it was important to reach non-english speakers because they often feel left out of major open source projects. Currently, the Drupal Console project is available, with some variations, in the 18 languages listed below.</p>
+
+<ul>
+<li>English</li>
+<li>Spanish</li>
+<li>Catalán</li>
+<li>French</li>
+<li>Korean</li>
+<li>Hindi</li>
+<li>Hungarian</li>
+<li>Indonesian</li>
+<li>Japanese</li>
+<li>Marathi</li>
+<li>Punjabi</li>
+<li>Brazilian Portuguese</li>
+<li>Romanian</li>
+<li>Russian</li>
+<li>Tagalog</li>
+<li>Vietnamese</li>
+<li>Chinese Simplified</li>
+<li>Chinese Traditional</li>
+</ul>
+
+<h1>One Million Downloads!</h1>
+
+<p>After four years of development in July 2017, we reached our first million downloads across different releases. This achievement is thanks to our more that 250 contributors across the globe.</p>
+
+<p>This brought a great sense of validation for deciding to stick to our guns, do the right thing and most importantly... be globally inclusive.</p>
+]]></description>
+            <link>http://enzolutions.com/articles/2017/08/24/the-drupal-console-journey</link>
+            <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
+            <guid>http://enzolutions.com/articles/2017/08/24/the-drupal-console-journey</guid>
+        </item>
+                <item>
             <title>How I Got My First Million…</title>
             <description><![CDATA[<p>Sadly, this is not about how I made my first million dollars, but rather a short story about how a project, I poured my heart soul and time into, got to 1 million downloads and helped thousands of people, all over the world, learn and build Drupal applications.</p>
 
