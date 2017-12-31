@@ -6,6 +6,106 @@
         <description>RSS feed for Welcome to [enzo]lutions</description>
         <atom:link href="http://enzolutions.com/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
+                <title>My 2017 Recap</title>
+                <description><![CDATA[<p>It’s been awhile since I wrote a blog post. Actually, this is only the third one in 2017; a bit of a change from 2016 when I wrote almost 200 posts. If you are wondering why, let me explain with a quick recap of my milestones for this year.</p>
+
+<h2>Is there anybody else who has never seen snow before?</h2>
+
+<p>This is something difficult to understand or believe for some people, but after 40 years I had never seen snow before. This is the price that comes with living in tropical countries like Colombia and Costa Rica, but hey, even paradise has a downside!</p>
+
+<p>I decided that I needed to check off this item from my bucket list, and in a big way. Fortunately, the Drupal community always helps me in my crazy travel adventures, and in this case the community of Iceland stepped up to the challenge.</p>
+
+<p>To accomplish this goal and at the same time contribute to the local Drupal community, I attended the first <a href="https://dcnlights.drupal.is/">Drupal Northern Lights</a> at Reykjavik, Iceland, which by the way is a remarkable event organized by <a href="https://twitter.com/baddysonja">Baddy Breidert</a>, <a href="https://twitter.com/drupalviking">Hilmar Hallbjörnsson</a>, and the rest of the amazing open source community in Iceland.</p>
+
+<p>Back to the snow, I tried to prepare as much as possible for this visit, but it seems you can never be ready enough for snow in Iceland. In the second day of my visit, <a href="http://icelandmonitor.mbl.is/news/news/2017/02/26/record_amount_of_snowfall_for_february_in_reykjavik/">we got the biggest snowfall since 1952</a>, 51 cm in just a few hours.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzo-snow-fall.jpg"/>
+<br /><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/Reykjavik.jpg"/></p>
+
+<p>After having experienced that, anything less than 51 cm of snow doesn’t feel like a proper snowfall to me :P. I guess that’s the problem when you set high standards!</p>
+
+<p>In 2017 I also visited these places:</p>
+
+<ul>
+<li>Metz, France</li>
+<li>Ghent, Belgium</li>
+<li>Brussels, Belgium</li>
+<li>Berlin, Germany</li>
+<li>Copenhagen, Denmark</li>
+<li>Malmo, Sweden</li>
+<li>Rome, Italy</li>
+<li>Camberra, Australia</li>
+<li>Sunshine Coast, Australia</li>
+</ul>
+
+<h2>Down Under</h2>
+
+<p>During my tour in Europe, I was notified that my family and I qualified to emigrate to Australia. So from Italy, I flew to Australia to arrange all the details for the arrival of my family, typical things like finding a place, buying some furniture, setting up the school for the kids, and a long etcetera.</p>
+
+<p>But why move so far away? This is a recurrent question, since the common impression for most people is that Australia lays at the end of the world (well maybe not for people in New Zealand, Indonesia, and Papua New Guinea, our closest neighbors).</p>
+
+<p>The answer is simple. My wife and I wanted our kids to pick up a close-to-native command of the English language, while at the same time have access to a better education system. Australia offers both, and although the immigration process is tough, it is also clearly stated, and if you read the fine print carefully it can actually be a straightforward process.</p>
+
+<h2>Is the *AMP stack dead?</h2>
+
+<p>I have been a Drupal Developer for many years, but before that, I was a straight-up PHP developer, Sysadmin, and even an Oracle Developer, among others in a long list of technologies that I’ve used in my professional career.</p>
+
+<p>In addition, as CTO of <a href="http://anexusit.com">Anexus</a> (now <a href="https://weknowinc.com">weKnow</a>), my role includes to constantly evaluate new technologies in order to improve the approach and solutions we offer to our partners. As a result, this year I decided to push myself to learn something new and far away from Drupal.</p>
+
+<p>For years in our company we’ve had a gap between what the market offers and our requirements related to time tracking, HR, accounting, and capabilities. We tried many tools and SaaS platforms, but none of them truly fulfilled our needs.</p>
+
+<p>After playing around with NodeJs and ReactJs, I decided to build a professional application, something that could fill this gap and finally resolve our problems.</p>
+
+<p>After some analysis I decided to build this platform leveraging the following technologies:</p>
+
+<ul>
+<li><a href="http://meteor.com">Meteor JS</a> - A <a href="http://nodejs.org">NodeJs</a> framework</li>
+<li><a href="http://mongodb.com">Mongo DB</a></li>
+<li><a href="https://reactjs.org">React JS</a></li>
+</ul>
+
+<p>Although the learning curve was a bit steep, we were able to release our first version after two and a half months of development.</p>
+
+<p>We are still in the process of improving the tool, but so far we have exceed our initial needs. Right now we are at the stage of innovating and adding new functionality to extend the platform’s abilities.</p>
+
+<p>A by-product of this project - at least 15% of our developers have become proficient in the technologies we used to build this tool, and are prepared to tackle any project that uses this stack. Our goal for 2018 is to increase that number to at least 50% of our company.</p>
+
+<h2>A sabbatical year? Maybe...</h2>
+
+<p>A sabbatical year is generally understood as a period for relaxing, pursuing academical or spiritual interests, and often traveling. In my case it is a bit of the opposite, as I’ve decided to avoid traveling outside Australia for a year to stay with my family a much as possible, starting in August 2017.</p>
+
+<p>Why this harsh move? Well, for the last nine years I’ve been traveling almost non-stop, especially in the last couple of years. It definitely feels like I could use some “detox” from traveling, which while always interesting, is also extremely energy-consuming. That said, after two months without any traveling I started to feel a little anxious about not having a next trip to prepare. Talk about first-world problems!</p>
+
+<p>At this point I’m completing four and a half months of staying put in Australia, and I don’t have plans to travel abroad in the first quarter of 2018, so I may be able to complete my goal after all... Or not. We’ll see!</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/enzotour17.png"/></p>
+
+<h2>This Time Next Year</h2>
+
+<p>This might sound geeky, but I think it would be interesting to use a <a href="https://en.wikipedia.org/wiki/Radar_chart">Radar chart</a> to graph the main aspects of our lives, where each variable could be an element such as love, professional life, family, financial wellbeing, health, and so on.</p>
+
+<p>Maybe all is related with each one personality factors, below my personality factors described using a <strong>Radar Chart</strong> created using <a href="https://personalityfactors.com">https://personalityfactors.com</a></p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/personalityfactors.png"/></p>
+
+<p>The reality is that maintaining a balance with all these elements is really difficult, and each one constantly pulls from the other to gain more relevance. In my personal analysis, Health has been the aspect that has been neglected the most in the last decade. Fortunately I do not suffer from any condition, but I can definitely feel how my health has started to slowly decline. Nothing major, but it’s time to take precautions.</p>
+
+<p>In order to incorporate some healthy changes, I made a challenge with <a href="https://weknowinc.com/user/jmolivas">Jesús</a> and <a href="https://twitter.com/omers">Omar</a>, to see who can lose more weight in approximately a year, starting in August 2017. The end date is not set in stone because we live in different cities and countries, so the winner will be confirmed when we see each other again…. and in front of a neutral scale.</p>
+
+<p>Let me share a baseline for reference. At the start of the challenge my weight was 102.8 kg (226 lbs), which equals to Grade II Obesity, definitely not very healthy. Back home I set up a diet plan and enrolled in a gym with the goal to attend at least six days/week.</p>
+
+<p>After four months and two weeks I’ve lost 17.2 (37.91 lbs) kg and my new weight is 85.6 Kg (188.7 lbs), and I’ve finally started to feel more healthy. Though I’m still about 6 kg from my personal goal, I’m happy with the results so far and am confident I’ll be cashing that prize, so watch out Omar &amp; Jesús!</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/before-after.jpeg"/></p>
+
+<p>Have a happy  2018!</p>
+]]></description>
+                <link>http://enzolutions.com/articles/2017/12/31/my-2017-recap</link>
+                <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2017/12/31/my-2017-recap</guid>
+            </item>
+                    <item>
                 <title>The Drupal Console Journey</title>
                 <description><![CDATA[<p>Before the existence of the Drupal Console as a project, it all began with an idea to make Drupal 8 better. Every great invention/innovation begins with an idea, and the Drupal transition from 7 to 8 came with massive changes to the fundamental operating procedures of yesterday. Symfony components were making a splash into Drupal Core.
 <a href="http://jmolivas.com">Jesus</a> and <a href="http://dmouse.github.io">David</a>, the initiators of Drupal Console project, came up with the idea of including the symfony console into the Drupal core. The same way that other symfony components were being included into the Drupal core.</p>
@@ -609,7 +709,7 @@
 
 <p><a href="https://en.wikipedia.org/wiki/Louvre">Louvre Museum</a></p>
 
-<p><a href="https://en.wikipedia.org/wiki/Palace_of_Versailles">/Palace_of_Versailles</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Palace_of_Versailles">Palace_of_Versailles</a></p>
 
 <h2>Airplane</h2>
 
@@ -4425,59 +4525,6 @@ $ chmod +x bin/phantomjs
                 <guid>http://enzolutions.com/articles/2016/04/30/taipei-day-1-drupal-tour-2016</guid>
             </item>
                     <item>
-                <title>Hong Kong Day 2 - Drupal Tour 2016</title>
-                <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
-
-<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
-
-<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
-
-<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
-<br/><br/>
-<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
-
-<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
-
-<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
-
-<h2>Walking</h2>
-
-<table>
-<thead>
-<tr>
-  <th></th>
-  <th>Distance (steps)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Bangkok (today)</td>
-  <td>14.760</td>
-</tr>
-<tr>
-  <td>Previously</td>
-  <td>965.986</td>
-</tr>
-<tr>
-  <td><strong>Total</strong></td>
-  <td>980.746</td>
-</tr>
-</tbody>
-</table>
-]]></description>
-                <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
-                <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
-                <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
-            </item>
-                    <item>
                 <title>Taipei, Taiwan Drupal Meetup - Drupal Tour 2016</title>
                 <description><![CDATA[<p>Yesterday, I finished my short visit to Hong Kong; Next time I have to reserve more days in this city.</p>
 
@@ -4594,6 +4641,59 @@ $ chmod +x bin/phantomjs
                 <link>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</link>
                 <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
                 <guid>http://enzolutions.com/articles/2016/04/29/taipei-taiwan-drupal-meetup-drupal-tour-2016</guid>
+            </item>
+                    <item>
+                <title>Hong Kong Day 2 - Drupal Tour 2016</title>
+                <description><![CDATA[<p>Hong is bigger than I expected, and some stuff I want to do required 2 hours travel each way, so I have to change my plans.</p>
+
+<p>After reviewing my options I went out to <a href="https://en.wikipedia.org/wiki/Man_Mo_Temple_(Hong_Kong)">Man Mo Temple</a> which is a small but beautiful temple, actually looks like those millennial places we usually saw in Kung Fu movies</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-1.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-2.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/man-mo-temple-3.jpg"/></p>
+
+<p>After lunch, I return to my place, to work a little bit with other <a href="http://drupalconsole.com">Drupal Console</a> maintainers. I share with them my idea of increase the level complexity in our introduction session for Drupal Console; they agreed and, I will use that starting in <a href="http://2016.drupalcampmanila.com">Drupal Camp Manila</a> next week.</p>
+
+<p>Later on, I walked in Nathan Street just to the environment and visited the <a href="https://en.wikipedia.org/wiki/Temple_Street,_Hong_Kong">Temple Street</a> and Lady's](https://en.wikipedia.org/wiki/Tung_Choi_Street) markets, both places where do you could find anything do you have in mind, I didn't buy anything due I wasn't looking for something.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/temple-street.jpg"/>
+<br/><br/>
+<img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/lady-street-market.jpg"/></p>
+
+<p>At night, I visited with <strong>Jackie</strong> and  <strong>Kevin</strong> from <a href="http://bootdev">Bootdev</a>, Jackie's parent's house, where his parents prepare a delicious dinner using Hongkonese style.</p>
+
+<p><img style="margin-right: 20px;" src="http://enzolutions.com/assets/img/jackie-parents-dinner.jpg"/></p>
+
+<h2>Walking</h2>
+
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>Distance (steps)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Bangkok (today)</td>
+  <td>14.760</td>
+</tr>
+<tr>
+  <td>Previously</td>
+  <td>965.986</td>
+</tr>
+<tr>
+  <td><strong>Total</strong></td>
+  <td>980.746</td>
+</tr>
+</tbody>
+</table>
+]]></description>
+                <link>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</link>
+                <pubDate>Fri, 29 Apr 2016 00:00:00 +0000</pubDate>
+                <guid>http://enzolutions.com/articles/2016/04/29/hong-kong-day-2-drupal-tour-2016</guid>
             </item>
                     <item>
                 <title>Hong Kong Drupal Meetup - Drupal Tour 2016</title>
